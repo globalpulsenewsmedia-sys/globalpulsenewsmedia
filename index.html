@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Pulse | AI-Powered Automated News Portal</title>
+    <meta name="description" content="Stay ahead with Global Pulse. 24/7 automated news intelligence powered by AI. Real-time updates on Tech, Business, and World events.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <div class="breaking-ticker">
+        <div class="ticker-label">LATEST</div>
+        <div class="ticker-content">
+            <p>Welcome to Global Pulse: AI-Enhanced News. • Markets reach new highs in morning trading. • AI innovation continues to disrupt the global tech landscape. • Stay tuned for live updates every 3 hours.</p>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>GLOBAL <span>PULSE</span></h1>
+                <p class="tagline">INTELLIGENT AUTOMATION</p>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#" class="active" data-category="all">Latest</a></li>
+                    <li><a href="#" data-category="world">World</a></li>
+                    <li><a href="#" data-category="tech">Technology</a></li>
+                    <li><a href="#" data-category="business">Business</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="news-section">
+            <div class="section-header">
+                <h2>Breaking Stories</h2>
+                <div class="live-indicator">
+                    <span class="dot"></span>
+                    <span>Live Intelligence</span>
+                </div>
+            </div>
+
+            <!-- News Grid -->
+            <div class="news-grid" id="newsGrid">
+                <!-- Javascript will populate cards here -->
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget trending">
+                <h3>Trending Topics</h3>
+                <div class="tags" id="trendingTags">
+                    <span class="tag">Artificial Intelligence</span>
+                    <span class="tag">Quantum Computing</span>
+                    <span class="tag">Global Economy</span>
+                    <span class="tag">Space Exploration</span>
+                    <span class="tag">Sustainability</span>
+                    <span class="tag">Markets</span>
+                </div>
+            </div>
+
+            <div class="sidebar-widget newsletter">
+                <h3>Intelligence Report</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Get daily summaries of AI-processed global news directly in your inbox.</p>
+                <div class="subscribe-box" style="display: flex; gap: 10px;">
+                    <input type="email" placeholder="Email address" style="background: #1a1a1a; border: 1px solid #333; color: white; padding: 10px; border-radius: 8px; flex-grow: 1; font-size: 0.8rem;">
+                    <button style="background: var(--accent-red); color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 700;">→</button>
+                </div>
+            </div>
+
+            <div class="ad-placeholder-sidebar" style="background: #0a0a0a; border: 1px dashed #222; height: 600px; display: flex; align-items: center; justify-content: center; border-radius: 20px;">
+                 <span style="color: #333; font-size: 0.7rem; letter-spacing: 2px; font-weight: 900;">ADVERTISEMENT</span>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>GLOBAL <span>PULSE</span></h2>
+                <p>Fully Autonomous News Intelligence.</p>
+                <p style="margin-top: 40px; opacity: 0.5;">&copy; 2026 Global Pulse Media Group. All rights reserved.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Categories</h4>
+                    <a href="#">World News</a>
+                    <a href="#">Technology</a>
+                    <a href="#">Business</a>
+                    <a href="#">Science</a>
+                </div>
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <a href="#">About Intelligence</a>
+                    <a href="#">Methodology</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy</a>
+                </div>
+                <div class="link-column">
+                    <h4>Partner</h4>
+                    <a href="#">API Access</a>
+                    <a href="#">Ad Portal</a>
+                    <a href="#">Affiliates</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .breaking-ticker {
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .ticker-label {
+            background: var(--accent-red);
+            padding: 0 15px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+        .ticker-content {
+            padding-left: 20px;
+            white-space: nowrap;
+            animation: scroll 30s linear infinite;
+        }
+        .ticker-content p {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #aaa;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .search-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .search-btn:hover {
+            color: #fff;
+        }
+    </style>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
