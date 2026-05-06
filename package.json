@@ -1,0 +1,20 @@
+{
+  "name": "globalpulsenewsmedia",
+  "version": "4.2.0",
+  "description": "Premium AI-Powered News Intelligence Portal",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site, no build needed'",
+    "fetch": "node scripts/fetch-news.mjs"
+  },
+  "keywords": [
+    "news",
+    "ai",
+    "automation"
+  ],
+  "author": "Global Pulse Media Group",
+  "license": "MIT",
+  "dependencies": {},
+  "type": "module"
+}
