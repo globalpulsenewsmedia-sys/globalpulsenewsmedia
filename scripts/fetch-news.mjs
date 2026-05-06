@@ -9,7 +9,9 @@ const RSS2JSON_API = 'https://api.rss2json.com/v1/api.json?rss_url=';
 const FEEDS = [
     { category: 'WORLD', url: 'http://feeds.bbci.co.uk/news/world/rss.xml' },
     { category: 'TECH', url: 'http://feeds.bbci.co.uk/news/technology/rss.xml' },
-    { category: 'BUSINESS', url: 'http://feeds.bbci.co.uk/news/business/rss.xml' }
+    { category: 'BUSINESS', url: 'http://feeds.bbci.co.uk/news/business/rss.xml' },
+    { category: 'SCIENCE', url: 'http://feeds.bbci.co.uk/news/science_and_environment/rss.xml' },
+    { category: 'HEALTH', url: 'http://feeds.bbci.co.uk/news/health/rss.xml' }
 ];
 
 async function rewriteArticlesWithGemini(articles) {
@@ -113,7 +115,35 @@ async function fetchFeeds() {
         JSON.stringify(allArticles, null, 2)
     );
 
+    // --- Master SEO: Generate Sitemap ---
+    await generateSitemap(allArticles);
+
     console.log(`Successfully saved ${allArticles.length} articles to data/news.json`);
+}
+
+async function generateSitemap(articles) {
+    console.log('Generating SEO Sitemap...');
+    const baseUrl = 'https://globalpulsenewsmedia.com';
+    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${baseUrl}/</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <priority>1.0</priority>
+  </url>`;
+
+    articles.forEach(article => {
+        sitemap += `
+  <url>
+    <loc>${article.link}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <priority>0.8</priority>
+  </url>`;
+    });
+
+    sitemap += '\n</urlset>';
+    
+    await fs.writeFile(path.join(process.cwd(), 'sitemap.xml'), sitemap);
 }
 
 fetchFeeds().catch(console.error);

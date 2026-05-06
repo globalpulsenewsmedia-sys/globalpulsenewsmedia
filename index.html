@@ -3,177 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Pulse | AI-Powered Automated News Portal</title>
-    <meta name="description" content="Stay ahead with Global Pulse. 24/7 automated news intelligence powered by AI. Real-time updates on Tech, Business, and World events.">
+    <title>Global Pulse | Future of News Intelligence</title>
+    <meta name="description" content="The world's most advanced AI-powered news intelligence portal. Real-time global insights, predictive analysis, and premium reporting.">
     
-    <!-- Google Fonts -->
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="Global Pulse | Future of News Intelligence">
+    <meta property="og:description" content="AI-driven news for the 1%. Intelligence that stays ahead of the curve.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1200">
+    
+    <!-- Fonts: Outfit for futuristic headings, Inter for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/index.css">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "Global Pulse Media",
+      "url": "https://globalpulsenewsmedia.com",
+      "logo": "https://globalpulsenewsmedia.com/logo.png",
+      "sameAs": [
+        "https://twitter.com/globalpulse",
+        "https://linkedin.com/company/globalpulse"
+      ]
+    }
+    </script>
 </head>
-<body>
+<body class="dark-theme">
 
-    <div class="breaking-ticker">
-        <div class="ticker-label">LATEST</div>
-        <div class="ticker-content">
-            <p>Welcome to Global Pulse: AI-Enhanced News. • Markets reach new highs in morning trading. • AI innovation continues to disrupt the global tech landscape. • Stay tuned for live updates every 3 hours.</p>
+    <!-- Ultra-Thin Intelligence Ticker -->
+    <div class="market-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-item"><span>BTC</span> <span class="up">+$2,401.50</span></div>
+            <div class="ticker-item"><span>ETH</span> <span class="up">+$142.20</span></div>
+            <div class="ticker-item"><span>NVDA</span> <span class="up">+3.4%</span></div>
+            <div class="ticker-item"><span>GOLD</span> <span class="down">-0.2%</span></div>
+            <div class="ticker-item"><span>AI SENTIMENT</span> <span class="neutral">BULLISH</span></div>
+            <!-- Duplicated for seamless loop -->
+            <div class="ticker-item"><span>BTC</span> <span class="up">+$2,401.50</span></div>
+            <div class="ticker-item"><span>ETH</span> <span class="up">+$142.20</span></div>
+            <div class="ticker-item"><span>NVDA</span> <span class="up">+3.4%</span></div>
         </div>
     </div>
 
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo">
-                <h1>GLOBAL <span>PULSE</span></h1>
-                <p class="tagline">INTELLIGENT AUTOMATION</p>
-            </div>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#" class="active" data-category="all">Latest</a></li>
-                    <li><a href="#" data-category="world">World</a></li>
-                    <li><a href="#" data-category="tech">Technology</a></li>
-                    <li><a href="#" data-category="business">Business</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <button class="search-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </button>
+    <header class="glass-header">
+        <div class="container">
+            <div class="header-main">
+                <div class="brand">
+                    <div class="brand-logo">
+                        <div class="pulse-ring"></div>
+                        <span class="logo-text">GP</span>
+                    </div>
+                    <div class="brand-names">
+                        <h1>GLOBAL <span>PULSE</span></h1>
+                        <span class="version">AI ENGINE v4.2</span>
+                    </div>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="active" data-category="all">Intelligence</a></li>
+                        <li><a href="#" data-category="world">Geopolitics</a></li>
+                        <li><a href="#" data-category="tech">Innovation</a></li>
+                        <li><a href="#" data-category="business">Markets</a></li>
+                        <li><a href="#" class="nav-premium">PRO</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="btn-live" id="liveTvToggle">
+                        <span class="live-dot"></span>
+                        LIVE STREAM
+                    </button>
+                    <button class="btn-search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="content-wrapper">
-        <section class="news-section">
-            <div class="section-header">
-                <h2>Breaking Stories</h2>
-                <div class="live-indicator">
-                    <span class="dot"></span>
-                    <span>Live Intelligence</span>
+    <main class="dashboard">
+        <div class="container">
+            <!-- Bento Grid Layout -->
+            <div class="bento-grid">
+                
+                <!-- Main Feature (Bento Large) -->
+                <div class="bento-item hero" id="heroSection">
+                    <!-- Populated by JS -->
                 </div>
-            </div>
 
-            <!-- News Grid -->
-            <div class="news-grid" id="newsGrid">
-                <!-- Javascript will populate cards here -->
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-            </div>
-        </section>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-widget trending">
-                <h3>Trending Topics</h3>
-                <div class="tags" id="trendingTags">
-                    <span class="tag">Artificial Intelligence</span>
-                    <span class="tag">Quantum Computing</span>
-                    <span class="tag">Global Economy</span>
-                    <span class="tag">Space Exploration</span>
-                    <span class="tag">Sustainability</span>
-                    <span class="tag">Markets</span>
+                <!-- LIVE TV SCREEN (The CNN Style Request) -->
+                <div class="bento-item live-tv-screen">
+                    <div class="screen-header">
+                        <span class="live-status">LIVE BROADCAST</span>
+                        <span class="location">GLOBAL HQ</span>
+                    </div>
+                    <div class="video-container">
+                        <iframe id="homeLiveVideo" src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&controls=0&modestbranding=1" title="Global Pulse Live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-overlay">
+                            <div class="watermark">GP<span>LIVE</span></div>
+                            <div class="breaking-banner">
+                                <span class="breaking-tag">BREAKING</span>
+                                <marquee class="breaking-text">AI ACCELERATION REACHES NEW GLOBAL MILESTONES • MARKETS REACT TO TECH SURGE • STAY TUNED FOR LIVE UPDATES</marquee>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="sidebar-widget newsletter">
-                <h3>Intelligence Report</h3>
-                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Get daily summaries of AI-processed global news directly in your inbox.</p>
-                <div class="subscribe-box" style="display: flex; gap: 10px;">
-                    <input type="email" placeholder="Email address" style="background: #1a1a1a; border: 1px solid #333; color: white; padding: 10px; border-radius: 8px; flex-grow: 1; font-size: 0.8rem;">
-                    <button style="background: var(--accent-red); color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 700;">→</button>
+                <!-- Live Signal (Bento Small) -->
+                <div class="bento-item live-signal">
+                    <div class="signal-header">
+                        <span class="label">LIVE SIGNAL</span>
+                        <span class="status">ENCRYPTED</span>
+                    </div>
+                    <div class="signal-visual">
+                        <div class="waveform">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="signal-content">
+                        <h3>AI Insight</h3>
+                        <p id="aiInsight">Analyzing global sentiment... Neutral-Bullish trend detected in Tech sector.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="ad-placeholder-sidebar" style="background: #0a0a0a; border: 1px dashed #222; height: 600px; display: flex; align-items: center; justify-content: center; border-radius: 20px;">
-                 <span style="color: #333; font-size: 0.7rem; letter-spacing: 2px; font-weight: 900;">ADVERTISEMENT</span>
+                <!-- Secondary News (Bento Medium) -->
+                <div class="bento-item secondary" id="secondarySection">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Newsletter / Lead Gen (Bento Small) -->
+                <div class="bento-item newsletter-box">
+                    <h3>The Edge</h3>
+                    <p>Get the newsletter that billionaires read.</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="VIP Email">
+                        <button type="submit">JOIN</button>
+                    </form>
+                </div>
+
+                <!-- News Grid (Standard Flow) -->
+                <div class="news-flow-header">
+                    <h2>Latest Intelligence Feed</h2>
+                    <div class="filter-pills">
+                        <span class="pill active">Real-time</span>
+                        <span class="pill">Verified</span>
+                        <span class="pill">AI Summary</span>
+                    </div>
+                </div>
+
+                <div class="news-grid" id="newsGrid">
+                    <!-- Content populated by JS -->
+                </div>
+
             </div>
-        </aside>
+        </div>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h2>GLOBAL <span>PULSE</span></h2>
-                <p>Fully Autonomous News Intelligence.</p>
-                <p style="margin-top: 40px; opacity: 0.5;">&copy; 2026 Global Pulse Media Group. All rights reserved.</p>
+    <!-- Floating Live TV (The CNN Plus upgrade) -->
+    <div class="live-overlay" id="liveTvOverlay">
+        <div class="player-container">
+            <div class="player-header">
+                <div class="player-title">GP INTELLIGENCE BROADCAST</div>
+                <button class="player-close" id="closeLiveTv">&times;</button>
             </div>
-            
-            <div class="footer-links">
-                <div class="link-column">
-                    <h4>Categories</h4>
-                    <a href="#">World News</a>
-                    <a href="#">Technology</a>
-                    <a href="#">Business</a>
-                    <a href="#">Science</a>
+            <div class="player-video">
+                <iframe id="liveVideo" src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=0&mute=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="player-controls">
+                <div class="control-badge">HD 4K</div>
+                <div class="control-viewers">12.4k watching</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monetization: Floating Ad Slot (Mockup) -->
+    <div class="monetization-anchor" id="floatingAd">
+        <span class="ad-label">SPONSORED</span>
+        <div class="ad-content">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=100&q=80" alt="Sponsor">
+            <div class="ad-text">
+                <strong>Next Gen Watches</strong>
+                <p>Luxury meets AI. Save 20% today.</p>
+            </div>
+            <a href="#" class="ad-link">Shop Now</a>
+        </div>
+    </div>
+
+    <footer class="futuristic-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h2>GLOBAL <span>PULSE</span></h2>
+                    <p>The definitive source for global intelligence. Powered by the next generation of AI.</p>
+                    <div class="social-links">
+                        <a href="#">TW</a><a href="#">LN</a><a href="#">IG</a>
+                    </div>
                 </div>
-                <div class="link-column">
-                    <h4>Company</h4>
-                    <a href="#">About Intelligence</a>
-                    <a href="#">Methodology</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Privacy</a>
+                <div class="footer-nav">
+                    <div class="nav-col">
+                        <h4>Intelligence</h4>
+                        <a href="#">Geopolitics</a><a href="#">Markets</a><a href="#">Innovation</a>
+                    </div>
+                    <div class="nav-col">
+                        <h4>Platform</h4>
+                        <a href="#">API</a><a href="#">Enterprise</a><a href="#">Pro</a>
+                    </div>
                 </div>
-                <div class="link-column">
-                    <h4>Partner</h4>
-                    <a href="#">API Access</a>
-                    <a href="#">Ad Portal</a>
-                    <a href="#">Affiliates</a>
-                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GLOBAL PULSE MEDIA GROUP. ALL RIGHTS RESERVED. [v4.2.0-STABLE]</p>
             </div>
         </div>
     </footer>
-
-    <style>
-        .breaking-ticker {
-            background: #000;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            height: 40px;
-            overflow: hidden;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .ticker-label {
-            background: var(--accent-red);
-            padding: 0 15px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            font-size: 0.7rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-            z-index: 2;
-        }
-        .ticker-content {
-            padding-left: 20px;
-            white-space: nowrap;
-            animation: scroll 30s linear infinite;
-        }
-        .ticker-content p {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #aaa;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-        .search-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-        .search-btn:hover {
-            color: #fff;
-        }
-    </style>
 
     <script src="js/app.js"></script>
 </body>

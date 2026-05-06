@@ -1,112 +1,126 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('newsGrid');
-    const navLinks = document.querySelectorAll('.navigation a');
+    const heroSection = document.getElementById('heroSection');
+    const secondarySection = document.getElementById('secondarySection');
+    const navLinks = document.querySelectorAll('.main-nav a');
+    const liveTvToggle = document.getElementById('liveTvToggle');
+    const closeLiveTv = document.getElementById('closeLiveTv');
+    const liveTvOverlay = document.getElementById('liveTvOverlay');
+    const liveVideo = document.getElementById('liveVideo');
+    const aiInsightText = document.getElementById('aiInsight');
+    
     let allArticles = [];
 
+    // --- Futuristic AI Simulation ---
+    const sentiments = [
+        "Bullish trend detected in Silicon Valley AI startups.",
+        "Geopolitical tension rising in Eastern Europe. Markets stable.",
+        "Quantum computing breakthrough imminent. Tech sector alert.",
+        "Green energy adoption accelerating in Southeast Asia.",
+        "Global trade routes showing increased efficiency patterns."
+    ];
+
+    const updateAISentiment = () => {
+        const randomSentiment = sentiments[Math.floor(Math.random() * sentiments.length)];
+        aiInsightText.style.opacity = 0;
+        setTimeout(() => {
+            aiInsightText.innerText = randomSentiment;
+            aiInsightText.style.opacity = 1;
+        }, 500);
+    };
+
+    // --- Live Stream Logic ---
+    liveTvToggle.addEventListener('click', () => {
+        liveTvOverlay.style.display = 'flex';
+        const currentSrc = liveVideo.src;
+        if (!currentSrc.includes('autoplay=1')) {
+            liveVideo.src = currentSrc.replace('autoplay=0', 'autoplay=1');
+        }
+    });
+
+    closeLiveTv.addEventListener('click', () => {
+        liveTvOverlay.style.display = 'none';
+        liveVideo.src = liveVideo.src.replace('autoplay=1', 'autoplay=0');
+    });
+
+    // --- Data Management ---
     const fetchNews = async () => {
         try {
-            // In a real deployed environment, this will fetch the generated JSON
-            const response = await fetch('data/news.json');
-            if (!response.ok) throw new Error('News data not found');
+            const response = await fetch(`data/news.json?t=${Date.now()}`);
+            if (!response.ok) throw new Error('Intelligence Link Offline');
             allArticles = await response.json();
-            renderArticles(allArticles);
+            
+            renderDashboard(allArticles);
         } catch (error) {
-            console.warn('Could not fetch news.json, falling back to mock data.', error);
-            loadMockData();
+            console.error('Critical System Error:', error);
+            grid.innerHTML = `<div class="error-panel">SYSTEM OFFLINE. RECONNECTING...</div>`;
         }
     };
 
-    const loadMockData = () => {
-        allArticles = [
-            {
-                title: "Global Markets Rally as Tech Sector Post Record Profits",
-                snippet: "Wall street surges forward after leading technology firms report higher-than-expected quarterly earnings, signaling strong economic resilience.",
-                category: "BUSINESS",
-                source: "Global Pulse Intelligence",
-                time: "10 mins ago",
-                imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&q=80",
-                link: "#"
-            },
-            {
-                title: "New Advancements in AI Models Reduce Training Costs by 40%",
-                snippet: "A consortium of researchers has released a novel architecture that dramatically lowers the compute required for large language models.",
-                category: "TECH",
-                source: "Global Pulse AI",
-                time: "45 mins ago",
-                imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80",
-                link: "#",
-                aiGenerated: true
-            },
-            {
-                title: "Global Climate Summit Yields Unprecedented Agreement on Emissions",
-                snippet: "World leaders reach a sweeping new accord aimed at limiting global warming, though implementation challenges remain.",
-                category: "WORLD",
-                source: "Global Pulse Intelligence",
-                time: "2 hours ago",
-                imageUrl: "https://images.unsplash.com/photo-1611273426858-450d8e3c9cce?w=600&q=80",
-                link: "#"
-            }
-        ];
-        renderArticles(allArticles);
-    };
+    const renderDashboard = (articles) => {
+        if (!articles || articles.length === 0) return;
 
-    const renderArticles = (articles) => {
-        grid.innerHTML = '';
-        
-        if (articles.length === 0) {
-            grid.innerHTML = '<p class="no-news">No news articles found for this category.</p>';
-            return;
-        }
+        // 1. Render Bento Hero (The Big Story)
+        const hero = articles[0];
+        heroSection.innerHTML = `
+            <img src="${hero.imageUrl || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200'}" class="hero-image-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-tag">${hero.category}</span>
+                <h1 class="hero-title">${hero.title}</h1>
+                <a href="${hero.link}" target="_blank" class="btn-live" style="width: fit-content; background: #fff; color: #000; padding: 12px 30px; font-size: 0.9rem;">DECRYPT STORY</a>
+            </div>
+        `;
 
-        articles.forEach((article, index) => {
-            const card = document.createElement('article');
-            card.className = 'news-card';
-            card.style.animationDelay = `${index * 0.1}s`;
-            
-            const aiBadge = article.aiGenerated ? '<span class="ai-badge">AI ENHANCED</span>' : '';
-            
-            card.innerHTML = `
-                <div class="card-image-wrapper">
-                    <img src="${article.imageUrl}" alt="News Image" class="card-image" loading="lazy">
-                    <div class="card-overlay"></div>
-                    ${aiBadge}
-                </div>
-                <div class="card-content">
-                    <div class="card-meta">
-                        <span class="category-tag">${article.category}</span>
-                        <span class="card-time">${article.time}</span>
-                    </div>
-                    <h3 class="card-title">${article.title}</h3>
-                    <p class="card-snippet">${article.snippet}</p>
-                    <div class="card-footer">
-                        <span class="card-source">${article.source}</span>
-                        <a href="${article.link}" target="_blank" class="read-more">Read Full Story →</a>
-                    </div>
-                </div>
+        // 2. Render Secondary Bento (Next 2 stories)
+        if (articles.length > 1) {
+            const subHero = articles[1];
+            secondarySection.style.backgroundImage = `linear-gradient(to top, #000, transparent), url('${subHero.imageUrl}')`;
+            secondarySection.innerHTML = `
+                <span class="hero-tag" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">${subHero.category}</span>
+                <h3 style="font-family: 'Outfit'; font-size: 1.5rem; line-height: 1.2;">${subHero.title}</h3>
+                <a href="${subHero.link}" target="_blank" style="color: #fff; font-size: 0.7rem; font-weight: 900; margin-top: 15px; text-decoration: none; letter-spacing: 2px;">READ ANALYSIS →</a>
             `;
-            
-            grid.appendChild(card);
-        });
+        }
+
+        // 3. Render Main News Flow (Rest of the articles)
+        const flowArticles = articles.slice(2);
+        grid.innerHTML = flowArticles.map(a => `
+            <a href="${a.link}" target="_blank" class="article-card">
+                <img src="${a.imageUrl}" class="article-img">
+                <div class="article-info">
+                    <span class="article-cat">${a.category}</span>
+                    <h4 class="article-title">${a.title}</h4>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                        <span style="font-size: 0.6rem; color: #555; font-weight: 800;">${a.time}</span>
+                        <span style="font-size: 0.6rem; color: var(--accent-pulse); font-weight: 900;">AI VERIFIED</span>
+                    </div>
+                </div>
+            </a>
+        `).join('');
     };
 
-    // Category filtering
+    // --- Nav Interaction ---
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
+            const cat = link.getAttribute('data-category');
+            if (!cat) return; // For PRO link
+
             e.preventDefault();
-            const category = e.target.getAttribute('data-category').toUpperCase();
-            
             navLinks.forEach(l => l.classList.remove('active'));
-            e.target.classList.add('active');
-            
-            if (category === 'ALL') {
-                renderArticles(allArticles);
+            link.classList.add('active');
+
+            if (cat === 'all') {
+                renderDashboard(allArticles);
             } else {
-                const filtered = allArticles.filter(a => a.category === category);
-                renderArticles(filtered);
+                const filtered = allArticles.filter(a => a.category.toLowerCase() === cat.toLowerCase());
+                renderDashboard(filtered);
             }
         });
     });
 
-    // Initial load
+    // Initialize
     fetchNews();
+    setInterval(updateAISentiment, 10000); // Pulse every 10s
+    setInterval(fetchNews, 600000); // 10 min refresh
 });
