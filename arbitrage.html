@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbitrage Smart AI | Global Intelligence & Orchestration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #00ff88; --bg: #050505; --text: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle at center, #111 0%, #050505 100%); }
+        .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: 5rem; font-weight: 700; letter-spacing: -2px; line-height: 1; margin-bottom: 20px; background: linear-gradient(to bottom, #fff 0%, #666 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: #888; max-width: 600px; margin-bottom: 40px; }
+        .glow-btn { background: var(--accent); color: #000; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 0 30px rgba(0,255,136,0.3); transition: all 0.3s ease; }
+        .glow-btn:hover { transform: scale(1.05); box-shadow: 0 0 50px rgba(0,255,136,0.5); }
+        .features { padding: 100px 5%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .feature-card { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 40px; border-radius: 20px; transition: all 0.3s ease; }
+        .feature-card:hover { border-color: var(--accent); transform: translateY(-10px); }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--accent); }
+        .feature-card p { color: #666; font-size: 0.9rem; line-height: 1.6; }
+        .status-bar { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 10px 30px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); display: flex; gap: 20px; font-size: 0.7rem; color: #666; }
+        .status-item { display: flex; align-items: center; gap: 5px; }
+        .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div style="font-size: 0.8rem; letter-spacing: 5px; color: var(--accent); margin-bottom: 20px;">AUTONOMOUS INTELLIGENCE SYSTEMS</div>
+        <h1>ARBITRAGE SMART AI</h1>
+        <p>The global infrastructure for multi-agent trade orchestration and real-time market intelligence.</p>
+        <div style="display: flex; gap: 20px;">
+            <a href="index.html" class="glow-btn">ENTER INTELLIGENCE HUB</a>
+            <a href="agent-command.html" style="color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px;">VIEW AGENTS →</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Global Pulse Media</h3>
+            <p>Our 24/7 autonomous media network, synthesizing world news and market sentiment into actionable intelligence reports.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Trade Orchestration</h3>
+            <p>Direct integration with Katke Enterprises for autonomous export/import logistics and document generation.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Agentic Wealth</h3>
+            <p>Advanced financial agents optimized for crypto arbitrage, stock signal detection, and risk management.</p>
+        </div>
+    </section>
+
+    <div class="status-bar">
+        <div class="status-item"><span class="dot"></span> AGENT_CRYPTO: ACTIVE</div>
+        <div class="status-item"><span class="dot"></span> AGENT_MARKET: ONLINE</div>
+        <div class="status-item"><span class="dot"></span> SYSTEM_LOAD: 14.2%</div>
+    </div>
+
+</body>
+</html>

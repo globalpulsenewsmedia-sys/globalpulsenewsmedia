@@ -24,8 +24,14 @@
         })(window, document, "clarity", "script", "XXXXXXXXXX");
     </script>
 
-    
-    <!-- CNN Professional Style Fonts -->
+    <!-- MASTER DOMAIN ROUTING: Directs traffic to the correct HQ based on the URL -->
+    <script>
+        const host = window.location.hostname;
+        if (host.includes('arbitragesmartai.com')) {
+            window.location.href = 'arbitrage.html';
+        }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Libre+Franklin:wght@300;400;700;900&display=swap" rel="stylesheet">
