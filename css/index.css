@@ -230,6 +230,103 @@ body {
     font-weight: 700;
 }
 
+/* Wealth Intelligence Command */
+.wealth-intelligence {
+    margin: 40px 0;
+    padding: 30px;
+    background: var(--cnn-grey);
+    border-radius: 8px;
+}
+
+.market-command-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.ai-agent-card {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.ai-agent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.agent-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.agent-avatar {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-family: var(--font-roboto);
+}
+
+.crypto-ai .agent-avatar { background: #2962ff; }
+.stock-ai .agent-avatar { background: var(--cnn-red); }
+
+.agent-info h4 {
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+.agent-status {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.agent-status::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #00ff88;
+    border-radius: 50%;
+    animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+
+.agent-insight {
+    background: #000;
+    color: #00ff88;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.stock-ai .agent-insight {
+    color: #fff;
+    border-left: 4px solid var(--cnn-red);
+}
+
+.tradingview-mini {
+    border-top: 1px solid var(--border-light);
+    padding-top: 15px;
+}
+
 /* Grid */
 .section-title {
     font-size: 1.5rem;

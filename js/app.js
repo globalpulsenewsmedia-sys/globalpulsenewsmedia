@@ -8,6 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Master Security: Anti-Debug & Protection ---
     document.addEventListener('contextmenu', event => event.preventDefault()); // Disable Right Click
     
+    // --- Wealth Intelligence: AI Agent Simulation ---
+    const cryptoInsights = [
+        "Detecting massive liquidity shifts in Bitcoin ecosystem. Volatility spike expected.",
+        "Whale movement detected: 5,000 BTC moved to cold storage. Bullish sentiment rising.",
+        "Ethereum Layer-2 adoption hit record highs. Gas fees normalizing.",
+        "Institutional accumulation phase starting for Solana. Resistance at $180."
+    ];
+
+    const stockInsights = [
+        "Tech sector RSI showing overbought conditions. Defensive posture recommended.",
+        "NVIDIA earnings anticipation driving semi-conductor surge. Watch the $120 level.",
+        "Fed signals suggest 'higher for longer' interest rates. Treasury yields climbing.",
+        "Energy sector showing inverse correlation to dollar strength. Buying opportunity?"
+    ];
+
+    const updateAgentInsights = () => {
+        const cryptoText = document.getElementById('cryptoAiInsight');
+        const stockText = document.getElementById('stockAiInsight');
+        if (cryptoText) cryptoText.innerText = `"${cryptoInsights[Math.floor(Math.random() * cryptoInsights.length)]}"`;
+        if (stockText) stockText.innerText = `"${stockInsights[Math.floor(Math.random() * stockInsights.length)]}"`;
+    };
+    setInterval(updateAgentInsights, 15000); // Pulse every 15s
+    
     // --- Viral Marketing: Share Logic ---
     window.shareArticle = (title, url) => {
         if (navigator.share) {
