@@ -8,6 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Master Security: Anti-Debug & Protection ---
     document.addEventListener('contextmenu', event => event.preventDefault()); // Disable Right Click
     
+    // --- Viral Marketing: Share Logic ---
+    window.shareArticle = (title, url) => {
+        if (navigator.share) {
+            navigator.share({
+                title: title,
+                text: 'Check out this intelligence report from Global Pulse:',
+                url: url || window.location.href,
+            }).catch(console.error);
+        } else {
+            // Fallback: Copy to clipboard
+            navigator.clipboard.writeText(url || window.location.href);
+            alert('Intelligence Link Copied to Clipboard!');
+        }
+    };
+    
     const protectSite = () => {
         const threshold = 160;
         const widthThreshold = window.outerWidth - window.innerWidth > threshold;
@@ -61,13 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const combinedArticles = [...viralArticles, ...articles.slice(1)];
         
         grid.innerHTML = combinedArticles.map(a => `
-            <a href="${a.link}" target="_blank" class="cnn-card">
-                <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800'}" alt="${sanitizeHTML(a.title)}">
-                <div class="cnn-card-title">${sanitizeHTML(a.title)}</div>
-                <div style="font-size: 0.7rem; color: #999; margin-top: 10px; text-transform: uppercase; font-weight: 700;">
-                    ${sanitizeHTML(a.category)} • ${sanitizeHTML(a.time)}
+            <div class="cnn-card">
+                <a href="${a.link}" target="_blank" style="text-decoration: none; color: inherit;">
+                    <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800'}" alt="${sanitizeHTML(a.title)}">
+                    <div class="cnn-card-title">${sanitizeHTML(a.title)}</div>
+                </a>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                    <div style="font-size: 0.7rem; color: #999; text-transform: uppercase; font-weight: 700;">
+                        ${sanitizeHTML(a.category)} • ${sanitizeHTML(a.time)}
+                    </div>
+                    <button onclick="shareArticle('${sanitizeHTML(a.title)}', '${a.link}')" style="background: none; border: 1px solid #ddd; padding: 4px 8px; font-size: 0.6rem; font-weight: 900; cursor: pointer; border-radius: 4px;">SHARE ↗</button>
                 </div>
-            </a>
+            </div>
         `).join('');
     };
 
