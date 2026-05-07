@@ -115,10 +115,40 @@ async function fetchFeeds() {
         JSON.stringify(allArticles, null, 2)
     );
 
-    // --- Master SEO: Generate Sitemap ---
+    // --- Master SEO: Generate Sitemap & Google News RSS ---
     await generateSitemap(allArticles);
+    await generateRSS(allArticles);
 
     console.log(`Successfully saved ${allArticles.length} articles to data/news.json`);
+}
+
+async function generateRSS(articles) {
+    console.log('Generating Google News RSS Feed...');
+    const baseUrl = 'https://globalpulsenews-1t1t.vercel.app';
+    let rss = `<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Global Pulse | AI News Intelligence</title>
+  <link>${baseUrl}</link>
+  <description>24/7 Global Intelligence and Market Analysis</description>
+  <language>en-us</language>
+  <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>`;
+
+    articles.forEach(article => {
+        rss += `
+  <item>
+    <title>${article.title}</title>
+    <link>${article.link}</link>
+    <description>${article.snippet}</description>
+    <pubDate>${new Date().toUTCString()}</pubDate>
+    <guid>${article.link}</guid>
+    <category>${article.category}</category>
+  </item>`;
+    });
+
+    rss += '\n</channel>\n</rss>';
+    
+    await fs.writeFile(path.join(process.cwd(), 'feed.xml'), rss);
 }
 
 async function generateSitemap(articles) {
