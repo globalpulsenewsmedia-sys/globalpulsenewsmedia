@@ -5,6 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let allArticles = [];
 
+    // --- Master Security: Anti-Debug & Protection ---
+    document.addEventListener('contextmenu', event => event.preventDefault()); // Disable Right Click
+    
+    const protectSite = () => {
+        const threshold = 160;
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        if (widthThreshold || heightThreshold) {
+            console.clear();
+            console.log('%cSECURITY ALERT: UNAUTHORIZED ACCESS DETECTED', 'color: red; font-size: 20px; font-weight: bold;');
+        }
+    };
+    setInterval(protectSite, 1000);
+
+    const sanitizeHTML = (str) => {
+        if (!str) return '';
+        const temp = document.createElement('div');
+        temp.textContent = str;
+        return temp.innerHTML;
+    };
+
     // --- News Fetching & Rendering ---
     const fetchNews = async () => {
         try {
@@ -30,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. Render CNN Hero (Topmost headline + Main Image)
         const hero = articles[0];
         heroSection.innerHTML = `
-            <a href="${hero.link}" target="_blank" class="hero-headline">${hero.title}</a>
+            <a href="${hero.link}" target="_blank" class="hero-headline">${sanitizeHTML(hero.title)}</a>
             <img src="${hero.imageUrl || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200'}" class="hero-image">
-            <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px;">${hero.snippet}</p>
+            <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px;">${sanitizeHTML(hero.snippet)}</p>
         `;
 
         // 2. Render Grid Articles (Standard CNN Cards)
@@ -41,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         grid.innerHTML = combinedArticles.map(a => `
             <a href="${a.link}" target="_blank" class="cnn-card">
-                <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800'}" alt="${a.title}">
-                <div class="cnn-card-title">${a.title}</div>
+                <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800'}" alt="${sanitizeHTML(a.title)}">
+                <div class="cnn-card-title">${sanitizeHTML(a.title)}</div>
                 <div style="font-size: 0.7rem; color: #999; margin-top: 10px; text-transform: uppercase; font-weight: 700;">
-                    ${a.category} • ${a.time}
+                    ${sanitizeHTML(a.category)} • ${sanitizeHTML(a.time)}
                 </div>
             </a>
         `).join('');
