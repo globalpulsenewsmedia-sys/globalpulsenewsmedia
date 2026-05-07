@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Pulse | Live World News Intelligence</title>
     
+    <!-- MASTER ANALYTICS: Google Analytics -->
+    <!-- Replace G-XXXXXXXXXX with your real ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- MASTER ANALYTICS: Microsoft Clarity (Heatmaps & Recordings) -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "XXXXXXXXXX");
+    </script>
+
+    
     <!-- CNN Professional Style Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -199,17 +219,23 @@
 
     <footer class="cnn-footer">
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-logo">GLOBAL<span>PULSE</span></div>
-                <div class="footer-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="#">Contact</a>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 30px; margin-bottom: 30px;">
+                <div class="footer-brand">
+                    <div class="cnn-logo" style="margin-bottom: 10px;">GLOBAL<span>PULSE</span></div>
+                    <p style="font-size: 0.7rem; color: #666;">Autonomous News Intelligence Group</p>
+                </div>
+                <div class="intelligence-hub" style="text-align: right;">
+                    <div style="font-size: 0.6rem; color: #00ff88; font-weight: 900; text-transform: uppercase;">LIVE INTELLIGENCE HUB</div>
+                    <div style="font-size: 1.2rem; font-weight: 900; color: #fff;">14,204 <span style="font-size: 0.7rem; color: #444;">REPORTS PROCESSED</span></div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Global Pulse Media Group. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="mediakit.html">Advertise</a>
+                <a href="partners.html">Partners</a>
             </div>
+            <p style="margin-top: 30px;">&copy; 2026 Global Pulse Media Group. All rights reserved.</p>
         </div>
     </footer>
 
