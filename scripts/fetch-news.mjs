@@ -29,12 +29,19 @@ async function rewriteArticlesWithGemini(articles) {
 
     for (const article of articlesToProcess) {
         try {
-            const prompt = `Rewrite this news snippet to be professional, engaging, and unique for a premium news portal. 
-            Original Title: ${article.title}
-            Original Snippet: ${article.snippet}
-            
-            Format your response as JSON:
-            {"title": "Rewritten Title", "snippet": "Rewritten snippet"}`;
+            const prompt = `Rewrite the following news items into professional, engaging, and unique intelligence reports for a premium news portal. 
+    For each item, provide:
+    1. A catchy title.
+    2. A 2-sentence professional summary (snippet).
+    3. The category (World, Business, Tech, Science, or Health).
+    4. A 'Marketing Kit' consisting of:
+       - A viral Twitter/X hook.
+       - A professional LinkedIn summary.
+       - A short Instagram/TikTok caption.
+    Format the output as a JSON array of objects with keys: title, snippet, category, imageUrl, twitter, linkedin, instagram.
+    
+    Items to process:
+    ${JSON.stringify([article])}`;
 
             const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
                 method: 'POST',
@@ -113,6 +120,19 @@ async function fetchFeeds() {
     await fs.writeFile(
         path.join(outputDir, 'news.json'),
         JSON.stringify(allArticles, null, 2)
+    );
+
+    // Save Marketing Kit
+    const marketingKit = allArticles.map(a => ({
+        title: a.title,
+        twitter: a.twitter,
+        linkedin: a.linkedin,
+        instagram: a.instagram,
+        link: a.link
+    }));
+    await fs.writeFile(
+        path.join(outputDir, 'marketing.json'),
+        JSON.stringify(marketingKit, null, 2)
     );
 
     // --- Master SEO: Generate Sitemap & Google News RSS ---
