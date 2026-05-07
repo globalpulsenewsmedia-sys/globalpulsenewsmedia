@@ -46,18 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Data Management ---
     const fetchNews = async () => {
         try {
+            // Fetch Standard News
             const response = await fetch(`data/news.json?t=${Date.now()}`);
             if (!response.ok) throw new Error('Intelligence Link Offline');
             allArticles = await response.json();
             
-            renderDashboard(allArticles);
+            // Fetch Viral Content
+            const vResponse = await fetch(`data/viral.json?t=${Date.now()}`);
+            let viralArticles = [];
+            if (vResponse.ok) viralArticles = await vResponse.json();
+
+            renderDashboard(allArticles, viralArticles);
         } catch (error) {
             console.error('Critical System Error:', error);
             grid.innerHTML = `<div class="error-panel">SYSTEM OFFLINE. RECONNECTING...</div>`;
         }
     };
 
-    const renderDashboard = (articles) => {
+    const renderDashboard = (articles, viralArticles = []) => {
         if (!articles || articles.length === 0) return;
 
         // 1. Render Bento Hero (The Big Story)
@@ -83,9 +89,25 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 3. Render Main News Flow (Rest of the articles)
+        // 3. Render Viral/Featured Section (Before the grid)
+        let viralHtml = '';
+        if (viralArticles.length > 0) {
+            viralHtml = viralArticles.map(v => `
+                <div class="article-card featured-viral" style="grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; background: linear-gradient(135deg, #111, #000); border: 1px solid #333;">
+                    <img src="${v.imageUrl}" style="height: 100%; width: 100%; object-fit: cover;">
+                    <div class="article-info" style="padding: 30px;">
+                        <span class="article-cat" style="color: #ffd700;">${v.category}</span>
+                        <h4 class="article-title" style="font-size: 1.4rem;">${v.title}</h4>
+                        <p style="font-size: 0.8rem; color: #888; margin-bottom: 20px;">${v.snippet}</p>
+                        <a href="${v.link}" class="btn-live" style="width: fit-content;">UNLOCK REPORT</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 4. Render Main News Flow
         const flowArticles = articles.slice(2);
-        grid.innerHTML = flowArticles.map(a => `
+        grid.innerHTML = viralHtml + flowArticles.map(a => `
             <a href="${a.link}" target="_blank" class="article-card">
                 <img src="${a.imageUrl}" class="article-img">
                 <div class="article-info">
