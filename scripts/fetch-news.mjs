@@ -78,28 +78,39 @@ async function fetchFeeds() {
     let allArticles = [];
 
     for (const feed of FEEDS) {
-        try {
-            console.log(`Fetching ${feed.category} news...`);
-            const response = await fetch(`${RSS2JSON_API}${encodeURIComponent(feed.url)}`);
-            const data = await response.json();
-
-            if (data.status === 'ok') {
-                const articles = data.items.slice(0, 5).map(item => {
-                    return {
-                        title: item.title,
-                        snippet: item.description.replace(/<[^>]*>?/gm, '').substring(0, 250),
-                        category: feed.category,
-                        source: 'Global Pulse Intelligence',
-                        time: new Date(item.pubDate).toLocaleString(),
-                        imageUrl: item.thumbnail || "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&q=80",
-                        link: item.link
-                    };
+        let retries = 3;
+        while (retries > 0) {
+            try {
+                console.log(`Fetching ${feed.category} news... (Retries left: ${retries-1})`);
+                const response = await fetch(`${RSS2JSON_API}${encodeURIComponent(feed.url)}`, {
+                    headers: { 'User-Agent': 'GlobalPulse-Fetcher/1.0' }
                 });
-                
-                allArticles = allArticles.concat(articles);
+                const data = await response.json();
+
+                if (data.status === 'ok') {
+                    const articles = data.items.slice(0, 5).map(item => {
+                        return {
+                            title: item.title,
+                            snippet: item.description.replace(/<[^>]*>?/gm, '').substring(0, 250),
+                            category: feed.category,
+                            source: 'Global Pulse Intelligence',
+                            time: new Date(item.pubDate).toLocaleString(),
+                            imageUrl: item.thumbnail || "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&q=80",
+                            link: item.link
+                        };
+                    });
+                    
+                    allArticles = allArticles.concat(articles);
+                    break; // Success, exit retry loop
+                } else {
+                    throw new Error(`API Status: ${data.status}`);
+                }
+            } catch (error) {
+                console.error(`Error fetching feed ${feed.category}:`, error.message);
+                retries--;
+                if (retries === 0) console.error(`Max retries reached for ${feed.category}.`);
+                await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2s before retry
             }
-        } catch (error) {
-            console.error(`Error fetching feed ${feed.category}:`, error);
         }
     }
 
@@ -144,7 +155,7 @@ async function fetchFeeds() {
 
 async function generateRSS(articles) {
     console.log('Generating Google News RSS Feed...');
-    const baseUrl = 'https://globalpulsenews-1t1t.vercel.app';
+    const baseUrl = 'https://globalpulsenewsmedia.com';
     let rss = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>

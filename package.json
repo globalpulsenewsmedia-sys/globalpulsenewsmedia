@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npx serve .",
     "build": "echo 'Static site, no build needed'",
-    "fetch": "node scripts/fetch-news.mjs"
+    "fetch": "node scripts/fetch-news.mjs",
+    "watchdog": "node scripts/watchdog.mjs"
   },
   "keywords": [
     "news",
@@ -15,6 +16,12 @@
   ],
   "author": "Global Pulse Media Group",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": "18.x"
+  },
   "type": "module"
 }
