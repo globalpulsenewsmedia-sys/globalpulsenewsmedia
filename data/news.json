@@ -1,227 +1,137 @@
 [
   {
-    "title": "Hantavirus-hit cruise ship on way to Canary Islands after three evacuated",
-    "snippet": "A British man is among three evacuees sent to the Netherlands after displaying symptoms while aboard the MV Hondius.",
-    "category": "HEALTH",
-    "source": "Global Pulse Intelligence",
-    "time": "7/5/2026, 9:40:24 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8fa8/live/9080e1e0-49e5-11f1-9921-0be54b6c608a.jpg",
-    "link": "https://www.bbc.com/news/articles/c5y093d5n9ko?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Iran accuses US of 'reckless military adventure'",
-    "snippet": "Abbas Araghchi says the US attacks each time there is a diplomatic solution on the table.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "9/5/2026, 6:13:30 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9c78/live/9157bc30-4add-11f1-9eb0-1940b1e77213.jpg",
-    "link": "https://www.bbc.com/news/articles/c99lpn9ze8ro?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Is this the real face of Anne Boleyn?",
-    "snippet": "A computer science team believes they have discovered a previously unknown sketch of King Henry VIII's second wife - but not everyone is convinced.",
-    "category": "SCIENCE",
-    "source": "Global Pulse Intelligence",
-    "time": "1/5/2026, 11:01:44 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/15ee/live/a5e63610-4603-11f1-ac78-2112837ce2aa.jpg",
-    "link": "https://www.bbc.com/news/articles/cp9pz53e891o?at_medium=RSS&at_campaign=rss"
-  },
-  {
     "title": "Instagram privacy tech is turned off today - what does this mean for your DMs?",
     "snippet": "The platform said it would remove end-to-end encrypted messages, a major U‑turn by parent company Meta.",
     "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 1:31:55 am",
+    "time": "5/8/2026, 1:31:55 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b18f/live/cbad6e00-4a17-11f1-a7ce-b934bcb15ff4.jpg",
     "link": "https://www.bbc.com/news/articles/clypzxl3lvqo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "US jet fuel could be used in Europe to ease possible shortages",
-    "snippet": "An international air body suggests wider acceptance of US-grade jet fuel could help to head off any supply problems.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 2:42:13 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f286/live/ba7a9570-4ac3-11f1-9325-ade34e8d64d0.jpg",
-    "link": "https://www.bbc.com/news/articles/cp8pk2m4nlxo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Is this actually what Anne Boleyn looked like?",
-    "snippet": "An algorithm has suggested images of what were thought to be Anne Boleyn might not be.",
-    "category": "SCIENCE",
-    "source": "Global Pulse Intelligence",
-    "time": "1/5/2026, 2:44:02 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1e87/live/9a3df7e0-4562-11f1-b55d-0f258dce1735.jpg",
-    "link": "https://www.bbc.com/news/videos/c3d2e581k7do?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Watch: Drone delivers first Amazon parcels in UK",
-    "snippet": "The tech giant says it hopes to slowly expand the service as the demand for ultra-fast deliveries grows.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "7/5/2026, 7:54:50 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/de78/live/3da3f970-4a0e-11f1-bd52-e755d604ece4.jpg",
-    "link": "https://www.bbc.com/news/videos/c0l21992z75o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Anger and resignation in Tenerife as hantavirus ship approaches",
-    "snippet": "Some on the Spanish island worry the imminent arrival of the MV Hondius could pose a health risk.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "9/5/2026, 12:15:58 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e972/live/7f630690-4b02-11f1-b584-9d74bfad42dc.jpg",
-    "link": "https://www.bbc.com/news/articles/c5y0gkg038yo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Meta brings High Court challenge over Ofcom fees",
-    "snippet": "Meta said Ofcom's calculations were \"disproportionate\"; the regulator said it would defend its position.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "7/5/2026, 4:30:55 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/49b2/live/00387d60-4a2a-11f1-bfb3-af42b3144659.jpg",
-    "link": "https://www.bbc.com/news/articles/cj0pqpgvvn2o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Massive Alaska megatsunami was second largest ever recorded",
-    "snippet": "New research suggests glacier melt driven by climate change is increasing the risk of giant waves.",
-    "category": "SCIENCE",
-    "source": "Global Pulse Intelligence",
-    "time": "6/5/2026, 12:00:25 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3642/live/5902acb0-487f-11f1-b133-d51692f10715.jpg",
-    "link": "https://www.bbc.com/news/articles/c1m253033m4o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "TikTok scales back AI-generated video descriptions after absurd errors",
-    "snippet": "While only rolled out to some users, the feature's bizarre AI-generated descriptions were shared widely.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 9:20:40 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d9ff/live/60622bb0-4a33-11f1-a70d-c72ff4101914.jpg",
-    "link": "https://www.bbc.com/news/articles/c5yerd05n01o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Ethiopian woman's joy at rare quintuplets after 12 years trying for a baby",
-    "snippet": "The woman, 35, says she was praying for a baby and was \"overjoyed\" to be \"blessed with five at once\".",
-    "category": "HEALTH",
-    "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 6:48:20 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/901d/live/9a4ff710-4a35-11f1-a70d-c72ff4101914.jpg",
-    "link": "https://www.bbc.com/news/articles/c893y34zlv0o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Hovering objects and flashing lights: what we learned from UFO documents released by the Pentagon",
-    "snippet": "The US has published transcripts, video clips and audio recordings about unidentified flying objects.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 10:04:55 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3d2f/live/55b14d10-4b17-11f1-be9e-ad2f8d891a76.png",
-    "link": "https://www.bbc.com/news/articles/c1m2epkey44o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "US jobs data beats expectations for second month in a row",
-    "snippet": "The solid figures came despite rising gas prices and economic uncertainty sparked by the Iran war.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 8:41:19 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0c42/live/c5a8cda0-4ae0-11f1-8c8d-458160734f59.jpg",
-    "link": "https://www.bbc.com/news/articles/cx21664lp32o?at_medium=RSS&at_campaign=rss"
   },
   {
     "title": "What is hantavirus and how does it spread?",
     "snippet": "The Andes strain of the virus, which can rarely be passed from person to person,  has been confirmed in some passengers.",
     "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "7/5/2026, 4:16:41 am",
+    "time": "5/7/2026, 4:16:41 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f9b6/live/e5da45c0-477c-11f1-b55d-0f258dce1735.jpg",
     "link": "https://www.bbc.com/news/articles/c8r8j1l6j0go?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Is this actually what Anne Boleyn looked like?",
+    "snippet": "An algorithm has suggested images of what were thought to be Anne Boleyn might not be.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "5/1/2026, 2:44:02 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1e87/live/9a3df7e0-4562-11f1-b55d-0f258dce1735.jpg",
+    "link": "https://www.bbc.com/news/videos/c3d2e581k7do?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "TikTok scales back AI-generated video descriptions after absurd errors",
+    "snippet": "While only rolled out to some users, the feature's bizarre AI-generated descriptions were shared widely.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/8/2026, 9:20:40 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d9ff/live/60622bb0-4a33-11f1-a70d-c72ff4101914.jpg",
+    "link": "https://www.bbc.com/news/articles/c5yerd05n01o?at_medium=RSS&at_campaign=rss"
   },
   {
     "title": "How sunburn inspired a new way to store energy",
     "snippet": "Molecules that can capture heat could be a useful technology to decarbonise heating.",
     "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "9/5/2026, 8:28:23 am",
+    "time": "5/9/2026, 8:28:23 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8ebd/live/fd224ab0-3d5a-11f1-9d5c-8ba507d7dbde.jpg",
     "link": "https://www.bbc.com/news/articles/c62l9gnx775o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "Putin denounces Nato at scaled back Victory Day parade",
-    "snippet": "The Russian leader used his annual speech to justify his so-called special military operation in Ukraine.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "9/5/2026, 12:18:58 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6793/live/2420c020-4ba1-11f1-bd52-e755d604ece4.png",
-    "link": "https://www.bbc.com/news/articles/c626xjq0q0vo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Global forest loss slows but El Niño fires could threaten progress",
-    "snippet": "The loss of tropical rainforests eased last year, according to new analysis, but scientists warn they are still disappearing rapidly.",
+    "title": "Massive Alaska megatsunami was second largest ever recorded",
+    "snippet": "New research suggests glacier melt driven by climate change is increasing the risk of giant waves.",
     "category": "SCIENCE",
     "source": "Global Pulse Intelligence",
-    "time": "29/4/2026, 1:26:08 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6cb5/live/51be1d40-43ed-11f1-ac78-2112837ce2aa.jpg",
-    "link": "https://www.bbc.com/news/articles/c78q5pygn66o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Hungary's new PM to be sworn in during 'regime change' party",
-    "snippet": "Nearly a month ago Péter Magyar steered his Tisza party to a landslide victory, sweeping away 16 years of rule by Viktor Orbán.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "9/5/2026, 9:13:23 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/891d/live/cd2bc300-4afb-11f1-b55d-0f258dce1735.jpg",
-    "link": "https://www.bbc.com/news/articles/ce3pqvvzgnko?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "The companies making billions from the Iran war",
-    "snippet": "Through surging profits or soaring share prices, the war has been a boon for some firms.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 8:13:07 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4805/live/10c5a3c0-4ab5-11f1-aa18-a5969e596c8c.jpg",
-    "link": "https://www.bbc.com/news/articles/ce8pyyz5e0ro?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "The UK is set for a staycation summer - and there are plenty of hidden gems",
-    "snippet": "Seasoned staycationers share their favourite spots as Airbnb and Booking.com say interest in UK stays are up on last year.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 11:30:12 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e92b/live/02a43c40-4ae5-11f1-8c8d-458160734f59.jpg",
-    "link": "https://www.bbc.com/news/articles/cgjpv9pdnpwo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "£20m mystery gift buys London Zoo new hospital where you can watch vets work",
-    "snippet": "Visitors will be able to watch live veterinary procedures inside a state-of-the-art new animal hospital.",
-    "category": "SCIENCE",
-    "source": "Global Pulse Intelligence",
-    "time": "28/4/2026, 11:20:26 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7db5/live/847cb040-431e-11f1-ac78-2112837ce2aa.jpg",
-    "link": "https://www.bbc.com/news/articles/cpqpj7wy4x4o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Major train operator to be renationalised in months",
-    "snippet": "GWR, which runs trains between London and South Wales, will come under government control.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "8/5/2026, 4:14:48 pm",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3292/live/06366080-4ae1-11f1-8c8d-458160734f59.jpg",
-    "link": "https://www.bbc.com/news/articles/cy02yyl1e7xo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Cruise passengers tell of life on board stranded ship after hantavirus outbreak",
-    "snippet": "While passengers onboard the MV Hondius say the situation is calm, they face days at sea as officials warn the disease may have spread.",
-    "category": "HEALTH",
-    "source": "Global Pulse Intelligence",
-    "time": "6/5/2026, 11:52:42 am",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6cf1/live/84782870-4929-11f1-bd52-e755d604ece4.jpg",
-    "link": "https://www.bbc.com/news/articles/clype7ededzo?at_medium=RSS&at_campaign=rss"
+    "time": "5/6/2026, 12:00:25 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3642/live/5902acb0-487f-11f1-b133-d51692f10715.jpg",
+    "link": "https://www.bbc.com/news/articles/c1m253033m4o?at_medium=RSS&at_campaign=rss"
   },
   {
     "title": "How worried should we be about hantavirus?",
     "snippet": "Some passengers potentially exposed to hantavirus have already taken flights to numerous countries.",
     "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "7/5/2026, 3:01:07 pm",
+    "time": "5/7/2026, 3:01:07 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
     "link": "https://www.bbc.com/news/articles/c98r199e195o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Hungary's new PM to be sworn in during 'regime change' party",
+    "snippet": "Nearly a month ago Péter Magyar steered his Tisza party to a landslide victory, sweeping away 16 years of rule by Viktor Orbán.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/9/2026, 9:13:23 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/891d/live/cd2bc300-4afb-11f1-b55d-0f258dce1735.jpg",
+    "link": "https://www.bbc.com/news/articles/ce3pqvvzgnko?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "US jet fuel could be used in Europe to ease possible shortages",
+    "snippet": "An international air body suggests wider acceptance of US-grade jet fuel could help to head off any supply problems.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "5/8/2026, 2:42:13 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f286/live/ba7a9570-4ac3-11f1-9325-ade34e8d64d0.jpg",
+    "link": "https://www.bbc.com/news/articles/cp8pk2m4nlxo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Hovering objects and flashing lights: what we learned from UFO documents released by the Pentagon",
+    "snippet": "The US has published transcripts, video clips and audio recordings about unidentified flying objects.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/8/2026, 10:04:55 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3d2f/live/55b14d10-4b17-11f1-be9e-ad2f8d891a76.png",
+    "link": "https://www.bbc.com/news/articles/c1m2epkey44o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Anger and resignation in Tenerife as hantavirus ship approaches",
+    "snippet": "Some on the Spanish island worry the imminent arrival of the MV Hondius could pose a health risk.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/9/2026, 12:15:58 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e972/live/7f630690-4b02-11f1-b584-9d74bfad42dc.jpg",
+    "link": "https://www.bbc.com/news/articles/c5y0gkg038yo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Ethiopian woman's joy at rare quintuplets after 12 years trying for a baby",
+    "snippet": "The woman, 35, says she was praying for a baby and was \"overjoyed\" to be \"blessed with five at once\".",
+    "category": "HEALTH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/8/2026, 6:48:20 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/901d/live/9a4ff710-4a35-11f1-a70d-c72ff4101914.jpg",
+    "link": "https://www.bbc.com/news/articles/c893y34zlv0o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "£20m mystery gift buys London Zoo new hospital where you can watch vets work",
+    "snippet": "Visitors will be able to watch live veterinary procedures inside a state-of-the-art new animal hospital.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "4/28/2026, 11:20:26 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7db5/live/847cb040-431e-11f1-ac78-2112837ce2aa.jpg",
+    "link": "https://www.bbc.com/news/articles/cpqpj7wy4x4o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Global forest loss slows but El Niño fires could threaten progress",
+    "snippet": "The loss of tropical rainforests eased last year, according to new analysis, but scientists warn they are still disappearing rapidly.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "4/29/2026, 1:26:08 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6cb5/live/51be1d40-43ed-11f1-ac78-2112837ce2aa.jpg",
+    "link": "https://www.bbc.com/news/articles/c78q5pygn66o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Is this the real face of Anne Boleyn?",
+    "snippet": "A computer science team believes they have discovered a previously unknown sketch of King Henry VIII's second wife - but not everyone is convinced.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "5/1/2026, 11:01:44 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/15ee/live/a5e63610-4603-11f1-ac78-2112837ce2aa.jpg",
+    "link": "https://www.bbc.com/news/articles/cp9pz53e891o?at_medium=RSS&at_campaign=rss"
   }
 ]
