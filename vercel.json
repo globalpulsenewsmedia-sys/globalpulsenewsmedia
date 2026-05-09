@@ -1,1 +1,8 @@
-{"cleanUrls": true, "trailingSlash": false}
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/data/(.*)", "dest": "/data/$1" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

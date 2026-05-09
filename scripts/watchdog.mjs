@@ -19,11 +19,24 @@ async function checkSystemHealth() {
             // Check if content is actually there (not just a Vercel error page that returns 200)
             const text = await response.text();
             if (text.includes('GLOBALPULSE')) {
-                console.log('✅ CONTENT VERIFIED: Portal is operational.');
+                console.log('✅ CONTENT VERIFIED: Portal frame is operational.');
+                
+                // CRITICAL: Check the intelligence link (data/news.json)
+                console.log('🔍 Checking Intelligence Link (data/news.json)...');
+                const dataResponse = await fetch(`${VERCEL_URL}/data/news.json?t=${Date.now()}`);
+                if (dataResponse.ok) {
+                    const newsData = await dataResponse.json();
+                    if (Array.isArray(newsData) && newsData.length > 0) {
+                        console.log(`✅ DATA VERIFIED: ${newsData.length} articles live.`);
+                    } else {
+                        console.warn('⚠️ DATA WARNING: news.json is empty or invalid.');
+                        await triggerRedeploy('Empty news data');
+                    }
+                } else {
+                    console.error(`🚨 DATA FAILURE: news.json returned status ${dataResponse.status}`);
+                    await triggerRedeploy('Intelligence Link (news.json) Offline');
+                }
             } else {
-                console.warn('⚠️ CONTENT WARNING: "GLOBALPULSE" keyword missing. Potential blank page or error.');
-                await triggerRedeploy('Incomplete content detected');
-            }
         } else {
             console.warn(`⚠️ SYSTEM ALERT: STATUS ${response.status} DETECTED.`);
             await triggerRedeploy(`HTTP Status ${response.status}`);
