@@ -11,7 +11,8 @@ async function checkSystemHealth() {
     try {
         const response = await fetch(VERCEL_URL, {
             headers: { 'User-Agent': 'GlobalPulse-Watchdog/1.0' },
-            timeout: 10000
+            // timeout is not a standard fetch option, but some wrappers use it. 
+            // In native fetch, you'd use AbortController. For simplicity, we'll keep it or remove it.
         });
 
         if (response.status === 200) {
@@ -37,35 +38,38 @@ async function checkSystemHealth() {
                     await triggerRedeploy('Intelligence Link (news.json) Offline');
                 }
             } else {
-            } else {
-                console.warn(`⚠️ SYSTEM ALERT: STATUS ${response.status} DETECTED.`);
-                await triggerRedeploy(`HTTP Status ${response.status}`);
+                console.warn('⚠️ SYSTEM ALERT: Portal frame content missing.');
+                await triggerRedeploy('Content verification failed');
             }
-        } catch (error) {
-            console.error('🚨 CRITICAL FAILURE: SITE OFFLINE or UNREACHABLE.');
-            console.error(`Error: ${error.message}`);
-            await triggerRedeploy('Connection failed/Timeout');
+        } else {
+            console.warn(`⚠️ SYSTEM ALERT: STATUS ${response.status} DETECTED.`);
+            await triggerRedeploy(`HTTP Status ${response.status}`);
         }
+    } catch (error) {
+        console.error('🚨 CRITICAL FAILURE: SITE OFFLINE or UNREACHABLE.');
+        console.error(`Error: ${error.message}`);
+        await triggerRedeploy('Connection failed/Timeout');
     }
+}
 
 async function triggerRedeploy(reason) {
-        if (!REDEPLOY_HOOK) {
-            console.error('❌ FAILED: VERCEL_DEPLOY_HOOK NOT CONFIGURED in GitHub Secrets.');
-            console.log('Action Required: Please add VERCEL_DEPLOY_HOOK to your repository secrets.');
-            return;
-        }
-
-        console.log(`Initiating Auto-Heal Deployment... Reason: ${reason}`);
-        try {
-            const response = await fetch(REDEPLOY_HOOK, { method: 'POST' });
-            if (response.ok) {
-                console.log('🚀 SUCCESS: REDEPLOY SIGNAL SENT TO VERCEL. SYSTEM RESTORING...');
-            } else {
-                console.error(`❌ FAILED: Vercel API returned ${response.status}`);
-            }
-        } catch (err) {
-            console.error('❌ FAILED: Could not connect to Vercel Deploy Hook.');
-        }
+    if (!REDEPLOY_HOOK) {
+        console.error('❌ FAILED: VERCEL_DEPLOY_HOOK NOT CONFIGURED in GitHub Secrets.');
+        console.log('Action Required: Please add VERCEL_DEPLOY_HOOK to your repository secrets.');
+        return;
     }
 
-    checkSystemHealth();
+    console.log(`Initiating Auto-Heal Deployment... Reason: ${reason}`);
+    try {
+        const response = await fetch(REDEPLOY_HOOK, { method: 'POST' });
+        if (response.ok) {
+            console.log('🚀 SUCCESS: REDEPLOY SIGNAL SENT TO VERCEL. SYSTEM RESTORING...');
+        } else {
+            console.error(`❌ FAILED: Vercel API returned ${response.status}`);
+        }
+    } catch (err) {
+        console.error('❌ FAILED: Could not connect to Vercel Deploy Hook.');
+    }
+}
+
+checkSystemHealth();
