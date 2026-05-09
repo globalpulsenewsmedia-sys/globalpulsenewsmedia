@@ -1,6 +1,9 @@
 name: 24/7 Self-Healing & DevOps Watchdog
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 * * * *' # Runs every hour
   workflow_dispatch: # Manual trigger
