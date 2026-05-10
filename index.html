@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Pulse | 24/7 Intelligence Hub</title>
-    
+
     <!-- MASTER ANALYTICS: Google Analytics -->
     <!-- Replace G-XXXXXXXXXX with your real ID from analytics.google.com -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
 
     <!-- MASTER ANALYTICS: Microsoft Clarity (Heatmaps & Recordings) -->
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "XXXXXXXXXX");
     </script>
 
@@ -34,29 +35,34 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Libre+Franklin:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Libre+Franklin:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/index.css">
-    
+
     <!-- VIRAL MARKETING: Social Media Open Graph Tags -->
     <meta property="og:title" content="Global Pulse | AI-Powered News Intelligence">
-    <meta property="og:description" content="Deciphering the future with 24/7 global intelligence. Powered by the next generation of AI.">
+    <meta property="og:description"
+        content="Deciphering the future with 24/7 global intelligence. Powered by the next generation of AI.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200">
     <meta property="og:url" content="https://globalpulsenewsmedia.com/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Global Pulse | World News Intelligence">
     <meta name="twitter:description" content="The definitive source for global intelligence.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200">
-    
+
     <!-- GOOGLE ADSENSE VERIFICATION CODE (Drop your code here) -->
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script -->
 </head>
+
 <body class="light-theme"> <!-- CNN uses Light Theme for authority -->
 
     <!-- CNN Style Breaking News Ticker (Topmost) -->
     <div class="cnn-breaking-bar">
         <div class="breaking-label">BREAKING NEWS</div>
-        <marquee class="breaking-marquee">GLOBAL PULSE AI DETECTS HISTORIC SHIFT IN TECH MARKETS • LIVE COVERAGE CONTINUES 24/7 • DEVELOPING STORY...</marquee>
+        <marquee class="breaking-marquee">GLOBAL PULSE AI DETECTS HISTORIC SHIFT IN TECH MARKETS • LIVE COVERAGE
+            CONTINUES 24/7 • DEVELOPING STORY...</marquee>
     </div>
 
     <!-- CNN Style Header -->
@@ -78,12 +84,15 @@
                         <li><a href="#" data-category="business">Business</a></li>
                         <li><a href="#" data-category="tech">Tech</a></li>
                         <li><a href="academy.html">Academy</a></li>
-                        <li><a href="pro.html" class="nav-premium" style="color: #ffd700; border: 1px solid #ffd700;">PRO</a></li>
+                        <li><a href="pro.html" class="nav-premium"
+                                style="color: #ffd700; border: 1px solid #ffd700;">PRO</a></li>
                     </ul>
                 </nav>
                 <div class="header-right">
-                    <div class="google-badge" style="background: #fff; color: #4285F4; border: 1px solid #4285F4; padding: 4px 8px; font-size: 0.6rem; font-weight: 900; border-radius: 4px; display: flex; align-items: center; gap: 5px;">
-                        <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d473530437e3586b74e1.svg" width="12" alt="Gemini">
+                    <div class="google-badge"
+                        style="background: #fff; color: #4285F4; border: 1px solid #4285F4; padding: 4px 8px; font-size: 0.6rem; font-weight: 900; border-radius: 4px; display: flex; align-items: center; gap: 5px;">
+                        <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d473530437e3586b74e1.svg"
+                            width="12" alt="Gemini">
                         POWERED BY GEMINI AI
                     </div>
                     <div class="live-tv-status">
@@ -98,40 +107,70 @@
 
     <main class="cnn-main">
         <div class="container">
-            
-            <!-- CNN HERO SECTION: Headline + Live TV Screen -->
-            <section class="cnn-hero">
+
+            <!-- CNN HERO SECTION: Headline + Main Image -->
+            <section class="cnn-hero" style="grid-template-columns: 1fr;">
                 <div class="hero-main-story" id="heroSection">
                     <!-- Populated by JS -->
                 </div>
-                
-                <div class="hero-live-tv">
-                    <div class="tv-header">
-                        <span class="tv-label">WATCH LIVE WORLD NEWS</span>
-                        <span class="tv-source" style="background: var(--cnn-red);">GLOBALPULSE 24/7</span>
-                    </div>
-                    <div class="tv-screen" style="border: 4px solid #000; box-shadow: 0 20px 50px rgba(0,0,0,0.4);">
-                        <iframe id="homeLiveVideo" 
-                            src="https://www.youtube.com/embed/9Auq9mYxFEE?autoplay=1&mute=1&rel=0" 
-                            title="Live Global News Broadcast" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                        <div class="tv-overlay">
-                            <div class="tv-watermark">GP <span>LIVE</span></div>
+            </section>
+
+            <!-- GP LIVE: MULTI-STREAM NEWS GRID -->
+            <section class="multi-stream-section">
+                <div class="section-title">Global Pulse Live: Multi-Stream Intelligence Hub</div>
+                <div class="multi-stream-grid">
+                    <!-- Stream 1: Al Jazeera -->
+                    <div class="stream-card">
+                        <div class="stream-header">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <span class="live-badge">LIVE</span>
+                                <span class="stream-name">AL JAZEERA ENGLISH</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=live_stream?channel=UCNye-wNBqNL5ZzHSJj3l8Bg" target="_blank" style="color: #666; font-size: 0.6rem; text-decoration: none;">EXTERNAL ↗</a>
+                        </div>
+                        <div class="stream-window">
+                            <iframe src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCNye-wNBqNL5ZzHSJj3l8Bg&autoplay=0&mute=1" 
+                                allowfullscreen allow="autoplay; fullscreen"></iframe>
                         </div>
                     </div>
-                    <div class="tv-footer" style="background: #000; color: #fff; padding: 10px; font-weight: 900;">
-                        <marquee>GLOBAL PULSE INTELLIGENCE: REAL-TIME WORLD BROADCAST • POWERED BY GOOGLE GEMINI AI • 24/7 LIVE COVERAGE</marquee>
+                    <!-- Stream 2: ABC News -->
+                    <div class="stream-card">
+                        <div class="stream-header">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <span class="live-badge">LIVE</span>
+                                <span class="stream-name">ABC NEWS LIVE</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=fC7p_H_D9e0" target="_blank" style="color: #666; font-size: 0.6rem; text-decoration: none;">EXTERNAL ↗</a>
+                        </div>
+                        <div class="stream-window">
+                            <iframe src="https://www.youtube-nocookie.com/embed/fC7p_H_D9e0?autoplay=0&mute=1" 
+                                allowfullscreen allow="autoplay; fullscreen"></iframe>
+                        </div>
                     </div>
+                    <!-- Stream 3: Sky News -->
+                    <div class="stream-card">
+                        <div class="stream-header">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <span class="live-badge">LIVE</span>
+                                <span class="stream-name">SKY NEWS UK</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=9Auq9mYxFEE" target="_blank" style="color: #666; font-size: 0.6rem; text-decoration: none;">EXTERNAL ↗</a>
+                        </div>
+                        <div class="stream-window">
+                            <iframe src="https://www.youtube-nocookie.com/embed/9Auq9mYxFEE?autoplay=0&mute=1" 
+                                allowfullscreen allow="autoplay; fullscreen"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 15px; text-align: center; color: #666; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
+                    Powered by Global Pulse Media AI • Multi-Agent Stream Orchestration Active
                 </div>
             </section>
 
             <!-- WEALTH INTELLIGENCE: Specialized AI Agents & Market Data -->
             <section class="wealth-intelligence">
                 <div class="section-title">Wealth Intelligence Command</div>
-                
+
                 <div class="market-command-grid">
                     <!-- Crypto AI Agent -->
                     <div class="ai-agent-card crypto-ai">
@@ -143,27 +182,30 @@
                             </div>
                         </div>
                         <div class="agent-insight">
-                            <p id="cryptoAiInsight">"Detecting massive liquidity shifts in Bitcoin ecosystem. Volatility spike expected within 12 hours."</p>
+                            <p id="cryptoAiInsight">"Detecting massive liquidity shifts in Bitcoin ecosystem. Volatility
+                                spike expected within 12 hours."</p>
                         </div>
                         <div class="tradingview-mini">
                             <!-- TradingView Widget BEGIN -->
                             <div class="tradingview-widget-container">
                                 <div class="tradingview-widget-container__widget"></div>
-                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-                                {
-                                "symbol": "BINANCE:BTCUSDT",
-                                "width": "100%",
-                                "height": 150,
-                                "locale": "en",
-                                "dateRange": "12M",
-                                "colorTheme": "light",
-                                "trendLineColor": "rgba(41, 98, 255, 1)",
-                                "underLineColor": "rgba(41, 98, 255, 0.3)",
-                                "underLineBottomColor": "rgba(41, 98, 255, 0)",
-                                "isReadOnly": true,
-                                "autosize": false
-                                }
-                                </script>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "BINANCE:BTCUSDT",
+                                                "width": "100%",
+                                                    "height": 150,
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(41, 98, 255, 1)",
+                                                                        "underLineColor": "rgba(41, 98, 255, 0.3)",
+                                                                            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                                                                                "isReadOnly": true,
+                                                                                    "autosize": false
+                                        }
+                                    </script>
                             </div>
                         </div>
                     </div>
@@ -178,27 +220,30 @@
                             </div>
                         </div>
                         <div class="agent-insight">
-                            <p id="stockAiInsight">"Tech sector RSI showing overbought conditions. Suggesting defensive posture on NASDAQ-100."</p>
+                            <p id="stockAiInsight">"Tech sector RSI showing overbought conditions. Suggesting defensive
+                                posture on NASDAQ-100."</p>
                         </div>
                         <div class="tradingview-mini">
                             <!-- TradingView Widget BEGIN -->
                             <div class="tradingview-widget-container">
                                 <div class="tradingview-widget-container__widget"></div>
-                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-                                {
-                                "symbol": "NASDAQ:QQQ",
-                                "width": "100%",
-                                "height": 150,
-                                "locale": "en",
-                                "dateRange": "12M",
-                                "colorTheme": "light",
-                                "trendLineColor": "rgba(204, 0, 0, 1)",
-                                "underLineColor": "rgba(204, 0, 0, 0.3)",
-                                "underLineBottomColor": "rgba(204, 0, 0, 0)",
-                                "isReadOnly": true,
-                                "autosize": false
-                                }
-                                </script>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                                    async>
+                                        {
+                                            "symbol": "NASDAQ:QQQ",
+                                                "width": "100%",
+                                                    "height": 150,
+                                                        "locale": "en",
+                                                            "dateRange": "12M",
+                                                                "colorTheme": "light",
+                                                                    "trendLineColor": "rgba(204, 0, 0, 1)",
+                                                                        "underLineColor": "rgba(204, 0, 0, 0.3)",
+                                                                            "underLineBottomColor": "rgba(204, 0, 0, 0)",
+                                                                                "isReadOnly": true,
+                                                                                    "autosize": false
+                                        }
+                                    </script>
                             </div>
                         </div>
                     </div>
@@ -206,15 +251,21 @@
             </section>
 
             <!-- GOOGLE SHOWCASE: The Pitch Section -->
-            <section class="google-pitch-section" style="margin: 60px 0; padding: 40px; background: #f8f9fa; border: 1px solid #4285F4; border-radius: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <section class="google-pitch-section"
+                style="margin: 60px 0; padding: 40px; background: #f8f9fa; border: 1px solid #4285F4; border-radius: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
                 <div>
                     <span class="hero-tag" style="background: #4285F4; color: #fff;">GOOGLE AGENTIC SHOWCASE</span>
-                    <h2 style="font-size: 2.5rem; font-weight: 900; margin-top: 15px;">Building the Future of Autonomous Media</h2>
-                    <p style="color: #666; margin-top: 20px;">Global Pulse is a 24/7 fully autonomous intelligence engine built on the Google Gemini Pro API. We are scaling the world's first multi-agent news infrastructure.</p>
-                    <button class="btn-live" onclick="window.location.href='agent-command.html'" style="margin-top: 30px; background: #4285F4; color: white;">VIEW AGENT COMMAND →</button>
+                    <h2 style="font-size: 2.5rem; font-weight: 900; margin-top: 15px;">Building the Future of Autonomous
+                        Media</h2>
+                    <p style="color: #666; margin-top: 20px;">Global Pulse is a 24/7 fully autonomous intelligence
+                        engine built on the Google Gemini Pro API. We are scaling the world's first multi-agent news
+                        infrastructure.</p>
+                    <button class="btn-live" onclick="window.location.href='agent-command.html'"
+                        style="margin-top: 30px; background: #4285F4; color: white;">VIEW AGENT COMMAND →</button>
                 </div>
                 <div style="text-align: center;">
-                    <img src="https://www.gstatic.com/lamda/images/gemini_logo_v002_6bc1209b0b467611.svg" width="200" alt="Google Gemini">
+                    <img src="https://www.gstatic.com/lamda/images/gemini_logo_v002_6bc1209b0b467611.svg" width="200"
+                        alt="Google Gemini">
                 </div>
             </section>
 
@@ -231,14 +282,17 @@
 
     <footer class="cnn-footer">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 30px; margin-bottom: 30px;">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 30px; margin-bottom: 30px;">
                 <div class="footer-brand">
                     <div class="cnn-logo" style="margin-bottom: 10px;">GLOBAL<span>PULSE</span></div>
                     <p style="font-size: 0.7rem; color: #666;">Autonomous News Intelligence Group</p>
                 </div>
                 <div class="intelligence-hub" style="text-align: right;">
-                    <div style="font-size: 0.6rem; color: #00ff88; font-weight: 900; text-transform: uppercase;">LIVE INTELLIGENCE HUB</div>
-                    <div style="font-size: 1.2rem; font-weight: 900; color: #fff;">14,204 <span style="font-size: 0.7rem; color: #444;">REPORTS PROCESSED</span></div>
+                    <div style="font-size: 0.6rem; color: #00ff88; font-weight: 900; text-transform: uppercase;">LIVE
+                        INTELLIGENCE HUB</div>
+                    <div style="font-size: 1.2rem; font-weight: 900; color: #fff;">14,204 <span
+                            style="font-size: 0.7rem; color: #444;">REPORTS PROCESSED</span></div>
                 </div>
             </div>
             <div class="footer-links">
@@ -256,4 +310,5 @@
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
