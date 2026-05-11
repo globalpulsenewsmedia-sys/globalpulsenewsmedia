@@ -73,5 +73,3 @@ async function triggerRedeploy(reason) {
 }
 
 checkSystemHealth();
-git commit--allow - empty - m "FORCE DEPLOY: Clear 404 Cache"
-git push origin main
