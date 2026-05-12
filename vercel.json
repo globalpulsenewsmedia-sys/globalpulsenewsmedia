@@ -7,7 +7,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(.*)arbitragesmartai.com"
+          "value": "(?<subdomain>.*)arbitragesmartai.com"
         }
       ],
       "destination": "/arbitrage.html"
