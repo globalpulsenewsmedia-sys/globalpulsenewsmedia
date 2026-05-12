@@ -60,6 +60,8 @@ async function checkSystemHealth() {
 async function resolveIssue(errorType) {
     console.log(`\n🤖 [AI AUTO-RESOLVER]: INITIATING SELF-HEALING PROTOCOL FOR [${errorType}]`);
     console.log(`🤖 [AI AUTO-RESOLVER]: CLEARING SERVER CACHE AND OVERRIDING PROTECTIONS...`);
+    await triggerRedeploy(errorType);
+}
 
 async function triggerRedeploy(reason) {
     if (!REDEPLOY_HOOK) {
