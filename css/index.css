@@ -254,17 +254,19 @@ body {
 .ai-agent-card {
     background: #fff;
     border: 1px solid var(--border-light);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 
 .ai-agent-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: var(--cnn-red);
 }
 
 .agent-header {
@@ -355,19 +357,36 @@ body {
     flex-direction: column;
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid transparent;
+}
+
+.cnn-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+    border-color: #eee;
 }
 
 .cnn-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.cnn-card:hover img {
+    transform: scale(1.05);
 }
 
 .cnn-card-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.3;
+    padding: 0 10px;
 }
 
 .cnn-card:hover .cnn-card-title { color: var(--cnn-red); }
