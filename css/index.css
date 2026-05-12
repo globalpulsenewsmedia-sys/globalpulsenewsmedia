@@ -428,6 +428,10 @@ body {
     .cnn-nav { display: none; }
     .cnn-grid { grid-template-columns: 1fr; }
 }
+@media (max-width: 1200px) {
+    .gemini-text { display: none; }
+    .cnn-nav ul { gap: 15px; }
+}
 /* Multi-Stream News Grid */
 .multi-stream-section {
     margin: 40px 0;

@@ -136,18 +136,20 @@
                                 style="color: #ffd700; border: 1px solid #ffd700;">PRO</a></li>
                     </ul>
                 </nav>
-                <div class="header-right">
+                <div class="header-right" style="gap: 15px; flex-shrink: 0;">
                     <div class="google-badge"
-                        style="background: #fff; color: #4285F4; border: 1px solid #4285F4; padding: 4px 8px; font-size: 0.6rem; font-weight: 900; border-radius: 4px; display: flex; align-items: center; gap: 5px;">
+                        style="background: #fff; color: #4285F4; border: 1px solid #4285F4; padding: 4px 8px; font-size: 0.6rem; font-weight: 900; border-radius: 4px; display: flex; align-items: center; gap: 5px; white-space: nowrap;">
                         <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d473530437e3586b74e1.svg"
                             width="12" alt="Gemini">
-                        POWERED BY GEMINI AI
+                        <span class="gemini-text">POWERED BY GEMINI AI</span>
                     </div>
-                    <div class="live-tv-status">
-                        <span class="live-dot"></span>
-                        LIVE TV
-                    </div>
-                    <button class="btn-search-icon">🔍</button>
+                    <a href="livetv.html" style="text-decoration: none; color: inherit;">
+                        <div class="live-tv-status" style="cursor: pointer;">
+                            <span class="live-dot"></span>
+                            LIVE TV
+                        </div>
+                    </a>
+                    <button class="btn-search-icon" onclick="alert('Global Pulse AI Search is initializing...')" style="cursor: pointer; background: transparent; border: none; font-size: 1.2rem; color: #fff;">🔍</button>
                 </div>
             </div>
         </div>
