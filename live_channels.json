@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ABC News",
+    "id": "dozPudY_06M",
+    "category": "News & Doc"
+  },
+  {
+    "name": "WildEarth",
+    "id": "sw_8OABWycY",
+    "category": "News & Doc"
+  },
+  {
+    "name": "Fox News",
+    "id": "wOxJ6lxCbmE",
+    "category": "News & Doc"
+  },
+  {
+    "name": "SpaceX",
+    "id": "Iz6qdzVCN9g",
+    "category": "News & Doc"
+  },
+  {
+    "name": "NASA",
+    "id": "FuuC4dpSQ1M",
+    "category": "News & Doc"
+  },
+  {
+    "name": "Al Jazeera",
+    "id": "gCNeDWCI0vo",
+    "category": "News & Doc"
+  },
+  {
+    "name": "Sky News",
+    "id": "-KgBCTZfOqk",
+    "category": "News & Doc"
+  },
+  {
+    "name": "Reuters",
+    "id": "-bqFtM9esvc",
+    "category": "News & Doc"
+  },
+  {
+    "name": "France 24",
+    "id": "Ap-UM1O9RBU",
+    "category": "News & Doc"
+  },
+  {
+    "name": "NBC News",
+    "id": "ilDYh3Zk5U4",
+    "category": "News & Doc"
+  },
+  {
+    "name": "DW News",
+    "id": "LuKwFajn37U",
+    "category": "News & Doc"
+  },
+  {
+    "name": "National Geographic",
+    "id": "csKGzh-MURk",
+    "category": "News & Doc"
+  }
+]

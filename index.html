@@ -130,6 +130,7 @@
                         <li><a href="#" data-category="world">World</a></li>
                         <li><a href="#" data-category="business">Business</a></li>
                         <li><a href="#" data-category="tech">Tech</a></li>
+                        <li><a href="livetv.html" style="color: #cc0000; font-weight: 900;">LIVE TV Hub</a></li>
                         <li><a href="academy.html">Academy</a></li>
                         <li><a href="pro.html" class="nav-premium"
                                 style="color: #ffd700; border: 1px solid #ffd700;">PRO</a></li>
@@ -162,49 +163,62 @@
                 </div>
             </section>
 
-            <!-- GP LIVE: MULTI-STREAM NEWS GRID -->
+            <!-- GP LIVE: MULTI-STREAM INTELLIGENCE HUB -->
             <section class="multi-stream-section">
-                <div class="section-title">Global Pulse Live: Multi-Stream Intelligence Hub</div>
-                <div class="multi-stream-grid">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="section-title">Global Pulse Live: Multi-Stream Hub</div>
+                    <button class="btn-live" onclick="window.location.href='livetv.html'" style="background: #cc0000; color: white; padding: 8px 16px; border: none; font-weight: 900; border-radius: 4px; cursor: pointer;">VIEW ALL 24+ CHANNELS →</button>
+                </div>
+                <div class="multi-stream-grid" style="grid-template-columns: repeat(4, 1fr); margin-top: 15px;">
                     <!-- Stream 1: Al Jazeera -->
                     <div class="stream-card">
                         <div class="stream-header">
                             <div style="display: flex; align-items: center; gap: 10px;">
                                 <span class="live-badge">LIVE</span>
-                                <span class="stream-name">AL JAZEERA ENGLISH</span>
+                                <span class="stream-name">AL JAZEERA (NEWS)</span>
                             </div>
-                            <a href="https://www.youtube.com/channel/UCNye-wNBqNL5ZzHSJj3l8Bg/live" target="_blank" style="color: #666; font-size: 0.6rem; text-decoration: none;">EXTERNAL ↗</a>
                         </div>
                         <div class="stream-window">
                             <iframe src="https://www.youtube.com/embed/gCNeDWCI0vo?autoplay=0&mute=1" 
                                 allowfullscreen allow="autoplay; fullscreen"></iframe>
                         </div>
                     </div>
-                    <!-- Stream 2: ABC News -->
+                    <!-- Stream 2: NASA -->
                     <div class="stream-card">
                         <div class="stream-header">
                             <div style="display: flex; align-items: center; gap: 10px;">
                                 <span class="live-badge">LIVE</span>
-                                <span class="stream-name">ABC NEWS LIVE</span>
+                                <span class="stream-name">NASA (SPACE)</span>
                             </div>
-                            <a href="https://www.youtube.com/channel/UCBi2mrWuNuyYy4gbM6fU18Q/live" target="_blank" style="color: #666; font-size: 0.6rem; text-decoration: none;">EXTERNAL ↗</a>
                         </div>
                         <div class="stream-window">
-                            <iframe src="https://www.youtube.com/embed/dozPudY_06M?autoplay=0&mute=1" 
+                            <iframe src="https://www.youtube.com/embed/FuuC4dpSQ1M?autoplay=0&mute=1" 
                                 allowfullscreen allow="autoplay; fullscreen"></iframe>
                         </div>
                     </div>
-                    <!-- Stream 3: Sky News -->
+                    <!-- Stream 3: National Geographic -->
                     <div class="stream-card">
                         <div class="stream-header">
                             <div style="display: flex; align-items: center; gap: 10px;">
                                 <span class="live-badge">LIVE</span>
-                                <span class="stream-name">SKY NEWS UK</span>
+                                <span class="stream-name">NAT GEO (NATURE)</span>
                             </div>
-                            <a href="https://www.youtube.com/channel/UCoMdktPbSTixAyNGrCoptmA/live" target="_blank" style="color: #666; font-size: 0.6rem; text-decoration: none;">EXTERNAL ↗</a>
                         </div>
                         <div class="stream-window">
-                            <iframe src="https://www.youtube.com/embed/Qe-f_1iSTPI?autoplay=0&mute=1" 
+                            <iframe src="https://www.youtube.com/embed/csKGzh-MURk?autoplay=0&mute=1" 
+                                allowfullscreen allow="autoplay; fullscreen"></iframe>
+                        </div>
+                    </div>
+                    <!-- Stream 4: NBC News -->
+                    <div class="stream-card">
+                        <div class="stream-header">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <span class="live-badge">LIVE</span>
+                                <span class="stream-name">NBC (NEWS)</span>
+                            </div>
+                        </div>
+                        <div class="stream-window">
+                            <iframe src="https://www.youtube.com/embed/ilDYh3Zk5U4?autoplay=0&mute=1" 
                                 allowfullscreen allow="autoplay; fullscreen"></iframe>
                         </div>
                     </div>
