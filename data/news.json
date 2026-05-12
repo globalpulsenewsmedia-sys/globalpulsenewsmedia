@@ -1,75 +1,12 @@
 [
   {
-    "title": "Is this the real face of Anne Boleyn?",
-    "snippet": "A computer science team believes they have discovered a previously unknown sketch of King Henry VIII's second wife - but not everyone is convinced.",
-    "category": "SCIENCE",
-    "source": "Global Pulse Intelligence",
-    "time": "5/1/2026, 11:01:44 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/15ee/live/a5e63610-4603-11f1-ac78-2112837ce2aa.jpg",
-    "link": "https://www.bbc.com/news/articles/cp9pz53e891o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Oil price predicted to remain above $100 for rest of year",
-    "snippet": "Investment bank JP Morgan expects oil to remain in the \"low $100s\" even if the Strait of Hormuz were to reopen next month.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 4:57:15 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2737/live/69b088e0-4cd8-11f1-b55d-0f258dce1735.jpg",
-    "link": "https://www.bbc.com/news/articles/ckgp4ev4yg4o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "How worried should we be about hantavirus?",
-    "snippet": "Passengers potentially exposed to hantavirus are being repatriated, so what is the risk to the wider public?",
+    "title": "How are countries responding to hantavirus?",
+    "snippet": "The UK, US and EU are asking all citizens returning home from the virus-hit MV Hondius to self-isolate for about six weeks.",
     "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 9:05:04 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7617/live/0a92d310-4d21-11f1-894d-1b54d8c2d924.jpg",
-    "link": "https://www.bbc.com/news/articles/c98r199e195o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Instagram privacy tech is turned off today - what does this mean for your DMs?",
-    "snippet": "The platform said it would remove end-to-end encrypted messages, a major U‑turn by parent company Meta.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "5/8/2026, 1:31:55 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b18f/live/cbad6e00-4a17-11f1-a7ce-b934bcb15ff4.jpg",
-    "link": "https://www.bbc.com/news/articles/clypzxl3lvqo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "How sunburn inspired a new way to store energy",
-    "snippet": "Molecules that can capture heat could be a useful technology to decarbonise heating.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "5/9/2026, 8:28:23 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8ebd/live/fd224ab0-3d5a-11f1-9d5c-8ba507d7dbde.jpg",
-    "link": "https://www.bbc.com/news/articles/c62l9gnx775o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Elon Musk and Tim Cook among CEOs expected to accompany Trump on China trip",
-    "snippet": "A total of 17 US executives are set to join the president on his visit, where he will meet his Chinese counterpart Xi Jinping.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 6:26:20 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/775b/live/f5806e70-4d60-11f1-b55d-0f258dce1735.png",
-    "link": "https://www.bbc.com/news/articles/c5yx757w048o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "What is hantavirus and how does it spread?",
-    "snippet": "The Andes strain of the virus, which can rarely be passed from person to person,  has been found among passengers of a cruise ship.",
-    "category": "HEALTH",
-    "source": "Global Pulse Intelligence",
-    "time": "5/10/2026, 4:22:20 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f9b6/live/e5da45c0-477c-11f1-b55d-0f258dce1735.jpg",
-    "link": "https://www.bbc.com/news/articles/c8r8j1l6j0go?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "TikTok launches £3.99 subscription for no ads in UK",
-    "snippet": "Those who don't subscribe will be able to use the platform for free - but be shown personalised ads by default.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 4:05:39 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/36d8/live/bd23dc20-4d37-11f1-87e0-250b0c741d1e.jpg",
-    "link": "https://www.bbc.com/news/articles/cn0pgl0vk0qo?at_medium=RSS&at_campaign=rss"
+    "time": "5/11/2026, 9:21:11 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5922/live/40585c40-4d49-11f1-8d15-c7bc28bbe41c.jpg",
+    "link": "https://www.bbc.com/news/articles/c4g8318v4yzo?at_medium=RSS&at_campaign=rss"
   },
   {
     "title": "TikTok scales back AI-generated video descriptions after absurd errors",
@@ -81,22 +18,76 @@
     "link": "https://www.bbc.com/news/articles/c5yerd05n01o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "£20m mystery gift buys London Zoo new hospital where you can watch vets work",
-    "snippet": "Visitors will be able to watch live veterinary procedures inside a state-of-the-art new animal hospital.",
-    "category": "SCIENCE",
+    "title": "Elon Musk and Tim Cook among CEOs expected to accompany Trump on China trip",
+    "snippet": "A total of 17 US executives are set to join the president on his visit, where he will meet his Chinese counterpart Xi Jinping.",
+    "category": "BUSINESS",
     "source": "Global Pulse Intelligence",
-    "time": "4/28/2026, 11:20:26 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7db5/live/847cb040-431e-11f1-ac78-2112837ce2aa.jpg",
-    "link": "https://www.bbc.com/news/articles/cpqpj7wy4x4o?at_medium=RSS&at_campaign=rss"
+    "time": "5/11/2026, 6:26:20 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/775b/live/f5806e70-4d60-11f1-b55d-0f258dce1735.png",
+    "link": "https://www.bbc.com/news/articles/c5yx757w048o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "How are countries responding to hantavirus?",
-    "snippet": "The UK, US and EU are asking all citizens returning home from the virus-hit MV Hondius to self-isolate for about six weeks.",
-    "category": "HEALTH",
+    "title": "British Steel nationalisation plans announced by Starmer",
+    "snippet": "The steelworks has been under government control for almost a year, but leglistation to nationalise it will be put forward this week.",
+    "category": "BUSINESS",
     "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 9:21:11 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5922/live/40585c40-4d49-11f1-8d15-c7bc28bbe41c.jpg",
-    "link": "https://www.bbc.com/news/articles/c4g8318v4yzo?at_medium=RSS&at_campaign=rss"
+    "time": "5/11/2026, 11:22:01 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3d94/live/87576030-4d32-11f1-bd52-e755d604ece4.png",
+    "link": "https://www.bbc.com/news/articles/c8xwg0gdrpzo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "EU agrees sanctions on Israeli settlers over West Bank violence",
+    "snippet": "The EU's foreign policy chief said \"extremism and violence carry consequences\", while Israel branded the move \"arbitrary\".",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/11/2026, 7:37:17 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2fec/live/3b96bbe0-4d51-11f1-b55d-0f258dce1735.jpg",
+    "link": "https://www.bbc.com/news/articles/c202wp2rl09o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "China should stop hoarding food and fertiliser, says former World Bank chief",
+    "snippet": "David Malpass' comments come as US President Donald Trump and China's Xi Jinping are due to meet in Beijing.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "5/12/2026, 12:02:58 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cffa/live/6e67d050-4d91-11f1-8853-793b146dcf4a.jpg",
+    "link": "https://www.bbc.com/news/articles/cwy2rnyg50zo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Not so dusty: How tech is changing woodworking",
+    "snippet": "Woodworking shops have been transformed by tech to make tools safer and more precise.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/11/2026, 11:23:48 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a1a6/live/ce922de0-3e23-11f1-ac78-2112837ce2aa.jpg",
+    "link": "https://www.bbc.com/news/articles/c747n11933eo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "International cyber attack disrupts swathe of universities and schools",
+    "snippet": "A hacking group breached the academic software Canvas, used by thousands of schools and universities across the globe.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/9/2026, 1:17:55 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7c9d/live/c19e8dd0-4ad1-11f1-92c1-4f69e4cb55db.jpg",
+    "link": "https://www.bbc.com/news/articles/ce3pq0136eqo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "US in closely-guarded talks to open new bases in Greenland",
+    "snippet": "It is seeking to open three bases in the south of the Arctic territory, according to multiple officials familiar with the talks.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/11/2026, 11:56:11 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a0d5/live/8f903210-4b1e-11f1-bd52-e755d604ece4.jpg",
+    "link": "https://www.bbc.com/news/articles/cx21669452lo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "How driving test booking is changing for learner drivers",
+    "snippet": "From 12 May, only learner drivers can book their own tests, not instructors.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "5/11/2026, 11:08:21 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a1f/live/c23457a0-4d62-11f1-940e-cbf9737b8b8f.jpg",
+    "link": "https://www.bbc.com/news/articles/ckgpl9zdw3po?at_medium=RSS&at_campaign=rss"
   },
   {
     "title": "Last passengers leave virus-hit cruise ship as three more test positive",
@@ -108,30 +99,39 @@
     "link": "https://www.bbc.com/news/articles/cjep78l5835o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "Trump says Iran ceasefire is on 'massive life support'",
-    "snippet": "The US president criticises an Iranian counteroffer to end the war, and says the month-long ceasefire is \"unbelievably weak\".",
-    "category": "WORLD",
+    "title": "TikTok launches £3.99 subscription for no ads in UK",
+    "snippet": "Those who don't subscribe will be able to use the platform for free - but be shown personalised ads by default.",
+    "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 6:17:34 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/877f/live/785db9c0-4d65-11f1-b55d-0f258dce1735.jpg",
-    "link": "https://www.bbc.com/news/articles/cvgznxn18zgo?at_medium=RSS&at_campaign=rss"
+    "time": "5/11/2026, 4:05:39 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/36d8/live/bd23dc20-4d37-11f1-87e0-250b0c741d1e.jpg",
+    "link": "https://www.bbc.com/news/articles/cn0pgl0vk0qo?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "US passengers quarantining in Nebraska as officials say public hantavirus risk 'very low'",
-    "snippet": "Two people are being monitored in Atlanta, while 16 others are in Nebraska at the nation's only national quarantine unit.",
-    "category": "WORLD",
+    "title": "UK alcohol deaths fall for first time since Covid pandemic",
+    "snippet": "Experts say the “modest reduction” is “not cause for complacency”, with calls to redouble efforts to slash deaths further.",
+    "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 5:17:25 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6d9b/live/a1fc43f0-4d51-11f1-a556-3191549e7ed9.jpg",
-    "link": "https://www.bbc.com/news/articles/cwy2e9e1g0wo?at_medium=RSS&at_campaign=rss"
+    "time": "5/11/2026, 5:52:44 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a815/live/7b753f80-4d50-11f1-9077-cb5f00d3274a.jpg",
+    "link": "https://www.bbc.com/news/articles/c3v2dxg79w2o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "Watch: Alaska town sees its last sunset until August",
-    "snippet": "Residents of Utqiagvik, the United States' northernmost city, will experience 84 days of midnight sun and uninterrupted daylight.",
-    "category": "WORLD",
+    "title": "Global forest loss slows but El Niño fires could threaten progress",
+    "snippet": "The loss of tropical rainforests eased last year, according to new analysis, but scientists warn they are still disappearing rapidly.",
+    "category": "SCIENCE",
     "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 9:05:29 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9cd6/live/95608450-4d7c-11f1-bd52-e755d604ece4.jpg",
-    "link": "https://www.bbc.com/news/videos/cgjpg20xgy5o?at_medium=RSS&at_campaign=rss"
+    "time": "4/29/2026, 1:26:08 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6cb5/live/51be1d40-43ed-11f1-ac78-2112837ce2aa.jpg",
+    "link": "https://www.bbc.com/news/articles/c78q5pygn66o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Ovo energy customers urged not to panic as takeover planned",
+    "snippet": "All existing tariffs will be honoured in full under a planned deal that could create one of Britain's largest energy suppliers.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "5/11/2026, 3:39:32 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a450/live/4602a130-4d3c-11f1-87e0-250b0c741d1e.jpg",
+    "link": "https://www.bbc.com/news/articles/cn4pl91npjdo?at_medium=RSS&at_campaign=rss"
   }
 ]
