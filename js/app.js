@@ -112,6 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `).join('');
+
+        // 3. Render Breaking News Ticker
+        const ticker = document.getElementById('breakingTicker');
+        if (ticker) {
+            const tickerTitles = articles.slice(0, 10).map(a => sanitizeHTML(a.title).toUpperCase()).join(' • ');
+            ticker.innerText = `${tickerTitles} • LIVE COVERAGE CONTINUES 24/7 • DEVELOPING STORY...`;
+        }
     };
 
     // --- Nav Interaction ---
