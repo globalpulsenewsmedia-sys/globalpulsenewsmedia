@@ -119,19 +119,24 @@ async function fetchFeeds() {
         }
     }
 
-    // Deduplicate by URL/link and merge categories
+    // Aggressive Deduplication by Title and Link
     const uniqueMap = new Map();
     allArticles.forEach(a => {
-        if (!uniqueMap.has(a.link)) {
-            uniqueMap.set(a.link, a);
+        const titleKey = a.title.toLowerCase().trim().replace(/[^\w\s]/g, '');
+        const linkKey = a.link.split('?')[0]; // Strip tracking params
+
+        if (!uniqueMap.has(titleKey) && !uniqueMap.has(linkKey)) {
+            uniqueMap.set(titleKey, a);
+            uniqueMap.set(linkKey, a);
         } else {
-            let existing = uniqueMap.get(a.link);
-            if (!existing.category.includes(a.category)) {
+            const existing = uniqueMap.get(titleKey) || uniqueMap.get(linkKey);
+            if (existing && !existing.category.toLowerCase().includes(a.category.toLowerCase())) {
                 existing.category += `, ${a.category}`;
             }
         }
     });
-    allArticles = Array.from(uniqueMap.values());
+    // Filter out values to get unique items
+    allArticles = Array.from(new Set(uniqueMap.values()));
 
     // Shuffle articles
     allArticles = allArticles.sort(() => 0.5 - Math.random());
