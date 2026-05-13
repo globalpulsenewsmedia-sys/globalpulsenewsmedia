@@ -84,7 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const renderDashboard = (articles, viralArticles = []) => {
-        if (!articles || articles.length === 0) return;
+        if (!articles || articles.length === 0) {
+            heroSection.innerHTML = '';
+            grid.innerHTML = `<div class="error-panel" style="grid-column: 1 / -1; text-align: center; padding: 50px; font-weight: bold; font-size: 1.2rem;">INTELLIGENCE AGENTS ARE CURRENTLY AGGREGATING DATA FOR THIS SECTOR. PLEASE CHECK BACK SHORTLY.</div>`;
+            return;
+        }
 
         // 1. Render CNN Hero (Topmost headline + Main Image)
         const hero = articles[0];
@@ -98,13 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // We mix viral and standard articles for the grid
         const combinedArticles = [...viralArticles, ...articles.slice(1)];
         
-        // Multiply for infinite scroll feeling (20 pages worth)
-        const duplicatedArticles = [];
-        for (let i = 0; i < 20; i++) {
-            duplicatedArticles.push(...combinedArticles);
-        }
-        
-        grid.innerHTML = duplicatedArticles.map(a => `
+        grid.innerHTML = combinedArticles.map(a => `
             <div class="cnn-card cnn-video-card">
                 <a href="${a.link}" target="_blank" style="text-decoration: none; color: inherit; display: block; position: relative;">
                     <div class="video-thumbnail-container">
@@ -148,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (cat === 'all') {
                 fetchNews(); // Re-render everything
             } else {
-                const filtered = allArticles.filter(a => a.category.toLowerCase() === cat.toLowerCase());
+                const filtered = allArticles.filter(a => a.category.toLowerCase().includes(cat.toLowerCase()));
                 renderDashboard(filtered, []); // No viral in filtered categories for now
             }
         });

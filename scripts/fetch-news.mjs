@@ -11,7 +11,12 @@ const FEEDS = [
     { category: 'TECH', url: 'http://feeds.bbci.co.uk/news/technology/rss.xml' },
     { category: 'BUSINESS', url: 'http://feeds.bbci.co.uk/news/business/rss.xml' },
     { category: 'SCIENCE', url: 'http://feeds.bbci.co.uk/news/science_and_environment/rss.xml' },
-    { category: 'HEALTH', url: 'http://feeds.bbci.co.uk/news/health/rss.xml' }
+    { category: 'HEALTH', url: 'http://feeds.bbci.co.uk/news/health/rss.xml' },
+    { category: 'SPORTS', url: 'http://feeds.bbci.co.uk/sport/rss.xml' },
+    { category: 'ENTERTAINMENT', url: 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml' },
+    { category: 'POLITICS', url: 'http://feeds.bbci.co.uk/news/politics/rss.xml' },
+    { category: 'US', url: 'http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml' },
+    { category: 'UK', url: 'http://feeds.bbci.co.uk/news/uk/rss.xml' }
 ];
 
 async function rewriteArticlesWithGemini(articles) {
@@ -33,7 +38,7 @@ async function rewriteArticlesWithGemini(articles) {
     For each item, provide:
     1. A catchy title.
     2. A 2-sentence professional summary (snippet).
-    3. The category (World, Business, Tech, Science, or Health).
+    3. The category (World, Business, Tech, Science, Health, Sports, Entertainment, Politics, US, or UK).
     4. A 'Marketing Kit' consisting of:
        - A viral Twitter/X hook.
        - A professional LinkedIn summary.
@@ -88,7 +93,7 @@ async function fetchFeeds() {
                 const data = await response.json();
 
                 if (data.status === 'ok') {
-                    const articles = data.items.slice(0, 5).map(item => {
+                    const articles = data.items.slice(0, 25).map(item => {
                         return {
                             title: item.title,
                             snippet: item.description.replace(/<[^>]*>?/gm, '').substring(0, 250),
@@ -113,6 +118,20 @@ async function fetchFeeds() {
             }
         }
     }
+
+    // Deduplicate by URL/link and merge categories
+    const uniqueMap = new Map();
+    allArticles.forEach(a => {
+        if (!uniqueMap.has(a.link)) {
+            uniqueMap.set(a.link, a);
+        } else {
+            let existing = uniqueMap.get(a.link);
+            if (!existing.category.includes(a.category)) {
+                existing.category += `, ${a.category}`;
+            }
+        }
+    });
+    allArticles = Array.from(uniqueMap.values());
 
     // Shuffle articles
     allArticles = allArticles.sort(() => 0.5 - Math.random());
