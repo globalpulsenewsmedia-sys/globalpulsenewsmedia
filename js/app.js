@@ -100,8 +100,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 2. Render Grid Articles (Standard CNN Cards)
         // We mix viral and standard articles for the grid
-        const combinedArticles = [...viralArticles, ...articles.slice(1)];
+        let combinedArticles = [...viralArticles, ...articles.slice(1)];
         
+        // Safety Frontend Deduplication (Fallback)
+        const seenTitles = new Set();
+        combinedArticles = combinedArticles.filter(a => {
+            const t = a.title.toLowerCase().trim();
+            if (seenTitles.has(t)) return false;
+            seenTitles.add(t);
+            return true;
+        });
+
         grid.innerHTML = combinedArticles.map(a => `
             <div class="cnn-card cnn-video-card">
                 <a href="${a.link}" target="_blank" style="text-decoration: none; color: inherit; display: block; position: relative;">
