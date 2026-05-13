@@ -4,6 +4,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { TwitterApi } from 'twitter-api-v2';
 
 // --- CONFIGURATION ---
 // These keys must be stored in your GitHub Secrets
@@ -48,13 +49,24 @@ async function postToTwitter(story) {
         return;
     }
 
-    // This is where the actual Twitter API logic will go once keys are provided.
-    // Example: Using the 'twitter-api-v2' package.
     const tweetText = `🚨 BREAKING: ${story.title}\n\nRead the full intelligence report here: ${story.link}\n\n#GlobalPulse #BreakingNews #Live`;
     
-    console.log(`🐦 [MARKETING AGENT] Simulating Twitter Broadcast:`);
-    console.log(tweetText);
-    console.log(`✅ [MARKETING AGENT] Successfully broadcasted to X network.`);
+    console.log(`🐦 [MARKETING AGENT] Attempting Twitter Broadcast...`);
+    
+    try {
+        const twitterClient = new TwitterApi({
+            appKey: TWITTER_API_KEY,
+            appSecret: TWITTER_API_SECRET,
+            accessToken: TWITTER_ACCESS_TOKEN,
+            accessSecret: TWITTER_ACCESS_SECRET,
+        });
+
+        const rwClient = twitterClient.readWrite;
+        await rwClient.v2.tweet(tweetText);
+        console.log(`✅ [MARKETING AGENT] Successfully broadcasted to X network.`);
+    } catch (err) {
+        console.error(`❌ [MARKETING AGENT] Failed to broadcast to X/Twitter:`, err.message);
+    }
 }
 
 async function pingGoogleSEO() {
