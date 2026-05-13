@@ -98,17 +98,31 @@ document.addEventListener('DOMContentLoaded', () => {
         // We mix viral and standard articles for the grid
         const combinedArticles = [...viralArticles, ...articles.slice(1)];
         
-        grid.innerHTML = combinedArticles.map(a => `
-            <div class="cnn-card">
-                <a href="${a.link}" target="_blank" style="text-decoration: none; color: inherit;">
-                    <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800'}" alt="${sanitizeHTML(a.title)}">
-                    <div class="cnn-card-title">${sanitizeHTML(a.title)}</div>
+        // Multiply for infinite scroll feeling (20 pages worth)
+        const duplicatedArticles = [];
+        for (let i = 0; i < 20; i++) {
+            duplicatedArticles.push(...combinedArticles);
+        }
+        
+        grid.innerHTML = duplicatedArticles.map(a => `
+            <div class="cnn-card cnn-video-card">
+                <a href="${a.link}" target="_blank" style="text-decoration: none; color: inherit; display: block; position: relative;">
+                    <div class="video-thumbnail-container">
+                        <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800'}" alt="${sanitizeHTML(a.title)}" loading="lazy">
+                        <div class="video-play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="video-duration">LIVE</div>
+                    </div>
+                    <div class="cnn-card-content">
+                        <div class="cnn-card-title">${sanitizeHTML(a.title)}</div>
+                    </div>
                 </a>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-                    <div style="font-size: 0.7rem; color: #999; text-transform: uppercase; font-weight: 700;">
+                <div class="cnn-card-meta">
+                    <div class="meta-left">
                         ${sanitizeHTML(a.category)} • ${sanitizeHTML(a.time)}
                     </div>
-                    <button onclick="shareArticle('${sanitizeHTML(a.title)}', '${a.link}')" style="background: none; border: 1px solid #ddd; padding: 4px 8px; font-size: 0.6rem; font-weight: 900; cursor: pointer; border-radius: 4px;">SHARE ↗</button>
+                    <button onclick="shareArticle('${sanitizeHTML(a.title)}', '${a.link}')" class="share-btn">SHARE ↗</button>
                 </div>
             </div>
         `).join('');
