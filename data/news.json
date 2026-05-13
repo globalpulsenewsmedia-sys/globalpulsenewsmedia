@@ -1,12 +1,84 @@
 [
   {
-    "title": "Plans for Australia's first Trump Tower scrapped due to 'toxic' brand, developer says",
-    "snippet": "The 91-storey luxury hotel on the Gold Coast in Queensland was meant to be Australia's tallest building.",
+    "title": "Lebanon says two paramedics among 13 killed in Israeli strikes",
+    "snippet": "Lebanon's health ministry says the paramedics were carrying out a rescue mission in Nabatieh in response to an earlier attack that killed one person.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/12/2026, 8:00:05 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e3ef/live/68ba80e0-4e1c-11f1-b55d-0f258dce1735.jpg",
+    "link": "https://www.bbc.com/news/articles/cx21j3xl72zo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "UK borrowing costs jump as uncertainty over PM's future continues",
+    "snippet": "The possibility of a change of leadership in the UK has unsettled some investors and sent bond yields higher.",
     "category": "BUSINESS",
     "source": "Global Pulse Intelligence",
-    "time": "5/13/2026, 12:42:23 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/312b/live/f06872d0-1132-11f1-8ecc-bfb7a4b29407.jpg",
-    "link": "https://www.bbc.com/news/articles/c4g08dlnd0vo?at_medium=RSS&at_campaign=rss"
+    "time": "5/12/2026, 4:31:00 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ecc5/live/d6326200-4e12-11f1-ac78-2112837ce2aa.jpg",
+    "link": "https://www.bbc.com/news/articles/cqjpqy19npxo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Global forest loss slows but El Niño fires could threaten progress",
+    "snippet": "The loss of tropical rainforests eased last year, according to new analysis, but scientists warn they are still disappearing rapidly.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "4/29/2026, 1:26:08 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6cb5/live/51be1d40-43ed-11f1-ac78-2112837ce2aa.jpg",
+    "link": "https://www.bbc.com/news/articles/c78q5pygn66o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Air India crisis deepens ahead of final Ahmedabad crash report",
+    "snippet": "Air India faces a leadership vacuum and mounting financial losses as it struggles to recover from the crash.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/12/2026, 10:15:50 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/59ad/live/94b20f80-4db6-11f1-8e66-f56d9b46fa9c.jpg",
+    "link": "https://www.bbc.com/news/articles/c775vvz0kydo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Smart glasses are 'an invasion of privacy' - Meta's are selling better than ever",
+    "snippet": "The biggest tech firms are set to sell millions of smart glasses despite growing privacy concerns.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "5/13/2026, 5:01:07 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c1d2/live/52785130-4e90-11f1-bd52-e755d604ece4.jpg",
+    "link": "https://www.bbc.com/news/articles/cj37z8357e5o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Is this the real face of Anne Boleyn?",
+    "snippet": "A computer science team believes they have discovered a previously unknown sketch of King Henry VIII's second wife - but not everyone is convinced.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "5/1/2026, 11:01:44 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/15ee/live/a5e63610-4603-11f1-ac78-2112837ce2aa.jpg",
+    "link": "https://www.bbc.com/news/articles/cp9pz53e891o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Texas accuses Netflix of spying on users, including children",
+    "snippet": "The lawsuit comes amid increased scrutiny over platform features like auto-play that deliver endless content to users.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/12/2026, 10:01:54 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b8a7/live/ae66b720-4de6-11f1-9cc8-93479330ab4b.jpg",
+    "link": "https://www.bbc.com/news/articles/c072dvv1rmro?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "How are countries responding to hantavirus?",
+    "snippet": "The UK, US and EU are asking all citizens returning home from the virus-hit MV Hondius to self-isolate for about six weeks.",
+    "category": "HEALTH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/12/2026, 8:51:41 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/af91/live/3f1a7440-4e29-11f1-b55d-0f258dce1735.jpg",
+    "link": "https://www.bbc.com/news/articles/c4g8318v4yzo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "White-tailed eagles to be released in Exmoor despite farmer warnings",
+    "snippet": "Some farmers fear the reintroduction of the UK's biggest bird of prey will threaten their livestock.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "5/13/2026, 5:00:08 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/51a1/live/e70ba040-4e13-11f1-bd2e-5b25b00aa23c.jpg",
+    "link": "https://www.bbc.com/news/articles/cd6p26y6d8vo?at_medium=RSS&at_campaign=rss"
   },
   {
     "title": "Elon Musk said control of OpenAI should go to his children, Sam Altman tells jury",
@@ -27,24 +99,6 @@
     "link": "https://www.bbc.com/news/articles/c1m253033m4o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "Not so dusty: How tech is changing woodworking",
-    "snippet": "Woodworking shops have been transformed by tech to make tools safer and more precise.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 11:23:48 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a1a6/live/ce922de0-3e23-11f1-ac78-2112837ce2aa.jpg",
-    "link": "https://www.bbc.com/news/articles/c747n11933eo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Air India crisis deepens ahead of final Ahmedabad crash report",
-    "snippet": "Air India faces a leadership vacuum and mounting financial losses as it struggles to recover from the crash.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "5/12/2026, 10:15:50 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/59ad/live/94b20f80-4db6-11f1-8e66-f56d9b46fa9c.jpg",
-    "link": "https://www.bbc.com/news/articles/c775vvz0kydo?at_medium=RSS&at_campaign=rss"
-  },
-  {
     "title": "US inflation jumps to 3.8% as energy costs surge from Iran war",
     "snippet": "The key measure of US inflation rises its highest level since May 2023 as consumers feel the impact of the Iran war.",
     "category": "BUSINESS",
@@ -54,84 +108,30 @@
     "link": "https://www.bbc.com/news/articles/c202pgxx89lo?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "Trump's 'Golden Dome' will cost $1.2tn and might not stop all-out missile attack",
-    "snippet": "That pricetag is nearly seven times higher than Trump's initial estimate, found an independent budget office.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "5/13/2026, 1:59:53 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f040/live/d4bf8df0-4e5b-11f1-9305-3566b5d14ae1.jpg",
-    "link": "https://www.bbc.com/news/articles/cqxp27j1xyjo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "£20m mystery gift buys London Zoo new hospital where you can watch vets work",
-    "snippet": "Visitors will be able to watch live veterinary procedures inside a state-of-the-art new animal hospital.",
-    "category": "SCIENCE",
-    "source": "Global Pulse Intelligence",
-    "time": "4/28/2026, 11:20:26 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7db5/live/847cb040-431e-11f1-ac78-2112837ce2aa.jpg",
-    "link": "https://www.bbc.com/news/articles/cpqpj7wy4x4o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "A decade on, Trump returns to a stronger and more assertive China",
-    "snippet": "Beijing is arguably the most powerful competitor the US has confronted in its history, one analyst says.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "5/12/2026, 10:07:51 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a764/live/ecd6a5e0-4e01-11f1-aa37-6b8846c2f74e.jpg",
-    "link": "https://www.bbc.com/news/articles/cm2py6l78dxo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "TikTok launches £3.99 subscription for no ads in UK",
-    "snippet": "Those who don't subscribe will be able to use the platform for free - but be shown personalised ads by default.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 4:05:39 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/36d8/live/bd23dc20-4d37-11f1-87e0-250b0c741d1e.jpg",
-    "link": "https://www.bbc.com/news/articles/cn0pgl0vk0qo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "French national shows symptoms on return from hantavirus-hit ship",
-    "snippet": "Five passengers of the MV Hondius will be quarantined in Paris \"until further notice\", France's prime minister says.",
+    "title": "How worried should we be about hantavirus?",
+    "snippet": "Passengers potentially exposed to hantavirus are being repatriated, so what is the risk to the wider public?",
     "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "5/11/2026, 3:29:58 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a28c/live/532e8af0-4ca5-11f1-a52e-37ef6facf99b.jpg",
-    "link": "https://www.bbc.com/news/articles/c3r2p70jdy7o?at_medium=RSS&at_campaign=rss"
+    "time": "5/12/2026, 10:01:52 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7617/live/0a92d310-4d21-11f1-894d-1b54d8c2d924.jpg",
+    "link": "https://www.bbc.com/news/articles/c98r199e195o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "Texas accuses Netflix of spying on users, including children",
-    "snippet": "The lawsuit comes amid increased scrutiny over platform features like auto-play that deliver endless content to users.",
+    "title": "Elon Musk said control of OpenAI should go to his children, Sam Altman tells jury",
+    "snippet": "Sam Altman said Elon Musk tried many times for total control of OpenAI, which he's now suing.",
     "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "5/12/2026, 10:01:54 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b8a7/live/ae66b720-4de6-11f1-9cc8-93479330ab4b.jpg",
-    "link": "https://www.bbc.com/news/articles/c072dvv1rmro?at_medium=RSS&at_campaign=rss"
+    "time": "5/12/2026, 6:51:56 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d608/live/c5360200-4e2a-11f1-a6a1-c1a2c5a4cd39.jpg",
+    "link": "https://www.bbc.com/news/articles/czj2k2exdzlo?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "Daily pill to help keep weight off after stopping obesity jabs",
-    "snippet": "The tablet - orforglipron - is available in the US and could soon launch in the UK.",
+    "title": "UK alcohol deaths fall for first time since Covid pandemic",
+    "snippet": "Experts say the “modest reduction” is “not cause for complacency”, with calls to redouble efforts to slash deaths further.",
     "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "5/12/2026, 11:06:23 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d8b3/live/55c5d990-4d53-11f1-a556-3191549e7ed9.jpg",
-    "link": "https://www.bbc.com/news/articles/cwy2e9wlvjxo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "No sign of larger hantavirus outbreak, says UN health agency",
-    "snippet": "The situation could still change and there might be more confirmed cases, warns the head of the World Health Organization.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "5/12/2026, 5:55:12 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/62d4/live/48741b80-4dee-11f1-8191-8bac3ae59130.jpg",
-    "link": "https://www.bbc.com/news/articles/cqjpqynj1nlo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "UK borrowing costs jump as uncertainty over PM's future continues",
-    "snippet": "The possibility of a change of leadership in the UK has unsettled some investors and sent bond yields higher.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "5/12/2026, 4:31:00 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ecc5/live/d6326200-4e12-11f1-ac78-2112837ce2aa.jpg",
-    "link": "https://www.bbc.com/news/articles/cqjpqy19npxo?at_medium=RSS&at_campaign=rss"
+    "time": "5/11/2026, 5:52:44 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a815/live/7b753f80-4d50-11f1-9077-cb5f00d3274a.jpg",
+    "link": "https://www.bbc.com/news/articles/c3v2dxg79w2o?at_medium=RSS&at_campaign=rss"
   }
 ]
