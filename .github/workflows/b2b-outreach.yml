@@ -1,0 +1,37 @@
+name: B2B Automated Outreach
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # Every day at 4:00 AM UTC (9:30 AM IST)
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  outreach:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install nodemailer
+
+      - name: Run Outreach Script
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+        run: node scripts/b2b-outreach.mjs
+
+      - name: Commit Status Update
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/outreach-history.json
+          git commit -m "Auto-update outreach history [skip ci]" || echo "No changes to commit"
+          git push origin main

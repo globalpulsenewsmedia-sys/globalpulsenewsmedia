@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Amazon India PR",
+        "email": "press@amazon.in",
+        "category": "E-commerce",
+        "region": "International"
+    },
+    {
+        "name": "Reliance JioMart Ads",
+        "email": "advertising@jiomart.com",
+        "category": "E-commerce",
+        "region": "Mumbai"
+    },
+    {
+        "name": "Lodha Group Marketing",
+        "email": "marketing@lodhagroup.com",
+        "category": "Real Estate",
+        "region": "Mumbai/Thane"
+    },
+    {
+        "name": "Flipkart AdDesk",
+        "email": "ads@flipkart.com",
+        "category": "E-commerce",
+        "region": "International"
+    }
+]
