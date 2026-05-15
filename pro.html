@@ -45,50 +45,58 @@
                 <span class="gold-tag">EXCLUSIVE ACCESS</span>
                 <h1 style="font-size: 3.5rem; font-weight: 900; margin-top: 20px;">The Billionaire's Edge</h1>
                 <p style="color: #888; max-width: 700px; margin: 20px auto;">Direct access to high-frequency AI signals, private market data, and billionaire-tier arbitrage opportunities.</p>
-                <div style="margin-top: 40px;">
-                <div style="margin-top: 40px;">
-                    <button id="razorpay-button" class="btn-live" style="background: #ffd700; color: #000; border: none; padding: 18px 50px; font-weight: 900; font-size: 1.2rem; cursor: pointer; box-shadow: 0 10px 40px rgba(255,215,0,0.3); border-radius: 50px;">GET PRO ACCESS — $99/MO</button>
-                    
-                    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-                    <script>
-                        document.getElementById('razorpay-button').onclick = function(e){
-                            var options = {
-                                "key": "rzp_live_SpnkpDvXoY4a92", // LIVE KEY ID
-                                "amount": "9900", // Amount in paise (9900 = 99.00 USD/INR - confirm currency)
-                                "currency": "USD", 
-                                "name": "Global Pulse PRO",
-                                "description": "24/7 Intelligence Subscription",
-                                "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100",
-                                "handler": function (response){
-                                    alert("Intelligence Link Secured! Redirecting to PRO Lounge...");
-                                    window.location.href = "success.html?payment_id=" + response.razorpay_payment_id;
-                                },
-                                "prefill": {
-                                    "name": "",
-                                    "email": "",
-                                    "contact": ""
-                                },
-                                "notes": {
-                                    "address": "Global Pulse Media Group"
-                                },
-                                "theme": {
-                                    "color": "#ffd700"
-                                }
-                            };
-                            var rzp1 = new Razorpay(options);
-                            rzp1.open();
-                            e.preventDefault();
-                        }
-                    </script>
+        <div class="pricing-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 60px; text-align: left;">
+            <!-- Monthly Plan -->
+            <div class="pricing-card" style="background: #050505; padding: 40px; border-radius: 20px; border: 1px solid #222; position: relative;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 10px;">GLOBAL MONTHLY</h3>
+                <div class="price" style="font-size: 3rem; font-weight: 900; margin-bottom: 20px;">$9.99<span style="font-size: 1rem; color: #666;">/mo</span></div>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; color: #888; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;">✓ 24/7 AI Signal Access</li>
+                    <li style="margin-bottom: 10px;">✓ Multi-Region Intelligence</li>
+                    <li style="margin-bottom: 10px;">✓ Ad-Free Dashboard</li>
+                </ul>
+                <button onclick="pay('999', 'Monthly')" style="width: 100%; padding: 15px; background: #ffd700; color: #000; border: none; border-radius: 10px; font-weight: 900; cursor: pointer;">SUBSCRIBE MONTHLY</button>
+            </div>
 
-                    <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; align-items: center;">
-                        <span style="font-size: 0.6rem; color: #666;">SECURE PAYMENT VIA</span>
-                        <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="15" alt="Razorpay">
-                        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" width="30" alt="PayPal">
-                        <span style="font-size: 0.6rem; color: #666; margin-left: 5px;">| DINERS CLUB ACCEPTED</span>
-                    </div>
-                    <p style="margin-top: 10px; font-size: 0.6rem; color: #444;">Supports UPI, NetBanking & International Cards</p>
-                </div>
+            <!-- Yearly Plan -->
+            <div class="pricing-card" style="background: #050505; padding: 40px; border-radius: 20px; border: 2px solid #ffd700; position: relative;">
+                <div style="position: absolute; top: -15px; right: 20px; background: #ffd700; color: #000; padding: 4px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: 900;">2 MONTHS FREE</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 10px;">ANNUAL PASS</h3>
+                <div class="price" style="font-size: 3rem; font-weight: 900; margin-bottom: 20px;">$99.99<span style="font-size: 1rem; color: #666;">/yr</span></div>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; color: #888; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;">✓ Everything in Monthly</li>
+                    <li style="margin-bottom: 10px;">✓ Priority Alpha Access</li>
+                    <li style="margin-bottom: 10px;">✓ Exclusive Market Reports</li>
+                </ul>
+                <button onclick="pay('9999', 'Annual')" style="width: 100%; padding: 15px; background: #fff; color: #000; border: none; border-radius: 10px; font-weight: 900; cursor: pointer;">SUBSCRIBE YEARLY</button>
+            </div>
+        </div>
+
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+            function pay(amount, plan) {
+                var options = {
+                    "key": "rzp_live_SpnkpDvXoY4a92",
+                    "amount": amount * 100,
+                    "currency": "USD",
+                    "name": "Global Pulse Intelligence",
+                    "description": plan + " PRO Access Subscription",
+                    "handler": function (response){
+                        window.location.href = "success.html?plan=" + plan + "&id=" + response.razorpay_payment_id;
+                    },
+                    "theme": { "color": "#ffd700" }
+                };
+                var rzp = new Razorpay(options);
+                rzp.open();
+            }
+        </script>
+
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px; align-items: center; opacity: 0.6;">
+            <span style="font-size: 0.7rem;">SECURE PAYMENTS VIA</span>
+            <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="20">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="60">
+            <span style="font-size: 0.7rem;">| DINERS CLUB & AMEX ACCEPTED | GDPR COMPLIANT</span>
+        </div>
             </section>
 
             <div class="signal-grid">

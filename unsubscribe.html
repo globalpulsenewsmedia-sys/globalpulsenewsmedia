@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unsubscribe | Global Pulse News</title>
+    <style>
+        body { background: #000; color: #fff; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; text-align: center; }
+        .box { background: #111; padding: 40px; border-radius: 10px; border: 1px solid #333; }
+        button { background: #ff0000; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Unsubscribe</h1>
+        <p>We are sorry to see you go. Click below to opt-out of future partnerships.</p>
+        <button onclick="confirmUnsubscribe()">Unsubscribe Now</button>
+        <p id="msg" style="margin-top: 20px; color: #666;"></p>
+    </div>
+
+    <script>
+        function confirmUnsubscribe() {
+            const params = new URLSearchParams(window.location.search);
+            const email = params.get('email');
+            document.getElementById('msg').innerText = "You have been successfully unsubscribed. (Log recorded)";
+            // In a real app, this would ping a backend. For now, we simulate the log.
+            console.log("Unsubscribed:", email);
+        }
+    </script>
+</body>
+</html>
