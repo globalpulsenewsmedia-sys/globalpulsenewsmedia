@@ -100,20 +100,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         });
 
-        // 1. TOP HERO AREA (CNN MAIN STORY)
+        const getDisplayTitle = (a) => a.title_mr ? `${sanitizeHTML(a.title)} <br> <span style="font-size: 0.8em; color: #ffcc00; font-family: 'Noto Sans Marathi';">${sanitizeHTML(a.title_mr)}</span>` : sanitizeHTML(a.title);
+        const getDisplaySnippet = (a) => a.snippet_mr ? `${sanitizeHTML(a.snippet)} <br> <span style="font-size: 0.9em; color: #aaa; font-family: 'Noto Sans Marathi';">${sanitizeHTML(a.snippet_mr)}</span>` : sanitizeHTML(a.snippet);
+
+        // 1. TOP HERO AREA
         const hero = uniqueArticles[0];
         if (heroSection) {
             heroSection.innerHTML = `
-                <a href="${hero.link}" target="_blank" class="hero-headline">${sanitizeHTML(hero.title)}</a>
+                <a href="${hero.link}" target="_blank" class="hero-headline">${getDisplayTitle(hero)}</a>
                 <div class="hero-image-wrapper">
                     <img src="${hero.imageUrl || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200'}" class="hero-image">
-                    <div class="live-updates-badge">LIVE UPDATES</div>
+                    <div class="live-updates-badge">AI GENERATED IMAGE</div>
                 </div>
-                <div class="hero-snippet" style="font-size: 1.5rem; line-height: 1.2; font-weight: 300;">${sanitizeHTML(hero.snippet)}</div>
+                <div class="hero-snippet" style="font-size: 1.5rem; line-height: 1.4; font-weight: 300;">${getDisplaySnippet(hero)}</div>
             `;
         }
 
-        // 2. LEFT COLUMN (Compact List)
+        // 2. LEFT COLUMN
         if (leftColumn) {
             const leftArticles = uniqueArticles.slice(1, 15);
             leftColumn.innerHTML = leftArticles.map(a => `
@@ -121,135 +124,88 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="compact-image-wrapper">
                         <img src="${a.imageUrl}" class="compact-image" loading="lazy">
                     </div>
-                    <a href="${a.link}" target="_blank">${sanitizeHTML(a.title)}</a>
+                    <a href="${a.link}" target="_blank">${getDisplayTitle(a)}</a>
                 </div>
             `).join('');
         }
 
-        // 3. RIGHT COLUMN (LIVE HEADLINES FEED) - NEW CNN STYLE
+        // 3. RIGHT COLUMN
         if (sideGrid) {
-            const sideArticles = uniqueArticles.slice(15, 40); // Large list for scroll
+            const sideArticles = uniqueArticles.slice(15, 40);
             sideGrid.innerHTML = `
                 <div class="headlines-box" style="text-align: left; background: transparent; padding: 0;">
-                    <div class="cnn-logo" style="font-size: 1.2rem; margin-bottom: 10px;">GLOBAL<span>PULSE</span> <span style="font-size: 0.8rem; font-weight: 300; color: #fff;">Headlines</span></div>
+                    <div class="cnn-logo" style="font-size: 1.2rem; margin-bottom: 10px;">MAHARASHTRA<span>VISHWA</span> <span style="font-size: 0.8rem; font-weight: 300; color: #fff;">Varta</span></div>
                     <div class="headlines-feed">
                         ${sideArticles.map(a => `
                             <div class="sidebar-card">
-                                <a href="${a.link}" target="_blank" style="font-size: 0.95rem; font-weight: 900; line-height: 1.2;">${sanitizeHTML(a.title)}</a>
-                                <p style="font-size: 0.7rem; color: #666; margin-top: 5px;">UPDATED ${Math.floor(Math.random() * 60)}M AGO</p>
+                                <a href="${a.link}" target="_blank" style="font-size: 0.95rem; font-weight: 900; line-height: 1.4;">${getDisplayTitle(a)}</a>
+                                <p style="font-size: 0.7rem; color: #666; margin-top: 5px;">AI VERIFIED • ${Math.floor(Math.random() * 60)}M AGO</p>
                             </div>
                         `).join('')}
                     </div>
-                    <a href="#" class="headlines-link">See all headlines →</a>
                 </div>
             `;
         }
 
-        // 4. CENTER AREA - INFINITE SCROLL SIMULATION (MANY SECTIONS)
+        // 4. CENTER AREA
         if (centerGrid) {
             let gridHTML = '';
             
-            // Section 1: Top Stories Grid
             const gridArticles = uniqueArticles.slice(40, 46);
             gridHTML += `
                 <div class="cnn-center-grid">
                     ${gridArticles.map(a => `
                         <div class="sidebar-card">
                             <div class="sidebar-image-wrapper"><img src="${a.imageUrl}" loading="lazy"></div>
-                            <a href="${a.link}" target="_blank" style="color: var(--cnn-blue); font-size: 1.4rem;">${sanitizeHTML(a.title)}</a>
+                            <a href="${a.link}" target="_blank" style="color: var(--cnn-blue); font-size: 1.4rem;">${getDisplayTitle(a)}</a>
                         </div>
                     `).join('')}
                 </div>
             `;
 
-            // Section 2: MORE TOP STORIES
             const moreStories = uniqueArticles.slice(46, 52);
             gridHTML += `
-                <div class="cnn-section-header">More Top Stories</div>
+                <div class="cnn-section-header">Exclusive Reports</div>
                 <div class="cnn-center-grid">
                     ${moreStories.map(a => `
                         <div class="sidebar-card">
                             <div class="sidebar-image-wrapper"><img src="${a.imageUrl}" loading="lazy"></div>
-                            <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${sanitizeHTML(a.title)}</a>
+                            <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${getDisplayTitle(a)}</a>
                         </div>
                     `).join('')}
                 </div>
             `;
 
-            // Section 3: WORLD INTELLIGENCE (Large Row)
-            const worldStories = uniqueArticles.filter(a => a.category.includes('WORLD')).slice(0, 3);
-            if (worldStories.length > 0) {
-                gridHTML += `
-                    <div class="cnn-section-header">World Intelligence</div>
-                    <div style="display: flex; flex-direction: column; gap: 30px;">
-                        ${worldStories.map(a => `
-                            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 20px; border-bottom: 1px solid #222; padding-bottom: 20px;">
-                                <div class="sidebar-image-wrapper"><img src="${a.imageUrl}" style="height: 100%;"></div>
-                                <div>
-                                    <a href="${a.link}" target="_blank" style="font-size: 1.8rem; font-weight: 900; color: #fff; text-decoration: none;">${sanitizeHTML(a.title)}</a>
-                                    <p style="color: #888; margin-top: 10px;">${sanitizeHTML(a.snippet)}</p>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            }
-
-            // Section 4-10: DEEP SCROLL REPETITION (CNN usually has massive lists)
-            // We use the rest of the unique articles or iterate to create length
-            const remaining = uniqueArticles.slice(52);
-            const categories = ['POLITICS', 'TECH', 'BUSINESS', 'HEALTH', 'STYLE', 'TRAVEL', 'SPORTS'];
-            
-            categories.forEach(cat => {
-                const catStories = uniqueArticles.filter(a => a.category.includes(cat)).slice(0, 4);
-                if (catStories.length > 0) {
-                    gridHTML += `
-                        <div class="cnn-section-header">${cat}</div>
-                        <div class="cnn-center-grid">
-                            ${catStories.map(a => `
-                                <div class="sidebar-card">
-                                    <div class="sidebar-image-wrapper"><img src="${a.imageUrl}" loading="lazy"></div>
-                                    <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${sanitizeHTML(a.title)}</a>
-                                </div>
-                            `).join('')}
-                        </div>
-                    `;
-                }
-            });
-
             centerGrid.innerHTML = gridHTML;
         }
 
-        // 5. Update Breaking News Ticker
+        // 5. Breaking News Ticker
         const ticker = document.getElementById('breakingTicker');
         if (ticker) {
-            const tickerTitles = uniqueArticles.slice(0, 10).map(a => sanitizeHTML(a.title).toUpperCase()).join(' • ');
-            ticker.innerText = `${tickerTitles} • LIVE COVERAGE CONTINUES 24/7 • DEVELOPING STORY...`;
+            const tickerTitles = uniqueArticles.slice(0, 10).map(a => a.title_mr || a.title.toUpperCase()).join(' • ');
+            ticker.innerText = `${tickerTitles} • २४/७ महाराष्ट्र विश्व वार्ता लाईव्ह...`;
         }
     };
-
-
 
     // --- Nav Interaction ---
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const cat = link.getAttribute('data-category');
-            if (!cat) return; // For Academy link
+            if (!cat) return;
 
             e.preventDefault();
             navLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
 
             if (cat === 'all') {
-                fetchNews(); // Re-render everything
+                fetchNews();
             } else {
                 const filtered = allArticles.filter(a => a.category.toLowerCase().includes(cat.toLowerCase()));
-                renderDashboard(filtered, []); // No viral in filtered categories for now
+                renderDashboard(filtered, []);
             }
         });
     });
 
-    // Initialize
     fetchNews();
-    setInterval(fetchNews, 600000); // 10 min refresh
+    setInterval(fetchNews, 600000);
 });

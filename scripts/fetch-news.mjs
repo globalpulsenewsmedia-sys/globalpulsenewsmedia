@@ -1,10 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-// This script is designed to be run by GitHub actions where Node.js is available.
-// It will fetch RSS feeds, rewrite them with Gemini (if API key is set),
-// and save them to a JSON file for the static site to render.
-
+// --- CONFIGURATION ---
 const RSS2JSON_API = 'https://api.rss2json.com/v1/api.json?rss_url=';
 const FEEDS = [
     { category: 'WORLD', url: 'http://feeds.bbci.co.uk/news/world/rss.xml' },
@@ -12,41 +9,62 @@ const FEEDS = [
     { category: 'BUSINESS', url: 'http://feeds.bbci.co.uk/news/business/rss.xml' },
     { category: 'SCIENCE', url: 'http://feeds.bbci.co.uk/news/science_and_environment/rss.xml' },
     { category: 'HEALTH', url: 'http://feeds.bbci.co.uk/news/health/rss.xml' },
-    { category: 'SPORTS', url: 'http://feeds.bbci.co.uk/sport/rss.xml' },
-    { category: 'ENTERTAINMENT', url: 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml' },
-    { category: 'POLITICS', url: 'http://feeds.bbci.co.uk/news/politics/rss.xml' },
-    { category: 'US', url: 'http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml' },
-    { category: 'UK', url: 'http://feeds.bbci.co.uk/news/uk/rss.xml' }
+    { category: 'POLITICS', url: 'http://feeds.bbci.co.uk/news/politics/rss.xml' }
 ];
 
-async function rewriteArticlesWithGemini(articles) {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-        console.warn('GEMINI_API_KEY not found. Skipping AI rewrite.');
-        return articles;
+const SITE_URL = "https://globalpulsenewsmedia.com";
+
+// --- AI: IMAGE GENERATION (Hugging Face Free Tier) ---
+async function generateImageWithHF(prompt) {
+    const hfToken = process.env.HUGGINGFACE_API_KEY;
+    if (!hfToken) return "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200";
+
+    try {
+        console.log(`🎨 Generating AI Image for: ${prompt.substring(0, 50)}...`);
+        const response = await fetch(
+            "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0",
+            {
+                headers: { Authorization: `Bearer ${hfToken}` },
+                method: "POST",
+                body: JSON.stringify({ inputs: `Professional news photo, high quality, cinematic, 16:9, ${prompt}` }),
+            }
+        );
+
+        if (!response.ok) throw new Error('HF API Error');
+        
+        const buffer = await response.arrayBuffer();
+        const fileName = `img_${Date.now()}.jpg`;
+        const localDir = path.join(process.cwd(), 'data', 'images');
+        
+        await fs.mkdir(localDir, { recursive: true });
+        await fs.writeFile(path.join(localDir, fileName), Buffer.from(buffer));
+        
+        return `./data/images/${fileName}`; // Return local path for static site
+    } catch (error) {
+        console.error('❌ HF Image Generation Failed:', error.message);
+        return "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200";
     }
+}
 
-    console.log('Rewriting articles with Gemini AI...');
-    const rewrittenArticles = [];
+// --- AI: REWRITE & TRANSLATE (Gemini Free Tier) ---
+async function rewriteAndTranslate(articles) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) return articles;
 
-    // Limit to top 15 articles to stay within 50,000 word daily limit comfortably
+    console.log('🤖 Processing articles with Gemini (Rewriting + Marathi)...');
+    const processedArticles = [];
     const articlesToProcess = articles.slice(0, 15);
 
     for (const article of articlesToProcess) {
         try {
-            const prompt = `Rewrite the following news items into professional, engaging, and unique intelligence reports for a premium news portal. 
-    For each item, provide:
-    1. A catchy title.
-    2. A 2-sentence professional summary (snippet).
-    3. The category (World, Business, Tech, Science, Health, Sports, Entertainment, Politics, US, or UK).
-    4. A 'Marketing Kit' consisting of:
-       - A viral Twitter/X hook.
-       - A professional LinkedIn summary.
-       - A short Instagram/TikTok caption.
-    Format the output as a JSON array of objects with keys: title, snippet, category, imageUrl, twitter, linkedin, instagram.
-    
-    Items to process:
-    ${JSON.stringify([article])}`;
+            const prompt = `Rewrite this news item for a premium portal. Provide English AND Marathi versions.
+            1. English Title & 2-sentence Snippet.
+            2. Marathi Title & 2-sentence Snippet (महाराष्ट्र विश्व वार्ता शैली).
+            3. Detailed visual prompt for image generation.
+            
+            Return ONLY a JSON object: { "title_en": "", "snippet_en": "", "title_mr": "", "snippet_mr": "", "category": "", "img_prompt": "" }
+            
+            Item: ${article.title} - ${article.snippet}`;
 
             const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
                 method: 'POST',
@@ -60,174 +78,87 @@ async function rewriteArticlesWithGemini(articles) {
             const result = await response.json();
             if (result.candidates && result.candidates[0].content.parts[0].text) {
                 const aiData = JSON.parse(result.candidates[0].content.parts[0].text);
-                rewrittenArticles.push({
+                
+                // Generate unique AI Image
+                const aiImageUrl = await generateImageWithHF(aiData.img_prompt);
+
+                processedArticles.push({
                     ...article,
-                    title: aiData.title || article.title,
-                    snippet: aiData.snippet || article.snippet,
+                    title: aiData.title_en,
+                    snippet: aiData.snippet_en,
+                    title_mr: aiData.title_mr,
+                    snippet_mr: aiData.snippet_mr,
+                    category: aiData.category || article.category,
+                    imageUrl: aiImageUrl,
                     source: 'Global Pulse AI Intelligence',
                     aiGenerated: true
                 });
             } else {
-                rewrittenArticles.push(article);
+                processedArticles.push(article);
             }
         } catch (error) {
-            console.error(`Error rewriting article "${article.title}":`, error);
-            rewrittenArticles.push(article); // Fallback to original
+            console.error(`❌ Error processing article:`, error);
+            processedArticles.push(article);
         }
     }
-    return rewrittenArticles;
+    return processedArticles;
 }
 
+// --- MAIN TASK ---
 async function fetchFeeds() {
-    console.log('Starting automated news fetch...');
+    console.log('🚀 Starting Zero-Cost AI News Pipeline...');
     let allArticles = [];
 
     for (const feed of FEEDS) {
-        let retries = 3;
-        while (retries > 0) {
-            try {
-                console.log(`Fetching ${feed.category} news... (Retries left: ${retries-1})`);
-                const response = await fetch(`${RSS2JSON_API}${encodeURIComponent(feed.url)}`, {
-                    headers: { 'User-Agent': 'GlobalPulse-Fetcher/1.0' }
-                });
-                const data = await response.json();
-
-                if (data.status === 'ok') {
-                    const articles = data.items.slice(0, 25).map(item => {
-                        return {
-                            title: item.title,
-                            snippet: item.description.replace(/<[^>]*>?/gm, '').substring(0, 250),
-                            category: feed.category,
-                            source: 'Global Pulse Intelligence',
-                            time: new Date(item.pubDate).toLocaleString(),
-                            imageUrl: item.thumbnail || "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&q=80",
-                            link: item.link
-                        };
-                    });
-                    
-                    allArticles = allArticles.concat(articles);
-                    break; // Success, exit retry loop
-                } else {
-                    throw new Error(`API Status: ${data.status}`);
-                }
-            } catch (error) {
-                console.error(`Error fetching feed ${feed.category}:`, error.message);
-                retries--;
-                if (retries === 0) console.error(`Max retries reached for ${feed.category}.`);
-                await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2s before retry
+        try {
+            const response = await fetch(`${RSS2JSON_API}${encodeURIComponent(feed.url)}`);
+            const data = await response.json();
+            if (data.status === 'ok') {
+                const articles = data.items.slice(0, 10).map(item => ({
+                    title: item.title,
+                    snippet: item.description.replace(/<[^>]*>?/gm, '').substring(0, 200),
+                    category: feed.category,
+                    source: 'Global Pulse Intelligence',
+                    time: new Date(item.pubDate).toLocaleString(),
+                    imageUrl: item.thumbnail || "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600",
+                    link: item.link
+                }));
+                allArticles = allArticles.concat(articles);
             }
-        }
+        } catch (e) { console.error(`Error fetching ${feed.category}`); }
     }
 
-    // Aggressive Deduplication by Title and Link
-    const uniqueMap = new Map();
-    allArticles.forEach(a => {
-        const titleKey = a.title.toLowerCase().trim().replace(/[^\w\s]/g, '');
-        const linkKey = a.link.split('?')[0]; // Strip tracking params
-
-        if (!uniqueMap.has(titleKey) && !uniqueMap.has(linkKey)) {
-            uniqueMap.set(titleKey, a);
-            uniqueMap.set(linkKey, a);
-        } else {
-            const existing = uniqueMap.get(titleKey) || uniqueMap.get(linkKey);
-            if (existing && !existing.category.toLowerCase().includes(a.category.toLowerCase())) {
-                existing.category += `, ${a.category}`;
-            }
-        }
+    // Deduplication
+    const seen = new Set();
+    allArticles = allArticles.filter(a => {
+        const key = a.title.toLowerCase().trim();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
     });
-    // Filter out values to get unique items
-    allArticles = Array.from(new Set(uniqueMap.values()));
 
-    // Shuffle articles
-    allArticles = allArticles.sort(() => 0.5 - Math.random());
+    // AI Enrichment
+    allArticles = await rewriteAndTranslate(allArticles);
 
-    // AI Rewriting
-    if (process.env.GEMINI_API_KEY) {
-         allArticles = await rewriteArticlesWithGemini(allArticles);
-    }
+    // Save Data
+    const dataDir = path.join(process.cwd(), 'data');
+    await fs.mkdir(dataDir, { recursive: true });
+    await fs.writeFile(path.join(dataDir, 'news.json'), JSON.stringify(allArticles, null, 2));
 
-    // Save to the static data directory
-    const outputDir = path.join(process.cwd(), 'data');
-    try {
-        await fs.mkdir(outputDir, { recursive: true });
-    } catch(e) {}
-    
-    await fs.writeFile(
-        path.join(outputDir, 'news.json'),
-        JSON.stringify(allArticles, null, 2)
-    );
-
-    // Save Marketing Kit
-    const marketingKit = allArticles.map(a => ({
-        title: a.title,
-        twitter: a.twitter,
-        linkedin: a.linkedin,
-        instagram: a.instagram,
-        link: a.link
-    }));
-    await fs.writeFile(
-        path.join(outputDir, 'marketing.json'),
-        JSON.stringify(marketingKit, null, 2)
-    );
-
-    // --- Master SEO: Generate Sitemap & Google News RSS ---
+    // SEO Generation
     await generateSitemap(allArticles);
     await generateRSS(allArticles);
 
-    console.log(`Successfully saved ${allArticles.length} articles to data/news.json`);
+    console.log(`✅ Pipeline complete. Processed ${allArticles.length} articles.`);
 }
 
 async function generateRSS(articles) {
-    console.log('Generating Google News RSS Feed...');
-    const baseUrl = 'https://globalpulsenewsmedia.com';
-    let rss = `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-<channel>
-  <title>Global Pulse | AI News Intelligence</title>
-  <link>${baseUrl}</link>
-  <description>24/7 Global Intelligence and Market Analysis</description>
-  <language>en-us</language>
-  <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>`;
-
-    articles.forEach(article => {
-        rss += `
-  <item>
-    <title>${article.title}</title>
-    <link>${article.link}</link>
-    <description>${article.snippet}</description>
-    <pubDate>${new Date().toUTCString()}</pubDate>
-    <guid>${article.link}</guid>
-    <category>${article.category}</category>
-  </item>`;
-    });
-
-    rss += '\n</channel>\n</rss>';
-    
+    const rss = `<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0"><channel><title>Global Pulse | AI News</title><link>${SITE_URL}</link><description>24/7 Global Intelligence</description>${articles.map(a => `<item><title>${a.title}</title><link>${a.link}</link><description>${a.snippet_mr || a.snippet}</description></item>`).join('')}</channel></rss>`;
     await fs.writeFile(path.join(process.cwd(), 'feed.xml'), rss);
 }
 
 async function generateSitemap(articles) {
-    console.log('Generating SEO Sitemap...');
-    const baseUrl = 'https://globalpulsenewsmedia.com';
-    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${baseUrl}/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <priority>1.0</priority>
-  </url>`;
-
-    articles.forEach(article => {
-        sitemap += `
-  <url>
-    <loc>${article.link}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <priority>0.8</priority>
-  </url>`;
-    });
-
-    sitemap += '\n</urlset>';
-    
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${SITE_URL}/</loc><priority>1.0</priority></url>${articles.map(a => `<url><loc>${a.link}</loc><lastmod>${new Date().toISOString()}</lastmod></url>`).join('')}</urlset>`;
     await fs.writeFile(path.join(process.cwd(), 'sitemap.xml'), sitemap);
 }
 
