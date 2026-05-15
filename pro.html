@@ -46,11 +46,46 @@
                 <h1 style="font-size: 3.5rem; font-weight: 900; margin-top: 20px;">The Billionaire's Edge</h1>
                 <p style="color: #888; max-width: 700px; margin: 20px auto;">Direct access to high-frequency AI signals, private market data, and billionaire-tier arbitrage opportunities.</p>
                 <div style="margin-top: 40px;">
-                    <button class="btn-live" style="background: #ffd700; color: #000; border: none; padding: 18px 50px; font-weight: 900; font-size: 1.2rem; cursor: pointer; box-shadow: 0 10px 40px rgba(255,215,0,0.3); border-radius: 50px;">GET PRO ACCESS — $99/MO</button>
+                <div style="margin-top: 40px;">
+                    <button id="razorpay-button" class="btn-live" style="background: #ffd700; color: #000; border: none; padding: 18px 50px; font-weight: 900; font-size: 1.2rem; cursor: pointer; box-shadow: 0 10px 40px rgba(255,215,0,0.3); border-radius: 50px;">GET PRO ACCESS — $99/MO</button>
+                    
+                    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+                    <script>
+                        document.getElementById('razorpay-button').onclick = function(e){
+                            var options = {
+                                "key": "rzp_live_SpnkpDvXoY4a92", // LIVE KEY ID
+                                "amount": "9900", // Amount in paise (9900 = 99.00 USD/INR - confirm currency)
+                                "currency": "USD", 
+                                "name": "Global Pulse PRO",
+                                "description": "24/7 Intelligence Subscription",
+                                "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100",
+                                "handler": function (response){
+                                    alert("Intelligence Link Secured! Redirecting to PRO Lounge...");
+                                    window.location.href = "success.html?payment_id=" + response.razorpay_payment_id;
+                                },
+                                "prefill": {
+                                    "name": "",
+                                    "email": "",
+                                    "contact": ""
+                                },
+                                "notes": {
+                                    "address": "Global Pulse Media Group"
+                                },
+                                "theme": {
+                                    "color": "#ffd700"
+                                }
+                            };
+                            var rzp1 = new Razorpay(options);
+                            rzp1.open();
+                            e.preventDefault();
+                        }
+                    </script>
+
                     <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; align-items: center;">
                         <span style="font-size: 0.6rem; color: #666;">SECURE PAYMENT VIA</span>
                         <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="15" alt="Razorpay">
                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" width="30" alt="PayPal">
+                        <span style="font-size: 0.6rem; color: #666; margin-left: 5px;">| DINERS CLUB ACCEPTED</span>
                     </div>
                     <p style="margin-top: 10px; font-size: 0.6rem; color: #444;">Supports UPI, NetBanking & International Cards</p>
                 </div>
