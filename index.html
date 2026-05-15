@@ -106,7 +106,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 
-<body class="light-theme"> <!-- CNN uses Light Theme for authority -->
+<body class="dark-theme"> <!-- CNN Style Dark Theme -->
 
     <!-- CNN Style Breaking News Ticker (Topmost) -->
     <div class="cnn-breaking-bar">
@@ -123,25 +123,29 @@
                     <button class="hamburger-menu">
                         <span></span><span></span><span></span>
                     </button>
-                    <div class="cnn-logo" onclick="window.location.reload()">
-                        GLOBAL<span>PULSE</span>
+                    <div class="cnn-logo-box" onclick="window.location.reload()" style="background: #cc0000; padding: 5px 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 40px;">
+                        <span style="color: #fff; font-weight: 900; font-size: 1.5rem; letter-spacing: -1px;">GLOBAL PULSE</span>
                     </div>
                 </div>
                 <nav class="cnn-nav">
                     <ul>
                         <li><a href="#" class="active" data-category="all">Latest</a></li>
-                        <li><a href="#" data-category="world">World</a></li>
-                        <li><a href="#" data-category="business">Business</a></li>
-                        <li><a href="#" data-category="tech">Tech</a></li>
-                        <li><a href="livetv.html" style="color: #cc0000; font-weight: 900;">LIVE TV Hub</a></li>
-                        <li><a href="academy.html">Academy</a></li>
-                        <li><a href="pro.html" class="nav-premium"
-                                style="color: #ffd700; border: 1px solid #ffd700;">PRO</a></li>
+                        <li><a href="#" data-category="US">US</a></li>
+                        <li><a href="#" data-category="WORLD">World</a></li>
+                        <li><a href="#" data-category="POLITICS">Politics</a></li>
+                        <li><a href="#" data-category="BUSINESS">Business</a></li>
+                        <li><a href="#" data-category="HEALTH">Health</a></li>
+                        <li><a href="#" data-category="ENTERTAINMENT">Entertainment</a></li>
+                        <li><a href="#" data-category="TECH">Tech</a></li>
+                        <li><a href="#" data-category="STYLE">Style</a></li>
+                        <li><a href="#" data-category="TRAVEL">Travel</a></li>
+                        <li><a href="#" data-category="SPORTS">Sports</a></li>
+                        <li><a href="livetv.html" style="color: #cc0000; font-weight: 900;">LIVE TV</a></li>
                     </ul>
                 </nav>
                 <div class="header-right" style="gap: 15px; flex-shrink: 0;">
                     <div class="google-badge"
-                        style="background: #fff; color: #4285F4; border: 1px solid #4285F4; padding: 4px 8px; font-size: 0.6rem; font-weight: 900; border-radius: 4px; display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                        style="background: #111; color: #4285F4; border: 1px solid #4285F4; padding: 4px 8px; font-size: 0.6rem; font-weight: 900; border-radius: 4px; display: flex; align-items: center; gap: 5px; white-space: nowrap;">
                         <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d473530437e3586b74e1.svg"
                             width="12" alt="Gemini">
                         <span class="gemini-text">POWERED BY GEMINI AI</span>
@@ -152,7 +156,6 @@
                             LIVE TV
                         </div>
                     </a>
-                    <button class="btn-search-icon" onclick="alert('Global Pulse AI Search is initializing...')" style="cursor: pointer; background: transparent; border: none; font-size: 1.2rem; color: #fff;">🔍</button>
                 </div>
             </div>
         </div>
@@ -161,19 +164,39 @@
     <main class="cnn-main">
         <div class="container">
 
-            <!-- CNN HERO SECTION: Headline + Main Image -->
-            <section class="cnn-hero" style="grid-template-columns: 1fr;">
-                <div class="hero-main-story" id="heroSection">
+            <div class="cnn-main-layout">
+                <!-- LEFT COLUMN: Compact stories and lists -->
+                <aside class="cnn-left-col" id="leftColumn">
                     <!-- Populated by JS -->
+                </aside>
+
+                <!-- CENTER COLUMN: Main stories and grids -->
+                <div class="cnn-center-col">
+                    <section class="hero-main-story" id="heroSection">
+                        <!-- Populated by JS -->
+                    </section>
+                    
+                    <div class="cnn-center-grid" id="centerGrid">
+                        <!-- Populated by JS -->
+                    </div>
                 </div>
-            </section>
+
+                <!-- RIGHT COLUMN: Headlines and side cards -->
+                <aside class="cnn-right-col" id="rightColumn">
+                    <div class="headlines-box">
+                        <div class="cnn-logo">GLOBAL<span>PULSE</span></div>
+                        <h3>Headlines</h3>
+                        <a href="livetv.html" class="headlines-link">Catch up on today's global news →</a>
+                    </div>
+                    <div id="sideGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </aside>
+            </div>
 
             <!-- GP LIVE: MULTI-STREAM INTELLIGENCE HUB -->
             <section class="multi-stream-section">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div class="section-title">Global Pulse Live: Multi-Stream Hub</div>
-                    <button class="btn-live" onclick="window.location.href='livetv.html'" style="background: #cc0000; color: white; padding: 8px 16px; border: none; font-weight: 900; border-radius: 4px; cursor: pointer;">VIEW ALL 24+ CHANNELS →</button>
-                </div>
+                <div class="cnn-section-header">Live Intelligence Streams</div>
                 <div class="multi-stream-grid" style="grid-template-columns: repeat(4, 1fr); margin-top: 15px;">
                     <!-- Stream 1: Al Jazeera -->
                     <div class="stream-card">
@@ -228,14 +251,11 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin-top: 15px; text-align: center; color: #666; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">
-                    Powered by Global Pulse Media AI • Multi-Agent Stream Orchestration Active
-                </div>
             </section>
 
             <!-- WEALTH INTELLIGENCE: Specialized AI Agents & Market Data -->
             <section class="wealth-intelligence">
-                <div class="section-title">Wealth Intelligence Command</div>
+                <div class="cnn-section-header">Wealth Intelligence Command</div>
 
                 <div class="market-command-grid">
                     <!-- Crypto AI Agent -->
@@ -324,28 +344,20 @@
 
             <!-- GOOGLE SHOWCASE: The Pitch Section -->
             <section class="google-pitch-section"
-                style="margin: 60px 0; padding: 40px; background: #f8f9fa; border: 1px solid #4285F4; border-radius: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                style="margin: 60px 0; padding: 40px; background: #111; border: 1px solid #4285F4; border-radius: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
                 <div>
-                    <span class="hero-tag" style="background: #4285F4; color: #fff;">GOOGLE AGENTIC SHOWCASE</span>
-                    <h2 style="font-size: 2.5rem; font-weight: 900; margin-top: 15px;">Building the Future of Autonomous
+                    <span class="hero-tag" style="background: #4285F4; color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 900;">GOOGLE AGENTIC SHOWCASE</span>
+                    <h2 style="font-size: 2.5rem; font-weight: 900; margin-top: 15px; color: #fff;">Building the Future of Autonomous
                         Media</h2>
-                    <p style="color: #666; margin-top: 20px;">Global Pulse is a 24/7 fully autonomous intelligence
+                    <p style="color: #ccc; margin-top: 20px;">Global Pulse is a 24/7 fully autonomous intelligence
                         engine built on the Google Gemini Pro API. We are scaling the world's first multi-agent news
                         infrastructure.</p>
                     <button class="btn-live" onclick="window.location.href='agent-command.html'"
-                        style="margin-top: 30px; background: #4285F4; color: white;">VIEW AGENT COMMAND →</button>
+                        style="margin-top: 30px; background: #4285F4; color: white; padding: 12px 24px; border: none; font-weight: 900; border-radius: 6px; cursor: pointer;">VIEW AGENT COMMAND →</button>
                 </div>
                 <div style="text-align: center;">
                     <img src="https://www.gstatic.com/lamda/images/gemini_logo_v002_6bc1209b0b467611.svg" width="200"
                         alt="Google Gemini">
-                </div>
-            </section>
-
-            <!-- Secondary Grid -->
-            <section class="cnn-grid-section">
-                <div class="section-title">Top Stories</div>
-                <div class="cnn-grid" id="newsGrid">
-                    <!-- Populated by JS -->
                 </div>
             </section>
 

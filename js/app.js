@@ -84,60 +84,112 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const renderDashboard = (articles, viralArticles = []) => {
+        const leftColumn = document.getElementById('leftColumn');
+        const heroSection = document.getElementById('heroSection');
+        const centerGrid = document.getElementById('centerGrid');
+        const sideGrid = document.getElementById('sideGrid');
+
         if (!articles || articles.length === 0) {
-            heroSection.innerHTML = '';
-            grid.innerHTML = `<div class="error-panel" style="grid-column: 1 / -1; text-align: center; padding: 50px; font-weight: bold; font-size: 1.2rem;">INTELLIGENCE AGENTS ARE CURRENTLY AGGREGATING DATA FOR THIS SECTOR. PLEASE CHECK BACK SHORTLY.</div>`;
+            if (heroSection) heroSection.innerHTML = '';
+            if (centerGrid) centerGrid.innerHTML = `<div class="error-panel" style="grid-column: 1 / -1; text-align: center; padding: 50px; font-weight: bold; font-size: 1.2rem;">INTELLIGENCE AGENTS ARE CURRENTLY AGGREGATING DATA FOR THIS SECTOR. PLEASE CHECK BACK SHORTLY.</div>`;
             return;
         }
 
-        // 1. Render CNN Hero (Topmost headline + Main Image)
-        const hero = articles[0];
-        heroSection.innerHTML = `
-            <a href="${hero.link}" target="_blank" class="hero-headline">${sanitizeHTML(hero.title)}</a>
-            <img src="${hero.imageUrl || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200'}" class="hero-image">
-            <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px;">${sanitizeHTML(hero.snippet)}</p>
-        `;
-
-        // 2. Render Grid Articles (Standard CNN Cards)
-        // We mix viral and standard articles for the grid
-        let combinedArticles = [...viralArticles, ...articles.slice(1)];
-        
-        // Safety Frontend Deduplication (Fallback)
+        // --- Aggressive Deduplication ---
         const seenTitles = new Set();
-        combinedArticles = combinedArticles.filter(a => {
+        let uniqueArticles = articles.filter(a => {
             const t = a.title.toLowerCase().trim();
             if (seenTitles.has(t)) return false;
             seenTitles.add(t);
             return true;
         });
 
-        grid.innerHTML = combinedArticles.map(a => `
-            <div class="cnn-card cnn-video-card">
-                <a href="${a.link}" target="_blank" style="text-decoration: none; color: inherit; display: block; position: relative;">
-                    <div class="video-thumbnail-container">
-                        <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800'}" alt="${sanitizeHTML(a.title)}" loading="lazy">
-                        <div class="video-play-overlay">
-                            <div class="play-icon">▶</div>
-                        </div>
-                        <div class="video-duration">LIVE</div>
-                    </div>
-                    <div class="cnn-card-content">
-                        <div class="cnn-card-title">${sanitizeHTML(a.title)}</div>
-                    </div>
-                </a>
-                <div class="cnn-card-meta">
-                    <div class="meta-left">
-                        ${sanitizeHTML(a.category)} • ${sanitizeHTML(a.time)}
-                    </div>
-                    <button onclick="shareArticle('${sanitizeHTML(a.title)}', '${a.link}')" class="share-btn">SHARE ↗</button>
+        // 1. Render CNN Hero (Topmost headline + Main Image)
+        const hero = uniqueArticles[0];
+        if (heroSection) {
+            heroSection.innerHTML = `
+                <a href="${hero.link}" target="_blank" class="hero-headline">${sanitizeHTML(hero.title)}</a>
+                <div class="hero-image-wrapper">
+                    <img src="${hero.imageUrl || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200'}" class="hero-image">
+                    <div class="live-updates-badge">LIVE UPDATES</div>
                 </div>
-            </div>
-        `).join('');
+                <div class="hero-snippet">${sanitizeHTML(hero.snippet)}</div>
+            `;
+        }
 
-        // 3. Render Breaking News Ticker
+        // 2. Left Column: Compact stories
+        if (leftColumn) {
+            const leftArticles = uniqueArticles.slice(1, 10);
+            leftColumn.innerHTML = leftArticles.map(a => `
+                <div class="compact-story">
+                    <img src="${a.imageUrl}" class="compact-image" loading="lazy">
+                    <a href="${a.link}" target="_blank">${sanitizeHTML(a.title)}</a>
+                </div>
+            `).join('');
+        }
+
+        // 3. Center Grid: Grid of cards + Additional Sections
+        if (centerGrid) {
+            const gridArticles = uniqueArticles.slice(10, 16);
+            let gridHTML = `
+                <div class="cnn-center-grid">
+                    ${gridArticles.map(a => `
+                        <div class="sidebar-card">
+                            <img src="${a.imageUrl}" loading="lazy">
+                            <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${sanitizeHTML(a.title)}</a>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            // Add "MORE TOP STORIES" Section
+            const moreStories = uniqueArticles.slice(16, 22);
+            gridHTML += `
+                <div class="cnn-section-header">More Top Stories</div>
+                <div class="cnn-center-grid">
+                    ${moreStories.map(a => `
+                        <div class="sidebar-card">
+                            <img src="${a.imageUrl}" loading="lazy">
+                            <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${sanitizeHTML(a.title)}</a>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            // Add "POLITICS" Section
+            const politicsStories = uniqueArticles.filter(a => a.category.includes('POLITICS')).slice(0, 4);
+            if (politicsStories.length > 0) {
+                gridHTML += `
+                    <div class="cnn-section-header">Politics</div>
+                    <div class="cnn-center-grid">
+                        ${politicsStories.map(a => `
+                            <div class="sidebar-card">
+                                <img src="${a.imageUrl}" loading="lazy">
+                                <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${sanitizeHTML(a.title)}</a>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            centerGrid.innerHTML = gridHTML;
+        }
+
+        // 4. Right Column: Side cards
+        if (sideGrid) {
+            const sideArticles = uniqueArticles.slice(22, 32);
+            sideGrid.innerHTML = sideArticles.map(a => `
+                <div class="sidebar-card">
+                    <img src="${a.imageUrl}" loading="lazy">
+                    <a href="${a.link}" target="_blank">${sanitizeHTML(a.title)}</a>
+                </div>
+            `).join('');
+        }
+
+        // 5. Render Breaking News Ticker
         const ticker = document.getElementById('breakingTicker');
         if (ticker) {
-            const tickerTitles = articles.slice(0, 10).map(a => sanitizeHTML(a.title).toUpperCase()).join(' • ');
+            const tickerTitles = uniqueArticles.slice(0, 10).map(a => sanitizeHTML(a.title).toUpperCase()).join(' • ');
             ticker.innerText = `${tickerTitles} • LIVE COVERAGE CONTINUES 24/7 • DEVELOPING STORY...`;
         }
     };

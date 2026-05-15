@@ -23,7 +23,7 @@ async function checkSystemHealth() {
             console.log('✅ [AI ANALYSIS]: TARGET NODE RESPONDING NORMALLY (HTTP 200).');
             
             const text = await response.text();
-            if (text.includes('GLOBALPULSE') || text.includes('GLOBAL<span>PULSE')) {
+            if (text.includes('GLOBALPULSE') || text.includes('GLOBAL<span>PULSE') || text.includes('GLOBAL PULSE')) {
                 console.log('✅ [AI ANALYSIS]: UI FRAME INTEGRITY VERIFIED.');
 
                 // CRITICAL: Check the intelligence link (data/news.json)
