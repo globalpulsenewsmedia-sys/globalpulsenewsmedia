@@ -122,7 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const leftArticles = uniqueArticles.slice(1, 10);
             leftColumn.innerHTML = leftArticles.map(a => `
                 <div class="compact-story">
-                    <img src="${a.imageUrl}" class="compact-image" loading="lazy">
+                    <div class="compact-image-wrapper">
+                        <img src="${a.imageUrl}" class="compact-image" loading="lazy">
+                    </div>
                     <a href="${a.link}" target="_blank">${sanitizeHTML(a.title)}</a>
                 </div>
             `).join('');
@@ -135,7 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="cnn-center-grid">
                     ${gridArticles.map(a => `
                         <div class="sidebar-card">
-                            <img src="${a.imageUrl}" loading="lazy">
+                            <div class="sidebar-image-wrapper">
+                                <img src="${a.imageUrl}" loading="lazy">
+                            </div>
                             <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${sanitizeHTML(a.title)}</a>
                         </div>
                     `).join('')}
@@ -149,7 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="cnn-center-grid">
                     ${moreStories.map(a => `
                         <div class="sidebar-card">
-                            <img src="${a.imageUrl}" loading="lazy">
+                            <div class="sidebar-image-wrapper">
+                                <img src="${a.imageUrl}" loading="lazy">
+                            </div>
                             <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${sanitizeHTML(a.title)}</a>
                         </div>
                     `).join('')}
@@ -164,7 +170,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="cnn-center-grid">
                         ${politicsStories.map(a => `
                             <div class="sidebar-card">
-                                <img src="${a.imageUrl}" loading="lazy">
+                                <div class="sidebar-image-wrapper">
+                                    <img src="${a.imageUrl}" loading="lazy">
+                                </div>
                                 <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${sanitizeHTML(a.title)}</a>
                             </div>
                         `).join('')}
@@ -180,7 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const sideArticles = uniqueArticles.slice(22, 32);
             sideGrid.innerHTML = sideArticles.map(a => `
                 <div class="sidebar-card">
-                    <img src="${a.imageUrl}" loading="lazy">
+                    <div class="sidebar-image-wrapper">
+                        <img src="${a.imageUrl}" loading="lazy">
+                    </div>
                     <a href="${a.link}" target="_blank">${sanitizeHTML(a.title)}</a>
                 </div>
             `).join('');

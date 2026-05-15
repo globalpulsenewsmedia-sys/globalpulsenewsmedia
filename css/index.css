@@ -178,11 +178,48 @@ body {
     text-decoration: underline;
 }
 
-.compact-image {
+.compact-image-wrapper, .sidebar-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.compact-image, .sidebar-card img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
     margin-bottom: 10px;
+    transition: transform 0.5s ease;
+}
+
+.compact-image-wrapper:hover .compact-image, 
+.sidebar-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.compact-image-wrapper::after, .sidebar-image-wrapper::after {
+    content: '▶';
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    background: rgba(204, 0, 0, 0.9);
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.compact-image-wrapper:hover::after, .sidebar-image-wrapper:hover::after {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 /* CENTER COLUMN: Hero + Grid */
