@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment Intelligence Hub | Global Pulse News</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Noto+Sans+Marathi:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background: #000; color: #fff; font-family: 'Outfit', sans-serif; }
+        .blog-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .blog-header { text-align: center; margin-bottom: 60px; }
+        .blog-header h1 { font-size: 4rem; font-weight: 900; letter-spacing: -2px; }
+        .blog-header span { color: #ff0000; }
+        .movie-card { background: #111; border-radius: 20px; overflow: hidden; margin-bottom: 60px; border: 1px solid #222; transition: transform 0.3s ease; }
+        .movie-card:hover { transform: translateY(-10px); border-color: #ff0000; }
+        .movie-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .movie-img { width: 100%; height: 400px; object-fit: cover; }
+        .movie-content { padding: 40px; }
+        .movie-title { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; line-height: 1.1; }
+        .movie-review { font-size: 1.2rem; line-height: 1.6; color: #ccc; margin-bottom: 30px; }
+        .marathi-review { font-family: 'Noto Sans Marathi'; color: #ffcc00; font-size: 1.1rem; border-left: 4px solid #ff0000; padding-left: 20px; margin-bottom: 30px; }
+        .watch-btn { background: #ff0000; color: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; transition: background 0.3s; }
+        .watch-btn:hover { background: #cc0000; }
+        .tags { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+        .tag { background: #222; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; color: #888; }
+    </style>
+</head>
+<body>
+    <header class="cnn-header">
+        <div class="container">
+            <div class="header-main">
+                <div class="cnn-logo"><a href="index.html" style="color: inherit; text-decoration: none;">GLOBAL<span>PULSE</span></a></div>
+                <div class="header-tagline">ENTERTAINMENT INTELLIGENCE HUB</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>MOVIE <span>INTELLIGENCE</span></h1>
+            <p style="color: #666; letter-spacing: 2px;">AI-POWERED REVIEWS • TRAILERS • OTT INSIGHTS</p>
+        </div>
+
+        <div id="blogGrid">
+            <!-- Blogs will be injected here -->
+             <div style="text-align: center; padding: 100px;">
+                <p>Analyzing Latest Trailers & Writing Reviews...</p>
+             </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadBlogs() {
+            try {
+                const response = await fetch('data/entertainment.json?t=' + Date.now());
+                const blogs = await response.json();
+                const grid = document.getElementById('blogGrid');
+                
+                grid.innerHTML = blogs.map(blog => `
+                    <div class="movie-card">
+                        <div class="movie-grid">
+                            <img src="${blog.thumbnail}" class="movie-img">
+                            <div class="movie-content">
+                                <div class="movie-title">${blog.title}</div>
+                                <div class="movie-review">${blog.content}</div>
+                                <div class="marathi-review">${blog.content_mr}</div>
+                                <a href="${blog.trailerLink}" target="_blank" class="watch-btn">WATCH TRAILER</a>
+                                <div class="tags">
+                                    ${blog.keywords.split(',').map(tag => `<span class="tag">#${tag.trim()}</span>`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (e) {
+                console.error("Error loading blogs");
+            }
+        }
+        loadBlogs();
+    </script>
+</body>
+</html>

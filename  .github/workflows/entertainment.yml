@@ -1,0 +1,31 @@
+name: Movie & Entertainment Hub Daily
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Every day at 6:00 AM UTC (11:30 AM IST)
+  workflow_dispatch:
+
+jobs:
+  entertainment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Run Entertainment Fetcher
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/fetch-entertainment.mjs
+
+      - name: Commit & Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/entertainment.json
+          git commit -m "Update Movie Intelligence Hub [skip ci]" || echo "No changes"
+          git push origin main
