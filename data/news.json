@@ -1,5 +1,41 @@
 [
   {
+    "title": "Trump warns Taiwan against declaring independence, hours after summit with China's Xi",
+    "snippet": "The US president says he wants Beijing and Taipei to \"cool down\" tensions over the self-governing island.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/15/2026, 9:28:25 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fc97/live/44d90680-5077-11f1-8b8c-6d33e1d5abb6.jpg",
+    "link": "https://www.bbc.com/news/articles/ce8p61v7l68o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Trump and Xi conclude 'very successful' talks but few deals confirmed",
+    "snippet": "There were plenty of choreographed ceremonies but no trade breakthroughs after the two-day visit.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/15/2026, 9:50:14 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f0ee/live/9a4e0250-5077-11f1-8b8c-6d33e1d5abb6.jpg",
+    "link": "https://www.bbc.com/news/articles/clypj01189lo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Trump says 20-year nuclear programme suspension by Iran would be enough",
+    "snippet": "The US president says Tehran has to show \"real\" commitment to removing nuclear fuel and stopping uranium enrichment.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/15/2026, 9:17:05 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3cb5/live/e66605e0-508e-11f1-89a3-d1f559421220.jpg",
+    "link": "https://www.bbc.com/news/articles/cgkpnnen5dzo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Lebanon says six killed in Israeli strike as US announces ceasefire extension",
+    "snippet": "President Trump announced the truce last month, but Israel and Hezbollah have continued to exchange fire since then.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "5/15/2026, 11:59:07 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cc2c/live/b1a99d90-508d-11f1-b682-cf91850925ea.jpg",
+    "link": "https://www.bbc.com/news/articles/cqlpzzl0d67o?at_medium=RSS&at_campaign=rss"
+  },
+  {
     "title": "Prisoner swap goes ahead as Kyiv mourns 24 killed in Russian strike on flats",
     "snippet": "Among the victims in Kyiv was 12-year-old Lyubava Yakovleva, whose father was killed during the war.",
     "category": "WORLD",
@@ -9,129 +45,93 @@
     "link": "https://www.bbc.com/news/articles/c5y049w8nqwo?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "HMRC to use AI from British tech firm to spot fraud and tax return errors",
-    "snippet": "Quantexa, a financial data platform, won the £175m contract to spot fraud and tax return errors.",
-    "category": "TECH",
+    "title": "AI vigilante trap snares alleged paedophile ex-teacher in France",
+    "snippet": "The 66-year-old handed himself in after an influencer used AI to pose as a 14-year-old girl and broadcast their conversation online.",
+    "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "5/14/2026, 5:10:45 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/61de/live/a2612020-4ed9-11f1-88a2-2b60a3feece0.jpg",
-    "link": "https://www.bbc.com/news/articles/c7v9ld262n4o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Harry and Meghan to produce Afghan war film for Netflix",
-    "snippet": "The couple's production company will make a film based on a true story of British troops under siege.",
-    "category": "ENTERTAINMENT",
-    "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 12:11:45 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9453/live/0ba77b80-504f-11f1-a712-bdb9a88fa140.jpg",
-    "link": "https://www.bbc.com/news/articles/c809g77jrx8o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "'We're right on track,' says Streeting as key target for hospital waiting times hit",
-    "snippet": "Government his its interim target of 65% of patients in England being treated within 18 weeks.",
-    "category": "HEALTH",
-    "source": "Global Pulse Intelligence",
-    "time": "5/14/2026, 2:26:20 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e27e/live/46846e70-4f78-11f1-9bf8-a147799c023a.jpg",
-    "link": "https://www.bbc.com/news/articles/cvgzv0j19vvo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Olly Murs in tears as he completes endurance feat",
-    "snippet": "He crossed the finish line at the London Stadium in Stratford after covering about 250 miles.",
-    "category": "ENTERTAINMENT",
-    "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 2:05:51 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/14a1/live/4a5caa40-5062-11f1-b5fd-657572a40ad0.jpg",
-    "link": "https://www.bbc.com/news/articles/c626lg9vyvpo?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Middlesbrough want Southampton kicked out of play-offs over Spygate",
-    "snippet": "Middlesbrough demand Southampton's expulsion from the Championship play-offs over spying allegations.",
-    "category": "SPORTS",
-    "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 4:16:30 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ca23/live/ca54dd60-506e-11f1-8c42-ed39d04e1525.jpg",
-    "link": "https://www.bbc.com/sport/football/articles/cwy2dg2w168o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "What does Makerfield make of by-election and can Burnham win?",
-    "snippet": "Andy Burnham says he will look to stand in the constituency, after Labour MP Josh Simons announces his resignation.",
-    "category": "POLITICS",
-    "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 5:00:34 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b267/live/88444110-507b-11f1-b682-cf91850925ea.jpg",
-    "link": "https://www.bbc.com/news/articles/cyv26e7yd89o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "Search for new James Bond officially kicks off as auditions begin",
-    "snippet": "Callum Turner, Jacob Elordi and Harris Dickinson are among the frontrunners to replace Daniel Craig.",
-    "category": "ENTERTAINMENT",
-    "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 9:33:32 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b62d/live/f2f28fd0-504e-11f1-b682-cf91850925ea.jpg",
-    "link": "https://www.bbc.com/news/articles/cn5pq7d9p39o?at_medium=RSS&at_campaign=rss"
-  },
-  {
-    "title": "UK borrowing costs rise and pound falls as leadership drama continues",
-    "snippet": "Analysts say the moves have been fuelled by concerns a Burnham-led government would increase government borrowing.",
-    "category": "BUSINESS, POLITICS",
-    "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 7:30:01 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2ac1/live/4d841640-5094-11f1-8eb4-7bbd1eefc905.png",
-    "link": "https://www.bbc.com/news/articles/czr2pl5lj84o?at_medium=RSS&at_campaign=rss"
+    "time": "5/15/2026, 2:26:27 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/764e/live/62f61850-505a-11f1-a466-d530a9b261a6.jpg",
+    "link": "https://www.bbc.com/news/articles/c1m2xg7x0m3o?at_medium=RSS&at_campaign=rss"
   },
   {
     "title": "Judge declares another mistrial in Harvey Weinstein New York rape case",
     "snippet": "It marks the third time a New York jury has considered the case against the 74-year-old disgraced film mogul.",
-    "category": "WORLD, US",
+    "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 7:10:59 PM",
+    "time": "5/16/2026, 1:32:47 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2a7a/live/3c2b1fc0-4fda-11f1-ab9a-17f0869e9914.jpg",
     "link": "https://www.bbc.com/news/articles/c152lexw1vxo?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "UK's biggest ever environmental pollution claim reaches High Court",
-    "snippet": "One of the UK's largest chicken producers and a water company accused of polluting three rivers including the River Wye",
-    "category": "SCIENCE",
+    "title": "Israel says it has killed Hamas commander in Gaza air strike",
+    "snippet": "Izz ad-Din al-Haddad, described as \"one of the architects of the October 7 massacre\", was killed in Gaza City, Israel says.",
+    "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "4/26/2026, 11:01:47 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4e75/live/a4f7bc10-3fdc-11f1-9365-9d68a044e038.jpg",
-    "link": "https://www.bbc.com/news/articles/cqxl5rjw58po?at_medium=RSS&at_campaign=rss"
+    "time": "5/15/2026, 7:38:38 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/86e2/live/d0adc620-5093-11f1-8b8c-6d33e1d5abb6.jpg",
+    "link": "https://www.bbc.com/news/articles/cx21jjwz1k1o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "US federal watchdog sues Chick-fil-A operator for religious discrimination",
-    "snippet": "A franchisee of the fast-food restaurant is accused of refusing an employee time off to observe the Sabbath, which is on Saturday in her Christian church.",
-    "category": "US",
+    "title": "Five Italians die during cave scuba dive in Maldives",
+    "snippet": "Four of the Italians were part of a team from the University of Genoa.",
+    "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 8:56:59 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b831/live/1ab206e0-5095-11f1-8eb4-7bbd1eefc905.jpg",
-    "link": "https://www.bbc.com/news/articles/ce3pyke2g0jo?at_medium=RSS&at_campaign=rss"
+    "time": "5/15/2026, 9:33:38 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ec8a/live/e46b9940-503d-11f1-b682-cf91850925ea.jpg",
+    "link": "https://www.bbc.com/news/articles/c62e0p7rd2ro?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "'We're living in a shed because of river pollution'",
-    "snippet": "Jane and Tony Coyle spent seven years waiting for planning permission due to River Lugg pollution.",
-    "category": "SCIENCE",
+    "title": "New York Times defends journalist after Israel threatens to sue",
+    "snippet": "Israel's prime minister says he has ordered legal action over an article which alleged Israeli security officials raped Palestinian detainees.",
+    "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "4/26/2026, 6:20:08 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3753/live/bea799a0-3fc8-11f1-b420-d1e4d9e88a70.png",
-    "link": "https://www.bbc.com/news/articles/c6244zv02ero?at_medium=RSS&at_campaign=rss"
+    "time": "5/15/2026, 4:30:31 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e939/live/8d3f3300-5049-11f1-89a3-d1f559421220.jpg",
+    "link": "https://www.bbc.com/news/articles/c9wedpk155jo?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "Who is James Murray, the new health secretary replacing Wes Streeting?",
-    "snippet": "What are the most pressing priorities for the new minister in charge of health?",
-    "category": "POLITICS",
+    "title": "X pledges quicker action on hate and terror content in the UK",
+    "snippet": "Ofcom said the commitments were of particular importance after recent crimes targeting Jewish communities in the UK.",
+    "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 1:55:54 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d571/live/55dbf1d0-5041-11f1-acce-79302838e29f.png",
-    "link": "https://www.bbc.com/news/articles/c2e2jr01ejno?at_medium=RSS&at_campaign=rss"
+    "time": "5/15/2026, 12:57:30 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4d12/live/72777cd0-505d-11f1-89a3-d1f559421220.jpg",
+    "link": "https://www.bbc.com/news/articles/clyp9652v18o?at_medium=RSS&at_campaign=rss"
   },
   {
-    "title": "How Rayner, Streeting and Burnham weakened PM in 12 hours of political drama",
-    "snippet": "Three interventions by three senior Labour politicians made for an unforgettable day in British politics.",
-    "category": "POLITICS",
+    "title": "Claim, counter-claim and tech's seedy side exposed: Five things we learned in the Musk-Altman trial",
+    "snippet": "As the jury deliberates, this is what we found out during the weeks-long trial with two tech titans at its heart.",
+    "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "5/15/2026, 8:21:08 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9734/live/f56a69d0-509f-11f1-b14d-d3adf2548784.jpg",
-    "link": "https://www.bbc.com/news/articles/cvgzjj474ywo?at_medium=RSS&at_campaign=rss"
+    "time": "5/15/2026, 5:03:31 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/61c3/live/5604dcc0-5024-11f1-8b8c-6d33e1d5abb6.jpg",
+    "link": "https://www.bbc.com/news/articles/cg7pj8p5mv4o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "Inside the secretive and lucrative world of orchid breeding",
+    "snippet": "It can take a decade to bring a new orchid to market, so breeders keep their hi-tech processes secret.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/14/2026, 11:03:16 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b721/live/63993a20-502e-11f1-8b8c-6d33e1d5abb6.jpg",
+    "link": "https://www.bbc.com/news/articles/cly039rr2mgo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "AI could put people off tech jobs and hurt the economy, warns Raspberry Pi boss",
+    "snippet": "Eben Upton warns against claims that Artificial Intelligence will destroy vast numbers of computing roles over the coming years.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/14/2026, 11:01:20 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b124/live/7a8cb440-4fc1-11f1-b651-41ca043d3d3f.jpg",
+    "link": "https://www.bbc.com/news/articles/clypr8p2lewo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "title": "'Millions' of pounds saved by replacing Palantir tech in refugee system",
+    "snippet": "The government said its in-house IT system was \"more flexible\" while meeting \"high standards\" of security.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "5/14/2026, 9:09:02 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1b91/live/a4434bd0-4a32-11f1-a70d-c72ff4101914.jpg",
+    "link": "https://www.bbc.com/news/articles/c2l2j1lxdk5o?at_medium=RSS&at_campaign=rss"
   }
 ]
