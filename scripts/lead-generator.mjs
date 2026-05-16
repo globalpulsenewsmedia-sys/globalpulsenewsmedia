@@ -47,8 +47,14 @@ async function generateGlobalLeads() {
 
         await fs.mkdir(path.dirname(TARGETS_FILE), { recursive: true });
         await fs.writeFile(TARGETS_FILE, JSON.stringify(existingTargets, null, 2));
+
+        // --- CSV Export ---
+        const csvPath = './data/leads.csv';
+        const csvHeader = "Name,Email,Region,Industry,Priority\n";
+        const csvRows = existingTargets.map(t => `${t.name},${t.email},${t.region},${t.industry},${t.priority}`).join("\n");
+        await fs.writeFile(csvPath, csvHeader + csvRows);
         
-        console.log(`✅ Successfully identified and added ${newLeads.length} new international leads.`);
+        console.log(`✅ Leads synced to JSON and CSV.`);
     } catch (e) {
         console.error("❌ Lead Gen Error:", e.message);
     }

@@ -10,10 +10,10 @@ const UNSUBSCRIBE_FILE = './data/unsubscribed.json';
 const BACKUP_DIR = './data/backups';
 
 const SMTP_CONFIG = {
-    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    host: process.env.SMTP_HOST || 'smtp.zoho.com',
     port: 465,
     secure: true,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
+    auth: { user: process.env.SMTP_USER || 'arbitragesmartai@arbitragesmartai.com', pass: process.env.SMTP_PASS }
 };
 
 const SITE_URL = "https://globalpulsenewsmedia.com";
@@ -92,7 +92,7 @@ async function runGlobalOutreach() {
         if (email) {
             try {
                 await transporter.sendMail({
-                    from: `"Manik Katke" <${process.env.SMTP_USER}>`,
+                    from: `"Manik Katke | Global Pulse" <arbitragesmartai@arbitragesmartai.com>`,
                     to: target.email,
                     subject: email.subject,
                     text: email.text
