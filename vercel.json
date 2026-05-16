@@ -1,16 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "(?<subdomain>.*)arbitragesmartai.com"
-        }
-      ],
-      "destination": "/arbitrage.html"
-    }
-  ]
+  "trailingSlash": false
 }
