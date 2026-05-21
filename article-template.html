@@ -161,8 +161,22 @@
             
             <img src="{{IMAGE_URL}}" class="article-featured-image" alt="{{TITLE_EN}}">
 
+            <!-- IN-ARTICLE AD PLACEHOLDER (TOP) -->
+            <div class="ad-slot-inarticle" style="margin: 20px 0 30px; text-align: center; background: #f9f9f9; padding: 15px; border: 1px dashed #ccc;">
+                <span style="font-size: 0.8rem; color: #888; text-transform: uppercase;">Advertisement</span>
+                <!-- Replace with Adsterra / Media.net / AdSense Script -->
+                <div id="ad-inarticle-top" style="min-height: 90px; display: flex; align-items: center; justify-content: center; color: #aaa;">728x90 Leaderboard or Responsive Native Ad</div>
+            </div>
+
             <div class="article-content">
                 {{CONTENT}}
+            </div>
+
+            <!-- IN-ARTICLE AD PLACEHOLDER (BOTTOM) -->
+            <div class="ad-slot-inarticle" style="margin: 40px 0 20px; text-align: center; background: #f9f9f9; padding: 15px; border: 1px dashed #ccc;">
+                <span style="font-size: 0.8rem; color: #888; text-transform: uppercase;">Advertisement</span>
+                <!-- Replace with Adsterra / Media.net / AdSense Script -->
+                <div id="ad-inarticle-bottom" style="min-height: 250px; display: flex; align-items: center; justify-content: center; color: #aaa;">300x250 or Responsive Native Ad</div>
             </div>
         </article>
     </main>

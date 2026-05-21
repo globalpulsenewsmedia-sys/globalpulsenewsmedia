@@ -140,6 +140,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         `).join('')}
                     </div>
+                    
+                    <!-- SIDEBAR AD PLACEHOLDER -->
+                    <div class="ad-slot-sidebar" style="margin-top: 20px; text-align: center; background: var(--cnn-grey-bg); padding: 15px; border: 1px dashed #ccc;">
+                        <span style="font-size: 0.8rem; color: #888; text-transform: uppercase;">Advertisement</span>
+                        <!-- Replace with Adsterra / Media.net / AdSense Script -->
+                        <div id="ad-sidebar-1" style="min-height: 250px; display: flex; align-items: center; justify-content: center; color: #aaa;">300x250 Ad Unit</div>
+                    </div>
                 </div>
             `;
 
