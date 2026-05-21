@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const grid = document.getElementById('newsGrid');
+    const newsCardsGrid = document.getElementById('newsCardsGrid');
     const heroSection = document.getElementById('heroSection');
     const navLinks = document.querySelectorAll('.cnn-nav a');
     
@@ -79,16 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
             renderDashboard(allArticles, viralArticles);
         } catch (error) {
             console.error('Critical System Error:', error);
-            grid.innerHTML = `<div class="error-panel">SYSTEM OFFLINE. RECONNECTING...</div>`;
+            if (newsCardsGrid) {
+                newsCardsGrid.innerHTML = `<div class="error-panel">SYSTEM OFFLINE. RECONNECTING...</div>`;
+            }
         }
     };
 
     const renderDashboard = (articles, viralArticles = []) => {
-        const leftColumn = document.getElementById('leftColumn');
-        const heroSection = document.getElementById('heroSection');
-        const centerGrid = document.getElementById('centerGrid');
-        const sideGrid = document.getElementById('sideGrid');
-
         if (!articles || articles.length === 0) return;
 
         // --- Aggressive Deduplication ---
@@ -100,90 +97,76 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         });
 
-        const getDisplayTitle = (a) => a.title_mr ? `${sanitizeHTML(a.title)} <br> <span style="font-size: 0.8em; color: #ffcc00; font-family: 'Noto Sans Marathi';">${sanitizeHTML(a.title_mr)}</span>` : sanitizeHTML(a.title);
-        const getDisplaySnippet = (a) => a.snippet_mr ? `${sanitizeHTML(a.snippet)} <br> <span style="font-size: 0.9em; color: #aaa; font-family: 'Noto Sans Marathi';">${sanitizeHTML(a.snippet_mr)}</span>` : sanitizeHTML(a.snippet);
+        const getDisplayTitle = (a) => a.title_mr ? `${sanitizeHTML(a.title)} <br> <span class="title-marathi">${sanitizeHTML(a.title_mr)}</span>` : sanitizeHTML(a.title);
+        const getDisplaySnippet = (a) => a.snippet_mr ? `${sanitizeHTML(a.snippet)} <br> <span class="snippet-marathi">${sanitizeHTML(a.snippet_mr)}</span>` : sanitizeHTML(a.snippet);
 
-        // 1. TOP HERO AREA
         const hero = uniqueArticles[0];
-        if (heroSection) {
-            heroSection.innerHTML = `
-                <a href="${hero.link}" target="_blank" class="hero-headline">${getDisplayTitle(hero)}</a>
-                <div class="hero-image-wrapper">
-                    <img src="${hero.imageUrl || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200'}" class="hero-image">
-                    <div class="live-updates-badge">AI GENERATED IMAGE</div>
-                </div>
-                <div class="hero-snippet" style="font-size: 1.5rem; line-height: 1.4; font-weight: 300;">${getDisplaySnippet(hero)}</div>
-            `;
+
+        // 1. TOP ALERT BAR (Full Width Headline)
+        const alertHeadline = document.getElementById('latestAlertHeadline');
+        if (alertHeadline && hero) {
+            alertHeadline.innerHTML = `<a href="${hero.link}" target="_blank" class="alert-headline-link">${sanitizeHTML(hero.title).toUpperCase()}</a>`;
         }
 
-        // 2. LEFT COLUMN
-        if (leftColumn) {
-            const leftArticles = uniqueArticles.slice(1, 15);
-            leftColumn.innerHTML = leftArticles.map(a => `
-                <div class="compact-story">
-                    <div class="compact-image-wrapper">
-                        <img src="${a.imageUrl}" class="compact-image" loading="lazy">
+        // 2. HERO SECTION (Above the Fold - 2 Column Split)
+        if (heroSection && hero) {
+            const heroLeftHTML = `
+                <div class="hero-featured-card">
+                    <a href="${hero.link}" target="_blank" class="hero-image-link">
+                        <img src="${hero.imageUrl || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200'}" class="hero-featured-image" alt="${sanitizeHTML(hero.title)}">
+                        <div class="hero-image-overlay">AI INTEL REPORT</div>
+                    </a>
+                    <div class="hero-card-content">
+                        <span class="hero-category-badge">${sanitizeHTML(hero.category || 'WORLD')}</span>
+                        <a href="${hero.link}" target="_blank" class="hero-title">${getDisplayTitle(hero)}</a>
+                        <p class="hero-excerpt">${getDisplaySnippet(hero)}</p>
+                        <div class="hero-meta">BY GLOBAL PULSE AI • UPDATED SECONDS AGO</div>
                     </div>
-                    <a href="${a.link}" target="_blank">${getDisplayTitle(a)}</a>
                 </div>
-            `).join('');
-        }
+            `;
 
-        // 3. RIGHT COLUMN
-        if (sideGrid) {
-            const sideArticles = uniqueArticles.slice(15, 40);
-            sideGrid.innerHTML = `
-                <div class="headlines-box" style="text-align: left; background: transparent; padding: 0;">
-                    <div class="cnn-logo" style="font-size: 1.2rem; margin-bottom: 10px;">MAHARASHTRA<span>VISHWA</span> <span style="font-size: 0.8rem; font-weight: 300; color: #fff;">Varta</span></div>
-                    <div class="headlines-feed">
-                        ${sideArticles.map(a => `
-                            <div class="sidebar-card">
-                                <a href="${a.link}" target="_blank" style="font-size: 0.95rem; font-weight: 900; line-height: 1.4;">${getDisplayTitle(a)}</a>
-                                <p style="font-size: 0.7rem; color: #666; margin-top: 5px;">AI VERIFIED • ${Math.floor(Math.random() * 60)}M AGO</p>
+            const trendingArticles = uniqueArticles.slice(1, 5); // Stack of 4 trending stories
+            const heroRightHTML = `
+                <div class="hero-trending-container">
+                    <h3 class="trending-header">TRENDING STORIES</h3>
+                    <div class="trending-list">
+                        ${trendingArticles.map((a, idx) => `
+                            <div class="trending-item">
+                                <span class="trending-number">0${idx + 1}</span>
+                                <div class="trending-item-content">
+                                    <a href="${a.link}" target="_blank" class="trending-item-title">${getDisplayTitle(a)}</a>
+                                    <span class="trending-item-category">${sanitizeHTML(a.category || 'WORLD')}</span>
+                                </div>
                             </div>
                         `).join('')}
                     </div>
                 </div>
             `;
+
+            heroSection.innerHTML = `
+                <div class="hero-left-col">${heroLeftHTML}</div>
+                <div class="hero-right-col">${heroRightHTML}</div>
+            `;
         }
 
-        // 4. CENTER AREA
-        if (centerGrid) {
-            let gridHTML = '';
-            
-            const gridArticles = uniqueArticles.slice(40, 46);
-            gridHTML += `
-                <div class="cnn-center-grid">
-                    ${gridArticles.map(a => `
-                        <div class="sidebar-card">
-                            <div class="sidebar-image-wrapper"><img src="${a.imageUrl}" loading="lazy"></div>
-                            <a href="${a.link}" target="_blank" style="color: var(--cnn-blue); font-size: 1.4rem;">${getDisplayTitle(a)}</a>
+        // 3. MULTI-COLUMN GRID (Below the Fold - Standard Cards in Column 1 & 2)
+        if (newsCardsGrid) {
+            const gridArticles = uniqueArticles.slice(5, 21); // Next 16 articles
+            newsCardsGrid.innerHTML = gridArticles.map(a => `
+                <div class="news-card">
+                    <a href="${a.link}" target="_blank" class="news-card-image-link">
+                        <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600'}" class="news-card-image" loading="lazy" alt="${sanitizeHTML(a.title)}">
+                    </a>
+                    <div class="news-card-content">
+                        <div class="news-card-meta">
+                            <span class="news-card-category">${sanitizeHTML(a.category || 'WORLD')}</span>
+                            <span class="news-card-bullet">•</span>
+                            <span class="news-card-date">${Math.floor(Math.random() * 45) + 15}M AGO</span>
                         </div>
-                    `).join('')}
+                        <a href="${a.link}" target="_blank" class="news-card-title">${getDisplayTitle(a)}</a>
+                    </div>
                 </div>
-            `;
-
-            const moreStories = uniqueArticles.slice(46, 52);
-            gridHTML += `
-                <div class="cnn-section-header">Exclusive Reports</div>
-                <div class="cnn-center-grid">
-                    ${moreStories.map(a => `
-                        <div class="sidebar-card">
-                            <div class="sidebar-image-wrapper"><img src="${a.imageUrl}" loading="lazy"></div>
-                            <a href="${a.link}" target="_blank" style="color: var(--cnn-blue);">${getDisplayTitle(a)}</a>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-
-            centerGrid.innerHTML = gridHTML;
-        }
-
-        // 5. Breaking News Ticker
-        const ticker = document.getElementById('breakingTicker');
-        if (ticker) {
-            const tickerTitles = uniqueArticles.slice(0, 10).map(a => a.title_mr || a.title.toUpperCase()).join(' • ');
-            ticker.innerText = `${tickerTitles} • २४/७ महाराष्ट्र विश्व वार्ता लाईव्ह...`;
+            `).join('');
         }
     };
 

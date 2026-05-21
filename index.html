@@ -32,9 +32,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Libre+Franklin:wght@300;400;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/index.css">
 
@@ -100,13 +98,12 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 
-<body class="dark-theme"> <!-- CNN Style Dark Theme -->
+<body class="light-theme">
 
-    <!-- CNN Style Breaking News Ticker (Topmost) -->
-    <div class="cnn-breaking-bar">
-        <div class="breaking-label">BREAKING NEWS</div>
-        <marquee class="breaking-marquee" id="breakingTicker">GLOBAL PULSE AI DETECTS HISTORIC SHIFT IN TECH MARKETS • LIVE COVERAGE
-            CONTINUES 24/7 • DEVELOPING STORY...</marquee>
+    <!-- TOP ALERT BAR (Full Width) -->
+    <div class="top-alert-bar">
+        <span class="alert-label">BREAKING</span>
+        <span class="alert-content" id="latestAlertHeadline">Loading latest intelligence update...</span>
     </div>
 
     <!-- CNN Style Header -->
@@ -160,35 +157,41 @@
     <main class="cnn-main">
         <div class="container">
 
-            <div class="cnn-main-layout">
-                <!-- LEFT COLUMN: Compact stories and lists -->
-                <aside class="cnn-left-col" id="leftColumn">
-                    <!-- Populated by JS -->
-                </aside>
+            <!-- HERO SECTION (Above the Fold - 2 Column Split) -->
+            <section class="hero-section" id="heroSection">
+                <!-- Populated by JS (Left 65% Featured Area, Right 35% Trending Stack) -->
+            </section>
 
-                <!-- CENTER COLUMN: Main stories and grids -->
-                <div class="cnn-center-col">
-                    <section class="hero-main-story" id="heroSection">
-                        <!-- Populated by JS -->
-                    </section>
-                    
-                    <div class="cnn-center-grid" id="centerGrid">
+            <!-- MULTI-COLUMN GRID (Below the Fold) -->
+            <section class="below-fold-section">
+                <div class="below-fold-grid">
+                    <!-- Columns 1 & 2: Dynamic Standard News Cards -->
+                    <div class="news-cards-container" id="newsCardsGrid">
                         <!-- Populated by JS -->
                     </div>
+
+                    <!-- Column 3: High-Margin Monetization Zone -->
+                    <aside class="monetization-sidebar">
+                        <div class="ad-unit sponsored-ad-box">
+                            <div class="ad-label">SPONSORED AD</div>
+                            <div class="ad-content">
+                                <h4 class="ad-title">Scale Globally with Google Cloud</h4>
+                                <p class="ad-text">Build, test, and deploy applications on Google's secure, reliable, and high-performance infrastructure.</p>
+                                <a href="https://cloud.google.com/" target="_blank" class="ad-link">Get Started for Free →</a>
+                            </div>
+                        </div>
+
+                        <div class="ad-unit premium-feature-box">
+                            <div class="ad-label">PREMIUM BUSINESS FEATURE</div>
+                            <div class="ad-content">
+                                <h4 class="ad-title">Global Pulse Intelligence Pro</h4>
+                                <p class="ad-text">Get unlimited access to proprietary news analysis, real-time alerts, and institutional research reports.</p>
+                                <a href="pro.html" class="ad-btn">Join Pro Lounge</a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-
-                <!-- RIGHT COLUMN: Headlines and side cards -->
-                <aside class="cnn-right-col" id="rightColumn">
-                    <div class="headlines-box">
-                        <div class="cnn-logo">GLOBAL<span>PULSE</span></div>
-                        <h3>Headlines</h3>
-                        <a href="livetv.html" class="headlines-link">Catch up on today's global news →</a>
-                    </div>
-                    <div id="sideGrid">
-                        <!-- Populated by JS -->
-                    </div>
-                </aside>
-            </div>
+            </section>
 
             <!-- GP LIVE: MULTI-STREAM INTELLIGENCE HUB -->
             <section class="multi-stream-section">
