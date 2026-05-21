@@ -105,20 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. TOP ALERT BAR (Full Width Headline)
         const alertHeadline = document.getElementById('latestAlertHeadline');
         if (alertHeadline && hero) {
-            alertHeadline.innerHTML = `<a href="${hero.link}" target="_blank" class="alert-headline-link">${sanitizeHTML(hero.title).toUpperCase()}</a>`;
+            alertHeadline.innerHTML = `<a href="${hero.link}" class="alert-headline-link">${sanitizeHTML(hero.title).toUpperCase()}</a>`;
         }
 
         // 2. HERO SECTION (Above the Fold - 2 Column Split)
         if (heroSection && hero) {
             const heroLeftHTML = `
                 <div class="hero-featured-card">
-                    <a href="${hero.link}" target="_blank" class="hero-image-link">
+                    <a href="${hero.link}" class="hero-image-link">
                         <img src="${hero.imageUrl || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200'}" class="hero-featured-image" alt="${sanitizeHTML(hero.title)}">
                         <div class="hero-image-overlay">AI INTEL REPORT</div>
                     </a>
                     <div class="hero-card-content">
                         <span class="hero-category-badge">${sanitizeHTML(hero.category || 'WORLD')}</span>
-                        <a href="${hero.link}" target="_blank" class="hero-title">${getDisplayTitle(hero)}</a>
+                        <a href="${hero.link}" class="hero-title">${getDisplayTitle(hero)}</a>
                         <p class="hero-excerpt">${getDisplaySnippet(hero)}</p>
                         <div class="hero-meta">BY GLOBAL PULSE AI • UPDATED SECONDS AGO</div>
                     </div>
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="trending-item">
                                 <span class="trending-number">0${idx + 1}</span>
                                 <div class="trending-item-content">
-                                    <a href="${a.link}" target="_blank" class="trending-item-title">${getDisplayTitle(a)}</a>
+                                    <a href="${a.link}" class="trending-item-title">${getDisplayTitle(a)}</a>
                                     <span class="trending-item-category">${sanitizeHTML(a.category || 'WORLD')}</span>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const gridArticles = uniqueArticles.slice(5, 21); // Next 16 articles
             newsCardsGrid.innerHTML = gridArticles.map(a => `
                 <div class="news-card">
-                    <a href="${a.link}" target="_blank" class="news-card-image-link">
+                    <a href="${a.link}" class="news-card-image-link">
                         <img src="${a.imageUrl || 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600'}" class="news-card-image" loading="lazy" alt="${sanitizeHTML(a.title)}">
                     </a>
                     <div class="news-card-content">
@@ -163,32 +163,86 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="news-card-bullet">•</span>
                             <span class="news-card-date">${Math.floor(Math.random() * 45) + 15}M AGO</span>
                         </div>
-                        <a href="${a.link}" target="_blank" class="news-card-title">${getDisplayTitle(a)}</a>
+                        <a href="${a.link}" class="news-card-title">${getDisplayTitle(a)}</a>
                     </div>
                 </div>
             `).join('');
         }
     };
 
-    // --- Nav Interaction ---
+    // --- Nav Interaction & Deep Linking ---
+    const getQueryParam = (param) => {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    };
+
+    const handleCategorySelect = async (cat, linkElement) => {
+        if (!cat) return;
+
+        navLinks.forEach(l => l.classList.remove('active'));
+        if (linkElement) {
+            linkElement.classList.add('active');
+        } else {
+            // Find link by data-category to set active state on direct load
+            const matchingLink = Array.from(navLinks).find(l => l.getAttribute('data-category')?.toLowerCase() === cat.toLowerCase());
+            if (matchingLink) matchingLink.classList.add('active');
+        }
+
+        if (cat.toLowerCase() === 'all') {
+            renderDashboard(allArticles, []);
+            // Update URL without reloading
+            window.history.pushState({}, '', '/');
+        } else if (cat.toLowerCase() === 'travel') {
+            // Load specific travel data
+            try {
+                const tResponse = await fetch(`data/travel.json?t=${Date.now()}`);
+                if (tResponse.ok) {
+                    const travelArticles = await tResponse.json();
+                    renderDashboard(travelArticles, []);
+                }
+            } catch (e) {
+                console.error("Failed to load travel data:", e);
+            }
+            window.history.pushState({}, '', `/?cat=${cat}`);
+        } else if (cat.toLowerCase() === 'health') {
+            // Load specific health data
+            try {
+                const hResponse = await fetch(`data/health.json?t=${Date.now()}`);
+                if (hResponse.ok) {
+                    const healthArticles = await hResponse.json();
+                    renderDashboard(healthArticles, []);
+                }
+            } catch (e) {
+                console.error("Failed to load health data:", e);
+            }
+            window.history.pushState({}, '', `/?cat=${cat}`);
+        } else {
+            const filtered = allArticles.filter(a => a.category && a.category.toLowerCase().includes(cat.toLowerCase()));
+            renderDashboard(filtered, []);
+            window.history.pushState({}, '', `/?cat=${cat}`);
+        }
+    };
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const cat = link.getAttribute('data-category');
-            if (!cat) return;
-
-            e.preventDefault();
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-
-            if (cat === 'all') {
-                fetchNews();
-            } else {
-                const filtered = allArticles.filter(a => a.category.toLowerCase().includes(cat.toLowerCase()));
-                renderDashboard(filtered, []);
+            if (cat) {
+                e.preventDefault();
+                handleCategorySelect(cat, link);
             }
         });
     });
 
-    fetchNews();
+    const initializeDashboard = async () => {
+        await fetchNews();
+        
+        // Handle initial load with query params
+        const initialCategory = getQueryParam('cat');
+        if (initialCategory) {
+            handleCategorySelect(initialCategory, null);
+        }
+    };
+
+    initializeDashboard();
     setInterval(fetchNews, 600000);
 });

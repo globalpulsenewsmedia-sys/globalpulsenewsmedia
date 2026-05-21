@@ -21,7 +21,8 @@
     "node-fetch": "^3.3.2",
     "nodemailer": "^8.0.7",
     "serve": "^14.2.1",
-    "twitter-api-v2": "^1.29.0"
+    "twitter-api-v2": "^1.29.0",
+    "ws": "^8.20.1"
   },
   "engines": {
     "node": "20.x"
