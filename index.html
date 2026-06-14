@@ -213,7 +213,7 @@
                     <!-- MODULE B: MARKET MASTER SENTINEL -->
                     <div class="tab-pane" id="market-master-sentinel">
                         <div class="hero-section">
-                            <!-- Left: Sentiment, Macro, and News Aggregation -->
+                            <!-- Left: Sentiment, Macro, and Live Intelligence Streams -->
                             <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
                                 <!-- Sentiment Indicators & Macro Event Summaries -->
                                 <div class="dashboard-card">
@@ -596,13 +596,13 @@
                                             Our platform integrates an autonomous verification daemon that continuously monitors contract security compliance, gas optimization limits, and transaction execution routing. This data is fed directly into the Arbitrage Smart AI multi-agent database for real-time audit verification.
                                         </p>
                                         
-                                        <!-- Live Scraping Ticker Stream -->
+                                        <!-- Live Verification Ticker Stream -->
                                         <div style="background: #0b0b0f; border: 1px solid var(--card-border); border-radius: 6px; padding: 15px; font-family: var(--font-mono); font-size: 0.78rem;">
                                             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; margin-bottom: 10px; color: var(--text-secondary);">
                                                 <span>LIVE INGESTION STREAM (AGENT TRANSACTION PIPELINE)</span>
                                                 <span class="pulse-dot" style="background-color: var(--accent); box-shadow: 0 0 6px var(--accent);"></span>
                                             </div>
-                                            <div id="ecosystemNewsStream" style="max-height: 120px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 0.75rem;">
+                                            <div id="ecosystemVerificationStream" style="max-height: 120px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 0.75rem;">
                                                 <div style="color: #888;">Initializing verification parser threads...</div>
                                             </div>
                                         </div>
@@ -619,7 +619,7 @@
             <section class="below-fold-section" style="margin-top: 30px;">
                 <div class="below-fold-grid">
                     <!-- Left: TradingView Chart -->
-                    <div class="news-cards-container">
+                    <div class="belowfold-cards-container">
                         <div class="dashboard-card">
                             <div class="card-header">
                                 <h3>📊 BTC/USDT Global Market Chart</h3>
@@ -761,7 +761,7 @@
                 <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:20px;">
                     <div style="background:#0b0b0f; border:1px solid var(--card-border); padding:10px; border-radius:4px; text-align:center;">
                         <span style="font-size:0.75rem; color:var(--text-secondary);">VM INSTANCE NAME</span>
-                        <div style="font-family:var(--font-mono); font-weight:700; color:#fff; margin-top:4px; font-size:0.85rem;">news-scraper-vm</div>
+                        <div style="font-family:var(--font-mono); font-weight:700; color:#fff; margin-top:4px; font-size:0.85rem;">arbitrage-engine-vm</div>
                     </div>
                     <div style="background:#0b0b0f; border:1px solid var(--card-border); padding:10px; border-radius:4px; text-align:center;">
                         <span style="font-size:0.75rem; color:var(--text-secondary);">GCP REGION / ZONE</span>
@@ -801,7 +801,6 @@ Schema Model (CEX Ticker Payload):
                 <ul style="padding-left:20px; margin-bottom:20px; color:var(--text-secondary); font-size:0.85rem;">
                     <li><strong style="color:#fff; font-family:var(--font-mono);">GET /data/arbitrage_data.json</strong> - Retrieves the latest consolidated CEX order book snapshots.</li>
                     <li><strong style="color:#fff; font-family:var(--font-mono);">GET /data/dex_arbitrage_data.json</strong> - Retrieves cross-DEX pools discrepancies, gas estimates, and risk indexes.</li>
-                    <li><strong style="color:#fff; font-family:var(--font-mono);">GET /data/news_data.json</strong> - Returns the daily aggregated crypto articles cache with JSON-LD schema bindings.</li>
                 </ul>
 
                 <h4 style="color:var(--accent-orange); margin-bottom:10px; font-weight:700;">🛡️ Kafka & TimescaleDB Topology</h4>

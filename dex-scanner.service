@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 User=HP
-WorkingDirectory=/home/HP/globalpulsenewsmedia
+WorkingDirectory=/home/HP/arbitrage-smart-ai
 ExecStart=/usr/bin/python3 scripts/dex_live_scanner.py
 
 # Auto Recovery Settings

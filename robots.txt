@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://globalpulsenewsmedia.com/sitemap.xml
+Sitemap: https://arbitragesmartai.com/sitemap.xml

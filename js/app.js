@@ -1035,10 +1035,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Ecosystem Live Scraper Log Streamer (Repurposed for multi-agent trade verification) ---
-    const ecosystemNewsStream = document.getElementById('ecosystemNewsStream');
-    const runEcosystemScraperLogSync = () => {
-        if (!ecosystemNewsStream) return;
+    // --- Ecosystem Live Verification Log Streamer (Repurposed for multi-agent trade verification) ---
+    const ecosystemVerificationStream = document.getElementById('ecosystemVerificationStream');
+    const runEcosystemVerificationLogSync = () => {
+        if (!ecosystemVerificationStream) return;
         
         const networks = ["Ethereum Mainnet", "Solana SVM", "Base L2", "Arbitrum One", "BSC Mainnet"];
         const net = networks[Math.floor(Math.random() * networks.length)];
@@ -1068,16 +1068,16 @@ document.addEventListener('DOMContentLoaded', () => {
             logItem.innerHTML = `<span style="color: var(--text-secondary);">${logMsg.slice(0, 20)}</span>${logMsg.slice(20)}`;
         }
         
-        ecosystemNewsStream.appendChild(logItem);
-        while (ecosystemNewsStream.children.length > 8) {
-            ecosystemNewsStream.removeChild(ecosystemNewsStream.firstChild);
+        ecosystemVerificationStream.appendChild(logItem);
+        while (ecosystemVerificationStream.children.length > 8) {
+            ecosystemVerificationStream.removeChild(ecosystemVerificationStream.firstChild);
         }
-        ecosystemNewsStream.scrollTop = ecosystemNewsStream.scrollHeight;
+        ecosystemVerificationStream.scrollTop = ecosystemVerificationStream.scrollHeight;
     };
 
-    // Run ecosystem scraper logs simulation
-    setInterval(runEcosystemScraperLogSync, 3000);
-    runEcosystemScraperLogSync(); // Initial run
+    // Run ecosystem verification logs simulation
+    setInterval(runEcosystemVerificationLogSync, 3000);
+    runEcosystemVerificationLogSync(); // Initial run
 
     // Intercept Ecosystem navigation/footer links
     const ecosystemLinks = document.querySelectorAll('a[href="#ecosystem"], .ecosystem-link');

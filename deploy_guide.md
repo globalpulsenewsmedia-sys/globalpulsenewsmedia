@@ -1,6 +1,6 @@
 # GCP Production Deployment Guide: ArbitrageSmartAI Autonomous Infrastructure
 
-This guide details how to spin up the containerized database/observability layers, harden your systemd service daemons, setup TimeSeries hypertables, and deploy the programmatic SEO generator on your GCP VM.
+This guide details how to spin up the containerized database/observability layers, harden your systemd service daemons, setup TimeSeries hypertables, and verify the backend stack.
 
 ---
 
@@ -12,10 +12,10 @@ On your VM, ensure Docker & Docker-Compose are installed, then boot the stack:
 
 ```bash
 # SSH into VM
-gcloud compute ssh --zone "asia-south1-a" "global-pulse-server-mumbai"
+gcloud compute ssh --zone "asia-south1-a" "arbitrage-smart-server-mumbai"
 
 # Navigate to repo
-cd /home/HP/globalpulsenewsmedia
+cd /home/HP/arbitrage-smart-ai
 
 # Boot database, proxy, & telemetry containers in background
 sudo docker-compose up -d
@@ -37,14 +37,14 @@ sudo docker exec -it arbitrage_timescaledb psql -U postgres -d arbitrage_db -f /
 
 ## 3. Harden and Enable systemd VM Services
 
-Copy all four hardened systemd files (with sandboxing, auto-restart triggers, and CPU/Memory constraints) to yourVM's services folder, reload the daemon, and start the engines:
+Copy all four hardened systemd files (with sandboxing, auto-restart triggers, and CPU/Memory constraints) to your VM's services folder, reload the daemon, and start the engines:
 
 ```bash
 # Copy service configurations
-sudo cp /home/HP/globalpulsenewsmedia/cex-scanner.service /etc/systemd/system/
-sudo cp /home/HP/globalpulsenewsmedia/dex-scanner.service /etc/systemd/system/
-sudo cp /home/HP/globalpulsenewsmedia/seo-engine.service /etc/systemd/system/
-sudo cp /home/HP/globalpulsenewsmedia/telemetry.service /etc/systemd/system/
+sudo cp /home/HP/arbitrage-smart-ai/cex-scanner.service /etc/systemd/system/
+sudo cp /home/HP/arbitrage-smart-ai/dex-scanner.service /etc/systemd/system/
+sudo cp /home/HP/arbitrage-smart-ai/telemetry.service /etc/systemd/system/
+sudo cp /home/HP/arbitrage-smart-ai/frontend-server.service /etc/systemd/system/
 
 # Reload systemd configuration
 sudo systemctl daemon-reload
@@ -52,14 +52,14 @@ sudo systemctl daemon-reload
 # Enable services to run automatically on boot
 sudo systemctl enable cex-scanner.service
 sudo systemctl enable dex-scanner.service
-sudo systemctl enable seo-engine.service
 sudo systemctl enable telemetry.service
+sudo systemctl enable frontend-server.service
 
 # Start the services
 sudo systemctl start cex-scanner.service
 sudo systemctl start dex-scanner.service
-sudo systemctl start seo-engine.service
 sudo systemctl start telemetry.service
+sudo systemctl start frontend-server.service
 ```
 
 ---
@@ -75,11 +75,11 @@ sudo journalctl -u cex-scanner.service -f
 # Check DEX pool scanner logs
 sudo journalctl -u dex-scanner.service -f
 
-# Check Programmatic SEO engine logs
-sudo journalctl -u seo-engine.service -f
-
 # Check WebSocket Telemetry logs
 sudo journalctl -u telemetry.service -f
+
+# Check Frontend Server logs
+sudo journalctl -u frontend-server.service -f
 ```
 
 ---

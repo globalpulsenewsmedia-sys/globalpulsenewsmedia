@@ -504,7 +504,7 @@ body {
     gap: 25px;
 }
 
-.news-cards-container {
+.belowfold-cards-container {
     display: flex;
     flex-direction: column;
 }

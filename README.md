@@ -1,36 +1,51 @@
-# Global Pulse News Media
+# ArbitrageSmartAI
 
-Global Pulse is a 24/7 fully autonomous, high-traffic international news portal and market intelligence synthesiser modeled after CNN.
+ArbitrageSmartAI is a high-fidelity, autonomous cryptocurrency arbitrage orchestration terminal and financial market intelligence ecosystem. It integrates real-time CEX order-book scans, cross-chain DEX liquidity pool discrepancy checks, and multi-agent simulation feeds.
 
-## 🚀 Live Vercel Deployment Instructions
-
-Since the Arbitrage Smart AI code and domains have been decoupled:
-
-1. Log in to your **Vercel Dashboard**.
-2. Click on the **Global Pulse News Media** project.
-3. Go to **Settings** → **Domains**.
-4. If `arbitragesmartai.com` or `www.arbitragesmartai.com` is listed here, **delete / remove** them immediately.
-5. Ensure only your news domains (e.g. `globalpulsenewsmedia.com` and `www.globalpulsenewsmedia.com`) are configured here.
-6. Trigger a redeployment if needed (it will automatically rebuild when you push changes to your Git repository).
+## 🚀 Key Features
+- **Autonomous Multi-Agent Logs**: Active simulated websocket streams (`AGENT_CRYPTO_INTEL` and `AGENT_MARKET_MASTER`) showcasing real-time intelligence gathering, sentiment analysis, and transaction verification.
+- **CEX & DEX Scanner Engines**: High-speed, CPU-quota hardened background services to query order book depths and decentralized pool pricing.
+- **Telemetry WebSocket Gateway**: Node.js WebSocket responder broadcasting updates with sub-100ms latency.
+- **Time-Series Persistence**: Integrated schema for TimescaleDB to persist spread histories, whale ledger swaps, and AI confidence telemetry.
+- **High-Fidelity Dashboard UI**: Fully responsive black-theme trading terminal with built-in calculators, live TradingView charts, and interactive compliance modals.
 
 ---
 
 ## 💻 Running & Testing Locally
 
-To run this website locally:
+To start the static terminal dashboard locally:
 
-1. Open your terminal in this directory (`globalpulsenewsmedia`).
-2. Start the local server:
+1. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Start the Local Web Server**:
    ```bash
    npm start
    ```
-3. Open your browser and navigate to: **[http://localhost:3000](http://localhost:3000)**
+
+3. **Open Terminal UI**:
+   Navigate to **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+4. **Verify Backend Syntax & Cache Structure**:
+   ```bash
+   py scripts/verify_production.py
+   ```
 
 ---
 
-## 🤖 AI Automation & B2B Outreach Scripts
+## ☁️ Production Vercel Deployment
 
-This project includes active Node.js services for news retrieval and outreach marketing:
+This standalone repository is linked to Vercel for automatic continuous deployments:
 
-*   **B2B Outreach Marketing (`scripts/b2b-outreach.mjs`):** Runs the automated email campaigns via Zoho SMTP.
-*   **Watchdog Health monitor (`scripts/watchdog.mjs`):** Monitors the portal, news file validity, and handles Vercel redeployment sequences.
+1. Push your commits to the main branch on GitHub.
+2. Vercel will build and deploy the production static assets.
+3. Configure the custom domains **`arbitragesmartai.com`** and **`www.arbitragesmartai.com`** directly in the Vercel Project Settings.
+
+---
+
+## 🛡️ VM Production Deployment
+
+For deploying the high-frequency scanning engines and WebSocket gateways on a Linux VM:
+Refer to the step-by-step instructions in the [GCP Production Deployment Guide](deploy_guide.md).

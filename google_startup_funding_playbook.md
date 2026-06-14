@@ -1,7 +1,7 @@
 # 🚀 Google for Startups Cloud Program Playbook
-## Securing Up to $350,000 in Cloud Credits for **Arbitrage Smart AI** & **Global Pulse Media**
+## Securing Up to $350,000 in Cloud Credits for **Arbitrage Smart AI**
 
-Welcome to your master application playbook! This guide is designed to help you secure up to **$350,000 in Google Cloud and Vertex AI credits** through the **Google for Startups Cloud Program**. Because you are building an AI-first platform combining autonomous agentic trade execution (**Arbitrage Smart AI**) and real-time intelligence feeds (**Global Pulse Media**), you qualify for Google's highest-tier program support.
+Welcome to your master application playbook! This guide is designed to help you secure up to **$350,000 in Google Cloud and Vertex AI credits** through the **Google for Startups Cloud Program**. Because you are building an AI-first platform combining autonomous agentic trade execution (**Arbitrage Smart AI**), you qualify for Google's highest-tier program support.
 
 ---
 
@@ -9,7 +9,7 @@ Welcome to your master application playbook! This guide is designed to help you 
 Before you hit "Submit" on the official portal, you must ensure that all structural trust signals are in place. Google manually reviews these applications, and having these ready guarantees a higher approval rate.
 
 - [ ] **Professional Website is Live:** 
-  * Your landing page must be fully functional at [arbitragesmartai.com](https://arbitragesmartai.com) and the news feed must be live at [globalpulsenewsmedia](https://globalpulsenewsmedia).
+  * Your landing page must be fully functional at [arbitragesmartai.com](https://arbitragesmartai.com).
 - [ ] **Professional Business Email Active:**
   * You must submit the form using `arbitragesmartai@arbitragesmartai.com` or another address matching your domain. **Applications from `@gmail.com` addresses are almost always rejected.**
 - [ ] **Google Cloud Platform (GCP) Account Created:**
@@ -31,7 +31,7 @@ Use the exact copy-paste scripts below to fill out the crucial narrative boxes i
 ```text
 Arbitrage Smart AI is building the future of autonomous agentic commerce. We have developed a proprietary multi-agent orchestration layer that bridges the gap between global market intelligence and logistics execution. 
 
-Our ecosystem features a 24/7 autonomous news and data synthesis arm (Global Pulse Media) that feeds real-time market and intelligence data into our proprietary Trade Orchestration Agents. We are solving a multi-billion dollar efficiency bottleneck in international commodity trade (e.g., Katke Enterprises) by automating complex document generation, compliance vetting, and optimal logistics routing via deep agentic workflows. Our target is to capture a significant percentage of operational efficiency gains in global trade logistics.
+Our ecosystem features 24/7 multi-agent autonomous market and intelligence data integration that feeds real-time spread analysis and order routing options into our proprietary Trade Orchestration Agents. We are solving a multi-billion dollar efficiency bottleneck in international commodity trade (e.g., Katke Enterprises) by automating complex document generation, compliance vetting, and optimal logistics routing via deep agentic workflows. Our target is to capture a significant percentage of operational efficiency gains in global trade logistics.
 ```
 
 ### ⚙️ Field 2: Technical Architecture & Google Cloud Usage
@@ -40,7 +40,7 @@ Our ecosystem features a 24/7 autonomous news and data synthesis arm (Global Pul
 ```text
 Our infrastructure is built entirely on the Google Cloud ecosystem to guarantee scale, high availability, and secure agentic compliance. 
 
-1. Vertex AI & Gemini Models: We utilize Vertex AI to access Gemini 1.5 Pro and Gemini Flash. These models power our news synthesis engine (scraping and condensing real-time supply chain data) and extract structured trade documents from PDFs.
+1. Vertex AI & Gemini Models: We utilize Vertex AI to access Gemini 1.5 Pro and Gemini Flash. These models power our market telemetry analysis (parsing and condensing real-time supply chain and exchange pricing data) and extract structured trade documents from PDFs.
 2. Google Cloud Functions & Cloud Run: We deploy our lightweight autonomous python trade agents on Cloud Run and trigger transaction evaluations using serverless Cloud Functions.
 3. Firebase: We use Firebase for low-latency, real-time data syncs between our frontend dashboard (Arbitrage Smart AI) and the backend multi-agent database.
 4. Future Roadmap: As we scale, we intend to utilize Google BigQuery for historic market analysis and Looker for providing high-fidelity visual reports to B2B logistics partners.
@@ -85,15 +85,15 @@ The form will ask you to select or input your **Google Cloud Billing Account ID*
 
 ## ⚡ Section 4: Critical Pro-Tips for Fast Approval
 
-> [!IMPORTANT]
+> [flat]
 > **Use AI Studio Immediately for Prototyping:**
 > Before the application is approved, you can start developing and testing models for free on the **Google AI Studio** dashboard. Do not let the processing time slow down your development.
 
-> [!TIP]
+> [flat]
 > **Avoid the Agency / Consulting Flag:**
 > When asked if you are an agency, development shop, or consulting firm, select **No**. Google only funds product-centric scalable startups. Always pitch Arbitrage Smart AI as a proprietary SaaS platform.
 
-> [!WARNING]
+> [flat]
 > **Do Not Cancel Your GCP Billing Card:**
 > Keeping an active credit card attached to your Google Cloud Billing Account is mandatory even after the credits are active. Google will deduct usage from your $350,000 credit balance first, but if the credit card is deleted, your account will be suspended.
 

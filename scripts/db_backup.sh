@@ -2,7 +2,7 @@
 # ArbitrageSmartAI Database Backup Script
 # Retention policy: 7 days
 
-BACKUP_DIR="/home/HP/globalpulsenewsmedia/backups"
+BACKUP_DIR="/home/HP/arbitrage-smart-ai/backups"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 BACKUP_FILE="$BACKUP_DIR/arbitrage_db_backup_$TIMESTAMP.sql"
 

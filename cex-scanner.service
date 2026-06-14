@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 User=HP
-WorkingDirectory=/home/HP/globalpulsenewsmedia
+WorkingDirectory=/home/HP/arbitrage-smart-ai
 ExecStart=/usr/bin/python3 scripts/arbitrage_live_engine.py
 
 # Auto Recovery Settings
