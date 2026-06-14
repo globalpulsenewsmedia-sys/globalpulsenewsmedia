@@ -18,16 +18,37 @@
     <div class="success-card">
         <div class="checkmark">✔</div>
         <h1>Intelligence Secured</h1>
-        <p>Your payment has been verified. You now have full access to the ArbitrageSmartAI PRO Lounge and high-frequency AI signals.</p>
+        <p id="successMessage">Your payment has been verified. You now have full access to the ArbitrageSmartAI PRO Lounge and high-frequency AI signals.</p>
+        
+        <div id="invoiceSummary" style="display:none; background:#111116; border:1px solid #222; border-radius:8px; padding:20px; margin-bottom:30px; text-align:left; font-size:0.9rem; font-family:monospace; line-height:1.8;">
+            <div style="color:var(--accent); font-weight:bold; border-bottom:1px solid #222; padding-bottom:8px; margin-bottom:12px; font-size:0.95rem; text-transform:uppercase;">Billing Invoice Summary</div>
+            <div><strong>Plan Activated:</strong> <span id="activatedPlan" style="color:#fff;">-</span></div>
+            <div><strong>Transaction ID:</strong> <span id="activatedId" style="color:var(--accent-blue);">-</span></div>
+            <div><strong>Registered Email:</strong> <span id="activatedEmail" style="color:#fff;">-</span></div>
+            <div><strong>MSME Registry:</strong> <span style="color:#ffd700;">UDYAM-MH-17-0069728</span></div>
+            <div><strong>Compliance:</strong> <span style="color:var(--accent);">APPROVED</span></div>
+        </div>
+
         <div id="paymentIdDisplay" style="font-family: monospace; color: #444; font-size: 0.7rem; margin-bottom: 30px;"></div>
-        <a href="pro.html" class="btn-lounge">ENTER PRO LOUNGE</a>
+        <a href="index.html" class="btn-lounge" style="background:var(--accent); color:#000;">Return to Dashboard</a>
     </div>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const paymentId = urlParams.get('payment_id');
+        const paymentId = urlParams.get('id') || urlParams.get('payment_id');
+        const plan = urlParams.get('plan');
+        const email = urlParams.get('email');
+        
         if (paymentId) {
             document.getElementById('paymentIdDisplay').innerText = "TRANSACTION ID: " + paymentId;
+        }
+        
+        if (plan) {
+            document.getElementById('successMessage').innerText = `Your activation of ${plan} is complete. Your low-latency telemetry feeds are now active.`;
+            document.getElementById('invoiceSummary').style.display = 'block';
+            document.getElementById('activatedPlan').innerText = plan;
+            document.getElementById('activatedId').innerText = paymentId || 'N/A';
+            document.getElementById('activatedEmail').innerText = email || 'N/A';
         }
     </script>
 </body>

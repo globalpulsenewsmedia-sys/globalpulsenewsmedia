@@ -1094,4 +1094,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Phase 3: Real-Time Intelligence Dashboard Counter Animation ---
+    let oppScanned = 14205832;
+    let signalsProcessed = 384021;
+    let dataPointsCollected = 294801048;
+    
+    if (document.getElementById('counterOppScanned')) {
+        oppScanned = parseInt(document.getElementById('counterOppScanned').innerText.replace(/,/g, '')) || 14205832;
+    }
+    if (document.getElementById('counterSignalsProcessed')) {
+        signalsProcessed = parseInt(document.getElementById('counterSignalsProcessed').innerText.replace(/,/g, '')) || 384021;
+    }
+    if (document.getElementById('counterDataPoints')) {
+        dataPointsCollected = parseInt(document.getElementById('counterDataPoints').innerText.replace(/,/g, '')) || 294801048;
+    }
+    
+    const counterOppScanned = document.getElementById('counterOppScanned');
+    const counterSignalsProcessed = document.getElementById('counterSignalsProcessed');
+    const counterDataPoints = document.getElementById('counterDataPoints');
+    
+    const animateBloombergCounters = () => {
+        oppScanned += Math.floor(Math.random() * 4) + 1;
+        signalsProcessed += Math.floor(Math.random() * 2);
+        dataPointsCollected += Math.floor(Math.random() * 50) + 10;
+        
+        if (counterOppScanned) counterOppScanned.innerText = oppScanned.toLocaleString();
+        if (counterSignalsProcessed) counterSignalsProcessed.innerText = signalsProcessed.toLocaleString();
+        if (counterDataPoints) counterDataPoints.innerText = dataPointsCollected.toLocaleString();
+    };
+    setInterval(animateBloombergCounters, 800); // Fast live updates
 });

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Cloud Startup Program Readiness | ArbitrageSmartAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .page-header { margin-bottom: 50px; border-bottom: 1px solid var(--card-border); padding-bottom: 30px; }
+        .page-title { font-size: 2.8rem; font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; color: var(--text-secondary); }
+        .section-block { margin-bottom: 60px; }
+        .section-title { font-size: 1.6rem; color: var(--accent-blue); margin-bottom: 25px; font-weight: 800; border-left: 4px solid var(--accent-blue); padding-left: 15px; }
+        .card-custom { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 30px; margin-bottom: 25px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; }
+        .badge { background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+        .arch-diagram { background:#08080c; border:1px solid var(--card-border); border-radius:8px; padding:25px; font-family:var(--font-mono); font-size:0.8rem; line-height:1.8; color:#a0a0b0; }
+        .arch-node { border: 1px solid var(--card-border); padding: 8px 12px; margin: 8px 0; border-radius: 4px; background: rgba(255,255,255,0.01); display: flex; justify-content: space-between; align-items: center; }
+        .arch-node.active { border-color: var(--accent-blue); color: #fff; background: rgba(0, 176, 255, 0.02); }
+    </style>
+</head>
+<body>
+
+    <header class="cnn-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="cnn-logo" onclick="window.location.href='index.html'" style="cursor:pointer;">
+                    ARBITRAGE<span>SMART AI</span>
+                </div>
+                <nav class="cnn-nav">
+                    <ul>
+                        <li><a href="index.html">Terminal</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="api-docs.html">Developer Portal</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                        <li><a href="contact-center.html">Support</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 80px 0;">
+        <div class="container">
+            <div class="page-header">
+                <span class="badge">Google Startup Program Readiness</span>
+                <h1 class="page-title">Google Cloud Infrastructure & Vertex AI Architecture</h1>
+                <p class="subtitle">Detailed evaluation blueprint detailing low-latency Kubernetes clusters, Vertex AI models, and monitoring frameworks.</p>
+            </div>
+
+            <div class="section-block">
+                <div class="grid-2">
+                    <div>
+                        <h2 class="section-title">Cloud Native Architecture</h2>
+                        <p style="color:var(--text-secondary); line-height: 1.8; margin-bottom: 20px;">
+                            Our core platform runs natively inside containerized clusters hosted across Google Cloud Platform. We utilize high-fidelity services to maintain telemetry accuracy.
+                        </p>
+                        
+                        <div class="card-custom">
+                            <h4 style="color:#fff; margin-bottom:8px; font-weight:700;">Google Kubernetes Engine (GKE)</h4>
+                            <p style="color:var(--text-secondary); font-size:0.85rem; line-height:1.6;">
+                                GKE orchestrates our autonomous telemetry pods, dynamically scaling container counts during volume spikes or validator bridge congestion.
+                            </p>
+                        </div>
+
+                        <div class="card-custom">
+                            <h4 style="color:#fff; margin-bottom:8px; font-weight:700;">Vertex AI & Gemini Integration</h4>
+                            <p style="color:var(--text-secondary); font-size:0.85rem; line-height:1.6;">
+                                We leverage Vertex AI pipelines and Gemini 1.5 Pro to compile real-time risk summaries, audit order parameters against local compliance, and generate trading reports.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="section-title">Deployment Topology Map</h2>
+                        <div class="arch-diagram">
+                            <div style="text-align:center; font-weight:bold; margin-bottom:15px; color:#fff; border-bottom:1px solid var(--card-border); padding-bottom:10px;">GCP MUMBAI REGION (asia-south1)</div>
+                            
+                            <div class="arch-node active">
+                                <span>🌐 GCLB (Load Balancer)</span>
+                                <span style="color:var(--accent-blue); font-size:0.7rem;">SSL SEALED</span>
+                            </div>
+                            <div style="text-align:center; color:var(--accent-blue);">↓</div>
+                            <div class="arch-node active">
+                                <span>☸️ GKE Cluster Autopower Array</span>
+                                <span style="color:var(--accent); font-size:0.7rem;">3 ACTIVE PODS</span>
+                            </div>
+                            <div style="text-align:center; color:var(--accent-blue);">↓</div>
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                                <div class="arch-node active" style="flex-direction:column; align-items:flex-start;">
+                                    <span style="font-size:0.75rem;">🤖 Vertex AI Agent</span>
+                                    <span style="font-size:0.65rem; color:var(--text-secondary); margin-top:5px;">Gemini 1.5 Pro</span>
+                                </div>
+                                <div class="arch-node active" style="flex-direction:column; align-items:flex-start;">
+                                    <span style="font-size:0.75rem;">🗄️ TimescaleDB</span>
+                                    <span style="font-size:0.65rem; color:var(--text-secondary); margin-top:5px;">Telemetry Logs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="cnn-mega-footer" style="background: #050505; border-top: 1px solid var(--card-border); padding: 40px 0;">
+        <div class="container">
+            <p style="font-size: 0.8rem; color: var(--text-secondary); text-align: center; line-height: 1.8;">
+                &copy; 2026 ArbitrageSmartAI (Katke Enterprises). All rights reserved. 
+                <br>MSME Registration: UDYAM-MH-17-0069728 | Registered in Palghar, Maharashtra, India.
+                <br>Grievance Officer Official Contact: <a href="mailto:arbitragesmartai@gmail.com" style="color: var(--accent); text-decoration: none;">arbitragesmartai@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

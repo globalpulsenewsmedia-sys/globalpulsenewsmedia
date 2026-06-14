@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation | ArbitrageSmartAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .page-header { margin-bottom: 50px; border-bottom: 1px solid var(--card-border); padding-bottom: 30px; }
+        .page-title { font-size: 2.8rem; font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; color: var(--text-secondary); }
+        .section-block { margin-bottom: 60px; }
+        .section-title { font-size: 1.6rem; color: var(--accent-blue); margin-bottom: 25px; font-weight: 800; border-left: 4px solid var(--accent-blue); padding-left: 15px; }
+        .card-custom { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 30px; margin-bottom: 25px; }
+        .grid-2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; }
+        .badge { background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+        .code-block { background: #08080c; border: 1px solid var(--card-border); padding: 20px; border-radius: 6px; font-family: var(--font-mono); font-size: 0.82rem; overflow-x: auto; color: #f1f1f5; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <header class="cnn-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="cnn-logo" onclick="window.location.href='index.html'" style="cursor:pointer;">
+                    ARBITRAGE<span>SMART AI</span>
+                </div>
+                <nav class="cnn-nav">
+                    <ul>
+                        <li><a href="index.html">Terminal</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="api-docs.html" class="active">Developer Portal</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                        <li><a href="contact-center.html">Support</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 80px 0;">
+        <div class="container">
+            <div class="page-header">
+                <span class="badge">Developer Portal</span>
+                <h1 class="page-title">Developer Portal & Live API</h1>
+                <p class="subtitle">Integrate high-frequency scanning telemetry logs natively into your trading terminals.</p>
+            </div>
+
+            <div class="section-block">
+                <div class="grid-2">
+                    <div>
+                        <h2 class="section-title">WebSocket Stream Connection</h2>
+                        <p style="color:var(--text-secondary); line-height: 1.8; margin-bottom: 25px;">
+                            Establish a low-latency websocket stream to listen to cross-exchange price spreads and triangular arbitrage data matches.
+                        </p>
+                        
+                        <div class="card-custom">
+                            <h4 style="color:#fff; margin-bottom:10px; font-weight:700;">Rate Limits & SLA</h4>
+                            <p style="color:var(--text-secondary); font-size:0.85rem; line-height:1.6;">
+                                Standard Tier accounts are rate-limited to 60 telemetry requests per minute. Enterprise licenses receive customized websocket pools with dedicated SLAs, 0ms execution latency, and zero rate-limiting.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="section-title">Sample Integration (Node.js)</h2>
+                        <div class="code-block">
+<pre style="margin:0;"><span style="color:#888;">// Establish low-latency WebSocket connection</span>
+<span style="color:#ff7b72;">import</span> WebSocket <span style="color:#ff7b72;">from</span> <span style="color:#a5d6ff;">'ws'</span>;
+
+<span style="color:#ff7b72;">const</span> ws = <span style="color:#ff7b72;">new</span> <span style="color:#d2a8ff;">WebSocket</span>(<span style="color:#a5d6ff;">'wss://api.arbitragesmartai.com/v1/telemetry'</span>);
+
+ws.<span style="color:#d2a8ff;">on</span>(<span style="color:#a5d6ff;">'open'</span>, () <span style="color:#ff7b72;">=&gt;</span> {
+    console.<span style="color:#d2a8ff;">log</span>(<span style="color:#a5d6ff;">'CONNECTED: Low-latency telemetry stream active.'</span>);
+    ws.<span style="color:#d2a8ff;">send</span>(<span style="color:#d2a8ff;">JSON</span>.<span style="color:#d2a8ff;">stringify</span>({ action: <span style="color:#a5d6ff;">'subscribe'</span>, pair: <span style="color:#a5d6ff;">'BTCUSDT'</span> }));
+});
+
+ws.<span style="color:#d2a8ff;">on</span>(<span style="color:#a5d6ff;">'message'</span>, (data) <span style="color:#ff7b72;">=&gt;</span> {
+    <span style="color:#ff7b72;">const</span> payload = <span style="color:#d2a8ff;">JSON</span>.<span style="color:#d2a8ff;">parse</span>(data);
+    console.<span style="color:#d2a8ff;">log</span>(<span style="color:#a5d6ff;">'SPREAD DETECTED:'</span>, payload.spreadPercentage + <span style="color:#a5d6ff;">'%'</span>);
+});
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="cnn-mega-footer" style="background: #050505; border-top: 1px solid var(--card-border); padding: 40px 0;">
+        <div class="container">
+            <p style="font-size: 0.8rem; color: var(--text-secondary); text-align: center; line-height: 1.8;">
+                &copy; 2026 ArbitrageSmartAI (Katke Enterprises). All rights reserved. 
+                <br>MSME Registration: UDYAM-MH-17-0069728 | Registered in Palghar, Maharashtra, India.
+                <br>Grievance Officer Official Contact: <a href="mailto:arbitragesmartai@gmail.com" style="color: var(--accent); text-decoration: none;">arbitragesmartai@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

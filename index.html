@@ -57,11 +57,11 @@
                 </div>
                 <nav class="cnn-nav">
                     <ul>
-                        <li><a href="#terminal" class="active">Intelligence Terminal</a></li>
-                        <li><a href="#heatmaps">Liquidity Heatmaps</a></li>
-                        <li><a href="#threats">Threat Monitoring</a></li>
-                        <li><a href="#crypto-academy" class="nav-academy-btn" style="color: #00B0FF; font-weight: 800; border: 1px solid rgba(0, 176, 255, 0.3); padding: 4px 10px; border-radius: 4px; background: rgba(0, 176, 255, 0.05); display: flex; align-items: center; gap: 5px;">🎓 Crypto Academy</a></li>
-                        <li><a href="#" id="btnOpenApiDocsModal" style="color: var(--accent); font-weight: 800; border: 1px solid rgba(0, 230, 118, 0.3); padding: 4px 10px; border-radius: 4px; background: rgba(0, 230, 118, 0.05); display: flex; align-items: center; gap: 5px;">📋 System Status & API Docs</a></li>
+                        <li><a href="#terminal" class="active">Terminal</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="api-docs.html">API Docs</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="pro.html" style="color: #00E676; font-weight: 900;">PRO LOUNGE</a></li>
                     </ul>
                 </nav>
@@ -85,6 +85,36 @@
 
     <main class="cnn-main">
         <div class="container">
+
+            <!-- PHASE 3 - REAL-TIME INTELLIGENCE DASHBOARD COUNTERS (Bloomberg/Palantir style) -->
+            <section class="bloomberg-counters-section" style="margin-top: 25px; margin-bottom: 25px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px;">
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">Opportunities Scanned</div>
+                        <div id="counterOppScanned" style="font-size: 1.35rem; font-weight: 900; color: var(--accent); font-family: var(--font-mono); margin-top: 5px;">14,205,832</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">AI Agents Active</div>
+                        <div id="counterAgentsActive" style="font-size: 1.35rem; font-weight: 900; color: var(--accent-blue); font-family: var(--font-mono); margin-top: 5px;">10</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">Exchanges Monitored</div>
+                        <div id="counterExchangesMonitored" style="font-size: 1.35rem; font-weight: 900; color: #fff; font-family: var(--font-mono); margin-top: 5px;">12</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">Signals Processed</div>
+                        <div id="counterSignalsProcessed" style="font-size: 1.35rem; font-weight: 900; color: var(--accent-orange); font-family: var(--font-mono); margin-top: 5px;">384,021</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">System Uptime</div>
+                        <div id="counterUptime" style="font-size: 1.35rem; font-weight: 900; color: var(--accent); font-family: var(--font-mono); margin-top: 5px;">99.998%</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">Data Points Collected</div>
+                        <div id="counterDataPoints" style="font-size: 1.35rem; font-weight: 900; color: var(--accent-blue); font-family: var(--font-mono); margin-top: 5px;">294,801,048</div>
+                    </div>
+                </div>
+            </section>
 
             <!-- TERMINAL SECTION (Multi-Tab Navigation) -->
             <section class="terminal-container" id="terminal" style="margin-top: 25px;">
@@ -719,32 +749,62 @@
         </div>
     </main>
 
-    <footer class="cnn-mega-footer" style="background: #050505; border-top: 1px solid #111; padding: 40px 0;">
+    <footer class="cnn-mega-footer" style="background: #050505; border-top: 1px solid var(--card-border); padding: 60px 0; font-family: var(--font-sans);">
         <div class="container">
-            <div class="mega-footer-top">
-                <div class="cnn-logo" style="font-size: 1.8rem; color: #fff;">ARBITRAGE<span>SMART AI</span></div>
-                <div class="footer-socials">
-                    <a href="#terminal">Terminal</a>
-                    <a href="#calculator">Profit Calculator</a>
-                    <a href="pro.html">Pro Lounge</a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent); padding-bottom: 5px;">Corporate</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">About Us</a></li>
+                        <li><a href="about.html#mission" style="color: var(--text-secondary); text-decoration: none;">Mission & Vision</a></li>
+                        <li><a href="careers.html" style="color: var(--text-secondary); text-decoration: none;">Careers</a></li>
+                        <li><a href="partnerships.html" style="color: var(--text-secondary); text-decoration: none;">Strategic Alliances</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent-blue); padding-bottom: 5px;">Developers</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="api-docs.html" style="color: var(--text-secondary); text-decoration: none;">API Documentation</a></li>
+                        <li><a href="api-docs.html" style="color: var(--text-secondary); text-decoration: none;">Developer Portal</a></li>
+                        <li><a href="whitepaper.html" style="color: var(--text-secondary); text-decoration: none;">Platform Whitepaper</a></li>
+                        <li><a href="roadmap.html" style="color: var(--text-secondary); text-decoration: none;">Product Roadmap</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent); padding-bottom: 5px;">Trust & Compliance</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="compliance-center.html" style="color: var(--text-secondary); text-decoration: none;">Compliance Hub</a></li>
+                        <li><a href="security-center.html" style="color: var(--text-secondary); text-decoration: none;">Security Center</a></li>
+                        <li><a href="compliance-center.html" style="color: var(--text-secondary); text-decoration: none;">MSME Verification</a></li>
+                        <li><a href="terms.html" style="color: var(--text-secondary); text-decoration: none;">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent-blue); padding-bottom: 5px;">Investors</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="investors.html" style="color: var(--text-secondary); text-decoration: none;">Investor Relations</a></li>
+                        <li><a href="google-readiness.html" style="color: var(--text-secondary); text-decoration: none;">Google Cloud Readiness</a></li>
+                        <li><a href="investors.html#tam" style="color: var(--text-secondary); text-decoration: none;">Market Opportunity</a></li>
+                        <li><a href="marketplace.html" style="color: var(--text-secondary); text-decoration: none;">AI Agent Marketplace</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent-orange); padding-bottom: 5px;">Support Desk</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="contact-center.html" style="color: var(--text-secondary); text-decoration: none;">Contact Center</a></li>
+                        <li><a href="contact-center.html" style="color: var(--text-secondary); text-decoration: none;">Support Helpdesk</a></li>
+                        <li><a href="contact.html" style="color: var(--text-secondary); text-decoration: none;">Legal & Grievance Desk</a></li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom" style="margin-top: 30px;">
-                <div class="footer-legal-links" style="display: flex; gap: 20px; font-size: 0.7rem; color: #666;">
-                    <a href="terms.html">Terms of Use</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="risk.html">Risk Disclosure</a>
-                    <a href="aml-kyc.html">AML/KYC Policy</a>
-                    <a href="refund.html">Refund Policy</a>
-                    <a href="shipping.html">Disclaimer</a>
-                    <a href="contact.html">Contact Us</a>
+            <div style="border-top: 1px solid var(--card-border); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div class="cnn-logo" style="font-size: 1.5rem; color: #fff;">ARBITRAGE<span>SMART AI</span></div>
+                <div style="font-size: 0.72rem; color: #555; text-align: right; line-height: 1.6;">
+                    &copy; 2026 ArbitrageSmartAI (Katke Enterprises). All rights reserved.
+                    <br>Parent Entity MSME Registry: <strong>UDYAM-MH-17-0069728</strong> (Micro Enterprise)
+                    <br>Headquarters: 301, Riddhi Siddhi Apartment, Near Shani Temple, Gaskopri, Virar - 401305, Maharashtra, India.
                 </div>
-                <p style="margin-top: 20px; font-size: 0.7rem; color: #555; line-height: 1.5;">
-                    &copy; 2026 ArbitrageSmartAI. Designed for full autonomous scale. Financial market data provided with ultra-low latency.<br>
-                    <strong>Parent Entity:</strong> Katke Enterprises (MSME Reg No: UDYAM-MH-17-0069728, Estd: 07/11/2013).<br>
-                    <strong>Registered Headquarters:</strong> 301, Riddhi Siddhi Apartment, Near Shani Temple, Gaskopri, Virar - 401305, Taluka: Vasai, District: Palghar, Maharashtra, India.
-                </p>
             </div>
         </div>
     </footer>

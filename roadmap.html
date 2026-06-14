@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap | ArbitrageSmartAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .page-header { margin-bottom: 50px; border-bottom: 1px solid var(--card-border); padding-bottom: 30px; }
+        .page-title { font-size: 2.8rem; font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; color: var(--text-secondary); }
+        .section-block { margin-bottom: 60px; }
+        .timeline { position: relative; max-width: 800px; margin: 40px auto; padding-left: 30px; border-left: 2px solid var(--card-border); }
+        .timeline-item { position: relative; margin-bottom: 50px; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg-dark); }
+        .timeline-item.future::before { background: var(--card-border); }
+        .timeline-date { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-blue); margin-bottom: 8px; }
+        .timeline-title { font-size: 1.3rem; color: #fff; font-weight: 700; margin-bottom: 10px; }
+        .card-custom { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 25px; }
+        .badge { background: rgba(0, 230, 118, 0.1); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <header class="cnn-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="cnn-logo" onclick="window.location.href='index.html'" style="cursor:pointer;">
+                    ARBITRAGE<span>SMART AI</span>
+                </div>
+                <nav class="cnn-nav">
+                    <ul>
+                        <li><a href="index.html">Terminal</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="api-docs.html">Developer Portal</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                        <li><a href="contact-center.html">Support</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 80px 0;">
+        <div class="container">
+            <div class="page-header">
+                <span class="badge">Development Path</span>
+                <h1 class="page-title">Product Roadmap</h1>
+                <p class="subtitle">Platform deployment timeline from core WebSocket implementation to institutional liquidity gateways.</p>
+            </div>
+
+            <div class="section-block">
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Q1 - Q2 2026 (Completed)</div>
+                        <div class="card-custom">
+                            <div class="timeline-title">Core WebSockets & Scanners Decoupling</div>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.6;">
+                                Launched high-frequency data parser engines. Decoupled on-chain scanner code systems for Base and Solana networks. Established Katke Enterprises MSME verification.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Q3 - Q4 2026 (Active)</div>
+                        <div class="card-custom">
+                            <div class="timeline-title">Ecosystem Upgrade & Google Credit Integration</div>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.6;">
+                                Build corporate trust structures, launch the multi-agent AI marketplace, and scale regional container clusters using Google Cloud Vertex AI credits.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item future">
+                        <div class="timeline-date">Q1 - Q2 2027 (Future)</div>
+                        <div class="card-custom">
+                            <div class="timeline-title">Institutional Liquidity Reseller Gateways</div>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.6;">
+                                Deploy dedicated private API nodes with 0ms rate limit SLAs. Offer fully white-labeled software portals to enterprise hedge fund allocators.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="cnn-mega-footer" style="background: #050505; border-top: 1px solid var(--card-border); padding: 40px 0;">
+        <div class="container">
+            <p style="font-size: 0.8rem; color: var(--text-secondary); text-align: center; line-height: 1.8;">
+                &copy; 2026 ArbitrageSmartAI (Katke Enterprises). All rights reserved. 
+                <br>MSME Registration: UDYAM-MH-17-0069728 | Registered in Palghar, Maharashtra, India.
+                <br>Grievance Officer Official Contact: <a href="mailto:arbitragesmartai@gmail.com" style="color: var(--accent); text-decoration: none;">arbitragesmartai@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
