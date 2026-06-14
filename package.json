@@ -1,21 +1,20 @@
 {
-  "name": "globalpulsenewsmedia",
+  "name": "arbitragesmartai",
   "version": "4.2.0",
-  "description": "Premium AI-Powered News Intelligence Portal",
+  "description": "Premium AI-Powered Crypto Arbitrage & Financial Intelligence Ecosystem",
   "main": "index.html",
   "scripts": {
     "start": "npx serve .",
-    "fetch": "node scripts/fetch-news.mjs",
-    "watchdog": "node scripts/watchdog.mjs",
-    "outreach": "node scripts/b2b-outreach.mjs",
-    "entertainment": "node scripts/fetch-entertainment.mjs"
+    "engine": "python scripts/arbitrage_live_engine.py"
   },
   "keywords": [
-    "news",
-    "ai",
-    "automation"
+    "arbitrage",
+    "cryptocurrency",
+    "telemetry",
+    "trading",
+    "ai"
   ],
-  "author": "Global Pulse Media Group",
+  "author": "Katke Enterprises",
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^3.3.2",

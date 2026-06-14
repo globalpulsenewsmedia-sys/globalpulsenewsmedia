@@ -1,0 +1,147 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cex-scanner-deployment
+  namespace: arbitrage-production
+  labels:
+    app: cex-scanner
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: cex-scanner
+  template:
+    metadata:
+      labels:
+        app: cex-scanner
+    spec:
+      containers:
+      - name: cex-scanner
+        image: arbitrage-registry.gcr.io/cex-scanner:latest
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "300m"
+        envFrom:
+        - secretRef:
+            name: arbitrage-secrets
+        livenessProbe:
+          httpGet:
+            path: /metrics
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /metrics
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dex-scanner-deployment
+  namespace: arbitrage-production
+  labels:
+    app: dex-scanner
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: dex-scanner
+  template:
+    metadata:
+      labels:
+        app: dex-scanner
+    spec:
+      containers:
+      - name: dex-scanner
+        image: arbitrage-registry.gcr.io/dex-scanner:latest
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "150m"
+          limits:
+            memory: "512Mi"
+            cpu: "350m"
+        envFrom:
+        - secretRef:
+            name: arbitrage-secrets
+        livenessProbe:
+          httpGet:
+            path: /metrics
+            port: 8001
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /metrics
+            port: 8001
+          initialDelaySeconds: 5
+          periodSeconds: 10
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telemetry-gateway-deployment
+  namespace: arbitrage-production
+  labels:
+    app: telemetry-gateway
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: telemetry-gateway
+  template:
+    metadata:
+      labels:
+        app: telemetry-gateway
+    spec:
+      containers:
+      - name: telemetry-gateway
+        image: arbitrage-registry.gcr.io/telemetry-gateway:latest
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "400Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 8002
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: dex-scanner-hpa
+  namespace: arbitrage-production
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: dex-scanner-deployment
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 75

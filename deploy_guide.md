@@ -1,92 +1,93 @@
-# GCP Deployment Guide: Global Pulse Bulk Travel & News Automation
+# GCP Production Deployment Guide: ArbitrageSmartAI Autonomous Infrastructure
 
-This guide explains how to deploy and continuously run the new Python native news extraction and bulk travel generation scripts on your Google Cloud Platform (GCP) Mumbai instance.
+This guide details how to spin up the containerized database/observability layers, harden your systemd service daemons, setup TimeSeries hypertables, and deploy the programmatic SEO generator on your GCP VM.
 
-## 1. Connect to your GCP Instance
+---
 
-1. Open the Google Cloud Console.
-2. Navigate to **Compute Engine > VM instances**.
-3. Locate your Mumbai instance (e.g., `global-pulse-server-mumbai`).
-4. Click the **SSH** button to open a terminal directly in your browser, or use your local terminal if you have `gcloud` CLI configured:
-   ```bash
-   gcloud compute ssh --zone "asia-south1-a" "global-pulse-server-mumbai"
-   ```
+## 1. Deploy the Middleware Stack (Docker Compose)
 
-## 2. Navigate to the Project Directory
+The database (TimescaleDB), caching (Redis), queue pipelines (Kafka/Zookeeper), Nginx reverse proxy, and observability modules (Prometheus, Grafana) are packaged in a single file.
 
-Assuming your project is cloned to `/home/user/globalpulsenewsmedia`:
-```bash
-cd /home/user/globalpulsenewsmedia
-```
-*(Adjust the path if your repository is located elsewhere).*
-
-## 3. Ensure Environment Variables are Set
-
-Verify that your `.env.local` file is present and contains the Gemini API key:
-```bash
-cat .env.local
-```
-It should contain:
-```
-GEMINI_API_KEY="your_actual_gemini_api_key_here"
-```
-If it's missing or incorrect, edit it:
-```bash
-nano .env.local
-```
-
-## 4. Install Dependencies
-
-The new Python scripts utilize built-in libraries (`os`, `json`, `time`, `urllib`, `xml`, `re`), but you will need `python-dotenv` to load the `.env.local` file.
+On your VM, ensure Docker & Docker-Compose are installed, then boot the stack:
 
 ```bash
-pip3 install python-dotenv
+# SSH into VM
+gcloud compute ssh --zone "asia-south1-a" "global-pulse-server-mumbai"
+
+# Navigate to repo
+cd /home/HP/globalpulsenewsmedia
+
+# Boot database, proxy, & telemetry containers in background
+sudo docker-compose up -d
 ```
 
-## 5. Running the Scripts
+---
 
-### The News Scraper (Continuous)
+## 2. Initialize TimescaleDB Hypertables Schema
 
-We have already modified the `run_scraper_loop.py` script. This script acts as an infinite loop, running both the live youtube stream scraper and our new AI News Rewriter (`fetch_news.py`) every hour.
-
-The system service `news-scraper.service` is already configured to run this loop. You just need to restart the service to pick up the new changes:
+TimescaleDB needs database schemas built. Execute the initialization SQL script inside the database container:
 
 ```bash
-sudo systemctl restart news-scraper.service
+# Copy setup script inside container and execute
+sudo docker cp scripts/db_setup.sql arbitrage_timescaledb:/tmp/
+sudo docker exec -it arbitrage_timescaledb psql -U postgres -d arbitrage_db -f /tmp/db_setup.sql
 ```
 
-To check the logs and ensure it is running without errors:
+---
+
+## 3. Harden and Enable systemd VM Services
+
+Copy all four hardened systemd files (with sandboxing, auto-restart triggers, and CPU/Memory constraints) to yourVM's services folder, reload the daemon, and start the engines:
+
 ```bash
-sudo journalctl -u news-scraper.service -f
+# Copy service configurations
+sudo cp /home/HP/globalpulsenewsmedia/cex-scanner.service /etc/systemd/system/
+sudo cp /home/HP/globalpulsenewsmedia/dex-scanner.service /etc/systemd/system/
+sudo cp /home/HP/globalpulsenewsmedia/seo-engine.service /etc/systemd/system/
+sudo cp /home/HP/globalpulsenewsmedia/telemetry.service /etc/systemd/system/
+
+# Reload systemd configuration
+sudo systemctl daemon-reload
+
+# Enable services to run automatically on boot
+sudo systemctl enable cex-scanner.service
+sudo systemctl enable dex-scanner.service
+sudo systemctl enable seo-engine.service
+sudo systemctl enable telemetry.service
+
+# Start the services
+sudo systemctl start cex-scanner.service
+sudo systemctl start dex-scanner.service
+sudo systemctl start seo-engine.service
+sudo systemctl start telemetry.service
 ```
 
-### The Bulk Travel Generator (Manual or Cron)
+---
 
-The `scripts/travel_bulk_generator.py` script is designed to generate up to 10,000 evergreen articles. It takes time and consumes Gemini API quota, so you generally want to run it either manually in batches or via a daily cron job.
+## 4. Verify Daemon Status and Logs
 
-**To run it manually:**
+Ensure all services are running and check output diagnostics:
+
 ```bash
-python3 scripts/travel_bulk_generator.py
+# Check CEX price scanner logs
+sudo journalctl -u cex-scanner.service -f
+
+# Check DEX pool scanner logs
+sudo journalctl -u dex-scanner.service -f
+
+# Check Programmatic SEO engine logs
+sudo journalctl -u seo-engine.service -f
+
+# Check WebSocket Telemetry logs
+sudo journalctl -u telemetry.service -f
 ```
-You will see output indicating which topics are being generated and saved as static HTML files in the `travel/` directory.
 
-**To run it automatically via Cron (e.g., every day at midnight):**
+---
 
-1. Open the crontab editor:
-   ```bash
-   crontab -e
-   ```
-2. Add the following line at the bottom (replace `/home/user/...` with your actual absolute path):
-   ```
-   0 0 * * * cd /home/user/globalpulsenewsmedia && /usr/bin/python3 scripts/travel_bulk_generator.py >> /var/log/travel_generator.log 2>&1
-   ```
-3. Save and exit.
+## 5. Verify Telemetry & Observability Targets
 
-## 6. Verifying the Deployment
-
-Once the scripts run:
-1. Check the `articles/` directory and `travel/` directory on your server. You should see new `.html` files appearing.
-2. Check `data/news.json` and `data/travel.json`. They should contain the metadata and paths for the new articles.
-3. Since this is a Vercel-hosted frontend, you need to ensure the updated `data/` and HTML files are pushed to the main git branch so Vercel can rebuild and serve them globally.
-   - You can automate this by adding a small git commit and push command at the end of your python scripts or cron jobs, OR 
-   - Ensure the server acts as the primary web host pointing directly to these generated directories (if you are moving away from Vercel to GCP completely).
+- **Prometheus Metrics**: Access `http://your-vm-ip:9090`. Verify under **Status > Targets** that both CEX and DEX targets are online (`UP`).
+- **Nginx Reverse Proxy Gateway**: Port `80` reverse-proxies:
+  - Standard web requests to your local static files web server (port `8080`).
+  - `/ws/` paths to the WebSocket Telemetry server (port `8002`).
+- **Frontend Dashboard Connection**: When you open your web URL in the browser, the header badge should display `WS: LIVE` in green, showing exact latency and processed ticker streams dynamically!

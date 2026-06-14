@@ -1,42 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- BUILD VERSION: 2026.05.30.00.45 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Global Pulse News Media</title>
+    <title>Privacy Policy | ArbitrageSmartAI</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/index.css">
     <style>
-        body { background: #f9f9f9; color: #333; padding: 100px 5%; font-family: 'Libre Franklin', sans-serif; line-height: 1.6; }
-        .container-legal { max-width: 900px; margin: 0 auto; background: #fff; padding: 50px; border: 1px solid #eee; }
-        h1 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 900; color: #000; }
-        h2 { margin-top: 30px; font-size: 1.2rem; color: #cc0000; text-transform: uppercase; }
-        p { margin-bottom: 15px; }
-        .back-link { display: inline-block; margin-top: 40px; color: #cc0000; text-decoration: none; font-weight: 900; }
+        .legal-body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            padding: 60px 0;
+            line-height: 1.7;
+        }
+        .legal-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 40px;
+        }
+        .legal-header {
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .legal-meta {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            background: rgba(0, 176, 255, 0.05);
+            padding: 8px 15px;
+            border-left: 3px solid var(--accent-blue);
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            margin-top: 30px;
+        }
+        .back-btn:hover {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
     </style>
 </head>
-<body>
-    <div class="container-legal">
-        <h1>Privacy Policy</h1>
-        <p>Last Updated: May 16, 2026</p>
-        
-        <p>Global Pulse News Media (Arbitrage Smart AI) respects your privacy and is committed to protecting your personal data. This privacy policy informs you about how we handle your personal data when you visit our website.</p>
 
-        <h2>1. Data We Collect</h2>
-        <p>We may collect personal identification information including name, email address, and payment details when you subscribe to our services. We also collect technical data like IP addresses and browser types for analytics.</p>
+<body class="dark-theme legal-body">
+    <div class="legal-container">
+        <div class="legal-header">
+            <div class="legal-meta">
+                STATUS: DRAFT LEGAL CONTENT | VERSION: 1.0.0-DRAFT-2026.05.30 | LAST UPDATED: MAY 30, 2026
+            </div>
+            <h1>Privacy Policy</h1>
+            <p>ArbitrageSmartAI respects your data privacy and is committed to shielding personal data under global protection standards.</p>
+        </div>
 
-        <h2>2. How We Use Your Data</h2>
-        <p>Your data is used to process your subscription, provide customer support, and send periodic updates. We use Razorpay for secure payment processing; your payment details are handled according to their PCI-DSS compliant protocols.</p>
+        <h2>1. Principles of Data Collection</h2>
+        <p>
+            We process personal data in accordance with the General Data Protection Regulation (GDPR) and applicable regional data protection statutes (including the India DPDPA). We collect:
+        </p>
+        <ul>
+            <li><strong>Subscription Details:</strong> Email addresses and user profile names gathered during customer checkout.</li>
+            <li><strong>Financial Metadata:</strong> Payment logs and transaction references. Payment processing is routed through PCI-DSS compliant providers (Razorpay and PayPal); we do not capture or store your full card details or account credentials.</li>
+            <li><strong>Client-Side Logs:</strong> IP addresses, browser agents, geolocation data, and page telemetry to prevent DDoS attacks and optimize latency routes.</li>
+        </ul>
 
-        <h2>3. Cookies & Tracking</h2>
-        <p>We use cookies to improve your browsing experience. Third-party partners like Google Analytics and AdSense may also set cookies to provide personalized content and ads.</p>
+        <h2>2. Use of Tracking & Cookies (Cookiebot Integration)</h2>
+        <p>
+            We integrate <strong>Cookiebot</strong> to manage cookie consents interactively. Google Analytics (G-LX2P8H9BY4) is loaded conditionally based on your choices. Cookies are classified into:
+        </p>
+        <ul>
+            <li><strong>Necessary:</strong> Required to enable system logins, premium unlocks, and secure socket connections.</li>
+            <li><strong>Statistics & Analytics:</strong> Used to monitor latency statistics, page traffic flows, and regional server load distributions.</li>
+        </ul>
 
-        <h2>4. Data Retention & Security</h2>
-        <p>We retain your personal data only for as long as necessary to provide our services. We use industry-standard encryption and security measures to protect your data from unauthorized access.</p>
+        <h2>3. Data Transfer & Storage Integrity</h2>
+        <p>
+            All gathered data is transmitted securely via SSL/TLS encryption and stored on GCP servers located in Mumbai, India. We do not sell or lease user lists to brokers or advertisers. Data is shared with regulatory authorities only when required by legal warrant or compliance requirements.
+        </p>
 
-        <h2>5. Your Rights</h2>
-        <p>You have the right to access, correct, or delete your personal data. To exercise these rights, please contact our Grievance Officer at manikkatke93@gmail.com.</p>
+        <h2>4. Your Rights under GDPR</h2>
+        <p>
+            If you are a resident of the European Economic Area (EEA), you possess:
+        </p>
+        <ul>
+            <li><strong>Right of Access & Portability:</strong> Obtain details and file exports of all personal data we process.</li>
+            <li><strong>Right to Rectification & Erasure:</strong> Request corrections or prompt removal of your profile information, except where record-retention obligations under AML/KYC laws take precedence.</li>
+            <li><strong>Right to Restrict or Object:</strong> Oppose automated data processing or profiling systems.</li>
+        </ul>
+        <p>
+            To exercise these rights, submit a formal request to our Grievance Officer at manikkatke93@gmail.com.
+        </p>
 
-        <a href="index.html" class="back-link">← Return to Global Pulse News</a>
+        <h2>5. Changes to this Policy</h2>
+        <p>
+            This draft policy is updated periodically to match compliance improvements. When changes occur, the version numbers and update dates at the top of the document will reflect the change.
+        </p>
+
+        <hr style="border:0; border-top: 1px solid var(--card-border); margin: 30px 0;">
+
+        <a href="index.html" class="back-btn">← Return to Intelligence Grid</a>
     </div>
 </body>
+
 </html>
