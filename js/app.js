@@ -1152,4 +1152,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     initPayPal();
+
+    // --- Live Razorpay Standard Checkout Trigger ---
+    const unlockBtn = document.getElementById('unlock-modules-btn');
+    if (unlockBtn) {
+        unlockBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.Razorpay) {
+                const options = {
+                    "key": "rzp_test_SmSo8lTjwKynmn",
+                    "amount": "19900", // $199.00 in cents
+                    "currency": "USD",
+                    "name": "ArbitrageSmartAI",
+                    "description": "Unlock Pro Institutional Access",
+                    "handler": function (response) {
+                        alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+                    },
+                    "prefill": {
+                        "name": "Manik Katke",
+                        "email": "manikkatke93@gmail.com",
+                        "contact": "+919372954852"
+                    },
+                    "theme": {
+                        "color": "#00E676"
+                    }
+                };
+                const rzp = new window.Razorpay(options);
+                rzp.open();
+            } else {
+                alert("Razorpay SDK failed to load. Please refresh the page.");
+            }
+        });
+    }
 });

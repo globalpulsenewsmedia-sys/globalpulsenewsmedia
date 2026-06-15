@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
 
     <!-- ==========================================
@@ -220,6 +221,23 @@
                                                 <strong id="calcConfidence" style="color: var(--accent-blue);">94%</strong>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Live Telemetry Ingestion Log Stream (Liquidity Arbitrage Engine) -->
+                            <div class="dashboard-card" style="border-color: var(--accent); margin-top: 20px;">
+                                <div class="card-header" style="background: rgba(0, 230, 118, 0.03); border-bottom-color: rgba(0, 230, 118, 0.1);">
+                                    <h3>🛰️ Live Ingestion Log Stream</h3>
+                                    <span class="live-tag" style="background: rgba(0, 230, 118, 0.1); color: var(--accent); border-color: rgba(0, 230, 118, 0.2);">ACTIVE</span>
+                                </div>
+                                <div class="card-body">
+                                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; display: flex; justify-content: space-between;">
+                                        <span>TELEMETRY FEED: AGENT_CRYPTO_INTEL</span>
+                                        <span class="pulse-dot" style="background-color: var(--accent); box-shadow: 0 0 6px var(--accent);"></span>
+                                    </div>
+                                    <div id="ecosystemVerificationStream" style="max-height: 140px; height: 140px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 0.75rem; padding-right: 5px;">
+                                        <div style="color: #888;">Initializing verification parser threads...</div>
                                     </div>
                                 </div>
                             </div>
@@ -546,12 +564,19 @@
                                         Gain unlimited access to elite smart contract templates, flash loan deployment code, real-time alert triggers, and the exclusive member-only institutional discord.
                                     </p>
                                     
+                                    <!-- Razorpay Button -->
+                                    <button id="unlock-modules-btn" style="width: 100%; background: var(--accent); color: #000; border: none; padding: 12px; font-weight: 900; border-radius: 4px; cursor: pointer; transition: all 0.2s; text-transform: uppercase;">
+                                        Unlock All Modules
+                                    </button>
+                                    
+                                    <div style="text-align: center; margin: 15px 0; font-size: 0.7rem; color: var(--text-secondary); letter-spacing: 1px;">— OR PAY WITH PAYPAL —</div>
+                                    
                                     <!-- Native PayPal SDK Buttons Container -->
-                                    <div id="paypal-button-container" style="margin-top: 15px; min-height: 150px;"></div>
+                                    <div id="paypal-button-container" style="min-height: 150px;"></div>
                                     
                                     <div style="margin-top: 15px; display: flex; justify-content: center; gap: 12px; align-items: center; font-size: 0.65rem; color: var(--text-secondary);">
                                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" width="26" alt="PayPal">
-                                        <span>SECURE CHECKOUT BACKED BY PAYPAL NATIVE SDK</span>
+                                        <span>SECURE CHECKOUT BACKED BY PAYPAL & RAZORPAY</span>
                                     </div>
                                 </div>
                             </div>
@@ -692,7 +717,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent); padding-bottom: 5px;">Trust</h4>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent); padding-bottom: 5px;">Trust & Compliance</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
                         <li><a href="compliance-center.html" style="color: var(--text-secondary); text-decoration: none;">Compliance Hub</a></li>
                         <li><a href="security-center.html" style="color: var(--text-secondary); text-decoration: none;">Security Center</a></li>
