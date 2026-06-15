@@ -1124,4 +1124,32 @@ document.addEventListener('DOMContentLoaded', () => {
         if (counterDataPoints) counterDataPoints.innerText = dataPointsCollected.toLocaleString();
     };
     setInterval(animateBloombergCounters, 800); // Fast live updates
+
+    // --- Live PayPal SDK Trigger ---
+    const initPayPal = () => {
+        const paypalContainer = document.getElementById('paypal-button-container');
+        if (paypalContainer && window.paypal) {
+            window.paypal.Buttons({
+                createOrder: (data, actions) => {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '199.00'
+                            },
+                            description: 'ArbitrageSmartAI Pro Institutional Access'
+                        }]
+                    });
+                },
+                onApprove: (data, actions) => {
+                    return actions.order.capture().then(details => {
+                        alert('Transaction completed by ' + details.payer.name.given_name + '. Welcome to Pro Access!');
+                    });
+                },
+                onError: (err) => {
+                    console.error('PayPal SDK Error:', err);
+                }
+            }).render('#paypal-button-container');
+        }
+    };
+    initPayPal();
 });

@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
 
     <!-- ==========================================
          ULTIMATE SEO & TRAFFIC GENERATION ENGINE
@@ -116,526 +117,441 @@
                 </div>
             </section>
 
-            <!-- TERMINAL SECTION (Multi-Tab Navigation) -->
-            <section class="terminal-container" id="terminal" style="margin-top: 25px;">
-                <div class="terminal-tabs-row">
-                    <button class="tab-btn active" data-target="liquidity-arbitrage">🛰️ Liquidity Arbitrage</button>
-                    <button class="tab-btn" data-target="market-master-sentinel">👁️ Market Master Sentinel</button>
-                    <button class="tab-btn" data-target="trade-orchestration">🤖 Trade Orchestration</button>
-                    <button class="tab-btn" data-target="crypto-academy" style="color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.3);">🎓 Crypto Academy</button>
-                    <button class="tab-btn" data-target="corporate-profile" style="color: #ffd700; border-color: rgba(255, 215, 0, 0.3);">👥 Corporate Profile & Founder</button>
+            <!-- TERMINAL SECTION (Pure 3-Agent Core Terminal) -->
+            <section class="terminal-container" id="terminal" style="margin-top: 25px; border: none; background: transparent; padding: 0;">
+                
+                <!-- MODULE A: LIQUIDITY ARBITRAGE STREAM -->
+                <div id="liquidity-arbitrage" style="margin-bottom: 40px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 20px;">
+                    <div style="background: rgba(0, 230, 118, 0.03); border: 1px solid var(--card-border); border-left: 4px solid var(--accent); padding: 15px 20px; border-radius: 6px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                        <h2 style="color: #fff; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; margin: 0; display: flex; align-items: center; gap: 10px; font-family: var(--font-sans);">🛰️ Liquidity Arbitrage Stream</h2>
+                        <span class="live-tag" style="background: rgba(0, 230, 118, 0.1); color: var(--accent); border-color: rgba(0, 230, 118, 0.2);">AGENT_CRYPTO_INTEL ACTIVE</span>
+                    </div>
+                    <div class="hero-section">
+                        <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- CEX Arbitrage Radar -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🛰️ Live Arbitrage Radar (CEX Book Scanner)</h3>
+                                    <span class="live-tag">REAL-TIME FEEDS</span>
+                                </div>
+                                <div class="card-body">
+                                    <table class="radar-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Trading Pair</th>
+                                                <th>Binance ($)</th>
+                                                <th>Bybit ($)</th>
+                                                <th>OKX ($)</th>
+                                                <th>Max Spread</th>
+                                                <th>Optimal Route</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cexTableBody">
+                                            <tr>
+                                                <td colspan="6" style="text-align: center; color: #888;">Fetching CEX ticker streams...</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- DEX & Cross-Chain Opportunities -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🧬 DEX & Cross-Chain Scanner Feeds</h3>
+                                    <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">ON-CHAIN LIQUIDITY POOLS</span>
+                                </div>
+                                <div class="card-body">
+                                    <table class="radar-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Target Token</th>
+                                                <th>Arbitrage Route</th>
+                                                <th>Spread</th>
+                                                <th>Estimated Gas</th>
+                                                <th>Opportunity Type</th>
+                                                <th>Risk Index</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="dexTableBody">
+                                            <tr>
+                                                <td colspan="6" style="text-align: center; color: #888;">Polling DEX contract states...</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- AI Profit Calculator (Spread Analytics) -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>💰 Spread Analytics & Profit Calculator</h3>
+                                    <span class="badge-accent">AUTO-FEE ADJUSTED</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="calculator-form">
+                                        <label for="calcCapital">Arbitrage Capital (USDT)</label>
+                                        <input type="number" id="calcCapital" value="5000" min="100" max="1000000" step="100">
+                                        
+                                        <label for="calcPair">Select Target Pair</label>
+                                        <select id="calcPair">
+                                            <option value="BTC/USDT">BTC/USDT (Spread: Fetching...)</option>
+                                            <option value="ETH/USDT" selected>ETH/USDT (Spread: Fetching...)</option>
+                                            <option value="SOL/USDT">SOL/USDT (Spread: Fetching...)</option>
+                                        </select>
+                                        
+                                        <div class="calc-results">
+                                            <div class="calc-row">
+                                                <span>Current Spread:</span>
+                                                <strong id="calcSpreadVal">0.00%</strong>
+                                            </div>
+                                            <div class="calc-row">
+                                                <span>Net Profit (Fee Adjusted):</span>
+                                                <strong id="calcNetProfit" style="color: var(--accent);">$0.00</strong>
+                                            </div>
+                                            <div class="calc-row">
+                                                <span>Est. Gas & Slippage:</span>
+                                                <strong id="calcGasCost" style="color: var(--accent-red);">$0.00</strong>
+                                            </div>
+                                            <div class="calc-row highlight">
+                                                <span>AI Confidence Score:</span>
+                                                <strong id="calcConfidence" style="color: var(--accent-blue);">94%</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Source Attribution Footer Banner -->
+                            <div class="source-attribution-disclaimer" style="padding: 12px 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.75rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 8px;">
+                                <span>🛰️ <strong>Data Source Attribution:</strong> Real-time pricing streams aggregated dynamically from Binance, Bybit, OKX order books, and decentralized pools.</span>
+                                <span style="font-style: italic;">ArbitrageSmartAI does not claim independent fact verification of cross-chain contract records. All operations carry risk.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-
-                <!-- Tab Contents -->
-                <div class="tab-contents-wrapper" style="margin-top: 20px;">
-                    
-                    <!-- MODULE A: LIQUIDITY ARBITRAGE -->
-                    <div class="tab-pane active" id="liquidity-arbitrage">
-                        <div class="hero-section">
-                            <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
-                                <!-- CEX Arbitrage Radar -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>🛰️ Live Arbitrage Radar (CEX Book Scanner)</h3>
-                                        <span class="live-tag">REAL-TIME FEEDS</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <table class="radar-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Trading Pair</th>
-                                                    <th>Binance ($)</th>
-                                                    <th>Bybit ($)</th>
-                                                    <th>OKX ($)</th>
-                                                    <th>Max Spread</th>
-                                                    <th>Optimal Route</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="cexTableBody">
-                                                <tr>
-                                                    <td colspan="6" style="text-align: center; color: #888;">Fetching CEX ticker streams...</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                <!-- MODULE B: MARKET MASTER SENTINEL STREAM -->
+                <div id="market-master-sentinel" style="margin-bottom: 40px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 20px;">
+                    <div style="background: rgba(0, 176, 255, 0.03); border: 1px solid var(--card-border); border-left: 4px solid var(--accent-blue); padding: 15px 20px; border-radius: 6px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                        <h2 style="color: #fff; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; margin: 0; display: flex; align-items: center; gap: 10px; font-family: var(--font-sans);">👁️ Market Master Sentinel Stream</h2>
+                        <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">AGENT_MARKET_MASTER ACTIVE</span>
+                    </div>
+                    <div class="hero-section">
+                        <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- Sentiment Indicators & Macro Event Summaries -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>👁️ Market Intelligence & Sentiment Panel</h3>
+                                    <span class="badge-indicator">GLOBAL TELEMETRY</span>
                                 </div>
-
-                                <!-- DEX & Cross-Chain Opportunities -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>🧬 DEX & Cross-Chain Scanner Feeds</h3>
-                                        <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">ON-CHAIN LIQUIDITY POOLS</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <table class="radar-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Target Token</th>
-                                                    <th>Arbitrage Route</th>
-                                                    <th>Spread</th>
-                                                    <th>Estimated Gas</th>
-                                                    <th>Opportunity Type</th>
-                                                    <th>Risk Index</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="dexTableBody">
-                                                <tr>
-                                                    <td colspan="6" style="text-align: center; color: #888;">Polling DEX contract states...</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <div class="card-body">
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                        <div>
+                                            <h4 style="margin-bottom: 12px; font-size: 0.95rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;">🔥 Sentiment Indicators</h4>
+                                            <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
+                                                <li style="display:flex; justify-content:space-between;"><span>Crypto Fear & Greed Index:</span> <strong style="color: var(--accent);" id="sentFearGreed">72 (Greed)</strong></li>
+                                                <li style="display:flex; justify-content:space-between;"><span>Smart Money Long/Short Ratio:</span> <strong style="color: var(--accent-blue);" id="sentSmartMoney">1.54 (Bullish)</strong></li>
+                                                <li style="display:flex; justify-content:space-between;"><span>Social Sentiment Score (AI):</span> <strong style="color: var(--accent);" id="sentSocial">78% Positive</strong></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 style="margin-bottom: 12px; font-size: 0.95rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;">📅 Macro Event Summaries</h4>
+                                            <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
+                                                <li style="display:flex; justify-content:space-between;"><span>CPI Announcement (US):</span> <span style="color: var(--text-primary);" id="macroCPI">June 10 (Est: +3.2%)</span></li>
+                                                <li style="display:flex; justify-content:space-between;"><span>FOMC Rate Decision:</span> <span style="color: var(--text-primary);" id="macroFOMC">June 17 (Est: Hold)</span></li>
+                                                <li style="display:flex; justify-content:space-between;"><span>Major Token Unlock Alert:</span> <span style="color: var(--accent-red);" id="macroUnlock">SOL ($42M) in 2 days</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
-                                <!-- AI Profit Calculator (Spread Analytics) -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>💰 Spread Analytics & Profit Calculator</h3>
-                                        <span class="badge-accent">AUTO-FEE ADJUSTED</span>
+                            <!-- Multi-Agent Live Intelligence Ticker (Real-Time Websocket Streams) -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🤖 Multi-Agent Live Intelligence & Market Scans</h3>
+                                    <span class="badge-accent" style="background: rgba(0, 230, 118, 0.1); color: var(--accent); border-color: rgba(0, 230, 118, 0.2);">WS ACTIVE</span>
+                                </div>
+                                <div class="card-body">
+                                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; display: flex; justify-content: space-between;">
+                                        <span>SUBSCRIBED DAEMONS: AGENT_CRYPTO_INTEL, AGENT_MARKET_MASTER</span>
+                                        <span class="pulse-dot" style="background-color: var(--accent); box-shadow: 0 0 6px var(--accent);"></span>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="calculator-form">
-                                            <label for="calcCapital">Arbitrage Capital (USDT)</label>
-                                            <input type="number" id="calcCapital" value="5000" min="100" max="1000000" step="100">
-                                            
-                                            <label for="calcPair">Select Target Pair</label>
-                                            <select id="calcPair">
-                                                <option value="BTC/USDT">BTC/USDT (Spread: Fetching...)</option>
-                                                <option value="ETH/USDT" selected>ETH/USDT (Spread: Fetching...)</option>
-                                                <option value="SOL/USDT">SOL/USDT (Spread: Fetching...)</option>
+                                    <div id="agentLogStreamList" style="max-height: 280px; height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 5px; font-family: var(--font-mono); font-size: 0.78rem;">
+                                        <div style="color: #888;">Initializing multi-agent websocket log listener...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- Network Liquidity Heatmaps -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🗺️ Network Liquidity Heatmaps</h3>
+                                    <span class="live-tag">ON-CHAIN SIGNAL</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="network-heatmap-grid" id="networkHeatmapGrid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                                        <!-- Polled dynamically -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Alpha Discovery & Sector Rotation -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🔮 Alpha Discovery & Sector Rotation</h3>
+                                    <span class="badge-accent">NARRATIVE TRACKER</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="sector-rotation-list" id="sectorRotationList">
+                                        <!-- Dynamic sectors -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Whale Activity Swaps Ledger -->
+                    <div class="dashboard-card" style="margin-top: 20px;">
+                        <div class="card-header">
+                            <h3>🐋 Smart Money Ledger (Large On-Chain Swaps)</h3>
+                            <span class="badge-indicator">MEMPOOL DATA ENGINE</span>
+                        </div>
+                        <div class="card-body" style="padding: 0;">
+                            <div class="whale-ledger-header" style="display: grid; grid-template-columns: 1.5fr 1fr 4fr 1fr; padding: 12px 20px; border-bottom: 1px solid var(--card-border); font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">
+                                <span>Wallet ID</span>
+                                <span>Time (UTC)</span>
+                                <span>Transaction Description</span>
+                                <span style="text-align: right;">Value (USD)</span>
+                            </div>
+                            <div id="whaleLedgerList" style="max-height: 250px; overflow-y: auto;">
+                                <div style="padding: 20px; text-align: center; color: #888;">Monitoring transaction memory pools...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODULE C: TRADE ORCHESTRATION STREAM -->
+                <div id="trade-orchestration" style="margin-bottom: 40px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 20px;">
+                    <div style="background: rgba(255, 145, 0, 0.03); border: 1px solid var(--card-border); border-left: 4px solid var(--accent-orange); padding: 15px 20px; border-radius: 6px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                        <h2 style="color: #fff; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; margin: 0; display: flex; align-items: center; gap: 10px; font-family: var(--font-sans);">🤖 Trade Orchestration Stream</h2>
+                        <span class="live-tag" style="background: rgba(255, 145, 0, 0.1); color: var(--accent-orange); border-color: rgba(255, 145, 0, 0.2);">EXECUTION AGENT LIVE</span>
+                    </div>
+                    <div class="hero-section">
+                        <!-- Left: Strategy dashboard settings and controls -->
+                        <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- Strategy Dashboard Controls -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>🤖 Strategy Orchestration Control Panel</h3>
+                                    <span class="live-tag" style="background: rgba(255, 145, 0, 0.1); color: var(--accent-orange); border-color: rgba(255, 145, 0, 0.2);">EXECUTION GRID</span>
+                                </div>
+                                <div class="card-body">
+                                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                                        <div>
+                                            <label style="display: block; color: var(--text-secondary); font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; text-transform: uppercase;">Active Strategy Routing</label>
+                                            <select id="activeStrategySelect" style="width: 100%; background: #0b0b0f; border: 1px solid var(--card-border); color: #fff; padding: 10px; border-radius: 4px; font-family: var(--font-sans);">
+                                                <option value="triangular">Triangular Book Arbitrage (High Frequency)</option>
+                                                <option value="cross-dex">Cross-DEX Liquidity Arbitrage (Smart Route)</option>
+                                                <option value="cex-dex" selected>CEX ➔ DEX Arbitrage (Atomic Bridge Routing)</option>
                                             </select>
-                                            
-                                            <div class="calc-results">
-                                                <div class="calc-row">
-                                                    <span>Current Spread:</span>
-                                                    <strong id="calcSpreadVal">0.00%</strong>
-                                                </div>
-                                                <div class="calc-row">
-                                                    <span>Gross Profit:</span>
-                                                    <strong id="calcGrossProfit">$0.00</strong>
-                                                </div>
-                                                <div class="calc-row">
-                                                    <span>Tx & Gas Fees (Est):</span>
-                                                    <span id="calcFees" style="color: #ff5252;">$0.00</span>
-                                                </div>
-                                                <hr style="border: 0; border-top: 1px solid #222; margin: 10px 0;">
-                                                <div class="calc-row highlight">
-                                                    <span>Expected Net Profit:</span>
-                                                    <strong id="calcNetProfit" style="color: #00E676; font-size: 1.2rem;">$0.00</strong>
-                                                </div>
-                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Source Attribution Footer Banner -->
-                        <div class="source-attribution-disclaimer" style="margin-top: 20px; padding: 12px 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.75rem; color: var(--text-secondary); display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center;">
-                            <span>🛰️ <strong>Data Source Attribution:</strong> Real-time pricing streams aggregated dynamically from Binance, Bybit, OKX order books, and decentralized pools.</span>
-                            <span style="font-style: italic;">ArbitrageSmartAI does not claim independent fact verification of cross-chain contract records. All operations carry risk.</span>
-                        </div>
-                    </div>
-
-                    <!-- MODULE B: MARKET MASTER SENTINEL -->
-                    <div class="tab-pane" id="market-master-sentinel">
-                        <div class="hero-section">
-                            <!-- Left: Sentiment, Macro, and Live Intelligence Streams -->
-                            <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
-                                <!-- Sentiment Indicators & Macro Event Summaries -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>👁️ Market Intelligence & Sentiment Panel</h3>
-                                        <span class="badge-indicator">GLOBAL TELEMETRY</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                                            <div>
-                                                <h4 style="margin-bottom: 12px; font-size: 0.95rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;">🔥 Sentiment Indicators</h4>
-                                                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
-                                                    <li style="display:flex; justify-content:space-between;"><span>Crypto Fear & Greed Index:</span> <strong style="color: var(--accent);" id="sentFearGreed">72 (Greed)</strong></li>
-                                                    <li style="display:flex; justify-content:space-between;"><span>Smart Money Long/Short Ratio:</span> <strong style="color: var(--accent-blue);" id="sentSmartMoney">1.54 (Bullish)</strong></li>
-                                                    <li style="display:flex; justify-content:space-between;"><span>Social Sentiment Score (AI):</span> <strong style="color: var(--accent);" id="sentSocial">78% Positive</strong></li>
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <h4 style="margin-bottom: 12px; font-size: 0.95rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;">📅 Macro Event Summaries</h4>
-                                                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
-                                                    <li style="display:flex; justify-content:space-between;"><span>CPI Announcement (US):</span> <span style="color: var(--text-primary);" id="macroCPI">June 10 (Est: +3.2%)</span></li>
-                                                    <li style="display:flex; justify-content:space-between;"><span>FOMC Rate Decision:</span> <span style="color: var(--text-primary);" id="macroFOMC">June 17 (Est: Hold)</span></li>
-                                                    <li style="display:flex; justify-content:space-between;"><span>Major Token Unlock Alert:</span> <span style="color: var(--accent-red);" id="macroUnlock">SOL ($42M) in 2 days</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Multi-Agent Live Intelligence Ticker (Real-Time Websocket Streams) -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>🤖 Multi-Agent Live Intelligence & Market Scans</h3>
-                                        <span class="badge-accent" style="background: rgba(0, 230, 118, 0.1); color: var(--accent); border-color: rgba(0, 230, 118, 0.2);">WS ACTIVE</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; display: flex; justify-content: space-between;">
-                                            <span>SUBSCRIBED DAEMONS: AGENT_CRYPTO_INTEL, AGENT_MARKET_MASTER</span>
-                                            <span class="pulse-dot" style="background-color: var(--accent); box-shadow: 0 0 6px var(--accent);"></span>
-                                        </div>
-                                        <div id="agentLogStreamList" style="max-height: 280px; height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 5px; font-family: var(--font-mono); font-size: 0.78rem;">
-                                            <div style="color: #888;">Initializing multi-agent websocket log listener...</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right: Network Heatmaps, Sector Rotation, Whale activity -->
-                            <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
-                                <!-- Network Liquidity Heatmaps -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>🗺️ Network Liquidity Heatmaps</h3>
-                                        <span class="live-tag">ON-CHAIN SIGNAL</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="network-heatmap-grid" id="networkHeatmapGrid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-                                            <!-- Polled dynamically -->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Alpha Discovery & Sector Rotation -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>🔮 Alpha Discovery & Sector Rotation</h3>
-                                        <span class="badge-accent">NARRATIVE TRACKER</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="sector-rotation-list" id="sectorRotationList">
-                                            <!-- Dynamic sectors -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Whale Activity Swaps Ledger -->
-                        <div class="dashboard-card" style="margin-top: 20px;">
-                            <div class="card-header">
-                                <h3>🐋 Smart Money Ledger (Large On-Chain Swaps)</h3>
-                                <span class="badge-indicator">MEMPOOL DATA ENGINE</span>
-                            </div>
-                            <div class="card-body" style="padding: 0;">
-                                <div class="whale-ledger-header" style="display: grid; grid-template-columns: 1.5fr 1fr 4fr 1fr; padding: 12px 20px; border-bottom: 1px solid var(--card-border); font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">
-                                    <span>Wallet ID</span>
-                                    <span>Time (UTC)</span>
-                                    <span>Transaction Description</span>
-                                    <span style="text-align: right;">Value (USD)</span>
-                                </div>
-                                <div id="whaleLedgerList" style="max-height: 250px; overflow-y: auto;">
-                                    <div style="padding: 20px; text-align: center; color: #888;">Monitoring transaction memory pools...</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- MODULE C: TRADE ORCHESTRATION -->
-                    <div class="tab-pane" id="trade-orchestration">
-                        <div class="hero-section">
-                            <!-- Left: Strategy dashboard settings and controls -->
-                            <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
-                                <!-- Strategy Dashboard Controls -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>🤖 Strategy Orchestration Control Panel</h3>
-                                        <span class="live-tag" style="background: rgba(255, 145, 0, 0.1); color: var(--accent-orange); border-color: rgba(255, 145, 0, 0.2);">EXECUTION GRID</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div style="display: flex; flex-direction: column; gap: 15px;">
-                                            <div>
-                                                <label style="display: block; color: var(--text-secondary); font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; text-transform: uppercase;">Active Strategy Routing</label>
-                                                <select id="activeStrategySelect" style="width: 100%; background: #0b0b0f; border: 1px solid var(--card-border); color: #fff; padding: 10px; border-radius: 4px; font-family: var(--font-sans);">
-                                                    <option value="triangular">Triangular Book Arbitrage (High Frequency)</option>
-                                                    <option value="cross-dex">Cross-DEX Liquidity Arbitrage (Smart Route)</option>
-                                                    <option value="cex-dex" selected>CEX ➔ DEX Arbitrage (Atomic Bridge Routing)</option>
-                                                </select>
-                                            </div>
-                                            
-                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
-                                                <button id="btnToggleBot" style="background: var(--accent); color: #000; border: none; padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.2s;">▶️ INITIALIZE AUTONOMOUS BOT</button>
-                                                <button id="btnEmergencyKill" style="background: var(--accent-red); color: #fff; border: none; padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.2s;">⏹️ EMERGENCY SHUTDOWN</button>
-                                            </div>
-
-                                            <div style="display: flex; justify-content: space-between; align-items: center; background: #0b0b0f; padding: 12px 15px; border-radius: 4px; border: 1px solid var(--card-border); margin-top: 10px;">
-                                                <span style="font-size: 0.85rem; color: var(--text-secondary);">Simulate Execution Mode (No Real Capital):</span>
-                                                <input type="checkbox" id="simModeToggle" checked style="width: 20px; height: 20px; cursor: pointer;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Simulation Metrics Sliders -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>⚙️ Autonomous Simulation Settings</h3>
-                                        <span class="badge-accent">PARAMETERS</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div style="display: flex; flex-direction: column; gap: 15px;">
-                                            <div>
-                                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
-                                                    <span style="color: var(--text-secondary);">Min Profit Threshold:</span>
-                                                    <strong id="valMinProfit" style="color: var(--accent-blue);">0.15%</strong>
-                                                </div>
-                                                <input type="range" id="sliderMinProfit" min="0.05" max="2.0" step="0.05" value="0.15" style="width: 100%; accent-color: var(--accent-blue);">
-                                            </div>
-                                            <div>
-                                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
-                                                    <span style="color: var(--text-secondary);">Max Execution Gas Settings:</span>
-                                                    <strong id="valMaxGas" style="color: var(--accent-blue);">120 Gwei</strong>
-                                                </div>
-                                                <input type="range" id="sliderMaxGas" min="10" max="300" step="10" value="120" style="width: 100%; accent-color: var(--accent-blue);">
-                                            </div>
-                                            <div>
-                                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
-                                                    <span style="color: var(--text-secondary);">Execution Latency Threshold:</span>
-                                                    <strong id="valLatencyLimit" style="color: var(--accent-blue);">250 ms</strong>
-                                                </div>
-                                                <input type="range" id="sliderLatencyLimit" min="50" max="1000" step="50" value="250" style="width: 100%; accent-color: var(--accent-blue);">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right: Performance summaries and execution logs -->
-                            <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
-                                <!-- Bot Performance Summaries -->
-                                <div class="dashboard-card">
-                                    <div class="card-header">
-                                        <h3>📊 Bot Performance Summaries</h3>
-                                        <span class="badge-indicator">KPI TELEMETRY</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                                            <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
-                                                <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Total Trades</span>
-                                                <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: #fff; margin-top: 5px;" id="botTotalTrades">247</div>
-                                            </div>
-                                            <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
-                                                <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Win Rate</span>
-                                                <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-top: 5px;" id="botWinRate">98.38%</div>
-                                            </div>
-                                            <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
-                                                <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Total Net Profit</span>
-                                                <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--accent);" id="botNetProfit">$1,248.52</div>
-                                            </div>
-                                            <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
-                                                <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Running Time</span>
-                                                <div style="font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--accent-blue); margin-top: 5px;" id="botRunningTime">12d 4h 32m</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Execution Telemetry (Live Engine Activity Logs) -->
-                                <div class="dashboard-card" id="alerts">
-                                    <div class="card-header">
-                                        <h3>🔔 Execution Telemetry (Live Engine logs)</h3>
-                                        <span class="badge-indicator">STREAMING</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="alert-log-container" id="alertLogList" style="height: 185px;">
-                                            <div class="log-item">
-                                                <span class="log-time">[00:43:01]</span>
-                                                <span class="log-msg">CEX price scanning active. Polling Binance, Bybit, OKX...</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- MODULE D: CRYPTO ACADEMY -->
-                    <div class="tab-pane" id="crypto-academy">
-                        <div class="dashboard-card" style="border-color: var(--accent-blue);">
-                            <div class="card-header" style="background: rgba(0, 176, 255, 0.05); border-bottom-color: rgba(0, 176, 255, 0.2);">
-                                <h3 style="color: var(--accent-blue);">🎓 Premium Crypto Academy</h3>
-                                <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">LIVE COURSE MODULES</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="academy-live-grid">
-                                    <!-- Column 1: Core Modules -->
-                                    <div class="academy-left-col">
-                                        <h4 style="margin-bottom: 15px; font-size: 1rem; color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">📚 Core Arbitrage & DeFi Curriculum</h4>
-                                        <div class="academy-modules-list" style="display: flex; flex-direction: column; gap: 15px;">
-                                            
-                                            <div class="academy-module-item">
-                                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                                                    <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 1: Cross-Chain Fundamentals</h5>
-                                                    <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: bold; background: rgba(0, 176, 255, 0.1); padding: 2px 6px; border-radius: 4px;">COMPLETED</span>
-                                                </div>
-                                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Master cross-chain message passing protocols, smart contract execution latency, and gas optimization techniques across Ethereum, Solana, and Layer-2 networks.</p>
-                                            </div>
-
-                                            <div class="academy-module-item">
-                                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                                                    <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 2: Flash Loan Guides & MEV</h5>
-                                                    <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: bold; background: rgba(0, 176, 255, 0.1); padding: 2px 6px; border-radius: 4px;">COMPLETED</span>
-                                                </div>
-                                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Step-by-step programming guides using Aave and Uniswap flash loans for risk-free triangular arbitrage execution, slippage limits, and frontrun prevention.</p>
-                                            </div>
-
-                                            <div class="academy-module-item" style="border-left-color: var(--text-secondary);">
-                                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                                                    <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 3: Advanced DEX Liquidity Calculations</h5>
-                                                    <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: bold; background: rgba(255, 255, 255, 0.05); padding: 2px 6px; border-radius: 4px;">NEXT UP</span>
-                                                </div>
-                                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Analyze dynamic constant-product pools vs concentrated liquidity pools (Uniswap V3) to identify exact slippage limits and mathematical optimal route mapping.</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <!-- Column 2: Live Updates & Unlock -->
-                                    <div class="academy-right-col">
-                                        <div class="academy-lesson-box">
-                                            <span class="lesson-label">⚡ LIVE INTEL LESSON</span>
-                                            <h4 style="margin-top: 10px; margin-bottom: 10px; color: #fff;">Today's Arbitrage Lesson</h4>
-                                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;" id="academyLessonText">
-                                                "Concentrated liquidity pools on Base (Aerodrome) currently show a 1.2% spread discrepancy for stablecoin pairs due to recent protocol rebalancings. Accessing these requires a low-latency execution wrapper."
-                                            </p>
-                                        </div>
-
-                                        <div class="academy-unlock-box">
-                                            <div>
-                                                <h4 style="color: var(--accent); margin-bottom: 10px; font-size: 1.1rem; font-weight: 800;">🚀 Unlock Pro Institutional Access</h4>
-                                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 15px;">
-                                                    Gain unlimited access to elite smart contract templates, flash loan deployment code, real-time alert triggers, and the exclusive member-only institutional discord.
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <button class="btn-live" style="width: 100%; background: var(--accent); color: #000; border: none; padding: 12px; font-weight: 900; border-radius: 4px; cursor: pointer; transition: all 0.2s;">
-                                                    UNLOCK ALL MODULES
-                                                </button>
-                                                <div style="margin-top: 10px; display: flex; justify-content: center; gap: 8px; align-items: center; font-size: 0.65rem; color: var(--text-secondary);">
-                                                    <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="12" alt="Razorpay">
-                                                    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" width="22" alt="PayPal">
-                                                    <span>SECURE CHECKOUT (UPI/CARD/PAYPAL)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- MODULE E: CORPORATE PROFILE & FOUNDER -->
-                    <div class="tab-pane" id="corporate-profile">
-                        <div class="dashboard-card" style="border-color: #ffd700;">
-                            <div class="card-header" style="background: rgba(255, 215, 0, 0.05); border-bottom-color: rgba(255, 215, 0, 0.2); display: flex; justify-content: space-between; align-items: center;">
-                                <h3 style="color: #ffd700;">👥 Katke Enterprises - Arbitrage Smart AI Corporate Profile</h3>
-                                <span class="live-tag" style="background: rgba(255, 215, 0, 0.1); color: #ffd700; border-color: rgba(255, 215, 0, 0.2);">OFFICIAL VERIFICATION TIER</span>
-                            </div>
-                            <div class="card-body" style="padding: 30px;">
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-                                    <div>
-                                        <h4 style="color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; margin-bottom: 15px;">🏢 Company Overview & Corporate Ecosystem</h4>
-                                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
-                                            <strong>Parent Entity:</strong> <span style="color: #ffd700; font-weight: bold;">Katke Enterprises</span> (Established: 07/11/2013).
-                                        </p>
-                                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
-                                            <strong>Corporate Operations:</strong> Arbitrage Smart AI is a standalone, high-fidelity autonomous trade orchestration and liquidity scanning terminal. The platform runs natively under the unified containerized infrastructure of Katke Enterprises to automate global transaction intelligence and on-chain liquidity scanning.
-                                        </p>
                                         
-                                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
-                                            We solve efficiency bottlenecks in international commodities trading, compliance operations, and logistics optimization. By deploying multi-agent systems powered by <strong>Google Cloud Vertex AI</strong> and <strong>Gemini 1.5 models</strong>, we automate document vetting, risk management, and market intelligence synthesis.
-                                        </p>
-                                        
-                                        <h4 style="color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; margin-top: 25px; margin-bottom: 15px;">📍 Registered Office & Support</h4>
-                                        <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
-                                            <li><strong>Headquarters:</strong> 301, Riddhi Siddhi Apartment, Near Shani Temple, Gaskopri, Virar - 401305, Taluka: Vasai, District: Palghar, Maharashtra, India.</li>
-                                            <li><strong>Contact Email:</strong> <a href="mailto:arbitragesmartai@arbitragesmartai.com" style="color: #ffd700;">arbitragesmartai@arbitragesmartai.com</a></li>
-                                            <li><strong>Support Email:</strong> <a href="mailto:support@arbitragesmartai.com" style="color: #ffd700;">support@arbitragesmartai.com</a></li>
-                                            <li><strong>Helpdesk / WhatsApp:</strong> +91 93729 54852 (24/7 Support)</li>
-                                        </ul>
-                                        
-                                        <h4 style="color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; margin-top: 25px; margin-bottom: 15px;">🛡️ Government Verification Credentials (MSME)</h4>
-                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; font-size: 0.8rem;">
-                                            <div>
-                                                <span style="color: var(--text-secondary); display: block; font-size: 0.7rem; text-transform: uppercase;">MSME Registration Number</span>
-                                                <strong style="color: #ffd700; font-family: var(--font-mono);">UDYAM-MH-17-0069728</strong>
-                                            </div>
-                                            <div>
-                                                <span style="color: var(--text-secondary); display: block; font-size: 0.7rem; text-transform: uppercase;">Legal Entity Classification</span>
-                                                <strong style="color: #fff;">Katke Enterprises</strong>
-                                            </div>
-                                            <div>
-                                                <span style="color: var(--text-secondary); display: block; font-size: 0.7rem; text-transform: uppercase;">Incorporation Date</span>
-                                                <strong style="color: #fff;">07/11/2013</strong>
-                                            </div>
-                                            <div>
-                                                <span style="color: var(--text-secondary); display: block; font-size: 0.7rem; text-transform: uppercase;">Business Commencement</span>
-                                                <strong style="color: #fff;">06/09/2013</strong>
-                                            </div>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+                                            <button id="btnToggleBot" style="background: var(--accent); color: #000; border: none; padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.2s;">▶️ INITIALIZE AUTONOMOUS BOT</button>
+                                            <button id="btnEmergencyKill" style="background: var(--accent-red); color: #fff; border: none; padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.2s;">⏹️ EMERGENCY SHUTDOWN</button>
+                                        </div>
+
+                                        <div style="display: flex; justify-content: space-between; align-items: center; background: #0b0b0f; padding: 12px 15px; border-radius: 4px; border: 1px solid var(--card-border); margin-top: 10px;">
+                                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Simulate Execution Mode (No Real Capital):</span>
+                                            <input type="checkbox" id="simModeToggle" checked style="width: 20px; height: 20px; cursor: pointer;">
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <!-- Simulation Metrics Sliders -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>⚙️ Autonomous Simulation Settings</h3>
+                                    <span class="badge-accent">PARAMETERS</span>
+                                </div>
+                                <div class="card-body">
+                                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                                        <div>
+                                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                                                <span style="color: var(--text-secondary);">Min Profit Threshold:</span>
+                                                <strong id="valMinProfit" style="color: var(--accent-blue);">0.15%</strong>
+                                            </div>
+                                            <input type="range" id="sliderMinProfit" min="0.05" max="2.0" step="0.05" value="0.15" style="width: 100%; accent-color: var(--accent-blue);">
+                                        </div>
+                                        <div>
+                                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                                                <span style="color: var(--text-secondary);">Max Execution Gas Settings:</span>
+                                                <strong id="valMaxGas" style="color: var(--accent-blue);">120 Gwei</strong>
+                                            </div>
+                                            <input type="range" id="sliderMaxGas" min="10" max="300" step="10" value="120" style="width: 100%; accent-color: var(--accent-blue);">
+                                        </div>
+                                        <div>
+                                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                                                <span style="color: var(--text-secondary);">Execution Latency Threshold:</span>
+                                                <strong id="valLatencyLimit" style="color: var(--accent-blue);">250 ms</strong>
+                                            </div>
+                                            <input type="range" id="sliderLatencyLimit" min="50" max="1000" step="50" value="250" style="width: 100%; accent-color: var(--accent-blue);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Performance summaries and execution logs -->
+                        <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- Bot Performance Summaries -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <h3>📊 Bot Performance Summaries</h3>
+                                    <span class="badge-indicator">KPI TELEMETRY</span>
+                                </div>
+                                <div class="card-body">
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                        <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
+                                            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Total Trades</span>
+                                            <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: #fff; margin-top: 5px;" id="botTotalTrades">247</div>
+                                        </div>
+                                        <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
+                                            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Win Rate</span>
+                                            <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-top: 5px;" id="botWinRate">98.38%</div>
+                                        </div>
+                                        <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
+                                            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Total Net Profit</span>
+                                            <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--accent);" id="botNetProfit">$1,248.52</div>
+                                        </div>
+                                        <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
+                                            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Running Time</span>
+                                            <div style="font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--accent-blue); margin-top: 5px;" id="botRunningTime">12d 4h 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Execution Telemetry (Live Engine Activity Logs) -->
+                            <div class="dashboard-card" id="alerts">
+                                <div class="card-header">
+                                    <h3>🔔 Execution Telemetry (Live Engine logs)</h3>
+                                    <span class="badge-indicator">STREAMING</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="alert-log-container" id="alertLogList" style="height: 185px;">
+                                        <div class="log-item">
+                                            <span class="log-time">[00:43:01]</span>
+                                            <span class="log-msg">CEX price scanning active. Polling Binance, Bybit, OKX...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- PREMIUM CRYPTO ACADEMY SECTION -->
+            <section class="academy-section-wrapper" id="crypto-academy" style="margin-top: 40px; margin-bottom: 40px;">
+                <div class="dashboard-card" style="border-color: var(--accent-blue);">
+                    <div class="card-header" style="background: rgba(0, 176, 255, 0.05); border-bottom-color: rgba(0, 176, 255, 0.2); display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="color: var(--accent-blue); font-size: 1.25rem; font-weight: 800; margin: 0; font-family: var(--font-sans);">🎓 Premium Crypto Academy</h3>
+                        <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">LIVE COURSE MODULES</span>
+                    </div>
+                    <div class="card-body" style="padding: 25px;">
+                        <div class="academy-live-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px;">
+                            <!-- Left: Curriculum & Syllabus -->
+                            <div class="academy-left-col">
+                                <h4 style="margin-bottom: 15px; font-size: 1rem; color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">📚 Core Arbitrage & DeFi Curriculum</h4>
+                                <div class="academy-modules-list" style="display: flex; flex-direction: column; gap: 20px;">
                                     
-                                    <div>
-                                        <h4 style="color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; margin-bottom: 15px;">👤 Founder & Leadership</h4>
-                                        <div style="display: flex; gap: 15px; align-items: flex-start; margin-bottom: 20px;">
-                                            <div style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 2px solid #ffd700; box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); background: #111; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                                <img src="assets/founder.jpg" alt="Manik Vithoba Katke" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                                <span style="font-size: 1.8rem; color: #ffd700; font-weight: bold; display: none;">M</span>
-                                            </div>
-                                            <div>
-                                                <h5 style="color: #fff; font-size: 1.1rem; margin: 0; font-weight: 700;">Manik Vithoba Katke (Founder & CEO)</h5>
-                                                <span style="color: #ffd700; font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Founder & CEO</span>
-                                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-top: 8px;">
-                                                    Manik Katke is the founder of Katke Enterprises, driving technological advancements in automated commodity trading, global trade frameworks, and AI-first agentic infrastructure.
-                                                </p>
-                                            </div>
+                                    <div class="academy-module-item" style="background: #0b0b0f; border: 1px solid var(--card-border); border-left: 4px solid var(--accent); padding: 15px; border-radius: 6px;">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                            <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 1: Cross-Chain Fundamentals</h5>
+                                            <span style="font-size: 0.7rem; color: var(--accent); font-weight: bold; background: rgba(0, 230, 118, 0.1); padding: 2px 6px; border-radius: 4px;">COMPLETED</span>
                                         </div>
-                                        
-                                        <h4 style="color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; margin-top: 15px; margin-bottom: 15px;">🛡️ Legal Compliance Frameworks</h4>
-                                        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-                                            Our ecosystem is fully aligned with global compliance standards. You can access our legal declarations and policy structures directly via the footer linkages or through these direct resources:
-                                        </p>
-                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
-                                            <a href="terms.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.85rem; font-weight: 600;">📄 Terms of Use</a>
-                                            <a href="privacy.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.85rem; font-weight: 600;">🛡️ Privacy Policy</a>
-                                            <a href="risk.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.85rem; font-weight: 600;">⚠️ Risk Disclosures</a>
-                                            <a href="aml-kyc.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.85rem; font-weight: 600;">👔 AML/KYC Policy</a>
-                                        </div>
+                                        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Master cross-chain message passing protocols, smart contract execution latency, and gas optimization techniques across Ethereum, Solana, and Layer-2 networks.</p>
                                     </div>
+
+                                    <div class="academy-module-item" style="background: #0b0b0f; border: 1px solid var(--card-border); border-left: 4px solid var(--accent); padding: 15px; border-radius: 6px;">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                            <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 2: Flash Loan Guides & MEV</h5>
+                                            <span style="font-size: 0.7rem; color: var(--accent); font-weight: bold; background: rgba(0, 230, 118, 0.1); padding: 2px 6px; border-radius: 4px;">COMPLETED</span>
+                                        </div>
+                                        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Step-by-step programming guides using Aave and Uniswap flash loans for risk-free triangular arbitrage execution, slippage limits, and frontrun prevention.</p>
+                                    </div>
+
+                                    <div class="academy-module-item" style="background: #0b0b0f; border: 1px solid var(--card-border); border-left: 4px solid var(--text-secondary); padding: 15px; border-radius: 6px;">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                            <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 3: Advanced DEX Liquidity Calculations</h5>
+                                            <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: bold; background: rgba(255, 255, 255, 0.05); padding: 2px 6px; border-radius: 4px;">NEXT UP</span>
+                                        </div>
+                                        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Analyze dynamic constant-product pools vs concentrated liquidity pools (Uniswap V3) to identify exact slippage limits and mathematical optimal route mapping.</p>
+                                    </div>
+
                                 </div>
 
-                                <hr style="border: 0; border-top: 1px solid var(--card-border); margin: 30px 0;">
-                                
-                                <div class="dashboard-card" style="background: rgba(0, 230, 118, 0.01); border-color: rgba(0, 230, 118, 0.15);">
-                                    <div class="card-header" style="background: rgba(0, 230, 118, 0.03); border-bottom-color: rgba(0, 230, 118, 0.1); display: flex; justify-content: space-between; align-items: center;">
-                                        <h4 style="color: var(--accent); margin: 0; font-weight: 700; font-size: 0.95rem;">⚙️ Multi-Agent Telemetry & Verification Portal</h4>
-                                        <span class="live-tag" style="background: rgba(0, 230, 118, 0.1); color: var(--accent); border-color: rgba(0, 230, 118, 0.2);">24/7 AUDIT DAEMON ACTIVE</span>
+                                <!-- Syllabus Path Grid -->
+                                <h4 style="margin-top: 30px; margin-bottom: 15px; font-size: 1rem; color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">📍 Comprehensive Course Syllabus Path</h4>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; font-size: 0.8rem;">
+                                    <div style="background: #0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 6px;">
+                                        <div style="color: var(--accent); font-weight: 800; margin-bottom: 6px;">STAGE 1: FOUNDATION</div>
+                                        <ul style="list-style: none; padding: 0; line-height: 1.6; color: var(--text-secondary);">
+                                            <li>• L1.1: Multi-Chain Liquidity</li>
+                                            <li>• L1.2: Cross-Chain Bridges</li>
+                                            <li>• L1.3: RPC Latency Opt</li>
+                                        </ul>
                                     </div>
-                                    <div class="card-body" style="padding: 20px;">
-                                        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 15px;">
-                                            Our platform integrates an autonomous verification daemon that continuously monitors contract security compliance, gas optimization limits, and transaction execution routing. This data is fed directly into the Arbitrage Smart AI multi-agent database for real-time audit verification.
-                                        </p>
-                                        
-                                        <!-- Live Verification Ticker Stream -->
-                                        <div style="background: #0b0b0f; border: 1px solid var(--card-border); border-radius: 6px; padding: 15px; font-family: var(--font-mono); font-size: 0.78rem;">
-                                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; margin-bottom: 10px; color: var(--text-secondary);">
-                                                <span>LIVE INGESTION STREAM (AGENT TRANSACTION PIPELINE)</span>
-                                                <span class="pulse-dot" style="background-color: var(--accent); box-shadow: 0 0 6px var(--accent);"></span>
-                                            </div>
-                                            <div id="ecosystemVerificationStream" style="max-height: 120px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 0.75rem;">
-                                                <div style="color: #888;">Initializing verification parser threads...</div>
-                                            </div>
-                                        </div>
+                                    <div style="background: #0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 6px;">
+                                        <div style="color: var(--accent-blue); font-weight: 800; margin-bottom: 6px;">STAGE 2: EXECUTION</div>
+                                        <ul style="list-style: none; padding: 0; line-height: 1.6; color: var(--text-secondary);">
+                                            <li>• L2.1: Flash Loan Mechanics</li>
+                                            <li>• L2.2: Solidity & Rust Contracts</li>
+                                            <li>• L2.3: MEV & Gas Bidding</li>
+                                        </ul>
+                                    </div>
+                                    <div style="background: #0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 6px;">
+                                        <div style="color: var(--accent-orange); font-weight: 800; margin-bottom: 6px;">STAGE 3: STRATEGY</div>
+                                        <ul style="list-style: none; padding: 0; line-height: 1.6; color: var(--text-secondary);">
+                                            <li>• L3.1: Uniswap V3 Math</li>
+                                            <li>• L3.2: Pathfinding Multi-Hop</li>
+                                            <li>• L3.3: Risk Profiling & Slippage</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Unlock Box with Live PayPal Integration -->
+                            <div class="academy-right-col" style="display: flex; flex-direction: column; gap: 20px;">
+                                <div class="academy-lesson-box" style="background: #0b0b0f; border: 1px solid var(--card-border); border-left: 4px solid var(--accent); padding: 15px; border-radius: 6px;">
+                                    <span class="lesson-label" style="color: var(--accent); font-weight: 800; font-size: 0.7rem; text-transform: uppercase;">⚡ LIVE INTEL LESSON</span>
+                                    <h4 style="margin-top: 10px; margin-bottom: 10px; color: #fff;">Today's Arbitrage Lesson</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;" id="academyLessonText">
+                                        "Concentrated liquidity pools on Base (Aerodrome) currently show a 1.2% spread discrepancy for stablecoin pairs due to recent protocol rebalancings. Accessing these requires a low-latency execution wrapper."
+                                    </p>
+                                </div>
+
+                                <div class="academy-unlock-box" style="background: #0b0b0f; border: 1px solid var(--card-border); border-top: 4px solid var(--accent-blue); padding: 20px; border-radius: 6px;">
+                                    <h4 style="color: var(--accent); margin-bottom: 10px; font-size: 1.1rem; font-weight: 800;">🚀 Unlock Pro Institutional Access</h4>
+                                    <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 15px;">
+                                        Gain unlimited access to elite smart contract templates, flash loan deployment code, real-time alert triggers, and the exclusive member-only institutional discord.
+                                    </p>
+                                    
+                                    <!-- Native PayPal SDK Buttons Container -->
+                                    <div id="paypal-button-container" style="margin-top: 15px; min-height: 150px;"></div>
+                                    
+                                    <div style="margin-top: 15px; display: flex; justify-content: center; gap: 12px; align-items: center; font-size: 0.65rem; color: var(--text-secondary);">
+                                        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" width="26" alt="PayPal">
+                                        <span>SECURE CHECKOUT BACKED BY PAYPAL NATIVE SDK</span>
                                     </div>
                                 </div>
                             </div>
@@ -643,7 +559,6 @@
                     </div>
                 </div>
             </section>
-
 
             <!-- GLOBAL WIDGETS SECTION (Below terminal grid tabs) -->
             <section class="below-fold-section" style="margin-top: 30px;">
@@ -759,6 +674,12 @@
                         <li><a href="about.html#mission" style="color: var(--text-secondary); text-decoration: none;">Mission & Vision</a></li>
                         <li><a href="careers.html" style="color: var(--text-secondary); text-decoration: none;">Careers</a></li>
                         <li><a href="partnerships.html" style="color: var(--text-secondary); text-decoration: none;">Strategic Alliances</a></li>
+                        <li style="margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; color: var(--text-secondary); font-size: 0.78rem; line-height: 1.4;">
+                            <strong>Entity:</strong> Katke Enterprises (Est. 2013)
+                        </li>
+                        <li style="color: var(--text-secondary); font-size: 0.78rem; line-height: 1.4; margin-top: 5px;">
+                            <strong>MSME Reg:</strong> <span style="color: var(--accent);">UDYAM-MH-17-0069728</span>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -771,12 +692,16 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent); padding-bottom: 5px;">Trust & Compliance</h4>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent); padding-bottom: 5px;">Trust</h4>
                     <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
                         <li><a href="compliance-center.html" style="color: var(--text-secondary); text-decoration: none;">Compliance Hub</a></li>
                         <li><a href="security-center.html" style="color: var(--text-secondary); text-decoration: none;">Security Center</a></li>
                         <li><a href="compliance-center.html" style="color: var(--text-secondary); text-decoration: none;">MSME Verification</a></li>
                         <li><a href="terms.html" style="color: var(--text-secondary); text-decoration: none;">Terms of Use</a></li>
+                        <li style="margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; color: var(--text-secondary); font-size: 0.78rem; line-height: 1.4;">
+                            <strong>Registered HQ:</strong><br>
+                            301, Riddhi Siddhi Apartment, Near Shani Temple, Gaskopri, Virar - 401305, Taluka: Vasai, District: Palghar, Maharashtra, India.
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -794,6 +719,15 @@
                         <li><a href="contact-center.html" style="color: var(--text-secondary); text-decoration: none;">Contact Center</a></li>
                         <li><a href="contact-center.html" style="color: var(--text-secondary); text-decoration: none;">Support Helpdesk</a></li>
                         <li><a href="contact.html" style="color: var(--text-secondary); text-decoration: none;">Legal & Grievance Desk</a></li>
+                        <li style="margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; color: var(--text-secondary); font-size: 0.78rem; line-height: 1.4;">
+                            <strong>Official Email:</strong><br>
+                            <a href="mailto:arbitragesmartai@gmail.com" style="color: var(--accent-orange); text-decoration: none;">arbitragesmartai@gmail.com</a>,<br>
+                            <a href="mailto:manikkatke93@gmail.com" style="color: var(--accent-orange); text-decoration: none;">manikkatke93@gmail.com</a>
+                        </li>
+                        <li style="color: var(--text-secondary); font-size: 0.78rem; line-height: 1.4; margin-top: 5px;">
+                            <strong>Corporate Email:</strong><br>
+                            <a href="mailto:arbitragesmartai@arbitragesmartai.com" style="color: var(--accent-orange); text-decoration: none;">arbitragesmartai@arbitragesmartai.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>
