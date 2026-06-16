@@ -240,20 +240,28 @@ a {
     gap: 30px;
 }
 
+.main-nav li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .nav-link {
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     color: var(--text-secondary);
-    padding: 8px 0;
+    padding: 28px 0; /* aligned to header height */
     position: relative;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     width: 0;
     height: 2px;
@@ -268,6 +276,55 @@ a {
 .nav-link:hover::after, .nav-link.active::after {
     width: 100%;
 }
+
+/* Glassmorphism Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 80px; /* immediately below header height */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(10, 10, 15, 0.96);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px 0;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(16, 185, 129, 0.05);
+    transition: var(--transition-smooth);
+    z-index: 150;
+}
+
+.main-nav li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: var(--transition-smooth);
+    display: block;
+    width: 100%;
+}
+
+.dropdown-item:hover {
+    color: var(--text-primary);
+    background-color: rgba(16, 185, 129, 0.08);
+    padding-left: 24px;
+}
+
 
 .header-actions {
     display: flex;

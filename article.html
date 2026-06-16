@@ -46,6 +46,20 @@
                     <li><a href="/#tech" class="nav-link">Tech</a></li>
                     <li><a href="/#markets" class="nav-link">Markets</a></li>
                     <li><a href="/#geopolitics" class="nav-link">Geopolitics</a></li>
+                    <li>
+                        <a href="/#sports" class="nav-link">Sports</a>
+                        <div class="dropdown-menu">
+                            <a href="/#football" class="dropdown-item">Football</a>
+                            <a href="/#tennis" class="dropdown-item">Tennis</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/#entertainment" class="nav-link">Entertainment</a>
+                        <div class="dropdown-menu">
+                            <a href="/#celebrity" class="dropdown-item">Celebrity</a>
+                            <a href="/#style" class="dropdown-item">Style</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -139,7 +153,7 @@
                         <li><a href="careers.html" class="footer-link">Careers</a></li>
                         <li><a href="media-center.html" class="footer-link">Press Room</a></li>
                         <li><a href="media-center.html" class="footer-link">Media Center</a></li>
-                        <li><a href="google-readiness.html" class="footer-link">Brand Guidelines</a></li>
+                        <li><a href="editorial-guidelines.html" class="footer-link">Editorial Guidelines</a></li>
                     </ul>
                 </div>
                 
@@ -149,7 +163,7 @@
                     <ul class="footer-links-list">
                         <li><a href="api-docs.html" class="footer-link">API Reference</a></li>
                         <li><a href="compliance-center.html" class="footer-link">System Status</a></li>
-                        <li><a href="google-readiness.html" class="footer-link">Sandbox</a></li>
+                        <li><a href="google-readiness.html" class="footer-link">Sandbox Sandbox</a></li>
                         <li><a href="https://github.com/manikkatke93-star/globalpulsenewsmedia" class="footer-link" target="_blank">GitHub Repository</a></li>
                         <li><a href="api-docs.html" class="footer-link">Documentation</a></li>
                     </ul>
@@ -160,7 +174,7 @@
                     <h4 class="footer-col-title">Legal & Compliance</h4>
                     <ul class="footer-links-list">
                         <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
-                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Desk</a></li>
                         <li><a href="aml-kyc.html" class="footer-link">AML / KYC Policy</a></li>
                         <li><a href="risk.html" class="footer-link">Risk Disclosure</a></li>
                         <li><a href="contact.html" class="footer-link">Grievance Desk</a></li>
@@ -183,7 +197,7 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">Support Center</h4>
                     <ul class="footer-links-list">
-                        <li><a href="contact.html" class="footer-link">Contact Center</a></li>
+                        <li><a href="contact.html" class="footer-link">Support/Contact</a></li>
                         <li><a href="contact-center.html" class="footer-link">Help Desk</a></li>
                         <li><a href="google-readiness.html" class="footer-link">FAQs</a></li>
                         <li><a href="contact.html" class="footer-link">Live Chat Desk</a></li>
@@ -209,8 +223,197 @@
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const articleId = params.get('id');
+            const type = params.get('type');
+            const category = params.get('category');
+            const index = params.get('index');
 
-            // Hardcoded premium default data representing the Gemini-generated feed
+            // Copy of content stubs for independent dynamic resolution
+            const stubs = {
+                celebrity: [
+                    {
+                        title: "Alistair Sterling Unveils Off-Grid Geothermal Sanctuary in Iceland",
+                        category: "Celebrity",
+                        source: "Global Pulse Elite Life",
+                        time: "June 16, 2026 • 20:30 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800",
+                        content: `
+                            <p><strong>REYKJAVIK, ICELAND</strong> — Award-winning actor and environmental advocate Alistair Sterling has officially opened his privately funded geothermal eco-sanctuary in the Icelandic highlands. The project, which took over three years of delicate architectural planning, is designed to serve as a blueprint for luxury off-grid living that generates zero carbon footprint.</p>
+                            <blockquote>
+                                "Seclusion should not come at the cost of the planet. By harnessing natural geothermal fissures and using recycled local volcanic basalt, we've built a retreat that is completely self-sustaining."
+                            </blockquote>
+                            <h2>Volcanic Integration & Design</h2>
+                            <p>Built directly into the volcanic rock face, the sanctuary features passive geothermal heating, custom greywater filtration systems, and a micro-hydroelectric array. The interior design combines Scandinavian minimalism with reclaimed materials, highlighting deep obsidian finishes and warm timber layouts.</p>
+                        `
+                    },
+                    {
+                        title: "Sovereign Cinematic Icon Wins Best Director at Cannes Film Festival",
+                        category: "Celebrity",
+                        source: "Cannes Media Desk",
+                        time: "June 15, 2026 • 19:15 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800",
+                        content: `
+                            <p><strong>CANNES, FRANCE</strong> — Julian Vance's highly anticipated silent black-and-white epic has claimed top honors at the 79th Cannes Film Festival. The film, lauded by critics as a visual masterpiece, utilizes dramatic contrast and deep shadow architecture to tell an allegorical story of the digital age.</p>
+                            <p>Vance dedicated the award to his engineering teams, who custom-built optical lenses capable of capturing ultra-high definition contrast ratios in low-light environments without digital noise artifacts.</p>
+                        `
+                    },
+                    {
+                        title: "Global Icon's Venture Fund Backs Next-Gen AI Talent Management Network",
+                        category: "Celebrity",
+                        source: "Entertainment Venture Capital",
+                        time: "June 14, 2026 • 14:00 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800",
+                        content: `
+                            <p><strong>LOS ANGELES, CA</strong> — A new investment consortium led by top Hollywood figures has announced a $120 million seed round for Talos Systems, a company specializing in cryptographic identity locks for digital actors. The technology allows stars to securely license their likenesses and voices for animated productions while preventing unauthorized deepfakes.</p>
+                        `
+                    }
+                ],
+                style: [
+                    {
+                        title: "The Rise of Obsidian Tailoring: Minimalism Dominates Milan Fashion Week",
+                        category: "Style",
+                        source: "Milan Editorial Desk",
+                        time: "June 16, 2026 • 18:45 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+                        content: `
+                            <p><strong>MILAN, ITALY</strong> — Structured architectural minimalism has taken center stage in Milan this week. Top design houses showcased collections built entirely from carbon-neutral smart fabrics, prioritizing clean sharp lines, hidden utility pockets, and raw texturizations.</p>
+                            <blockquote>
+                                "Luxury is no longer about decorative excess; it is defined by fabric integrity and geometric precision. We are tailoring garments that act as protective, functional shells for the modern urban landscape."
+                            </blockquote>
+                            <h2>Obsidian Fabric Engineering</h2>
+                            <p>The collections highlight advanced textiles made from recycled carbon fiber and organic hemp threads. These garments provide natural thermoregulation and water repellency, matching style with modern performance requirements.</p>
+                        `
+                    },
+                    {
+                        title: "Emerald Accents: High Jewelry Houses Pivot to Sustainable Geothermal Emeralds",
+                        category: "Style",
+                        source: "Luxury Jewelry Report",
+                        time: "June 15, 2026 • 16:30 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800",
+                        content: `
+                            <p><strong>GENEVA</strong> — Prominent jewelry brands have debuted collections featuring laboratory-grown emeralds powered entirely by geothermal energy. The stones, indistinguishable from mined equivalents, represent a major shift toward circular luxury and carbon-neutral gemstones.</p>
+                        `
+                    },
+                    {
+                        title: "Sartorial Architecture: The Fusion of High-Performance Textiles and Haute Couture",
+                        category: "Style",
+                        source: "Paris Fashion Journal",
+                        time: "June 14, 2026 • 11:20 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1445205170230-053b830c6038?w=800",
+                        content: `
+                            <p><strong>PARIS</strong> — Parisian design ateliers are collaborating with materials science labs to create dresses and coats that adapt dynamically to ambient humidity and body temperature, creating a new category of intelligent haute couture.</p>
+                        `
+                    }
+                ],
+                football: [
+                    {
+                        title: "Sovereign League: European Football Giants Confirm Web3 Ticket Integration",
+                        category: "Football",
+                        source: "Sports Business Telemetry",
+                        time: "June 16, 2026 • 17:00 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
+                        content: `
+                            <p><strong>LONDON</strong> — Europe's elite football clubs have collectively agreed to deploy a unified blockchain ticketing standard for all continental competitions starting next season. The new system links ticket ownership directly to secure digital wallets, eliminating resale fraud.</p>
+                            <blockquote>
+                                "By digitizing ticket allocations via smart contracts, we guarantee that genuine supporters acquire tickets at face value while retaining security and trace transparency."
+                    </blockquote>
+                            <h2>Anti-Fraud Technology</h2>
+                            <p>The smart contracts prevent ticket transfers within 24 hours of kickoff, unless authorized through the official team marketplace. This measure ensures secure venues and removes third-party scalpers from the resale loop.</p>
+                        `
+                    },
+                    {
+                        title: "Champions League Finals: Real-Time Telemetry Upgrades Stadium Experience",
+                        category: "Football",
+                        source: "Athletic Tech Insider",
+                        time: "June 15, 2026 • 20:15 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1577223625856-748b11cca222?w=800",
+                        content: `
+                            <p><strong>MUNICH</strong> — Spectators at the Champions League finals will have access to real-time performance telemetry. Sensors embedded in the players' jerseys transmit physical data points with sub-10ms latency, creating an immersive, data-rich viewing experience.</p>
+                        `
+                    },
+                    {
+                        title: "Tactical AI: How Predictive Modeling is Redefining Premier League Formations",
+                        category: "Football",
+                        source: "Tactical Analysis Desk",
+                        time: "June 14, 2026 • 15:30 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1524015368236-bbf6f72545b6?w=800",
+                        content: `
+                            <p><strong>MANCHESTER</strong> — Premier League coaching staffs are deploying advanced multi-agent simulations to model opponent reaction times and positioning, shifting tactical planning from retrospective video analysis to predictive real-time strategy.</p>
+                        `
+                    }
+                ],
+                tennis: [
+                    {
+                        title: "Wimbledon Adopts Real-Time Optical Ball Tracking Powered by Deep Learning",
+                        category: "Tennis",
+                        source: "Court Tech Journal",
+                        time: "June 16, 2026 • 16:15 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=800",
+                        content: `
+                            <p><strong>WIMBLEDON</strong> — The All England Club has announced the permanent deployment of deep-learning optical tracking systems for all tournament courts. The technology uses 18 synchronized high-frequency cameras to reconstruct ball vectors in real-time.</p>
+                            <blockquote>
+                                "Human error has been completely removed from court decisions. The optical arrays analyze photon disruption profiles, providing instantaneous, objective out-of-bounds determinations."
+                            </blockquote>
+                            <h2>Quantum Precision Mechanics</h2>
+                            <p>The tracking system operates at 500 frames per second, calculating the exact deformation profile of the tennis ball as it impacts the grass surface. The resulting data is rendered instantly in 3D for broadcast feeds.</p>
+                        `
+                    },
+                    {
+                        title: "Clay Court Mastery: Telemetry Sensors Analyze Racket-Speed Efficiency",
+                        category: "Tennis",
+                        source: "Elite Athletic Performance",
+                        time: "June 15, 2026 • 14:00 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=800",
+                        content: `
+                            <p><strong>PARIS</strong> — Professional trainers at Roland Garros are employing racket grip telemetry to adjust spin angles. The sensors measure torsional forces and energy dissipation, helping athletes optimize baseline strokes while minimizing joint stress.</p>
+                        `
+                    },
+                    {
+                        title: "Grand Slam Pioneer Announces Sovereign High-Performance Training Academy",
+                        category: "Tennis",
+                        source: "Tennis Association News",
+                        time: "June 13, 2026 • 10:45 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800",
+                        content: `
+                            <p><strong>MIAMI, FL</strong> — A state-of-the-art tennis academy focusing on biomechanics and neuro-training has officially broken ground. The campus integrates virtual reality practice courts and custom recovery pods, establishing a new gold standard for junior development.</p>
+                        `
+                    }
+                ],
+                geopolitics: [
+                    {
+                        title: "Subsea Cable Treaties: G7 Establishes Quantum Key Distribution Corridors",
+                        category: "Geopolitics",
+                        source: "Global Cybersecurity Desk",
+                        time: "June 16, 2026 • 15:15 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+                        content: `
+                            <p><strong>LONDON, UK</strong> — Transatlantic optical cables are being retrofitted with state-of-the-art quantum key distribution (QKD) hardware under a new joint G7 security treaty. The upgrade protects subsea data transmission channels from hypothetical interception by quantum decryptors currently in development by adversarial state actors.</p>
+                            <blockquote>
+                                "This treaty secures our data backbones for the coming decades. Any physical attempt to tap or read the subsea optical signals collapses the quantum state of the photons, instantly severing the connection and alerting our defense centers."
+                            </blockquote>
+                            <h2>Deploying Quantum Backbones</h2>
+                            <p>The system relies on cryptographic keys encoded on single photons. If an unauthorized party attempts to measure the photons, their wavefunctions collapse, causing transmission errors that alert administrators of the intrusion within milliseconds.</p>
+                        `
+                    }
+                ],
+                markets: [
+                    {
+                        title: "Sovereign Debt Tokens: European Banks Finalize Settlement Channels",
+                        category: "Markets",
+                        source: "Global Finance Desk",
+                        time: "June 16, 2026 • 18:30 UTC",
+                        imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800",
+                        content: `
+                            <p><strong>GENEVA, SWITZERLAND</strong> — A consortium of central and commercial banks has successfully settled a €500 million sovereign bond transaction using tokenized smart contracts on a regulated ledger, proving that instant clearing is viable within existing regulatory frameworks.</p>
+                            <blockquote>
+                                "Tokenization eliminates multi-day clearing risks. By locking collateral cryptographically and triggering instant swaps, we remove clearinghouses and reduce settlement overhead to zero."
+                            </blockquote>
+                            <h2>Clearing Architecture</h2>
+                            <p>The transaction utilized digital compliance wrappers that automatically verified KYC requirements of the participating institutions before authorizing the swap, validating on-chain compliance models.</p>
+                        `
+                    }
+                ]
+            };
+
             const defaultArticles = [
                 {
                     title: "AI Decentralization: The Next Frontier in Geopolitical News Syndication",
@@ -234,90 +437,11 @@
                         <h2>USA Audience Targeting and Linguistic Safety</h2>
                         <p>To optimize search engine optimization metrics and maximize ad-revenue yields, the news generator is restricted strictly to English-language generation. By eliminating translation layers and focusing on high-authority terminology common in major financial and tech sectors, the platform guarantees that its content remains highly relevant to corporate decision makers, investor circles, and compliance regulators.</p>
                     `
-                },
-                {
-                    title: "Silicon Valley Emerges with Sovereign Energy Grid Solutions for Megawatt AI Datacenters",
-                    category: "TECH",
-                    source: "Silicon Valley Tech Team",
-                    time: "June 16, 2026 • 21:00 UTC",
-                    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
-                    snippet: "Major tech firms are acquiring localized nuclear and hydroelectric power assets to isolate hyperscale AI computing clusters from municipal power grids.",
-                    content: `
-                        <p><strong>SAN JOSE, CA</strong> — Hyperscale tech companies are quietly purchasing legacy power stations to secure dedicated power lines for next-generation generative AI clusters. As model context lengths expand to millions of tokens, the energy requirement per compute query has doubled, creating unprecedented stress on local grids.</p>
-                        
-                        <h2>Sovereign Datacenters</h2>
-                        <p>By using modular reactor loops and off-grid solar arrays, tech networks are aiming for absolute infrastructure independence. This shift allows uninterrupted operations during peak demand windows, bypassing municipality limits and environmental taxes.</p>
-                        
-                        <p>Industry analysts project that by 2028, over 40% of tier-one computing centers in the United States will be powered by dedicated, off-grid generation, creating a separate utility layer governed entirely by technology conglomerates.</p>
-                    `
-                },
-                {
-                    title: "Federal Reserve Expands Liquidity Swaps to Limit Cross-Border Market Spreads",
-                    category: "MARKETS",
-                    source: "Macroeconomic Advisory Desk",
-                    time: "June 16, 2026 • 18:30 UTC",
-                    imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800",
-                    snippet: "The central bank has initiated dynamic swap pools with three additional foreign jurisdictions to stabilize arbitrage volatility.",
-                    content: `
-                        <p><strong>NEW YORK</strong> — The Federal Reserve announced an expansion of its currency liquidity swap lines, aiming to counteract arbitrage spreads in international trading pairs. The intervention is expected to bring down spot discrepancy ranges and prevent institutional slippage across G7 currencies.</p>
-                        
-                        <blockquote>
-                            "By offering guaranteed swap pricing to secondary desks, we reduce the volatility spikes that trigger automated liquidations on multi-chain trading terminals."
-                        </blockquote>
-
-                        <h2>Stabilizing Arbitrage Radars</h2>
-                        <p>The action immediately cooled markets, bringing average spreads back within typical bounds. Proprietary CEX order-book monitors logged a 14% drop in trade volume anomalies, validating the central bank's timing.</p>
-                    `
-                },
-                {
-                    title: "Deep Sea Telecom Cables Upgraded with Post-Quantum Optical Cryptography",
-                    category: "GEOPOLITICS",
-                    source: "Global Cybersecurity Desk",
-                    time: "June 16, 2026 • 15:15 UTC",
-                    imageUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
-                    snippet: "A consortium of security firms has deployed quantum key distribution units across transatlantic subsea trunk lines.",
-                    content: `
-                        <p><strong>LONDON</strong> — Transatlantic optical cables are being retrofitted with state-of-the-art quantum key distribution (QKD) hardware. The upgrade protects subsea data transmission channels from hypothetical interception by quantum decryptors currently in development by adversarial state actors.</p>
-                        
-                        <h2>Securing Global Backbones</h2>
-                        <p>The new cryptography system uses single-photon polarization checks, ensuring that any physical tap on the glass fiber immediately collapses the state, triggering automated route switching and real-time security alerts.</p>
-                    `
                 }
             ];
 
-            // Load articles from data/news.json or use fallback
-            fetch('data/news.json')
-                .then(res => {
-                    if (res.ok) return res.json();
-                    throw new Error('News file offline');
-                })
-                .then(data => {
-                    renderArticle(data);
-                })
-                .catch(err => {
-                    console.log('Using default high-fidelity fallbacks:', err);
-                    renderArticle(defaultArticles);
-                });
-
-            function renderArticle(articles) {
-                let article = null;
-                
-                // Find by ID/Index or use default/cover
-                if (articleId === 'cover') {
-                    article = articles[0];
-                } else if (articleId !== null && !isNaN(articleId)) {
-                    const idx = parseInt(articleId);
-                    if (idx >= 0 && idx < articles.length) {
-                        article = articles[idx];
-                    }
-                }
-
-                // If not found by index/cover, match title slug or category
-                if (!article) {
-                    article = articles[0]; // Fallback to cover story
-                }
-
-                // Update UI elements
+            // Primary rendering controller
+            const renderArticleData = (article, recsPool) => {
                 document.title = `${article.title} | Global Pulse News`;
                 document.getElementById('articleTitle').innerText = article.title;
                 document.getElementById('articleCategory').innerText = article.category || 'GLOBAL';
@@ -329,40 +453,68 @@
                 }
                 document.getElementById('articleImage').alt = article.title;
 
-                // Render content
                 if (article.content) {
                     document.getElementById('articleBody').innerHTML = article.content;
                 } else {
-                    // Generate body from snippet if detailed content doesn't exist
-                    document.getElementById('articleBody').innerHTML = `
-                        <p class="article-lead" style="font-size: 1.35rem; line-height: 1.7; color: #ffffff; margin-bottom: 2rem;">
-                            ${article.snippet}
-                        </p>
-                        <p><strong>WASHINGTON D.C.</strong> — This report has been compiled by the Global Pulse News autonomous narrative engines. Using direct feeds from intelligence registries and background Gemini trend scrapers, our models synthesize comprehensive, verified data streams to provide high-fidelity reporting targeting immediate operational needs.</p>
-                        
-                        <h2>System Analysis & Telemetry</h2>
-                        <p>Our automation layer utilizes scheduled triggers executing Node.js processes on isolated runners. The resulting summaries are structured into native JSON payloads and saved directly to the deployment repository. This architecture bypasses traditional server-side rendering pipelines, yielding near-zero latencies and eliminating single-point database vulnerabilities.</p>
-                        
-                        <p>For continuing coverage of this developing story, return to the primary intelligence dashboard. Updates are refreshed automatically every three hours.</p>
-                    `;
+                    document.getElementById('articleBody').innerHTML = `<p>${article.snippet}</p>`;
                 }
 
-                // Render Sidebar Recommendations
+                // Render Sidebar recommendations from pool
                 const sidebarContainer = document.getElementById('sidebarRecs');
-                const recs = articles.filter(a => a.title !== article.title).slice(0, 4);
+                const recs = recsPool.filter(a => a.title !== article.title).slice(0, 4);
                 
                 if (recs.length > 0) {
                     sidebarContainer.innerHTML = recs.map((a, i) => {
-                        const originalIdx = articles.indexOf(a);
-                        const idParam = originalIdx === 0 ? 'cover' : originalIdx;
+                        const originalIdx = recsPool.indexOf(a);
+                        let recLink = `article.html?id=${originalIdx}`;
+                        
+                        // If we are currently viewing a stub, recommendations should also link as stubs
+                        if (type === 'stub') {
+                            recLink = `article.html?type=stub&category=${category}&index=${originalIdx}`;
+                        } else if (originalIdx === 0) {
+                            recLink = `article.html?id=cover`;
+                        }
+                        
                         return `
-                            <a href="article.html?id=${idParam}" class="sidebar-article-link">
+                            <a href="${recLink}" class="sidebar-article-link">
                                 <span class="sidebar-article-meta">${a.category || 'NEWS'}</span>
                                 <h4 class="sidebar-article-title">${a.title}</h4>
                             </a>
                         `;
                     }).join('');
                 }
+            };
+
+            // Resolution Router
+            if (type === 'stub' && category && index !== null && stubs[category] && stubs[category][index]) {
+                const article = stubs[category][index];
+                renderArticleData(article, stubs[category]);
+            } else {
+                // Load from data/news.json or use fallback
+                fetch('data/news.json')
+                    .then(res => {
+                        if (res.ok) return res.json();
+                        throw new Error('News file offline');
+                    })
+                    .then(data => {
+                        let article = null;
+                        if (articleId === 'cover') {
+                            article = data[0];
+                        } else if (articleId !== null && !isNaN(articleId)) {
+                            const idx = parseInt(articleId);
+                            if (idx >= 0 && idx < data.length) {
+                                article = data[idx];
+                            }
+                        }
+                        
+                        if (!article) article = data[0] || defaultArticles[0];
+                        renderArticleData(article, data);
+                    })
+                    .catch(err => {
+                        console.log('Using default fallbacks:', err);
+                        let article = defaultArticles[0];
+                        renderArticleData(article, defaultArticles);
+                    });
             }
         });
     </script>
