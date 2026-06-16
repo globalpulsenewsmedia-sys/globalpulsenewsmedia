@@ -381,8 +381,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- INITIALIZE ALL COMPONENTS ---
     initTicker();
     initTV();
-    initNews().then(() => {
-        initFilters();
-    });
+    // initNews().then(() => {
+    //     initFilters();
+    // });
     initMobileMenu();
 });

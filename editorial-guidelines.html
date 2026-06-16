@@ -16,6 +16,15 @@
     <!-- SEO Optimization -->
     <meta name="description" content="Editorial guidelines, journalistic principles, and automated AI safety guardrails for Global Pulse News Media.">
     <meta name="robots" content="index, follow">
+    
+    <!-- Google tag (gtag.js) - Gemini Automated Analytics Block -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LX2P8H9BY4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LX2P8H9BY4');
+    </script>
 </head>
 <body id="top">
 
@@ -42,22 +51,65 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="/#all" class="nav-link">Global</a></li>
-                    <li><a href="/#tech" class="nav-link">Tech</a></li>
-                    <li><a href="/#markets" class="nav-link">Markets</a></li>
-                    <li><a href="/#geopolitics" class="nav-link">Geopolitics</a></li>
+                    <li><a href="/?category=all" class="nav-link">Global</a></li>
                     <li>
-                        <a href="/#sports" class="nav-link">Sports</a>
+                        <a href="/?category=world" class="nav-link">US & World</a>
                         <div class="dropdown-menu">
-                            <a href="/#football" class="dropdown-item">Football</a>
-                            <a href="/#tennis" class="dropdown-item">Tennis</a>
+                            <a href="/?category=world" class="dropdown-item">World News</a>
+                            <a href="/?category=us" class="dropdown-item">US News</a>
+                            <a href="/?category=us-politics" class="dropdown-item">US Politics</a>
+                            <a href="/?category=geopolitics" class="dropdown-item">Geopolitics</a>
                         </div>
                     </li>
                     <li>
-                        <a href="/#entertainment" class="nav-link">Entertainment</a>
+                        <a href="/?category=business" class="nav-link">Business & Markets</a>
                         <div class="dropdown-menu">
-                            <a href="/#celebrity" class="dropdown-item">Celebrity</a>
-                            <a href="/#style" class="dropdown-item">Style</a>
+                            <a href="/?category=business" class="dropdown-item">Business</a>
+                            <a href="/?category=markets" class="dropdown-item">Markets</a>
+                            <a href="/?category=economy" class="dropdown-item">Economy</a>
+                            <a href="/?category=finance" class="dropdown-item">Finance</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/?category=tech" class="nav-link">Tech & AI</a>
+                        <div class="dropdown-menu">
+                            <a href="/?category=tech" class="dropdown-item">Technology</a>
+                            <a href="/?category=ai" class="dropdown-item">Artificial Intelligence</a>
+                            <a href="/?category=cybersecurity" class="dropdown-item">Cybersecurity</a>
+                            <a href="/?category=biotech" class="dropdown-item">Biotech</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/?category=lifestyle" class="nav-link">Lifestyle</a>
+                        <div class="dropdown-menu">
+                            <a href="/?category=travel" class="dropdown-item">Travel</a>
+                            <a href="/?category=luxury" class="dropdown-item">Luxury</a>
+                            <a href="/?category=fitness" class="dropdown-item">Fitness</a>
+                            <a href="/?category=relationships" class="dropdown-item">Relationships</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/?category=health" class="nav-link">Health</a>
+                        <div class="dropdown-menu">
+                            <a href="/?category=health" class="dropdown-item">Health General</a>
+                            <a href="/?category=wellness" class="dropdown-item">Wellness</a>
+                            <a href="/?category=medicine" class="dropdown-item">Medicine</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/?category=sports" class="nav-link">Sports</a>
+                        <div class="dropdown-menu">
+                            <a href="/?category=football" class="dropdown-item">Football</a>
+                            <a href="/?category=tennis" class="dropdown-item">Tennis</a>
+                            <a href="/?category=athletics" class="dropdown-item">Athletics</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/?category=entertainment" class="nav-link">Entertainment</a>
+                        <div class="dropdown-menu">
+                            <a href="/?category=celebrity" class="dropdown-item">Celebrity</a>
+                            <a href="/?category=style" class="dropdown-item">Style</a>
+                            <a href="/?category=movies" class="dropdown-item">Movies</a>
                         </div>
                     </li>
                 </ul>
@@ -135,11 +187,11 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">Corporate</h4>
                     <ul class="footer-links-list">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="about-us.html" class="footer-link">About Us</a></li>
                         <li><a href="careers.html" class="footer-link">Careers</a></li>
-                        <li><a href="media-center.html" class="footer-link">Press Room</a></li>
                         <li><a href="media-center.html" class="footer-link">Media Center</a></li>
                         <li><a href="editorial-guidelines.html" class="footer-link">Editorial Guidelines</a></li>
+                        <li><a href="partnerships.html" class="footer-link">Partnerships</a></li>
                     </ul>
                 </div>
                 
@@ -150,12 +202,12 @@
                         <li><a href="api-docs.html" class="footer-link">API Reference</a></li>
                         <li><a href="compliance-center.html" class="footer-link">System Status</a></li>
                         <li><a href="google-readiness.html" class="footer-link">Sandbox Sandbox</a></li>
-                        <li><a href="https://github.com/manikkatke93-star/globalpulsenewsmedia" class="footer-link" target="_blank">GitHub Repository</a></li>
-                        <li><a href="api-docs.html" class="footer-link">Documentation</a></li>
+                        <li><a href="roadmap.html" class="footer-link">Product Roadmap</a></li>
+                        <li><a href="enterprise.html" class="footer-link">Enterprise Solutions</a></li>
                     </ul>
                 </div>
                 
-                <!-- Column 3: Legal / Compliance -->
+                <!-- Column 3: Legal & Compliance -->
                 <div class="footer-col">
                     <h4 class="footer-col-title">Legal & Compliance</h4>
                     <ul class="footer-links-list">
@@ -163,19 +215,19 @@
                         <li><a href="privacy.html" class="footer-link">Privacy Desk</a></li>
                         <li><a href="aml-kyc.html" class="footer-link">AML / KYC Policy</a></li>
                         <li><a href="risk.html" class="footer-link">Risk Disclosure</a></li>
-                        <li><a href="contact.html" class="footer-link">Grievance Desk</a></li>
+                        <li><a href="refund.html" class="footer-link">Refund Policy</a></li>
                     </ul>
                 </div>
                 
-                <!-- Column 4: Investors -->
+                <!-- Column 4: Investors & Market -->
                 <div class="footer-col">
-                    <h4 class="footer-col-title">Investors</h4>
+                    <h4 class="footer-col-title">Investors & Market</h4>
                     <ul class="footer-links-list">
                         <li><a href="investors.html" class="footer-link">Financial Reports</a></li>
-                        <li><a href="investors.html" class="footer-link">Board of Directors</a></li>
-                        <li><a href="investors.html" class="footer-link">Shareholder Info</a></li>
-                        <li><a href="investors.html" class="footer-link">SEC Filings</a></li>
-                        <li><a href="investors.html" class="footer-link">ESG Metrics</a></li>
+                        <li><a href="marketplace.html" class="footer-link">Marketplace</a></li>
+                        <li><a href="pro.html" class="footer-link">Pro Terminal</a></li>
+                        <li><a href="whitepaper.html" class="footer-link">Whitepaper</a></li>
+                        <li><a href="investors.html#governance" class="footer-link">Governance</a></li>
                     </ul>
                 </div>
                 
@@ -183,11 +235,11 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">Support Center</h4>
                     <ul class="footer-links-list">
-                        <li><a href="contact.html" class="footer-link">Support/Contact</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
                         <li><a href="contact-center.html" class="footer-link">Help Desk</a></li>
-                        <li><a href="google-readiness.html" class="footer-link">FAQs</a></li>
-                        <li><a href="contact.html" class="footer-link">Live Chat Desk</a></li>
-                        <li><a href="compliance-center.html" class="footer-link">Report Abuse</a></li>
+                        <li><a href="security-center.html" class="footer-link">Security Center</a></li>
+                        <li><a href="shipping.html" class="footer-link">Shipping Desk</a></li>
+                        <li><a href="contact-center.html#chat" class="footer-link">Live Support</a></li>
                     </ul>
                 </div>
                 

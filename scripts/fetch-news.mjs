@@ -122,7 +122,7 @@ async function fetchFeeds() {
                     source: 'Global Pulse Intelligence',
                     time: new Date(item.pubDate).toLocaleString(),
                     imageUrl: item.thumbnail || "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600",
-                    link: item.link
+                    link: "#"
                 }));
                 allArticles = allArticles.concat(articles);
             }
@@ -154,12 +154,12 @@ async function fetchFeeds() {
 }
 
 async function generateRSS(articles) {
-    const rss = `<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0"><channel><title>Global Pulse | AI News</title><link>${SITE_URL}</link><description>24/7 Global Intelligence</description>${articles.map(a => `<item><title>${a.title}</title><link>${a.link}</link><description>${a.snippet}</description></item>`).join('')}</channel></rss>`;
+    const rss = `<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0"><channel><title>Global Pulse | AI News</title><link>${SITE_URL}</link><description>24/7 Global Intelligence</description>${articles.map((a, idx) => `<item><title>${a.title}</title><link>${SITE_URL}/article.html?id=${idx}</link><description>${a.snippet}</description></item>`).join('')}</channel></rss>`;
     await fs.writeFile(path.join(process.cwd(), 'feed.xml'), rss);
 }
 
 async function generateSitemap(articles) {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${SITE_URL}/</loc><priority>1.0</priority></url>${articles.map(a => `<url><loc>${a.link}</loc><lastmod>${new Date().toISOString()}</lastmod></url>`).join('')}</urlset>`;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${SITE_URL}/</loc><priority>1.0</priority></url>${articles.map((a, idx) => `<url><loc>${SITE_URL}/article.html?id=${idx}</loc><lastmod>${new Date().toISOString()}</lastmod></url>`).join('')}</urlset>`;
     await fs.writeFile(path.join(process.cwd(), 'sitemap.xml'), sitemap);
 }
 

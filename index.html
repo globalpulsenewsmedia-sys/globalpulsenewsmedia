@@ -28,6 +28,15 @@
     
     <!-- Cookiebot Consent placeholder (preserved) -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="9840b70c-e566-4518-a689-32d33f180cb2" type="text/javascript" async></script>
+
+    <!-- Google tag (gtag.js) - Gemini Automated Analytics Block -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LX2P8H9BY4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LX2P8H9BY4');
+    </script>
 </head>
 <body id="top">
 
@@ -65,14 +74,56 @@
             <nav class="main-nav" id="mainNavigation">
                 <ul>
                     <li><a href="#" class="nav-link active" data-category="all">Global</a></li>
-                    <li><a href="#" class="nav-link" data-category="tech">Tech</a></li>
-                    <li><a href="#" class="nav-link" data-category="markets">Markets</a></li>
-                    <li><a href="#" class="nav-link" data-category="geopolitics">Geopolitics</a></li>
+                    <li>
+                        <a href="#" class="nav-link" data-category="world">US & World</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-category="world">World News</a>
+                            <a href="#" class="dropdown-item" data-category="us">US News</a>
+                            <a href="#" class="dropdown-item" data-category="us-politics">US Politics</a>
+                            <a href="#" class="dropdown-item" data-category="geopolitics">Geopolitics</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-category="business">Business & Markets</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-category="business">Business</a>
+                            <a href="#" class="dropdown-item" data-category="markets">Markets</a>
+                            <a href="#" class="dropdown-item" data-category="economy">Economy</a>
+                            <a href="#" class="dropdown-item" data-category="finance">Finance</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-category="tech">Tech & AI</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-category="tech">Technology</a>
+                            <a href="#" class="dropdown-item" data-category="ai">Artificial Intelligence</a>
+                            <a href="#" class="dropdown-item" data-category="cybersecurity">Cybersecurity</a>
+                            <a href="#" class="dropdown-item" data-category="biotech">Biotech</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-category="lifestyle">Lifestyle</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-category="travel">Travel</a>
+                            <a href="#" class="dropdown-item" data-category="luxury">Luxury</a>
+                            <a href="#" class="dropdown-item" data-category="fitness">Fitness</a>
+                            <a href="#" class="dropdown-item" data-category="relationships">Relationships</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-category="health">Health</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-category="health">Health General</a>
+                            <a href="#" class="dropdown-item" data-category="wellness">Wellness</a>
+                            <a href="#" class="dropdown-item" data-category="medicine">Medicine</a>
+                        </div>
+                    </li>
                     <li>
                         <a href="#" class="nav-link" data-category="sports">Sports</a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item" data-category="football">Football</a>
                             <a href="#" class="dropdown-item" data-category="tennis">Tennis</a>
+                            <a href="#" class="dropdown-item" data-category="athletics">Athletics</a>
                         </div>
                     </li>
                     <li>
@@ -80,6 +131,7 @@
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item" data-category="celebrity">Celebrity</a>
                             <a href="#" class="dropdown-item" data-category="style">Style</a>
+                            <a href="#" class="dropdown-item" data-category="movies">Movies</a>
                         </div>
                     </li>
                 </ul>
@@ -211,11 +263,11 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">Corporate</h4>
                     <ul class="footer-links-list">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="about-us.html" class="footer-link">About Us</a></li>
                         <li><a href="careers.html" class="footer-link">Careers</a></li>
-                        <li><a href="media-center.html" class="footer-link">Press Room</a></li>
                         <li><a href="media-center.html" class="footer-link">Media Center</a></li>
                         <li><a href="editorial-guidelines.html" class="footer-link">Editorial Guidelines</a></li>
+                        <li><a href="partnerships.html" class="footer-link">Partnerships</a></li>
                     </ul>
                 </div>
                 
@@ -226,12 +278,12 @@
                         <li><a href="api-docs.html" class="footer-link">API Reference</a></li>
                         <li><a href="compliance-center.html" class="footer-link">System Status</a></li>
                         <li><a href="google-readiness.html" class="footer-link">Sandbox Sandbox</a></li>
-                        <li><a href="https://github.com/manikkatke93-star/globalpulsenewsmedia" class="footer-link" target="_blank">GitHub Repository</a></li>
-                        <li><a href="api-docs.html" class="footer-link">Documentation</a></li>
+                        <li><a href="roadmap.html" class="footer-link">Product Roadmap</a></li>
+                        <li><a href="enterprise.html" class="footer-link">Enterprise Solutions</a></li>
                     </ul>
                 </div>
                 
-                <!-- Column 3: Legal / Compliance -->
+                <!-- Column 3: Legal & Compliance -->
                 <div class="footer-col">
                     <h4 class="footer-col-title">Legal & Compliance</h4>
                     <ul class="footer-links-list">
@@ -239,19 +291,19 @@
                         <li><a href="privacy.html" class="footer-link">Privacy Desk</a></li>
                         <li><a href="aml-kyc.html" class="footer-link">AML / KYC Policy</a></li>
                         <li><a href="risk.html" class="footer-link">Risk Disclosure</a></li>
-                        <li><a href="contact.html" class="footer-link">Grievance Desk</a></li>
+                        <li><a href="refund.html" class="footer-link">Refund Policy</a></li>
                     </ul>
                 </div>
                 
-                <!-- Column 4: Investors -->
+                <!-- Column 4: Investors & Market -->
                 <div class="footer-col">
-                    <h4 class="footer-col-title">Investors</h4>
+                    <h4 class="footer-col-title">Investors & Market</h4>
                     <ul class="footer-links-list">
                         <li><a href="investors.html" class="footer-link">Financial Reports</a></li>
-                        <li><a href="investors.html" class="footer-link">Board of Directors</a></li>
-                        <li><a href="investors.html" class="footer-link">Shareholder Info</a></li>
-                        <li><a href="investors.html" class="footer-link">SEC Filings</a></li>
-                        <li><a href="investors.html" class="footer-link">ESG Metrics</a></li>
+                        <li><a href="marketplace.html" class="footer-link">Marketplace</a></li>
+                        <li><a href="pro.html" class="footer-link">Pro Terminal</a></li>
+                        <li><a href="whitepaper.html" class="footer-link">Whitepaper</a></li>
+                        <li><a href="investors.html#governance" class="footer-link">Governance</a></li>
                     </ul>
                 </div>
                 
@@ -259,11 +311,11 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">Support Center</h4>
                     <ul class="footer-links-list">
-                        <li><a href="contact.html" class="footer-link">Support/Contact</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
                         <li><a href="contact-center.html" class="footer-link">Help Desk</a></li>
-                        <li><a href="google-readiness.html" class="footer-link">FAQs</a></li>
-                        <li><a href="contact.html" class="footer-link">Live Chat Desk</a></li>
-                        <li><a href="compliance-center.html" class="footer-link">Report Abuse</a></li>
+                        <li><a href="security-center.html" class="footer-link">Security Center</a></li>
+                        <li><a href="shipping.html" class="footer-link">Shipping Desk</a></li>
+                        <li><a href="contact-center.html#chat" class="footer-link">Live Support</a></li>
                     </ul>
                 </div>
                 
