@@ -294,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const headerNavLinks = document.querySelectorAll('.main-nav .nav-link');
     const dropdownItems = document.querySelectorAll('.dropdown-item');
+    const footerCategoryLinks = document.querySelectorAll('.footer-category-link');
 
     // Fetch primary articles
     const fetchArticles = async () => {
@@ -522,6 +523,23 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const subCat = item.getAttribute('data-category');
             if (subCat) {
+                triggerFilter(subCat);
+                
+                // Focus on grid section
+                const targetSec = document.querySelector('.feed-grid-section');
+                if (targetSec) {
+                    targetSec.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+        });
+    });
+
+    // Wire up footer category links
+    footerCategoryLinks.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const subCat = item.getAttribute('data-category');
+            if (subCat) {
+                e.preventDefault();
                 triggerFilter(subCat);
                 
                 // Focus on grid section
