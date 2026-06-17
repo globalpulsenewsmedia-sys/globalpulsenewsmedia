@@ -104,8 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- 2. PULSE AI TV VIDEO INTERACTION ---
+    // --- 2. PULSE AI TV TELEMETRY RADAR ENGINE ---
     const initTV = () => {
-        const tvVideoIframe = document.getElementById('tvVideoIframe');
+        const canvas = document.getElementById('tvRadarCanvas');
         const tvHeadline = document.getElementById('tvHeadline');
         const tvCaptions = document.getElementById('tvCaptions');
         const tvDescription = document.getElementById('tvDescription');
@@ -115,27 +116,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const playToggle = document.getElementById('tvPlayToggle');
         const waveBars = document.querySelectorAll('.tv-wave-bar');
 
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
         let isMuted = true;
         let isPlaying = true;
+        let angle = 0;
+        const targets = [];
+
+        // Resize canvas to match bounds
+        const resizeCanvas = () => {
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * (window.devicePixelRatio || 1);
+            canvas.height = rect.height * (window.devicePixelRatio || 1);
+        };
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
 
         const channels = {
             world: {
                 title: "PULSE AI TV // GEOPOLITICAL LOG",
                 caption: "Scanning primary subsea trunk routing. Summarizing security upgrades in post-quantum optics...",
-                desc: "Autonomous global intelligence briefs generated using Google Veo video engines. Analyzing transatlantic optic layouts, sovereign borders, and satellite communications corridors in real-time.",
-                url: "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=jfKfPfyJRdk"
+                desc: "Autonomous global intelligence briefs generated using Google Veo video engines. Analyzing transatlantic optic layouts, sovereign borders, and satellite communications corridors in real-time."
             },
             tech: {
                 title: "PULSE AI TV // TECH FRONTIER",
                 caption: "Compiling micro-grid datasets. Analyzing datacenter reactor acquisitions in Silicon Valley...",
-                desc: "Exploring megawatt datacenter infrastructure pivots. Monitoring off-grid nuclear acquisitions, silicon logical qubit breakthroughs, and quantum encryption deployments.",
-                url: "https://www.youtube.com/embed/S29G3r1m2f0?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=S29G3r1m2f0"
+                desc: "Exploring megawatt datacenter infrastructure pivots. Monitoring off-grid nuclear acquisitions, silicon logical qubit breakthroughs, and quantum encryption deployments."
             },
             markets: {
                 title: "PULSE AI TV // FINANCIAL MARKETS",
                 caption: "Monitoring Federal Reserve liquidity nodes. Analyzing G7 spot swap corridors...",
-                desc: "Live macro analysis streams powered by Gemini engines. Synthesizing central bank swaps, tokenized sovereign debt, multi-chain order books, and global rate telemetry.",
-                url: "https://www.youtube.com/embed/1K3L5nL8tV8?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=1K3L5nL8tV8"
+                desc: "Live macro analysis streams powered by Gemini engines. Synthesizing central bank swaps, tokenized sovereign debt, multi-chain order books, and global rate telemetry."
             }
         };
 
@@ -148,7 +160,116 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(updateClock, 1000);
         updateClock();
 
-        // Channel Selectors
+        // Generate target blips
+        const addTarget = () => {
+            if (targets.length > 5) return;
+            const w = canvas.width;
+            const h = canvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const maxRadius = Math.min(cx, cy) * 0.9;
+            const r = Math.random() * maxRadius;
+            const theta = Math.random() * Math.PI * 2;
+            targets.push({
+                x: cx + r * Math.cos(theta),
+                y: cy + r * Math.sin(theta),
+                alpha: 1.0,
+                id: 'TRG-' + Math.floor(Math.random() * 9000 + 1000)
+            });
+        };
+
+        // Draw radar
+        const drawRadar = () => {
+            if (!isPlaying) return;
+            
+            const w = canvas.width;
+            const h = canvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const maxRadius = Math.min(cx, cy) * 0.85;
+
+            // Clear with slight alpha to create sweep tail trail
+            ctx.fillStyle = 'rgba(5, 5, 5, 0.08)';
+            ctx.fillRect(0, 0, w, h);
+
+            // Draw concentric range rings
+            ctx.strokeStyle = 'rgba(0, 230, 118, 0.1)';
+            ctx.lineWidth = 1;
+            for (let i = 1; i <= 4; i++) {
+                ctx.beginPath();
+                ctx.arc(cx, cy, maxRadius * (i / 4), 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // Draw crosshairs
+            ctx.beginPath();
+            ctx.moveTo(cx - maxRadius, cy);
+            ctx.lineTo(cx + maxRadius, cy);
+            ctx.moveTo(cx, cy - maxRadius);
+            ctx.lineTo(cx, cy + maxRadius);
+            ctx.stroke();
+
+            // Draw sweep line
+            ctx.strokeStyle = 'rgba(0, 230, 118, 0.5)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(cx + maxRadius * Math.cos(angle), cy + maxRadius * Math.sin(angle));
+            ctx.stroke();
+
+            // Draw sweep gradient fan
+            ctx.fillStyle = 'rgba(0, 230, 118, 0.02)';
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.arc(cx, cy, maxRadius, angle - 0.3, angle);
+            ctx.closePath();
+            ctx.fill();
+
+            // Draw target blips
+            targets.forEach((t, index) => {
+                ctx.fillStyle = `rgba(0, 230, 118, ${t.alpha})`;
+                ctx.beginPath();
+                ctx.arc(t.x, t.y, 4, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Target tag
+                ctx.font = '8px monospace';
+                ctx.fillStyle = `rgba(0, 230, 118, ${t.alpha * 0.7})`;
+                ctx.fillText(t.id, t.x + 8, t.y - 4);
+
+                // Fade target
+                t.alpha -= 0.005;
+                if (t.alpha <= 0) {
+                    targets.splice(index, 1);
+                }
+            });
+
+            // Randomly insert target
+            if (Math.random() < 0.01) {
+                addTarget();
+            }
+
+            // Draw overlay telemetry stats on canvas
+            ctx.font = '9px monospace';
+            ctx.fillStyle = 'rgba(0, 230, 118, 0.6)';
+            ctx.fillText(`SWEEP ANGLE: ${(angle * (180 / Math.PI)).toFixed(1)}°`, 15, 20);
+            ctx.fillText(`TARGET COUNT: ${targets.length}`, 15, 32);
+            ctx.fillText(`GRID LOCK: TRUE`, 15, 44);
+            ctx.fillText(`SYS FREQ: 5.8 GHz`, w - 110, 20);
+            ctx.fillText(`LATENCY: 14ms`, w - 110, 32);
+
+            // Increment sweep angle
+            angle += 0.015;
+            if (angle > Math.PI * 2) angle = 0;
+        };
+
+        const loop = () => {
+            drawRadar();
+            requestAnimationFrame(loop);
+        };
+        loop();
+
+        // Channel selector events
         channelBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 channelBtns.forEach(b => b.classList.remove('active'));
@@ -160,51 +281,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     tvCaptions.innerText = channels[ch].caption;
                     tvDescription.innerText = channels[ch].desc;
                     
-                    // Maintain mute/play states while swapping src
-                    let srcUrl = channels[ch].url;
-                    if (!isMuted) srcUrl = srcUrl.replace('mute=1', 'mute=0');
-                    if (!isPlaying) srcUrl = srcUrl.replace('autoplay=1', 'autoplay=0');
-                    
-                    tvVideoIframe.src = srcUrl;
+                    // Trigger dynamic target burst for visual feedback
+                    for (let i = 0; i < 3; i++) addTarget();
                 }
             });
         });
 
-        // Mute / Unmute
+        // Mute toggle (visual audio wave indicator toggle)
         if (muteToggle) {
             muteToggle.addEventListener('click', () => {
                 isMuted = !isMuted;
                 muteToggle.innerText = isMuted ? '🔇' : '🔊';
                 
-                let currentSrc = tvVideoIframe.src;
-                if (isMuted) {
-                    currentSrc = currentSrc.replace('mute=0', 'mute=1');
-                } else {
-                    currentSrc = currentSrc.replace('mute=1', 'mute=0');
-                }
-                tvVideoIframe.src = currentSrc;
+                waveBars.forEach(bar => {
+                    bar.style.display = isMuted ? 'none' : 'block';
+                });
             });
         }
 
-        // Play / Pause
+        // Play/Pause toggle
         if (playToggle) {
             playToggle.addEventListener('click', () => {
                 isPlaying = !isPlaying;
                 playToggle.innerText = isPlaying ? '⏸' : '▶';
                 
-                // Toggle animated waveform visualization
                 waveBars.forEach(bar => {
                     bar.style.animationPlayState = isPlaying ? 'running' : 'paused';
                 });
-
-                // Simulate play pause by swapping parameters or reloading
-                let currentSrc = tvVideoIframe.src;
-                if (isPlaying) {
-                    currentSrc = currentSrc.replace('autoplay=0', 'autoplay=1');
-                } else {
-                    currentSrc = currentSrc.replace('autoplay=1', 'autoplay=0');
-                }
-                tvVideoIframe.src = currentSrc;
             });
         }
     };

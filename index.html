@@ -177,22 +177,22 @@
                 <div class="pulse-tv-container">
                     <div class="tv-header-bar">
                         <div class="tv-title"><span>Pulse AI</span> TV</div>
-                        <div class="tv-status">LIVE</div>
+                        <div class="tv-status" style="background: var(--accent); color: #000; font-weight: 900;">ACTIVE</div>
                     </div>
                     
                     <div class="tv-player-screen">
-                        <!-- Default high-fidelity embed representing our Google Vids/Veo news stream -->
-                        <iframe id="tvVideoIframe" src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=jfKfPfyJRdk" title="Pulse AI Live TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- Simulated telemetry scanning radar canvas -->
+                        <canvas id="tvRadarCanvas" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #050505; z-index: 1;"></canvas>
                         
                         <!-- Premium HUD Ticker Overlay -->
-                        <div class="tv-mock-presenter">
+                        <div class="tv-mock-presenter" style="z-index: 2;">
                             <div class="tv-overlay-top">
                                 <div class="tv-watermark">GP <span>SECURE FEED</span></div>
                                 <div class="tv-clock" id="tvLiveClock">12:00:00 UTC</div>
                             </div>
                             <div class="tv-overlay-bottom">
                                 <div class="tv-ticker-overlay">
-                                    <div class="tv-headline-short" id="tvHeadline">PULSE AI TV // PREPARING HOURLY NEWS BRIEFING...</div>
+                                    <div class="tv-headline-short" id="tvHeadline">PULSE AI TV // LIVE GENERATIVE SYNTHESIS ACTIVE</div>
                                     <div class="tv-live-captions" id="tvCaptions">Gemini model scanning Reuters & Bloomberg news clusters. Generating synthetic audio/video...</div>
                                     <div class="tv-wave-container">
                                         <div class="tv-wave-bar"></div>
