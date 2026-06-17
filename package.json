@@ -1,11 +1,10 @@
 {
-  "name": "arbitragesmartai",
-  "version": "4.2.0",
-  "description": "Premium AI-Powered Crypto Arbitrage & Financial Intelligence Ecosystem",
+  "name": "globalpulsenewsmedia",
+  "version": "1.0.0",
+  "description": "Premium Dark-Themed Global News Media Platform powered by Gemini AI",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve .",
-    "engine": "python scripts/arbitrage_live_engine.py"
+    "start": "npx serve ."
   },
   "keywords": [
     "arbitrage",
