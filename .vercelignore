@@ -1,0 +1,10 @@
+node_modules
+.git
+.github
+scripts/__pycache__
+__pycache__
+k8s
+.env
+.env.local
+.env.vercel
+C:\Users\HP\.gemini\antigravity\brain

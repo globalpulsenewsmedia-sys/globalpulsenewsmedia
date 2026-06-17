@@ -4,7 +4,8 @@
   "description": "Premium Dark-Themed Global News Media Platform powered by Gemini AI",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "build": "echo 'No build step required'"
   },
   "keywords": [
     "arbitrage",
