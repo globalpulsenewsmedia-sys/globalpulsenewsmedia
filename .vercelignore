@@ -8,3 +8,7 @@ k8s
 .env.local
 .env.vercel
 C:\Users\HP\.gemini\antigravity\brain
+*.zip
+*.log
+logs/
+.vercel/

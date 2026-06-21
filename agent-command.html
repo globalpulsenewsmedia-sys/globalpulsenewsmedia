@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Command Center | Arbitrage Smart AI</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #030305;
+            --card: #08080c;
+            --border: rgba(255, 255, 255, 0.05);
+            --accent: #00ff88;
+            --accent-red: #ff3e3e;
+            --accent-blue: #2962ff;
+            --text: #ffffff;
+            --text-secondary: #888c94;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .dashboard {
+            padding: 40px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h1 span {
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-family: 'Roboto Mono', monospace;
+            border: 1px solid var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .btn-exit {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-exit:hover {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .terminal-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 450px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .card-header {
+            background: rgba(255,255,255,0.02);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .agent-badge {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .agent-badge.red {
+            color: var(--accent-red);
+            border-color: var(--accent-red);
+        }
+
+        .status-pill {
+            background: var(--accent);
+            color: #000;
+            font-size: 0.65rem;
+            font-weight: 900;
+            padding: 2px 8px;
+            border-radius: 100px;
+            letter-spacing: 0.5px;
+        }
+
+        .status-pill.red {
+            background: var(--accent-red);
+            color: #fff;
+        }
+
+        .terminal-body {
+            padding: 20px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: #e0e0e0;
+            overflow-y: auto;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #040406;
+        }
+
+        .terminal-input-line {
+            display: flex;
+            align-items: center;
+            background: #020204;
+            border-top: 1px solid var(--border);
+            padding: 10px 16px;
+            gap: 10px;
+        }
+
+        .prompt-symbol {
+            color: var(--accent);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .terminal-input-line input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            flex-grow: 1;
+            outline: none;
+        }
+
+        /* Modal Overlay & Card Styling for Share */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(3, 3, 5, 0.94);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            background: #060609;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            box-shadow: 0 0 50px rgba(0, 255, 136, 0.1);
+            border-radius: 24px;
+            padding: 45px 35px;
+            max-width: 480px;
+            width: 90%;
+            position: relative;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .modal-pill {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .modal-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .modal-card p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .log-entry {
+            border-left: 2px solid rgba(255,255,255,0.05);
+            padding-left: 12px;
+            line-height: 1.5;
+        }
+
+        .log-entry.highlight {
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .log-entry.alert {
+            color: #ffaa55;
+            border-color: #ffaa55;
+        }
+
+        .projection-panel {
+            background: rgba(41, 98, 255, 0.03);
+            border: 1px solid rgba(41, 98, 255, 0.15);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .projection-panel h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-val {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        .stat-val.green {
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+
+        @media (max-width: 480px) {
+            .stats-row { grid-template-columns: 1fr; }
+            header { flex-direction: column; align-items: flex-start; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="dashboard">
+        <header>
+            <div>
+                <h1>AGENT ORCHESTRATION <span>v4.0</span></h1>
+                <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 4px;">Autonomous Trade Execution Protocol | Sandbox Mode</p>
+            </div>
+            <a href="index.html" class="btn-exit">EXIT DASHBOARD</a>
+        </header>
+
+        <div class="grid">
+            <!-- Terminal 1: Crypto Agent (CLI) -->
+            <div class="terminal-card">
+                <div class="card-header">
+                    <span class="agent-badge">AGENT_CRYPTO_INTEL [CLI]</span>
+                    <span class="status-pill">INTERACTIVE</span>
+                </div>
+                <div class="terminal-body" id="cryptoLogs">
+                    <div class="log-entry">[00:00:01] Multi-chain DEX listener ready.</div>
+                    <div class="log-entry">[00:00:02] Command system initialized.</div>
+                    <div class="log-entry highlight">[00:00:03] Enter 'help' in prompt to display available trade protocols.</div>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="prompt-symbol">CRYPTO_INTEL:~$</span>
+                    <input type="text" id="cryptoInput" placeholder="Type 'help' and press Enter..." autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Terminal 2: Stock Agent -->
+            <div class="terminal-card">
+                <div class="card-header">
+                    <span class="agent-badge red">AGENT_MARKET_MASTER</span>
+                    <span class="status-pill red">ACTIVE</span>
+                </div>
+                <div class="terminal-body" id="stockLogs">
+                    <div class="log-entry">[00:00:02] Establishing WebSocket streams with global financial APIs...</div>
+                    <div class="log-entry">[00:00:06] Monitoring SEC Edgar RSS and Federal Reserve live statements...</div>
+                    <div class="log-entry highlight">[00:00:11] DATA TRIGGER: Core inflation report published. Parsing sentiment matrix...</div>
+                    <div class="log-entry alert">[00:00:15] Hedging protocol engaged. Adjusting S&P 500 defensive option margins.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projections Panel -->
+        <section class="projection-panel">
+            <h2>Autonomous Operations</h2>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-label">Daily Signals</div>
+                    <div class="stat-val">1,400+</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Est. Monthly Volume</div>
+                    <div class="stat-val green">$1.2M</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Agent Efficiency</div>
+                    <div class="stat-val">99.8%</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">System Load</div>
+                    <div class="stat-val">14.2%</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Share Modal Overlay -->
+    <div class="modal-overlay" id="shareModal">
+        <div class="modal-card" style="border-color: var(--accent);">
+            <button class="modal-close" onclick="closeShareModal()">&times;</button>
+            <div class="modal-pill">🏆 ARBITRAGE GAIN CAPTURED</div>
+            <h3>Simulated Arbitrage Capture Live!</h3>
+            <p>You have successfully run a simulated cross-market atomic hedge routing contract! Show the world how your AI trade agents discover and lock in spreads.</p>
+            <div class="stats-row" style="margin: 20px 0 30px; grid-template-columns: 1fr; background: rgba(0, 255, 136, 0.05); padding: 20px; border-radius: 12px; border: 1px dashed var(--accent);">
+                <div class="stat-item" style="text-align: center;">
+                    <div class="stat-label">Simulated Yield Capture</div>
+                    <div class="stat-val green" style="font-size: 2.2rem; color: var(--accent);">+1.48% (+$148.00)</div>
+                </div>
+            </div>
+            <a id="twitterShareBtn" href="#" target="_blank" class="btn-primary" style="display: inline-block; background: linear-gradient(135deg, var(--accent) 0%, #00d974 100%); color: #000; padding: 14px 28px; border-radius: 30px; font-weight: 700; text-decoration: none; width: 100%;">SHARE ON TWITTER/X</a>
+        </div>
+    </div>
+
+    <!-- Legal Footer -->
+    <footer style="margin: 60px auto 40px; max-width: 1200px; padding: 30px 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-secondary); flex-wrap: wrap; gap: 15px;">
+        <div>&copy; 2026 Arbitrage Smart AI Inc. All Rights Reserved.</div>
+        <div style="display: flex; gap: 20px;">
+            <a href="terms" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-secondary)'">Terms of Use</a>
+            <span style="color: rgba(255,255,255,0.05);">|</span>
+            <a href="privacy" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-secondary)'">Privacy Policy</a>
+            <span style="color: rgba(255,255,255,0.05);">|</span>
+            <a href="disclosures" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-secondary)'">Risk Disclosures</a>
+            <span style="color: rgba(255,255,255,0.05);">|</span>
+            <a href="security" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-secondary)'">Security Audit</a>
+        </div>
+    </footer>
+
+    <script>
+        const cryptoLogs = document.getElementById('cryptoLogs');
+        const stockLogs = document.getElementById('stockLogs');
+        const cryptoInput = document.getElementById('cryptoInput');
+        const shareModal = document.getElementById('shareModal');
+        const twitterShareBtn = document.getElementById('twitterShareBtn');
+
+        const stockMessages = [
+            "Fed Speech parser triggered: Hawk/Dove score: 0.38.",
+            "Option block order flow anomaly detected in NASDAQ:QQQ.",
+            "Monitoring corporate filings queue...",
+            "Real-time volume anomaly identified in tech equities index.",
+            "VIX index check: Volatility index currently at 14.82.",
+            "Executing automated defensive hedge sweep.",
+            "Parsing latest SEC 10-Q filing from tech sector leaders.",
+            "Defensive options boundary parameters verified."
+        ];
+
+        // Stock Agent (Live Stream Simulation)
+        setInterval(() => {
+            const randomMsg = stockMessages[Math.floor(Math.random() * stockMessages.length)];
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            
+            if (Math.random() > 0.7) {
+                entry.className += ' highlight';
+            } else if (Math.random() > 0.85) {
+                entry.className += ' alert';
+            }
+
+            const timestamp = new Date().toLocaleTimeString();
+            entry.innerText = `[${timestamp}] ${randomMsg}`;
+            stockLogs.appendChild(entry);
+            stockLogs.scrollTop = stockLogs.scrollHeight;
+
+            if (stockLogs.children.length > 8) {
+                stockLogs.removeChild(stockLogs.firstChild);
+            }
+        }, 3500);
+
+        // Interactive CLI Terminal Handler
+        cryptoInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const command = cryptoInput.value.trim().toLowerCase();
+                cryptoInput.value = '';
+                if (command) {
+                    processCLICommand(command);
+                }
+            }
+        });
+
+        function appendCLILog(text, type = '') {
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            const timestamp = new Date().toLocaleTimeString();
+            entry.innerText = `[${timestamp}] ${text}`;
+            cryptoLogs.appendChild(entry);
+            cryptoLogs.scrollTop = cryptoLogs.scrollHeight;
+
+            if (cryptoLogs.children.length > 30) {
+                cryptoLogs.removeChild(cryptoLogs.firstChild);
+            }
+        }
+
+        function processCLICommand(command) {
+            // Sanitize input to strip common HTML/script hacking vectors
+            const sanitizedCmd = command.replace(/[<>'"&;]/g, '');
+            appendCLILog(`CRYPTO_INTEL:~$ ${sanitizedCmd}`, 'highlight');
+
+            setTimeout(() => {
+                switch(sanitizedCmd) {
+                    case 'help':
+                        appendCLILog('Arbitrage Smart AI - Command Protocol List:');
+                        appendCLILog('  scan         - Execute cross-chain liquidity pool scanner');
+                        appendCLILog('  orchestrate  - Trigger simulated high-frequency arbitrage');
+                        appendCLILog('  agents       - Audit live orchestration agent threads');
+                        appendCLILog('  status       - Query global engine performance metrics');
+                        appendCLILog('  clear        - Clear command screen buffer');
+                        break;
+                    case 'agents':
+                        appendCLILog('Auditing active agent threads...');
+                        setTimeout(() => {
+                            appendCLILog('  [ONLINE] AGENT_CRYPTO_INTEL - Syncing DEX spreads (Raydium, Orca)');
+                            appendCLILog('  [ONLINE] AGENT_MARKET_MASTER - Parsing Options & Sentiment feeds');
+                            appendCLILog('Compliance integrity: verified zero-trust validation active.');
+                        }, 400);
+                        break;
+                    case 'status':
+                        appendCLILog('Retrieving global performance indicators...');
+                        setTimeout(() => {
+                            appendCLILog('  Engine version  : v4.0.2-Stable');
+                            appendCLILog('  Average Latency : 8.42ms');
+                            appendCLILog('  Execution Load  : 14.24%');
+                            appendCLILog('  Uptime Ratio    : 99.82%');
+                            appendCLILog('  Status          : Fully operational [No threats detected]');
+                        }, 400);
+                        break;
+                    case 'clear':
+                        cryptoLogs.innerHTML = '';
+                        appendCLILog('Buffer cleared. Multi-chain DEX listener ready.');
+                        break;
+                    case 'scan':
+                        appendCLILog('Initiating multi-chain liquidity scanning array...', 'alert');
+                        setTimeout(() => {
+                            appendCLILog('[INFO] Accessing Raydium (Solana) and Orca liquidity depths...');
+                        }, 400);
+                        setTimeout(() => {
+                            appendCLILog('[INFO] Scanning 1,402 active pools concurrently...');
+                        }, 900);
+                        setTimeout(() => {
+                            appendCLILog('⚡ SPREAD DETECTED: SOL/USDC price discrepancy identified.', 'alert');
+                            appendCLILog('   Raydium exchange: $142.92  |  Orca exchange: $142.20');
+                            appendCLILog('   Expected yield opportunity: +0.51% net of gas metrics.');
+                            appendCLILog('🚀 Type \'orchestrate\' to execute automatic hedge route.');
+                        }, 1500);
+                        break;
+                    case 'orchestrate':
+                        appendCLILog('ENGAGING DEFENSIVE ARBITRAGE SWAP...', 'alert');
+                        setTimeout(() => {
+                            appendCLILog('[ROUTE] Atomic swap generated: Raydium [SOL] -> Orca [USDC] -> Raydium [SOL].');
+                        }, 400);
+                        setTimeout(() => {
+                            appendCLILog('[HASH] Cryptographic signature generated: sha256_8f7eeef1_de9e_423a...');
+                        }, 950);
+                        setTimeout(() => {
+                            appendCLILog('[TX] Executing contract router swaps. Gas locked: 0.00042 SOL.');
+                        }, 1500);
+                        setTimeout(() => {
+                            appendCLILog('🎉 SUCCESS: Swap confirmed. Yield locked: +1.48% (+$148.00).', 'highlight');
+                            triggerShareModal();
+                        }, 2100);
+                        break;
+                    default:
+                        appendCLILog(`Command protocol '${sanitizedCmd}' not recognized. Enter 'help' for instructions.`, 'alert');
+                }
+            }, 250);
+        }
+
+        // Share Modal Functions
+        function triggerShareModal() {
+            const tweetText = encodeURIComponent("I just orchestrated a simulated crypto arbitrage with +1.48% yield using Arbitrage Smart AI! Check out their multi-agent Command Center! @ArbitrageSmart #AI #Arbitrage #Web3");
+            const shareUrl = `https://twitter.com/intent/tweet?text=${tweetText}&url=https%3A%2F%2Farbitragesmartai.com`;
+            twitterShareBtn.href = shareUrl;
+            
+            setTimeout(() => {
+                shareModal.classList.add('active');
+            }, 400);
+        }
+
+        function closeShareModal() {
+            shareModal.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

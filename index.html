@@ -1,349 +1,1125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- BUILD VERSION: 2026.05.30.00.45 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Pulse News | Autonomous World Intelligence</title>
+    <title>ArbitrageSmartAI | Multi-Chain AI Crypto Intelligence Terminal</title>
     
-    <!-- Premium Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/global.css">
-    
-    <!-- SEO Optimization Meta Tags -->
-    <meta name="description" content="Global Pulse News is a world-class, autonomous news media intelligence platform powered by advanced Gemini AI daemons, broadcasting live world, technology, financial markets, and geopolitical insights.">
-    <meta name="keywords" content="global news, tech news, financial markets, geopolitics, AI news platform, automated news, Gemini AI, real-time intelligence">
-    <meta name="author" content="Global Pulse Media Group">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://globalpulsenewsmedia.com/">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Global Pulse News | Autonomous World Intelligence">
-    <meta property="og:description" content="World-class automated editorial layout powered by advanced Gemini AI engines and live video news.">
-    <meta property="og:url" content="https://globalpulsenewsmedia.com/">
-    <meta property="og:type" content="website">
-    
-    <!-- Cookiebot Consent placeholder (preserved) -->
+    <!-- COOKIE CONSENT: Cookiebot -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="9840b70c-e566-4518-a689-32d33f180cb2" type="text/javascript" async></script>
 
-    <!-- Google tag (gtag.js) - Gemini Automated Analytics Block -->
+    <!-- MASTER ANALYTICS: Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LX2P8H9BY4"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LX2P8H9BY4');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-LX2P8H9BY4');
     </script>
-</head>
-<body id="top">
 
-    <!-- 1. REAL-TIME GLOBAL STOCK/CRYPTO TICKER -->
-    <div class="ticker-wrap">
-        <div class="ticker-title">Pulse Live Feed</div>
-        <div class="ticker" id="tickerContainer">
-            <!-- Populated dynamically via JS. Fallbacks provided. -->
-            <div class="ticker-item"><span class="ticker-symbol">BTC/USD</span><span class="ticker-price">$67,405.20</span><span class="ticker-change up">+3.14%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">ETH/USD</span><span class="ticker-price">$3,524.80</span><span class="ticker-change up">+2.45%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">SOL/USD</span><span class="ticker-price">$154.60</span><span class="ticker-change up">+5.89%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">S&P 500</span><span class="ticker-price">5,432.10</span><span class="ticker-change up">+0.42%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">NASDAQ</span><span class="ticker-price">17,895.50</span><span class="ticker-change up">+0.88%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">EUR/USD</span><span class="ticker-price">1.0824</span><span class="ticker-change down">-0.12%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">GOLD/OZ</span><span class="ticker-price">$2,342.50</span><span class="ticker-change up">+1.15%</span></div>
-            <!-- Duplicated for seamless infinite scrolling loop -->
-            <div class="ticker-item"><span class="ticker-symbol">BTC/USD</span><span class="ticker-price">$67,405.20</span><span class="ticker-change up">+3.14%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">ETH/USD</span><span class="ticker-price">$3,524.80</span><span class="ticker-change up">+2.45%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">SOL/USD</span><span class="ticker-price">$154.60</span><span class="ticker-change up">+5.89%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">S&P 500</span><span class="ticker-price">5,432.10</span><span class="ticker-change up">+0.42%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">NASDAQ</span><span class="ticker-price">17,895.50</span><span class="ticker-change up">+0.88%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">EUR/USD</span><span class="ticker-price">1.0824</span><span class="ticker-change down">-0.12%</span></div>
-            <div class="ticker-item"><span class="ticker-symbol">GOLD/OZ</span><span class="ticker-price">$2,342.50</span><span class="ticker-change up">+1.15%</span></div>
-        </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- ==========================================
+         ULTIMATE SEO & TRAFFIC GENERATION ENGINE
+         ========================================== -->
+    <meta name="description" content="ArbitrageSmartAI is a fully autonomous real-time crypto arbitrage scanning network. Monitor price gaps across Binance, Bybit, and OKX, and calculate instant profits with our AI Profit Calculator.">
+    <meta name="keywords" content="crypto arbitrage, bitcoin arbitrage, ethereum arbitrage, live price scanner, arbitrage smart AI, trading bot, binance bybit okx, triangular arbitrage, cross-chain arbitrage">
+    <meta name="author" content="ArbitrageSmartAI Group">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://arbitragesmartai.com/">
+
+    <!-- Force-injected Keyframes for AI mini robots -->
+    <style>
+        .ai-mini-robot {
+            position: relative;
+            display: inline-block !important;
+            width: 32px !important;
+            height: 32px !important;
+            z-index: 9999 !important;
+            animation: robotFloat 3s ease-in-out infinite !important;
+            filter: drop-shadow(0 0 10px #ff5500) drop-shadow(0 0 15px #00E676) !important;
+            transition: transform 0.3s ease;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+        @keyframes robotFloat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(3deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .profit-pop-alert {
+            position: absolute !important;
+            background: var(--accent) !important;
+            color: #000 !important;
+            font-weight: 900 !important;
+            font-size: 0.85rem !important;
+            padding: 5px 12px !important;
+            border-radius: 4px !important;
+            box-shadow: 0 0 15px var(--accent) !important;
+            animation: popUpFade 1.5s forwards !important;
+            pointer-events: none;
+            z-index: 99999 !important;
+        }
+        @keyframes popUpFade {
+            0% { opacity: 0; transform: translateY(15px) scale(0.8); }
+            15% { opacity: 1; transform: translateY(0) scale(1.15); }
+            80% { opacity: 1; transform: translateY(-25px) scale(1); }
+            100% { opacity: 0; transform: translateY(-35px) scale(0.8); }
+        }
+    </style>
+</head>
+
+<body class="dark-theme">
+
+    <!-- TOP ALERT BAR (Full Width) -->
+    <div class="top-alert-bar">
+        <span class="alert-label">AI ENGINE</span>
+        <span class="alert-content" id="latestAlertHeadline">Scanning multi-chain pools for cross-market spreads...</span>
     </div>
 
-    <!-- 2. LUXURY BRAND HEADER -->
-    <header class="main-header">
-        <div class="container header-container">
-            <div class="brand-logo" onclick="window.location.href='/'" style="cursor: pointer;">
-                <div class="logo-badge">GP</div>
-                <div class="logo-text">GLOBAL<span>PULSE</span></div>
-            </div>
-            
-            <nav class="main-nav" id="mainNavigation">
-                <ul>
-                    <li><a href="javascript:void(0);" class="nav-link active" data-category="all">Global</a></li>
-                    <li>
-                        <a href="javascript:void(0);" class="nav-link" data-category="world">US & World</a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="world">World News</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="us">US News</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="us-politics">US Politics</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="geopolitics">Geopolitics</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="nav-link" data-category="business">Business & Markets</a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="business">Business</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="markets">Markets</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="economy">Economy</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="finance">Finance</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="nav-link" data-category="tech">Tech & AI</a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="tech">Technology</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="ai">Artificial Intelligence</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="cybersecurity">Cybersecurity</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="biotech">Biotech</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="nav-link" data-category="lifestyle">Lifestyle</a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="travel">Travel</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="luxury">Luxury</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="fitness">Fitness</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="relationships">Relationships</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="nav-link" data-category="health">Health</a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="health">Health General</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="wellness">Wellness</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="medicine">Medicine</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="nav-link" data-category="sports">Sports</a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="football">Football</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="tennis">Tennis</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="athletics">Athletics</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="nav-link" data-category="entertainment">Entertainment</a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="celebrity">Celebrity</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="style">Style</a>
-                            <a href="javascript:void(0);" class="dropdown-item" data-category="movies">Movies</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            
-            <div class="header-actions">
-                <div class="live-indicator">
-                    <span></span>LIVE STREAM
+    <!-- Institutional Header -->
+    <header class="cnn-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="hamburger-menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <div class="cnn-logo-box" onclick="window.location.reload()" style="background: #00E676; padding: 5px 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 40px; border-radius: 4px;">
+                        <span style="color: #000; font-weight: 900; font-size: 1.3rem; letter-spacing: -0.5px;">ARBITRAGE SMART AI</span>
+                    </div>
                 </div>
-                <button class="hamburger-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <nav class="cnn-nav">
+                    <ul>
+                        <li><a href="#terminal" class="active">Terminal</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="pro.html" style="color: #00E676; font-weight: 900;">PRO LOUNGE</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right" style="display: flex; gap: 15px; flex-shrink: 0; align-items: center; font-size: 0.75rem; font-weight: bold; font-family: var(--font-mono);">
+                    <div id="wsStatusBadge" style="background: rgba(255, 82, 82, 0.1); color: var(--accent-red); border: 1px solid rgba(255, 82, 82, 0.2); padding: 4px 8px; border-radius: 4px; display: flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 0.65rem;">
+                        <span class="pulse-dot" style="background-color: var(--accent-red); box-shadow: 0 0 8px var(--accent-red);"></span>
+                        <span>WS: OFFLINE</span>
+                    </div>
+                    <div style="background: #111; color: var(--accent-blue); border: 1px solid var(--card-border); padding: 4px 8px; border-radius: 4px; display: flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 0.65rem;">
+                        <span>LATENCY:</span>
+                        <span id="latencyValue">-- ms</span>
+                    </div>
+                    <div style="background: #111; color: var(--text-secondary); border: 1px solid var(--card-border); padding: 4px 8px; border-radius: 4px; display: flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 0.65rem;">
+                        <span>TICKS:</span>
+                        <span id="processedTicks" style="color: var(--text-primary);">0</span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- 3. PRIMARY HERO & PULSE AI TV GRID -->
-    <main class="container">
-        <section class="hero-layout-section">
-            <div class="editorial-hero-grid">
-                
-                <!-- COVER STORY: PRIMARY NEWS CONTAINER -->
-                <div class="cover-story-card" id="primaryCoverStory">
-                    <div class="category-tag">Featured Editorial</div>
-                    <a href="article.html?id=cover" id="coverStoryLink">
-                        <h1 class="cover-story-title" id="coverStoryTitle">AI Decentralization: The Next Frontier in Geopolitical News Syndication</h1>
-                    </a>
-                    <div class="cover-story-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200" alt="Global Network AI" class="cover-story-image" id="coverStoryImage">
+    <main class="cnn-main">
+        <div class="container">
+
+            <!-- PHASE 3 - REAL-TIME INTELLIGENCE DASHBOARD COUNTERS (Bloomberg/Palantir style) -->
+            <section class="bloomberg-counters-section" style="margin-top: 25px; margin-bottom: 25px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px;">
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">Opportunities Scanned</div>
+                        <div id="counterOppScanned" style="font-size: 1.35rem; font-weight: 900; color: var(--accent); font-family: var(--font-mono); margin-top: 5px;">14,205,832</div>
                     </div>
-                    <p class="cover-story-snippet" id="coverStorySnippet">
-                        Our background Gemini analysis engines observe a significant shift toward localized, multi-agent AI synthesis for hourly copyright-free journalism, reducing dependency on legacy newsrooms.
-                    </p>
-                    <div class="author-meta">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Editor">
-                        <span id="coverStoryMeta">By Global Pulse Intelligence Desk • June 16, 2026</span>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">AI Agents Active</div>
+                        <div id="counterAgentsActive" style="font-size: 1.35rem; font-weight: 900; color: var(--accent-blue); font-family: var(--font-mono); margin-top: 5px;">10</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">Exchanges Monitored</div>
+                        <div id="counterExchangesMonitored" style="font-size: 1.35rem; font-weight: 900; color: #fff; font-family: var(--font-mono); margin-top: 5px;">12</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">Signals Processed</div>
+                        <div id="counterSignalsProcessed" style="font-size: 1.35rem; font-weight: 900; color: var(--accent-orange); font-family: var(--font-mono); margin-top: 5px;">384,021</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">System Uptime</div>
+                        <div id="counterUptime" style="font-size: 1.35rem; font-weight: 900; color: var(--accent); font-family: var(--font-mono); margin-top: 5px;">99.998%</div>
+                    </div>
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; text-align: center;">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; font-family: var(--font-mono);">Data Points Collected</div>
+                        <div id="counterDataPoints" style="font-size: 1.35rem; font-weight: 900; color: var(--accent-blue); font-family: var(--font-mono); margin-top: 5px;">294,801,048</div>
                     </div>
                 </div>
+            </section>
 
-                <!-- PULSE AI TV PRIMARY CONTAINER -->
-                <div class="pulse-tv-container">
-                    <div class="tv-header-bar">
-                        <div class="tv-title"><span>Pulse AI</span> TV</div>
-                        <div class="tv-status" style="background: var(--accent); color: #000; font-weight: 900;">ACTIVE</div>
-                    </div>
+            <!-- TERMINAL SECTION (Multi-Tab Navigation) -->
+            <section class="terminal-container" id="terminal" style="margin-top: 25px;">
+                <div class="terminal-tabs-row">
+                    <button class="tab-btn active" data-target="liquidity-arbitrage">🛰️ Liquidity Arbitrage</button>
+                    <button class="tab-btn" data-target="market-master" style="color: var(--accent); border-color: rgba(0, 230, 118, 0.3);">👁️ Market Master Sentinel</button>
+                    <button class="tab-btn" data-target="trade-orchestration" style="color: var(--accent-orange); border-color: rgba(255, 145, 0, 0.3);">🤖 Trade Orchestration</button>
+                    <button class="tab-btn" data-target="crypto-academy" style="color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.3);">🎓 Crypto Academy</button>
+                </div>
+
+
+                <!-- Tab Contents -->
+                <div class="tab-contents-wrapper" style="margin-top: 20px;">
                     
-                    <div class="tv-player-screen">
-                        <!-- Simulated telemetry scanning radar canvas -->
-                        <canvas id="tvRadarCanvas" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #050505; z-index: 1;"></canvas>
+                    <!-- MODULE A: LIQUIDITY ARBITRAGE -->
+                    <div class="tab-pane active" id="liquidity-arbitrage">
                         
-                        <!-- Premium HUD Ticker Overlay -->
-                        <div class="tv-mock-presenter" style="z-index: 2;">
-                            <div class="tv-overlay-top">
-                                <div class="tv-watermark">GP <span>SECURE FEED</span></div>
-                                <div class="tv-clock" id="tvLiveClock">12:00:00 UTC</div>
+                        <!-- 1. LIQUIDITY ARBITRAGE STREAM -->
+                        <div style="margin-bottom: 40px;">
+                            <div style="border-bottom: 2px solid var(--accent-blue); padding-bottom: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+                                <h2 style="font-family: var(--font-sans); font-size: 1.5rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 10px;">
+                                    <span>🛰️</span> Liquidity Arbitrage Stream
+                                </h2>
+                                <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">ACTIVE ENGINE</span>
                             </div>
-                            <div class="tv-overlay-bottom">
-                                <div class="tv-ticker-overlay">
-                                    <div class="tv-headline-short" id="tvHeadline">PULSE AI TV // AUTOMATED INTELLIGENCE FEED ACTIVE</div>
-                                    <div class="tv-live-captions" id="tvCaptions">Gemini model scanning Reuters & Bloomberg news clusters. Generating synthetic audio/video...</div>
-                                    <div class="tv-wave-container">
-                                        <div class="tv-wave-bar"></div>
-                                        <div class="tv-wave-bar"></div>
-                                        <div class="tv-wave-bar"></div>
-                                        <div class="tv-wave-bar"></div>
-                                        <div class="tv-wave-bar"></div>
-                                        <div class="tv-wave-bar"></div>
+                            
+                            <div class="hero-section">
+                                <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
+                                    <!-- CEX Arbitrage Radar -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header" style="display: flex; align-items: center; justify-content: space-between;">
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <h3>🛰️ Live Arbitrage Radar (CEX Book Scanner)</h3>
+                                                <!-- Robot 1 (Screener Bot SVG) -->
+                                                <div class="ai-mini-robot" style="width: 32px; height: 32px; display: inline-block; vertical-align: middle;">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="32" cy="32" r="28" fill="#0b0b0f" stroke="#00E676" stroke-width="2"/>
+                                                        <rect x="20" y="24" width="24" height="20" rx="3" fill="#00b0ff"/>
+                                                        <circle cx="27" cy="32" r="3" fill="#fff"/>
+                                                        <circle cx="37" cy="32" r="3" fill="#fff"/>
+                                                        <circle cx="27" cy="32" r="1" fill="#000"/>
+                                                        <circle cx="37" cy="32" r="1" fill="#000"/>
+                                                        <path d="M26 39h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                                        <line x1="32" y1="24" x2="32" y2="16" stroke="#00E676" stroke-width="2"/>
+                                                        <circle cx="32" cy="14" r="3" fill="#00E676"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <span class="live-tag">REAL-TIME FEEDS</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- AI Scanner Avatar -->
+                                            <div class="ai-scan-robot-container">
+                                                <svg class="ai-mini-robot" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px; flex-shrink: 0;">
+                                                    <rect x="16" y="20" width="32" height="28" rx="4" fill="#00b0ff"/>
+                                                    <rect x="22" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                    <rect x="36" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                    <circle cx="25" cy="29" r="2" fill="#000"/>
+                                                    <circle cx="39" cy="29" r="2" fill="#000"/>
+                                                    <path d="M24 38h16v4H24z" fill="#fff"/>
+                                                </svg>
+                                                <div><strong>ScannerBot-AI:</strong> I am monitoring cross-exchange spreads! Speed: <strong id="robotScanLatency">15ms</strong>.</div>
+                                            </div>
+                                            <table class="radar-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Trading Pair</th>
+                                                        <th>Binance ($)</th>
+                                                        <th>Bybit ($)</th>
+                                                        <th>OKX ($)</th>
+                                                        <th>Max Spread</th>
+                                                        <th>Optimal Route</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="cexTableBody">
+                                                    <tr>
+                                                        <td colspan="6" style="text-align: center; color: #888;">Fetching CEX ticker streams...</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <!-- DEX & Cross-Chain Opportunities -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header">
+                                            <h3>🧬 DEX & Cross-Chain Scanner Feeds</h3>
+                                            <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">ON-CHAIN LIQUIDITY POOLS</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="radar-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Target Token</th>
+                                                        <th>Arbitrage Route</th>
+                                                        <th>Spread</th>
+                                                        <th>Estimated Gas</th>
+                                                        <th>Opportunity Type</th>
+                                                        <th>Risk Index</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="dexTableBody">
+                                                    <tr>
+                                                        <td colspan="6" style="text-align: center; color: #888;">Polling DEX contract states...</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
+                                    <!-- AI Profit Calculator (Spread Analytics) -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header" style="display: flex; align-items: center; justify-content: space-between;">
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <h3>💰 Spread Analytics & Profit Calculator</h3>
+                                                <!-- Robot 2 (Execution Bot SVG) -->
+                                                <div class="ai-mini-robot" style="width: 32px; height: 32px; display: inline-block; vertical-align: middle;">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="32" cy="32" r="28" fill="#0b0b0f" stroke="#00b0ff" stroke-width="2"/>
+                                                        <rect x="20" y="24" width="24" height="20" rx="3" fill="#00E676"/>
+                                                        <circle cx="27" cy="32" r="3" fill="#fff"/>
+                                                        <circle cx="37" cy="32" r="3" fill="#fff"/>
+                                                        <circle cx="27" cy="32" r="1" fill="#000"/>
+                                                        <circle cx="37" cy="32" r="1" fill="#000"/>
+                                                        <path d="M26 39c0-2 10-2 10 0" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                                                        <path d="M12 28l6 4v-8l-6 4zM52 28l-6 4v-8l6 4z" fill="#00b0ff"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <span class="badge-accent">AUTO-FEE ADJUSTED</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="calculator-form">
+                                                <label for="calcCapital">Arbitrage Capital (USDT)</label>
+                                                <input type="number" id="calcCapital" value="5000" min="100" max="1000000" step="100">
+                                                
+                                                <label for="calcPair">Select Target Pair</label>
+                                                <select id="calcPair">
+                                                    <option value="BTC/USDT">BTC/USDT (Spread: Fetching...)</option>
+                                                    <option value="ETH/USDT" selected>ETH/USDT (Spread: Fetching...)</option>
+                                                    <option value="SOL/USDT">SOL/USDT (Spread: Fetching...)</option>
+                                                </select>
+                                                
+                                                <div class="calc-results">
+                                                    <div class="calc-row">
+                                                        <span>Current Spread:</span>
+                                                        <strong id="calcSpreadVal">0.00%</strong>
+                                                    </div>
+                                                    <div class="calc-row">
+                                                        <span>Gross Profit:</span>
+                                                        <strong id="calcGrossProfit">$0.00</strong>
+                                                    </div>
+                                                    <div class="calc-row">
+                                                        <span>Tx & Gas Fees (Est):</span>
+                                                        <span id="calcFees" style="color: #ff5252;">$0.00</span>
+                                                    </div>
+                                                    <hr style="border: 0; border-top: 1px solid #222; margin: 10px 0;">
+                                                    <div class="calc-row highlight">
+                                                        <span>Expected Net Profit:</span>
+                                                        <strong id="calcNetProfit" style="color: #00E676; font-size: 1.2rem;">$0.00</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Source Attribution Footer Banner -->
+                            <div class="source-attribution-disclaimer" style="margin-top: 20px; padding: 12px 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.75rem; color: var(--text-secondary); display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center;">
+                                <span>🛰️ <strong>Data Source Attribution:</strong> Real-time pricing streams aggregated dynamically from Binance, Bybit, OKX order books, and decentralized pools.</span>
+                                <span style="font-style: italic;">ArbitrageSmartAI does not claim independent fact verification of cross-chain contract records. All operations carry risk.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODULE B: MARKET MASTER SENTINEL -->
+                    <div class="tab-pane" id="market-master">
+                        <!-- 2. MARKET MASTER SENTINEL STREAM -->
+                        <div style="margin-bottom: 40px;">
+                            <div style="border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+                                <h2 style="font-family: var(--font-sans); font-size: 1.5rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 10px;">
+                                    <span>👁️</span> Market Master Sentinel Stream
+                                </h2>
+                                <span class="live-tag" style="background: rgba(0, 230, 118, 0.1); color: var(--accent); border-color: rgba(0, 230, 118, 0.2);">ACTIVE ENGINE</span>
+                            </div>
+                            
+                            <div class="hero-section">
+                                <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
+                                    <!-- Sentiment Indicators & Macro Event Summaries -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header">
+                                            <h3>👁️ Market Intelligence & Sentiment Panel</h3>
+                                            <span class="badge-indicator">GLOBAL TELEMETRY</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- AI Sentiment Bot Avatar -->
+                                            <div class="ai-scan-robot-container" style="background: rgba(255, 145, 0, 0.04); border-color: rgba(255, 145, 0, 0.15); color: #fff;">
+                                                <svg class="ai-mini-robot" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px; flex-shrink: 0;">
+                                                    <rect x="16" y="20" width="32" height="28" rx="4" fill="#ff9100"/>
+                                                    <rect x="22" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                    <rect x="36" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                    <circle cx="25" cy="29" r="2" fill="#000"/>
+                                                    <circle cx="39" cy="29" r="2" fill="#000"/>
+                                                    <path d="M24 38h16v4H24z" fill="#fff"/>
+                                                </svg>
+                                                <div><strong>SentimentBot-AI:</strong> Scanning news channels for breakouts! <span id="sentimentBotAlert" style="color: var(--accent-orange); font-weight: bold;">NO ALERTS</span></div>
+                                            </div>
+                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                                <div>
+                                                    <h4 style="margin-bottom: 12px; font-size: 0.95rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;">🔥 Sentiment Indicators</h4>
+                                                    <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
+                                                        <li style="display:flex; justify-content:space-between;"><span>Crypto Fear & Greed Index:</span> <strong style="color: var(--accent);" id="sentFearGreed">72 (Greed)</strong></li>
+                                                        <li style="display:flex; justify-content:space-between;"><span>Smart Money Long/Short Ratio:</span> <strong style="color: var(--accent-blue);" id="sentSmartMoney">1.54 (Bullish)</strong></li>
+                                                        <li style="display:flex; justify-content:space-between;"><span>Social Sentiment Score (AI):</span> <strong style="color: var(--accent);" id="sentSocial">78% Positive</strong></li>
+                                                    </ul>
+                                                </div>
+                                                <div>
+                                                    <h4 style="margin-bottom: 12px; font-size: 0.95rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;">📅 Macro Event Summaries</h4>
+                                                    <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
+                                                        <li style="display:flex; justify-content:space-between;"><span>CPI Announcement (US):</span> <span style="color: var(--text-primary);" id="macroCPI">June 10 (Est: +3.2%)</span></li>
+                                                        <li style="display:flex; justify-content:space-between;"><span>FOMC Rate Decision:</span> <span style="color: var(--text-primary);" id="macroFOMC">June 17 (Est: Hold)</span></li>
+                                                        <li style="display:flex; justify-content:space-between;"><span>Major Token Unlock Alert:</span> <span style="color: var(--accent-red);" id="macroUnlock">SOL ($42M) in 2 days</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Multi-Agent Live Intelligence Ticker (Real-Time Websocket Streams) -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header" style="display: flex; align-items: center; justify-content: space-between;">
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <h3>🤖 Multi-Agent Live Intelligence & Market Scans</h3>
+                                                <!-- Robot 3 (Sentiment Bot SVG) -->
+                                                <div class="ai-mini-robot" style="width: 32px; height: 32px; display: inline-block; vertical-align: middle;">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="32" cy="32" r="28" fill="#0b0b0f" stroke="#ff9100" stroke-width="2"/>
+                                                        <rect x="20" y="24" width="24" height="20" rx="3" fill="#ff9100"/>
+                                                        <circle cx="27" cy="32" r="3" fill="#fff"/>
+                                                        <circle cx="37" cy="32" r="3" fill="#fff"/>
+                                                        <circle cx="27" cy="32" r="1" fill="#000"/>
+                                                        <circle cx="37" cy="32" r="1" fill="#000"/>
+                                                        <path d="M24 38c0 4 16 4 16 0" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                                        <line x1="32" y1="24" x2="32" y2="14" stroke="#ff9100" stroke-width="2"/>
+                                                        <circle cx="32" cy="12" r="4" fill="#ff5252"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <span class="badge-accent" style="background: rgba(0, 230, 118, 0.1); color: var(--accent); border-color: rgba(0, 230, 118, 0.2);">WS ACTIVE</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; display: flex; justify-content: space-between;">
+                                                <span>SUBSCRIBED DAEMONS: AGENT_CRYPTO_INTEL, AGENT_MARKET_MASTER</span>
+                                                <span class="pulse-dot" style="background-color: var(--accent); box-shadow: 0 0 6px var(--accent);"></span>
+                                            </div>
+                                            <div id="agentLogStreamList" style="max-height: 280px; height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 5px; font-family: var(--font-mono); font-size: 0.78rem;">
+                                                <div style="color: #888;">Initializing multi-agent websocket log listener...</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
+                                    <!-- Network Liquidity Heatmaps -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header">
+                                            <h3>🗺️ Network Liquidity Heatmaps</h3>
+                                            <span class="live-tag">ON-CHAIN SIGNAL</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="network-heatmap-grid" id="networkHeatmapGrid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                                                <!-- Polled dynamically -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Alpha Discovery & Sector Rotation -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header">
+                                            <h3>🔮 Alpha Discovery & Sector Rotation</h3>
+                                            <span class="badge-accent">NARRATIVE TRACKER</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="sector-rotation-list" id="sectorRotationList">
+                                                <!-- Dynamic sectors -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Whale Activity Swaps Ledger -->
+                            <div class="dashboard-card" style="margin-top: 20px;">
+                                <div class="card-header">
+                                    <h3>🐋 Smart Money Ledger (Large On-Chain Swaps)</h3>
+                                    <span class="badge-indicator">MEMPOOL DATA ENGINE</span>
+                                </div>
+                                <div class="card-body" style="padding: 0;">
+                                    <div class="whale-ledger-header" style="display: grid; grid-template-columns: 1.5fr 1fr 4fr 1fr; padding: 12px 20px; border-bottom: 1px solid var(--card-border); font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">
+                                        <span>Wallet ID</span>
+                                        <span>Time (UTC)</span>
+                                        <span>Transaction Description</span>
+                                        <span style="text-align: right;">Value (USD)</span>
+                                    </div>
+                                    <div id="whaleLedgerList" style="max-height: 250px; overflow-y: auto;">
+                                        <div style="padding: 20px; text-align: center; color: #888;">Monitoring transaction memory pools...</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="tv-controls-panel">
-                        <p class="tv-description-text" id="tvDescription">
-                            Hourly news broadcasts generated dynamically using Google Vids and Veo video synthesis pipelines. Select a sector channel below to query the corresponding AI summary reel.
-                        </p>
-                        <div class="tv-interactive-row">
-                            <div class="tv-channel-selector">
-                                <button class="tv-channel-btn active" data-channel="world">Ch 1: Global</button>
-                                <button class="tv-channel-btn" data-channel="tech">Ch 2: Tech</button>
-                                <button class="tv-channel-btn" data-channel="markets">Ch 3: Markets</button>
+
+                    <!-- MODULE C: TRADE ORCHESTRATION -->
+                    <div class="tab-pane" id="trade-orchestration">
+                        <!-- 3. TRADE ORCHESTRATION STREAM -->
+                        <div style="margin-bottom: 25px;">
+                            <div style="border-bottom: 2px solid var(--accent-orange); padding-bottom: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+                                <h2 style="font-family: var(--font-sans); font-size: 1.5rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 10px;">
+                                    <span>🤖</span> Trade Orchestration Stream
+                                </h2>
+                                <span class="live-tag" style="background: rgba(255, 145, 0, 0.1); color: var(--accent-orange); border-color: rgba(255, 145, 0, 0.2);">ACTIVE ENGINE</span>
                             </div>
-                            <div class="tv-video-controls">
-                                <button class="tv-video-btn" id="tvMuteToggle" title="Mute/Unmute">🔇</button>
-                                <button class="tv-video-btn" id="tvPlayToggle" title="Play/Pause">⏸</button>
+                            
+                            <div class="hero-section">
+                                <div class="hero-left-col" style="display: flex; flex-direction: column; gap: 20px;">
+                                    <!-- Strategy Dashboard Controls -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header">
+                                            <h3>🤖 Strategy Orchestration Control Panel</h3>
+                                            <span class="live-tag" style="background: rgba(255, 145, 0, 0.1); color: var(--accent-orange); border-color: rgba(255, 145, 0, 0.2);">EXECUTION GRID</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- AI Execution Avatar -->
+                                            <div class="ai-scan-robot-container" style="background: rgba(255, 145, 0, 0.04); border-color: rgba(255, 145, 0, 0.15); color: #fff;">
+                                                <svg class="ai-mini-robot" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px; flex-shrink: 0;">
+                                                    <rect x="16" y="20" width="32" height="28" rx="4" fill="#ff9100"/>
+                                                    <rect x="22" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                    <rect x="36" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                    <circle cx="25" cy="29" r="2" fill="#000"/>
+                                                    <circle cx="39" cy="29" r="2" fill="#000"/>
+                                                    <path d="M24 38h16v4H24z" fill="#fff"/>
+                                                </svg>
+                                                <div><strong>TraderBot-AI:</strong> Running low-latency trade routing simulations... <span id="robotExecutionState" style="color: var(--accent-orange); font-weight: bold;">STANDBY</span></div>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 15px;">
+                                                <div>
+                                                    <label style="display: block; color: var(--text-secondary); font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; text-transform: uppercase;">Active Strategy Routing</label>
+                                                    <select id="activeStrategySelect" style="width: 100%; background: #0b0b0f; border: 1px solid var(--card-border); color: #fff; padding: 10px; border-radius: 4px; font-family: var(--font-sans);">
+                                                        <option value="triangular">Triangular Book Arbitrage (High Frequency)</option>
+                                                        <option value="cross-dex">Cross-DEX Liquidity Arbitrage (Smart Route)</option>
+                                                        <option value="cex-dex" selected>CEX ➔ DEX Arbitrage (Atomic Bridge Routing)</option>
+                                                    </select>
+                                                </div>
+                                                
+                                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+                                                    <button id="btnToggleBot" style="background: var(--accent); color: #000; border: none; padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.2s;">▶️ INITIALIZE AUTONOMOUS BOT</button>
+                                                    <button id="btnEmergencyKill" style="background: var(--accent-red); color: #fff; border: none; padding: 12px; font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.2s;">⏹️ EMERGENCY SHUTDOWN</button>
+                                                </div>
+
+                                                <div style="display: flex; justify-content: space-between; align-items: center; background: #0b0b0f; padding: 12px 15px; border-radius: 4px; border: 1px solid var(--card-border); margin-top: 10px;">
+                                                    <span style="font-size: 0.85rem; color: var(--text-secondary);">Simulate Execution Mode (No Real Capital):</span>
+                                                    <input type="checkbox" id="simModeToggle" checked style="width: 20px; height: 20px; cursor: pointer;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Simulation Metrics Sliders -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header">
+                                            <h3>⚙️ Autonomous Simulation Settings</h3>
+                                            <span class="badge-accent">PARAMETERS</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div style="display: flex; flex-direction: column; gap: 15px;">
+                                                <div>
+                                                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                                                        <span style="color: var(--text-secondary);">Min Profit Threshold:</span>
+                                                        <strong id="valMinProfit" style="color: var(--accent-blue);">0.15%</strong>
+                                                    </div>
+                                                    <input type="range" id="sliderMinProfit" min="0.05" max="2.0" step="0.05" value="0.15" style="width: 100%; accent-color: var(--accent-blue);">
+                                                </div>
+                                                <div>
+                                                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                                                        <span style="color: var(--text-secondary);">Max Execution Gas Settings:</span>
+                                                        <strong id="valMaxGas" style="color: var(--accent-blue);">120 Gwei</strong>
+                                                    </div>
+                                                    <input type="range" id="sliderMaxGas" min="10" max="300" step="10" value="120" style="width: 100%; accent-color: var(--accent-blue);">
+                                                </div>
+                                                <div>
+                                                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+                                                        <span style="color: var(--text-secondary);">Execution Latency Threshold:</span>
+                                                        <strong id="valLatencyLimit" style="color: var(--accent-blue);">250 ms</strong>
+                                                    </div>
+                                                    <input type="range" id="sliderLatencyLimit" min="50" max="1000" step="50" value="250" style="width: 100%; accent-color: var(--accent-blue);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- USA Market Trade Simulation Widget -->
+                                    <div class="dashboard-card" id="usaSimulationWidget" style="border: 1px solid var(--accent-blue);">
+                                        <div class="card-header" style="background: rgba(0, 176, 255, 0.05);">
+                                            <h3>🇺🇸 USA Market Arbitrage Simulator</h3>
+                                            <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">FREE TRIAL WIDGET</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                                                 <svg id="aiRobotUsa" class="ai-mini-robot" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px; flex-shrink: 0;">
+                                                     <rect x="16" y="20" width="32" height="28" rx="4" fill="#00b0ff"/>
+                                                     <rect x="22" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                     <rect x="36" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                     <path d="M24 38h16v4H24z" fill="#fff"/>
+                                                     <circle cx="25" cy="29" r="2" fill="#000"/>
+                                                     <circle cx="39" cy="29" r="2" fill="#000"/>
+                                                 </svg>
+                                                <div>
+                                                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Hi! I'm <strong>ArbiBot-USA</strong>. Test my low-latency routes across the New York Stock Exchange and Coinbase book spreads instantly!</p>
+                                                </div>
+                                            </div>
+                                            <button id="btnTriggerUsaSim" style="width:100%; background:var(--accent-blue); color:#fff; border:none; padding:12px; font-weight:800; border-radius:4px; cursor:pointer;">⚡ SIMULATE HFT USA ROUTE (FREE TEST)</button>
+                                            
+                                            <div id="usaSimOutput" style="display:none; margin-top:15px; padding:12px; background:#0b0b0f; border:1px solid rgba(255,255,255,0.05); border-radius:4px; font-family:var(--font-mono); font-size:0.78rem;">
+                                                <div style="color:var(--accent-blue); margin-bottom:5px; font-weight:bold;">🚀 INITIALIZING HIGH-FREQUENCY ROUTE SIMULATION...</div>
+                                                <div id="usaSimTerminalText" style="color:#aaa; line-height:1.6; white-space: pre-line;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hero-right-col" style="display: flex; flex-direction: column; gap: 20px;">
+                                    <!-- Bot Performance Summaries -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header">
+                                            <h3>📊 Bot Performance Summaries</h3>
+                                            <span class="badge-indicator">KPI TELEMETRY</span>
+                                        </div>
+                                        <div class="card-body" id="whaleBotCardBody" style="position: relative;">
+                                            <!-- AI Whale Bot Avatar -->
+                                            <div class="ai-scan-robot-container" style="background: rgba(0, 230, 118, 0.04); border-color: rgba(0, 230, 118, 0.15); color: #fff;">
+                                                <svg class="ai-mini-robot" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px; flex-shrink: 0;">
+                                                    <rect x="16" y="20" width="32" height="28" rx="4" fill="#00E676"/>
+                                                    <rect x="22" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                    <rect x="36" y="26" width="6" height="6" rx="3" fill="#fff"/>
+                                                    <circle cx="25" cy="29" r="2" fill="#000"/>
+                                                    <circle cx="39" cy="29" r="2" fill="#000"/>
+                                                    <path d="M24 38h16v4H24z" fill="#fff"/>
+                                                </svg>
+                                                <div><strong>WhaleBot-AI:</strong> Tracking smart money flow spreads! <span id="whaleBotProfitSignal" style="color: var(--accent); font-weight: bold;">WAITING FOR TARGET</span></div>
+                                            </div>
+                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                                <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
+                                                    <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Total Trades</span>
+                                                    <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: #fff; margin-top: 5px;" id="botTotalTrades">247</div>
+                                                </div>
+                                                <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
+                                                    <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Win Rate</span>
+                                                    <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-top: 5px;" id="botWinRate">98.38%</div>
+                                                </div>
+                                                <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
+                                                    <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Total Net Profit</span>
+                                                    <div style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--accent);" id="botNetProfit">$1,248.52</div>
+                                                </div>
+                                                <div style="background:#0b0b0f; border: 1px solid var(--card-border); padding: 12px; border-radius: 4px; text-align: center;">
+                                                    <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Running Time</span>
+                                                    <div style="font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--accent-blue); margin-top: 5px;" id="botRunningTime">12d 4h 32m</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Execution Telemetry (Live Engine Activity Logs) -->
+                                    <div class="dashboard-card" id="alerts">
+                                        <div class="card-header">
+                                            <h3>🔔 Execution Telemetry (Live Engine logs)</h3>
+                                            <span class="badge-indicator">STREAMING</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="alert-log-container" id="alertLogList" style="height: 185px;">
+                                                <div class="log-item">
+                                                    <span class="log-time">[00:43:01]</span>
+                                                    <span class="log-msg">CEX price scanning active. Polling Binance, Bybit, OKX...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODULE D: CRYPTO ACADEMY -->
+                    <div class="tab-pane" id="crypto-academy">
+                        <div class="dashboard-card" style="border-color: var(--accent-blue);">
+                            <div class="card-header" style="background: rgba(0, 176, 255, 0.05); border-bottom-color: rgba(0, 176, 255, 0.2);">
+                                <h3 style="color: var(--accent-blue);">🎓 Premium Crypto Academy</h3>
+                                <span class="live-tag" style="background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); border-color: rgba(0, 176, 255, 0.2);">LIVE COURSE MODULES</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="academy-live-grid">
+                                    <!-- Column 1: Core Modules -->
+                                    <div class="academy-left-col">
+                                        <h4 style="margin-bottom: 15px; font-size: 1rem; color: #fff; border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">📚 Core Arbitrage & DeFi Curriculum</h4>
+                                        <div class="academy-modules-list" style="display: flex; flex-direction: column; gap: 15px;">
+                                            
+                                            <div class="academy-module-item">
+                                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                                    <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 1: Cross-Chain Fundamentals</h5>
+                                                    <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: bold; background: rgba(0, 176, 255, 0.1); padding: 2px 6px; border-radius: 4px;">COMPLETED</span>
+                                                </div>
+                                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Master cross-chain message passing protocols, smart contract execution latency, and gas optimization techniques across Ethereum, Solana, and Layer-2 networks.</p>
+                                            </div>
+
+                                            <div class="academy-module-item">
+                                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                                    <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 2: Flash Loan Guides & MEV</h5>
+                                                    <span style="font-size: 0.7rem; color: var(--accent-blue); font-weight: bold; background: rgba(0, 176, 255, 0.1); padding: 2px 6px; border-radius: 4px;">COMPLETED</span>
+                                                </div>
+                                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Step-by-step programming guides using Aave and Uniswap flash loans for risk-free triangular arbitrage execution, slippage limits, and frontrun prevention.</p>
+                                            </div>
+
+                                            <div class="academy-module-item" style="border-left-color: var(--text-secondary);">
+                                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                                    <h5 style="font-size: 0.95rem; color: #fff; font-weight: 700;">Module 3: Advanced DEX Liquidity Calculations</h5>
+                                                    <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: bold; background: rgba(255, 255, 255, 0.05); padding: 2px 6px; border-radius: 4px;">NEXT UP</span>
+                                                </div>
+                                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">Analyze dynamic constant-product pools vs concentrated liquidity pools (Uniswap V3) to identify exact slippage limits and mathematical optimal route mapping.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 2: Live Updates & Unlock -->
+                                    <div class="academy-right-col">
+                                        <div class="academy-lesson-box">
+                                            <span class="lesson-label">⚡ LIVE INTEL LESSON</span>
+                                            <h4 style="margin-top: 10px; margin-bottom: 10px; color: #fff;">Today's Arbitrage Lesson</h4>
+                                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;" id="academyLessonText">
+                                                "Concentrated liquidity pools on Base (Aerodrome) currently show a 1.2% spread discrepancy for stablecoin pairs due to recent protocol rebalancings. Accessing these requires a low-latency execution wrapper."
+                                            </p>
+                                        </div>
+
+                                        <div class="academy-unlock-box">
+                                            <div>
+                                                <h4 style="color: var(--accent); margin-bottom: 10px; font-size: 1.1rem; font-weight: 800;">🚀 Unlock Pro Institutional Access</h4>
+                                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 15px;">
+                                                    Gain unlimited access to elite smart contract templates, flash loan deployment code, real-time alert triggers, and the exclusive member-only institutional discord.
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <button id="btnAcademyUnlock" class="btn-live" style="width: 100%; background: var(--accent); color: #000; border: none; padding: 12px; font-weight: 900; border-radius: 4px; cursor: pointer; transition: all 0.2s;">
+                                                    UNLOCK ALL MODULES
+                                                </button>
+                                                <div style="margin-top: 10px; display: flex; justify-content: center; gap: 8px; align-items: center; font-size: 0.65rem; color: var(--text-secondary);">
+                                                    <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="12" alt="Razorpay">
+                                                    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" width="22" alt="PayPal">
+                                                    <span>SECURE CHECKOUT (UPI/CARD/PAYPAL)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-            </div>
-        </section>
 
-        <!-- 4. RESPONSIVE MASONRY GRID SECTION -->
-        <section class="feed-grid-section">
-            <div class="feed-section-header">
-                <h2 class="section-label">Automated <span>Pulse Feed</span></h2>
-                <div class="feed-filter-bar" id="categoryFilterBar" style="flex-wrap: wrap; gap: 8px;">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="world">Global</button>
-                    <button class="filter-btn" data-filter="tech">Tech</button>
-                    <button class="filter-btn" data-filter="markets">Markets</button>
-                    <button class="filter-btn" data-filter="geopolitics">Geopolitics</button>
-                    <button class="filter-btn" data-filter="football">Football</button>
-                    <button class="filter-btn" data-filter="tennis">Tennis</button>
-                    <button class="filter-btn" data-filter="celebrity">Celebrity</button>
-                    <button class="filter-btn" data-filter="style">Style</button>
+            <!-- GLOBAL WIDGETS SECTION (Below terminal grid tabs) -->
+            <section class="below-fold-section" style="margin-top: 30px;">
+                <div class="below-fold-grid">
+                    <!-- Left: TradingView Chart -->
+                    <div class="belowfold-cards-container">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>📊 BTC/USDT Global Market Chart</h3>
+                            </div>
+                            <div class="card-body" style="padding: 0; min-height: 350px;">
+                                <div class="tradingview-widget-container" style="height:350px;width:100%">
+                                    <div id="tradingview_chart" style="height:350px;width:100%"></div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                    <script type="text/javascript">
+                                        new TradingView.widget({
+                                            "autosize": true,
+                                            "symbol": "BINANCE:BTCUSDT",
+                                            "interval": "5",
+                                            "timezone": "Etc/UTC",
+                                            "theme": "dark",
+                                            "style": "1",
+                                            "locale": "en",
+                                            "enable_publishing": false,
+                                            "hide_side_toolbar": false,
+                                            "allow_symbol_change": true,
+                                            "container_id": "tradingview_chart"
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Threat Shield and Telegram Units -->
+                    <aside class="monetization-sidebar" id="threats">
+                        <div class="ad-unit premium-feature-box" style="background: #111; border-color: #ff5252; padding: 20px;">
+                            <div class="ad-label" style="background: #ff5252; color: #fff; font-weight: 800; margin-bottom: 12px;">🚨 ON-CHAIN SECURITY MONITOR</div>
+                            <div class="ad-content">
+                                <h4 class="ad-title" style="color: #ff5252; font-size: 1rem; font-weight:700;">Live Threat Alerts</h4>
+                                <div class="threat-list" id="threatList" style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div style="font-size: 0.8rem; color: #888;">Connecting to smart-contract risk APIs...</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-unit sponsored-ad-box" style="background: #111; border-color: #00E676; padding: 20px;">
+                            <div class="ad-label" style="background: #00E676; color: #000; font-weight:800; margin-bottom:12px;">TELEGRAM ALERTS</div>
+                            <div class="ad-content">
+                                <h4 class="ad-title" style="font-size:1rem; font-weight:700;">High-Speed Signals</h4>
+                                <p class="ad-text" style="font-size:0.8rem; line-height:1.4; color:var(--text-secondary);">Join our alert channels to receive CEX/DEX arbitrage events in real-time.</p>
+                                <a href="https://t.me/your_telegram_channel" class="ad-link" style="color: #00E676; font-weight: 700;">Join Telegram Alerts →</a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
-            </div>
-            
-            <div class="masonry-grid" id="newsGrid">
-                <!-- Populated dynamically via JS. Fallbacks provided. -->
-                <div class="error-panel" style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-secondary); font-family: var(--font-mono);">
-                    INITIALIZING AUTONOMOUS NEWS PIPELINE...
+            </section>
+
+            <!-- PROGRAMMATIC SEO DIRECTORY SECTION -->
+            <section class="seo-directory-section" style="margin: 60px 0; padding: 40px; background: #0b0b0b; border: 1px solid #222; border-radius: 12px;">
+                <h2 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 10px;">Global Arbitrage SEO Directory</h2>
+                <p style="color: #888; font-size: 0.9rem; margin-bottom: 30px;">Scan real-time arbitrage directories, tutorials, and exchange listings optimized globally.</p>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;" class="seo-links-grid">
+                    <div>
+                        <h4 style="color: #00E676; margin-bottom: 12px; font-size: 0.95rem;">By Cryptocurrency</h4>
+                        <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Bitcoin Arbitrage Opportunities</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Ethereum Arbitrage Spreads</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Solana High-Speed Scanner</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Ripple (XRP) Ledger Arbitrage</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #00E676; margin-bottom: 12px; font-size: 0.95rem;">Exchange Pairs</h4>
+                        <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Binance vs Bybit Spreads</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Bybit vs OKX Spreads</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">OKX vs Binance Spreads</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">KuCoin vs Coinbase Scans</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #00E676; margin-bottom: 12px; font-size: 0.95rem;">Regional Hubs</h4>
+                        <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">USA Crypto Arbitrage Regulations</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">India Arbitrage Capital Returns</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">UAE / Dubai Crypto Trading Hubs</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Singapore Low Latency Nodes</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #00E676; margin-bottom: 12px; font-size: 0.95rem;">Guides & Tutorials</h4>
+                        <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8;">
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Flash Loan Arbitrage Tutorial</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">Triangular Arbitrage Math</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">MEV Bots & Slip Prevention</a></li>
+                            <li><a href="#" style="color: #ccc; text-decoration: none;">On-Chain Liquidity Map Guide</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+        </div>
     </main>
 
-    <!-- 5. INSTITUTIONAL MEGA FOOTER -->
-    <footer class="mega-footer">
+    <footer class="cnn-mega-footer" id="corporate-profile" style="background: #050505; border-top: 1px solid var(--card-border); padding: 60px 0; font-family: var(--font-sans);">
         <div class="container">
-            <div class="footer-grid">
-                
-                <!-- Column 1: US & World -->
-                <div class="footer-col">
-                    <h4 class="footer-col-title">US & World</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="all">Global News</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="world">World Coverage</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="us">United States</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="us-politics">US Politics</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="geopolitics">Geopolitics</a></li>
-                    </ul>
+            <!-- Sleek Control Buttons for API Docs & Corporate Profile -->
+            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap;">
+                <button id="btnOpenApiDocsModal" class="btn-live" style="background: var(--accent-blue); color: #000; border: none; padding: 12px 24px; font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px; font-family: var(--font-sans);">
+                    📋 Open API Documentation
+                </button>
+                <button id="btnToggleProfile" class="btn-live" style="background: #ffd700; color: #000; border: none; padding: 12px 24px; font-weight: 800; border-radius: 4px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px; font-family: var(--font-sans);">
+                    👤 View Profile
+                </button>
+            </div>
+
+            <!-- Consolidated Corporate Profile & MSME Registry -->
+            <div id="corporateProfileSection" style="display: none; background: rgba(10, 10, 15, 0.6); border: 1px solid var(--card-border); border-radius: 8px; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 15px; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+                    <h3 style="color: #ffd700; margin: 0; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">👥 Katke Enterprises - Corporate Profile</h3>
+                    <span class="live-tag" style="background: rgba(255, 215, 0, 0.1); color: #ffd700; border-color: rgba(255, 215, 0, 0.2); font-size: 0.7rem;">OFFICIAL VERIFICATION TIER</span>
                 </div>
                 
-                <!-- Column 2: Business & Finance -->
-                <div class="footer-col">
-                    <h4 class="footer-col-title">Business & Finance</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="business">Business</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="markets">Markets</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="economy">Economy</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="finance">Finance</a></li>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div>
+                        <h4 style="color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; margin-bottom: 15px; font-size: 1rem;">🏢 Company Overview</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 10px;">
+                            <strong>Parent Entity:</strong> <span style="color: #ffd700; font-weight: bold;">Katke Enterprises</span> (Established: 07/11/2013).
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 15px;">
+                            Arbitrage Smart AI is a standalone, high-fidelity autonomous trade orchestration and liquidity scanning terminal. The platform runs natively under the unified containerized infrastructure of Katke Enterprises to automate global transaction intelligence and on-chain liquidity scanning.
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 15px;">
+                            We deploy multi-agent systems powered by <strong>Google Cloud Vertex AI</strong> and <strong>Gemini 1.5 models</strong> to automate document vetting, risk management, and market intelligence synthesis.
+                        </p>
+                        
+                        <h4 style="color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; margin-top: 25px; margin-bottom: 15px; font-size: 1rem;">📍 Registered Office & Support</h4>
+                        <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8; color: var(--text-secondary);">
+                            <li><strong>Headquarters:</strong> 301, Riddhi Siddhi Apartment, Near Shani Temple, Gaskopri, Virar - 401305, Taluka: Vasai, District: Palghar, Maharashtra, India.</li>
+                            <li><strong>Contact Email:</strong> <a href="mailto:arbitragesmartai@arbitragesmartai.com" style="color: #ffd700; text-decoration: none;">arbitragesmartai@arbitragesmartai.com</a></li>
+                            <li><strong>Support Email:</strong> <a href="mailto:support@arbitragesmartai.com" style="color: #ffd700; text-decoration: none;">support@arbitragesmartai.com</a></li>
+                            <li><strong>Helpdesk / WhatsApp:</strong> +91 93729 54852 (24/7 Support)</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; margin-bottom: 15px; font-size: 1rem;">👤 Founder & Leadership</h4>
+                        <div style="display: flex; gap: 15px; align-items: flex-start; margin-bottom: 25px;">
+                            <div style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #ffd700; box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); background: #111; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <img src="assets/founder.jpg" alt="Manik Vithoba Katke" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <span style="font-size: 1.5rem; color: #ffd700; font-weight: bold; display: none;">M</span>
+                            </div>
+                            <div>
+                                <h5 style="color: #fff; font-size: 1rem; margin: 0; font-weight: 700;">Manik Vithoba Katke (Founder & CEO)</h5>
+                                <span style="color: #ffd700; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">Founder & CEO</span>
+                                <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-top: 6px;">
+                                    Manik Katke is the founder of Katke Enterprises, driving technological advancements in automated commodity trading, global trade frameworks, and AI-first agentic infrastructure.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <h4 style="color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; margin-bottom: 15px; font-size: 1rem;">🛡️ Government Verification Credentials (MSME)</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: rgba(0, 0, 0, 0.2); border: 1px solid var(--card-border); padding: 15px; border-radius: 6px; font-size: 0.78rem; margin-bottom: 20px;">
+                            <div>
+                                <span style="color: var(--text-secondary); display: block; font-size: 0.65rem; text-transform: uppercase;">MSME Registration Number</span>
+                                <strong style="color: #ffd700; font-family: var(--font-mono);">UDYAM-MH-17-0069728</strong>
+                            </div>
+                            <div>
+                                <span style="color: var(--text-secondary); display: block; font-size: 0.65rem; text-transform: uppercase;">Legal Entity Classification</span>
+                                <strong style="color: #fff;">Katke Enterprises</strong>
+                            </div>
+                            <div>
+                                <span style="color: var(--text-secondary); display: block; font-size: 0.65rem; text-transform: uppercase;">Incorporation Date</span>
+                                <strong style="color: #fff;">07/11/2013</strong>
+                            </div>
+                            <div>
+                                <span style="color: var(--text-secondary); display: block; font-size: 0.65rem; text-transform: uppercase;">Business Commencement</span>
+                                <strong style="color: #fff;">06/09/2013</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div style="margin-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 25px;">
+                    <div style="background: rgba(0, 230, 118, 0.02); border: 1px solid rgba(0, 230, 118, 0.15); border-radius: 6px; padding: 20px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0, 230, 118, 0.1); padding-bottom: 8px; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+                            <h4 style="color: var(--accent); margin: 0; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">⚙️ Multi-Agent Telemetry & Verification Portal</h4>
+                            <span class="live-tag" style="background: rgba(0, 230, 118, 0.1); color: var(--accent); border-color: rgba(0, 230, 118, 0.2); font-size: 0.65rem;">24/7 AUDIT DAEMON ACTIVE</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 15px;">
+                            Our platform integrates an autonomous verification daemon that continuously monitors contract security compliance, gas optimization limits, and transaction execution routing.
+                        </p>
+                        <div style="background: #050508; border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 15px; font-family: var(--font-mono); font-size: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; margin-bottom: 10px; color: var(--text-secondary);">
+                                <span>LIVE INGESTION STREAM (AGENT TRANSACTION PIPELINE)</span>
+                                <span class="pulse-dot" style="background-color: var(--accent); box-shadow: 0 0 6px var(--accent);"></span>
+                            </div>
+                            <div id="ecosystemVerificationStream" style="max-height: 120px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 0.75rem;">
+                                <div style="color: #888;">Initializing verification parser threads...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent); padding-bottom: 5px;">Corporate</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">About Us</a></li>
+                        <li><a href="about.html#mission" style="color: var(--text-secondary); text-decoration: none;">Mission & Vision</a></li>
+                        <li><a href="careers.html" style="color: var(--text-secondary); text-decoration: none;">Careers</a></li>
+                        <li><a href="partnerships.html" style="color: var(--text-secondary); text-decoration: none;">Strategic Alliances</a></li>
                     </ul>
                 </div>
-                
-                <!-- Column 3: Tech & AI -->
-                <div class="footer-col">
-                    <h4 class="footer-col-title">Tech & AI</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="tech">Technology</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="ai">Artificial Intelligence</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="cybersecurity">Cybersecurity</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="biotech">Biotech</a></li>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent-blue); padding-bottom: 5px;">Developers</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="api-docs.html" style="color: var(--text-secondary); text-decoration: none;">API Documentation</a></li>
+                        <li><a href="api-docs.html" style="color: var(--text-secondary); text-decoration: none;">Developer Portal</a></li>
+                        <li><a href="whitepaper.html" style="color: var(--text-secondary); text-decoration: none;">Platform Whitepaper</a></li>
+                        <li><a href="roadmap.html" style="color: var(--text-secondary); text-decoration: none;">Product Roadmap</a></li>
                     </ul>
                 </div>
-                
-                <!-- Column 4: Lifestyle & Health -->
-                <div class="footer-col">
-                    <h4 class="footer-col-title">Lifestyle & Health</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="travel">Travel</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="luxury">Luxury</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="fitness">Fitness</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="relationships">Relationships</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="health">Health General</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="wellness">Wellness</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="medicine">Medicine</a></li>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent); padding-bottom: 5px;">Trust & Compliance</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="compliance-center.html" style="color: var(--text-secondary); text-decoration: none;">Compliance Hub</a></li>
+                        <li><a href="security-center.html" style="color: var(--text-secondary); text-decoration: none;">Security Center</a></li>
+                        <li><a href="compliance-center.html" style="color: var(--text-secondary); text-decoration: none;">MSME Verification</a></li>
+                        <li><a href="terms.html" style="color: var(--text-secondary); text-decoration: none;">Terms of Use</a></li>
                     </ul>
                 </div>
-                
-                <!-- Column 5: Sports & Entertainment -->
-                <div class="footer-col">
-                    <h4 class="footer-col-title">Sports & Entertainment</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="sports">Sports</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="football">Football</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="tennis">Tennis</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="athletics">Athletics</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="entertainment">Entertainment</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="celebrity">Celebrity</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="style">Style</a></li>
-                        <li><a href="javascript:void(0);" class="footer-category-link" data-category="movies">Movies</a></li>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent-blue); padding-bottom: 5px;">Investors</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="investors.html" style="color: var(--text-secondary); text-decoration: none;">Investor Relations</a></li>
+                        <li><a href="google-readiness.html" style="color: var(--text-secondary); text-decoration: none;">Google Cloud Readiness</a></li>
+                        <li><a href="investors.html#tam" style="color: var(--text-secondary); text-decoration: none;">Market Opportunity</a></li>
+                        <li><a href="marketplace.html" style="color: var(--text-secondary); text-decoration: none;">AI Agent Marketplace</a></li>
                     </ul>
                 </div>
-                
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-bottom: 1.5px solid var(--accent-orange); padding-bottom: 5px;">Support Desk</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.82rem; line-height: 2;">
+                        <li><a href="contact-center.html" style="color: var(--text-secondary); text-decoration: none;">Contact Center</a></li>
+                        <li><a href="contact-center.html" style="color: var(--text-secondary); text-decoration: none;">Support Helpdesk</a></li>
+                        <li><a href="contact.html" style="color: var(--text-secondary); text-decoration: none;">Legal & Grievance Desk</a></li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="footer-bottom-bar" style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--card-border);">
-                <div class="footer-legal-links" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-                    <a href="about-us.html" class="footer-link">About Us</a>
-                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
-                    <a href="terms.html" class="footer-link">Terms of Service</a>
-                    <a href="editorial-guidelines.html" class="footer-link">Editorial Guidelines</a>
-                    <a href="contact.html" class="footer-link">Contact Us</a>
-                </div>
-                <div class="footer-copy" style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">
-                    &copy; 2026 Global Pulse News Media Group Ltd. All rights reserved. Powered by Google Gemini AI.
-                </div>
-                <div class="footer-controls">
-                    <button class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Scroll to Top">▲</button>
+            <div style="border-top: 1px solid var(--card-border); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div class="cnn-logo" style="font-size: 1.5rem; color: #fff;">ARBITRAGE<span>SMART AI</span></div>
+                <div style="font-size: 0.72rem; color: #555; text-align: right; line-height: 1.6;">
+                    &copy; 2026 ArbitrageSmartAI (Katke Enterprises). All rights reserved.
+                    <br>Parent Entity MSME Registry: <strong>UDYAM-MH-17-0069728</strong> (Micro Enterprise)
+                    <br>Headquarters: 301, Riddhi Siddhi Apartment, Near Shani Temple, Gaskopri, Virar - 401305, Maharashtra, India.
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- App JavaScript & News Engine -->
+    <!-- System Status & API Docs Modal -->
+    <div id="apiDocsModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:1000; justify-content:center; align-items:center; padding:20px;">
+        <div style="background:#111116; border:1px solid var(--card-border); max-width:800px; width:100%; border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+            <div style="background:rgba(30, 30, 36, 0.6); padding:15px 20px; border-bottom:1px solid var(--card-border); display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="color:#fff; margin:0; display:flex; align-items:center; gap:8px; font-size:1.1rem; font-weight:700;">📋 System Status & Live API Documentation</h3>
+                <button id="btnCloseApiDocsModal" style="background:none; border:none; color:var(--text-secondary); font-size:1.5rem; cursor:pointer; transition:color 0.2s;">&times;</button>
+            </div>
+            <div style="padding:25px; overflow-y:auto; max-height:70vh; font-family:var(--font-sans); font-size:0.88rem; line-height:1.6;">
+                <h4 style="color:var(--accent); margin-bottom:10px; font-weight:700;">🟢 Live GCP Infrastructure Telemetry Status</h4>
+                <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:20px;">
+                    <div style="background:#0b0b0f; border:1px solid var(--card-border); padding:10px; border-radius:4px; text-align:center;">
+                        <span style="font-size:0.75rem; color:var(--text-secondary);">VM INSTANCE NAME</span>
+                        <div style="font-family:var(--font-mono); font-weight:700; color:#fff; margin-top:4px; font-size:0.85rem;">arbitrage-engine-vm</div>
+                    </div>
+                    <div style="background:#0b0b0f; border:1px solid var(--card-border); padding:10px; border-radius:4px; text-align:center;">
+                        <span style="font-size:0.75rem; color:var(--text-secondary);">GCP REGION / ZONE</span>
+                        <div style="font-family:var(--font-mono); font-weight:700; color:#fff; margin-top:4px; font-size:0.85rem;">asia-south1-a</div>
+                    </div>
+                    <div style="background:#0b0b0f; border:1px solid var(--card-border); padding:10px; border-radius:4px; text-align:center;">
+                        <span style="font-size:0.75rem; color:var(--text-secondary);">TELEMETRY STATUS</span>
+                        <div style="font-family:var(--font-mono); font-weight:700; color:var(--accent); margin-top:4px; font-size:0.85rem;">OPERATIONAL</div>
+                    </div>
+                </div>
+
+                <h4 style="color:var(--accent-blue); margin-bottom:10px; font-weight:700;">🛰️ WebSocket Real-Time Ticker Stream</h4>
+                <p style="color:var(--text-secondary); margin-bottom:10px; font-size:0.85rem;">
+                    Clients subscribe to our live WebSocket gateway to receive high-frequency price feeds broadcasted directly from our GCP Mumbai messaging nodes:
+                </p>
+                <pre style="background:#0b0b0f; border:1px solid var(--card-border); padding:15px; border-radius:6px; font-family:var(--font-mono); font-size:0.78rem; color:#ccc; margin-bottom:20px; overflow-x:auto; white-space:pre-wrap;">
+Endpoint: wss://arbitragesmartai.com/ws/
+Data Frequency: 100ms / frame broadcast
+
+Schema Model (CEX Ticker Payload):
+{
+  "type": "cex",
+  "data": {
+    "timestamp": "2026-05-30T10:10:00Z",
+    "pairs": {
+      "BTC/USDT": {
+        "spread_pct": 0.115,
+        "buy_exchange": "Binance",
+        "sell_exchange": "Bybit",
+        "exchanges": { ... }
+      }
+    }
+  }
+}</pre>
+
+                <h4 style="color:var(--accent-blue); margin-bottom:10px; font-weight:700;">🔌 REST Cache Analytics Endpoints</h4>
+                <ul style="padding-left:20px; margin-bottom:20px; color:var(--text-secondary); font-size:0.85rem;">
+                    <li><strong style="color:#fff; font-family:var(--font-mono);">GET /data/arbitrage_data.json</strong> - Retrieves the latest consolidated CEX order book snapshots.</li>
+                    <li><strong style="color:#fff; font-family:var(--font-mono);">GET /data/dex_arbitrage_data.json</strong> - Retrieves cross-DEX pools discrepancies, gas estimates, and risk indexes.</li>
+                </ul>
+
+                <h4 style="color:var(--accent-orange); margin-bottom:10px; font-weight:700;">🛡️ Kafka & TimescaleDB Topology</h4>
+                <p style="color:var(--text-secondary); margin-bottom:0; font-size:0.85rem;">
+                    Our backend engine runs under sandboxed Systemd managers on a GCP Mumbai E2 VM. Pricing data feeds are ingested via Zookeeper and Kafka message bridges, buffered through hot Redis caches, and persisted inside Time-Series hypertables for historical volatility forecasting.
+                </p>
+            </div>
+            <div style="background:rgba(30, 30, 36, 0.4); padding:15px 20px; border-top:1px solid var(--card-border); text-align:right;">
+                <button id="btnCloseApiDocsModalBtn" style="background:var(--accent-blue); color:#000; border:none; padding:8px 16px; font-weight:700; border-radius:4px; cursor:pointer; transition:brightness 0.2s;">Close Documentation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" style="position:fixed; bottom:20px; left:20px; right:20px; background:#111116; border:1px solid var(--card-border); border-left:4px solid var(--accent-blue); border-radius:8px; padding:20px; z-index:999; display:flex; flex-direction:row; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:15px; box-shadow:0 8px 24px rgba(0,0,0,0.6); transition:opacity 0.3s;">
+        <div style="max-width:850px;">
+            <h4 style="color:#fff; margin-bottom:6px; font-size:0.95rem; font-weight:700;">🍪 Cookie & Privacy Consent Notice</h4>
+            <p style="color:var(--text-secondary); font-size:0.8rem; line-height:1.4; margin:0;">
+                We use cookies to analyze execution latencies, verify security mappings, and compile statistical telemetry logs. By clicking "Accept All Cookies", you consent to the storage of compliance preferences in your browser cache in accordance with our <a href="privacy.html" style="color:var(--accent-blue); text-decoration:none;">Privacy Policy</a> and GDPR standards.
+            </p>
+        </div>
+        <div style="display:flex; gap:10px;">
+            <button id="btnAcceptCookies" style="background:var(--accent); color:#000; border:none; padding:8px 16px; font-weight:800; border-radius:4px; cursor:pointer; transition:brightness 0.2s; font-size:0.8rem;">ACCEPT ALL</button>
+            <button id="btnDeclineCookies" style="background:rgba(255,255,255,0.05); color:var(--text-primary); border:1px solid var(--card-border); padding:8px 16px; font-weight:700; border-radius:4px; cursor:pointer; transition:brightness 0.2s; font-size:0.8rem;">DECLINE</button>
+        </div>
+    </div>
+
+    <!-- Unified Legal & Corporate Modal -->
+    <div id="legalModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:1000; justify-content:center; align-items:center; padding:20px;">
+        <div style="background:#111116; border:1px solid var(--card-border); max-width:800px; width:100%; border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+            <div style="background:rgba(30, 30, 36, 0.6); padding:15px 20px; border-bottom:1px solid var(--card-border); display:flex; justify-content:space-between; align-items:center;">
+                <h3 id="legalModalTitle" style="color:#fff; margin:0; display:flex; align-items:center; gap:8px; font-size:1.1rem; font-weight:700;">Legal Document</h3>
+                <button id="btnCloseLegalModal" style="background:none; border:none; color:var(--text-secondary); font-size:1.5rem; cursor:pointer; transition:color 0.2s;">&times;</button>
+            </div>
+            <div id="legalModalBody" style="padding:25px; overflow-y:auto; max-height:70vh; font-family:var(--font-sans); font-size:0.88rem; line-height:1.6; color: var(--text-secondary);">
+                <!-- Dynamic Content Injected Here -->
+            </div>
+            <div style="background:rgba(30, 30, 36, 0.4); padding:15px 20px; border-top:1px solid var(--card-border); text-align:right;">
+                <button id="btnCloseLegalModalBtn" style="background:var(--accent-blue); color:#000; border:none; padding:8px 16px; font-weight:700; border-radius:4px; cursor:pointer; transition:brightness 0.2s;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Razorpay and PayPal Payment Gateways SDKs -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZTvGqDp1LSuZItYPkArYra2FyPhII5yQ2TGbcULTDf8Ymyl2c2dwwBRfMMEZWggeeJdmLT5D1Pn69Sa&currency=USD"></script>
+
+    <!-- Academy Checkout Selection Modal -->
+    <div id="academyCheckoutModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:1000; justify-content:center; align-items:center; padding:20px;">
+        <div style="background:#111116; border:1px solid var(--card-border); max-width:480px; width:100%; border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+            <div style="background:rgba(30, 30, 36, 0.6); padding:15px 20px; border-bottom:1px solid var(--card-border); display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="color:#fff; margin:0; display:flex; align-items:center; gap:8px; font-size:1.1rem; font-weight:700;">🎓 Premium Checkout Gateway</h3>
+                <button id="btnCloseAcademyModal" style="background:none; border:none; color:var(--text-secondary); font-size:1.5rem; cursor:pointer; transition:color 0.2s;">&times;</button>
+            </div>
+            <div style="padding:25px; overflow-y:auto; font-family:var(--font-sans); color: var(--text-secondary);">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <div style="display: inline-block; padding: 10px; background: rgba(0, 176, 255, 0.1); border-radius: 50%; color: var(--accent-blue); margin-bottom: 12px; font-size: 1.5rem;">🎓</div>
+                    <h4 style="color: #fff; margin: 0; font-size: 1.15rem; font-weight: 700;">PRO Institutional Access</h4>
+                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 5px;">Unlock all modules, contract templates, and the Discord server.</p>
+                    <div style="font-size: 1.8rem; color: var(--accent); font-weight: 800; margin-top: 15px;">$99.00 <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 400;">/ one-time</span></div>
+                </div>
+
+                <!-- Payment Selectors -->
+                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <!-- Razorpay Button -->
+                    <button id="btnTriggerRazorpay" style="width: 100%; background: #00E676; color: #000; border: none; padding: 12px; font-weight: 900; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem; transition: brightness 0.2s;">
+                        <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="16" alt="Razorpay"> Pay with Razorpay (Cards/UPI/NetBanking)
+                    </button>
+                    
+                    <div style="text-align: center; font-size: 0.72rem; color: #555; text-transform: uppercase; letter-spacing: 1px; margin: 5px 0;">— OR —</div>
+                    
+                    <!-- PayPal Buttons Container -->
+                    <div id="paypal-button-container-academy" style="min-height: 45px;"></div>
+                </div>
+            </div>
+            <div style="background:rgba(30, 30, 36, 0.4); padding:15px 20px; border-top:1px solid var(--card-border); text-align:right;">
+                <button id="btnCancelAcademyModal" style="background:rgba(255,255,255,0.05); color:var(--text-primary); border:1px solid var(--card-border); padding:8px 16px; font-weight:700; border-radius:4px; cursor:pointer; transition:brightness 0.2s; font-size: 0.8rem;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/app.js"></script>
-    <script src="js/news-engine.js"></script>
 </body>
 </html>
