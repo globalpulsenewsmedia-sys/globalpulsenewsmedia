@@ -1,11 +1,11 @@
 [
   {
-    "title": "Iran says it has closed Strait of Hormuz over Israel attacks on Lebanon",
-    "snippet": "The US military has disputed Tehran's claim, which comes ahead of US-Iran talks in Switzerland on Sunday.",
+    "title": "US-Iran talks to begin in Switzerland as Tehran says it closed Strait of Hormuz",
+    "snippet": "The US disputed Iran's claim the waterway is shut, a move Tehran says was a response to Israeli attacks in Lebanon.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "6/20/2026, 9:11:57 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b522/live/df959320-6cb8-11f1-9fea-e751269afdb9.jpg",
+    "time": "6/21/2026, 1:46:31 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/17c2/live/72006a90-6d05-11f1-8e1d-bbbb1017d210.jpg",
     "link": "#"
   },
   {
@@ -24,6 +24,15 @@
     "source": "Global Pulse Intelligence",
     "time": "6/20/2026, 3:31:12 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/614c/live/49688d60-6bd9-11f1-b1db-af71d47507d6.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Israeli strikes kill six people in Gaza including Al Jazeera cameraman, officials say",
+    "snippet": "The Israeli military accused Ahmed Wishah of being a \"Hamas sniper operative\", without providing evidence.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "6/20/2026, 9:57:36 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6bfd/live/e03cdc90-6ced-11f1-bb4f-2f04956fdc7f.jpg",
     "link": "#"
   },
   {
@@ -54,15 +63,6 @@
     "link": "#"
   },
   {
-    "title": "Zelensky stripped of highest Polish honour over WW2 name of army unit",
-    "snippet": "Ukraine has denounced the move, calling it a \"strategic mistake\" and \"disrespectful\".",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "6/19/2026, 9:46:07 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4074/live/aa7d3d80-6c1a-11f1-82ca-39eb136d082f.jpg",
-    "link": "#"
-  },
-  {
     "title": "US to stop funding HIV programmes in South Africa",
     "snippet": "More than eight million South Africans are living with HIV – the highest number of any country in the world.",
     "category": "WORLD",
@@ -90,6 +90,24 @@
     "link": "#"
   },
   {
+    "title": "Why an AI company cleaned my New York City apartment for free",
+    "snippet": "An AI company is sending free cleaners door-to-door in a bid to train the robots it hopes one day will replace them.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "6/20/2026, 11:18:55 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/570f/live/e297c6a0-6af7-11f1-8546-8f19e4fe30f4.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Why the social media ban is about so much more than social media",
+    "snippet": "If we are witnessing a profound shift in the online space, how will it reshape our relationship with it? Technology and AI editor Zoe Kleinman writes.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "6/20/2026, 11:18:12 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5d09/live/48cc8790-6bf1-11f1-b1db-af71d47507d6.jpg",
+    "link": "#"
+  },
+  {
     "title": "New video game console aims to get kids moving",
     "snippet": "The Nex Playground will cost £269 (€319) when it is released on 22 June in the UK and Ireland.",
     "category": "TECH",
@@ -114,24 +132,6 @@
     "source": "Global Pulse Intelligence",
     "time": "6/19/2026, 11:21:09 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6ab0/live/49c33180-6bce-11f1-a94c-73f00a91c697.jpg",
-    "link": "#"
-  },
-  {
-    "title": "The artificial ice pyramids saving India's mountain villages",
-    "snippet": "Himalayan villages are creating artificial glaciers to guarantee water for their crops in the spring.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "6/18/2026, 11:11:07 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ac70/live/f0de5b80-6015-11f1-89a3-d1f559421220.jpg",
-    "link": "#"
-  },
-  {
-    "title": "GTA 6 pre-order date and cover art revealed by Rockstar",
-    "snippet": "The developer has said pre-sales of the hugely anticipated game will begin on 25 June.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "6/18/2026, 2:06:48 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/34b6/live/03c3e400-6b19-11f1-be36-65d2d6d55e70.jpg",
     "link": "#"
   }
 ]
