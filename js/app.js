@@ -789,7 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Establish SSE connection to our serverless backend
             const sseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
                 ? 'http://localhost:8002/api/stream' 
-                : 'https://arbitrage-service-568269681276.asia-south1.run.app/api/stream';
+                : `${window.location.protocol}//${window.location.host}/api/stream`;
 
             sseSource = new EventSource(sseUrl);
 

@@ -2,7 +2,7 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 80;
 
 const MIME_TYPES = {
     '.html': 'text/html; charset=utf-8',
