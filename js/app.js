@@ -788,7 +788,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // Establish SSE connection to our serverless backend
             const sseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-                ? 'http://localhost:8002/api/stream' 
+                ? 'http://103.220.198.8/api/stream' 
                 : `${window.location.protocol}//${window.location.host}/api/stream`;
 
             sseSource = new EventSource(sseUrl);
