@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "npx serve .",
+    "build": "echo 'No build required'",
     "engine": "python scripts/arbitrage_live_engine.py"
   },
   "keywords": [
