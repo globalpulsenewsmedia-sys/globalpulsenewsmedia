@@ -144,11 +144,17 @@
                     <span>Published by <strong style="color: #ffffff;" id="articleSource">Global Pulse AI Sentinel</strong></span>
                 </div>
                 <div class="article-share-links">
+                    <span class="share-icon" id="bookmarkArticleBtn" onclick="toggleBookmarkArticle()" style="cursor: pointer; color: var(--accent-gold); margin-right: 15px;">🔖 Bookmark</span>
                     <span class="share-icon" onclick="alert('Link copied to clipboard!')" title="Copy Link">🔗 Link</span>
                     <span class="share-icon" onclick="alert('Shared to Twitter/X')" title="Share to X">𝕏 Share</span>
                 </div>
             </div>
         </header>
+
+        <!-- Header AdSense Slot -->
+        <div class="container adsense-slot" style="background: rgba(20, 20, 25, 0.4); border: 1px dashed #333344; color: #555566; font-family: var(--font-mono); font-size: 0.72rem; text-align: center; padding: 10px; margin: 15px auto; max-width: 1200px; border-radius: 4px; letter-spacing: 0.05em;">
+            <strong>AD: Leaderboard Banner 728x90</strong> - Premium Institutional Analytics & Wealth Advisory Subscriptions Open.
+        </div>
 
         <!-- Hero Media Banner -->
         <section class="article-hero-media">
@@ -159,9 +165,24 @@
         <div class="article-content-layout">
             
             <!-- Main Content Area -->
-            <article class="article-body-text" id="articleBody">
-                <p>Loading autonomous news feed analysis from local databases...</p>
-            </article>
+            <div class="main-content-wrapper" style="flex: 1; min-width: 0; margin-right: 30px;">
+                <article class="article-body-text" id="articleBody">
+                    <p>Loading autonomous news feed analysis from local databases...</p>
+                </article>
+
+                <!-- In-Content Ad Slot -->
+                <div class="adsense-slot" style="background: rgba(20, 20, 25, 0.4); border: 1px dashed #333344; color: #555566; font-family: var(--font-mono); font-size: 0.72rem; text-align: center; padding: 10px; margin: 25px 0; border-radius: 4px; letter-spacing: 0.05em; width: 100%;">
+                    <strong>AD: In-Content Banner 468x60</strong> - Get Lifetime Digital Credentials & Cloud Security Certifications.
+                </div>
+
+                <!-- You Might Also Like Bottom Recommendations -->
+                <section class="bottom-recommendations" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; width: 100%;">
+                    <h3 style="font-family: var(--font-sans); color: #ffffff; font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">You Might Also Like</h3>
+                    <div id="bottomRecommendationsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                        <!-- Dynamic bottom rec cards -->
+                    </div>
+                </section>
+            </div>
 
             <!-- Sidebar Panel -->
             <aside class="article-sidebar">
@@ -174,6 +195,11 @@
                             <h4 class="sidebar-article-title">Markets adjust to cryptocurrency volume peaks</h4>
                         </div>
                     </div>
+                </div>
+
+                <!-- Sidebar Ad Slot -->
+                <div class="adsense-slot" style="background: rgba(20, 20, 25, 0.4); border: 1px dashed #333344; color: #555566; font-family: var(--font-mono); font-size: 0.72rem; text-align: center; padding: 10px; margin: 15px 0; border-radius: 4px; letter-spacing: 0.05em;">
+                    <strong>AD: Sidebar Banner 300x250</strong> - Secure Your Ledger Hardware Key.
                 </div>
                 
                 <div class="sidebar-widget" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5,5,8,0.5) 100%);">
@@ -1061,6 +1087,52 @@
                     document.getElementById('articleBody').innerHTML = article.content;
                 } else {
                     document.getElementById('articleBody').innerHTML = `<p>${article.snippet}</p>`;
+                }
+
+                // Sync bookmark status
+                const bookmarks = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
+                const bmBtn = document.getElementById('bookmarkArticleBtn');
+                if (bookmarks.indexOf(article.title) > -1) {
+                    bmBtn.innerText = "⭐ Bookmarked";
+                } else {
+                    bmBtn.innerText = "🔖 Bookmark";
+                }
+
+                // Expose function to bookmark current article
+                window.toggleBookmarkArticle = () => {
+                    let bms = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
+                    const idx = bms.indexOf(article.title);
+                    if (idx > -1) {
+                        bms.splice(idx, 1);
+                        bmBtn.innerText = "🔖 Bookmark";
+                        alert("Removed from bookmarks.");
+                    } else {
+                        bms.push(article.title);
+                        bmBtn.innerText = "⭐ Bookmarked";
+                        alert("Added to bookmarks.");
+                    }
+                    localStorage.setItem('news_bookmarks', JSON.stringify(bms));
+                };
+
+                // Render bottom recommendations
+                const bottomGrid = document.getElementById('bottomRecommendationsGrid');
+                if (bottomGrid) {
+                    const bottomRecs = recsPool.filter(a => a.title !== article.title).slice(0, 3);
+                    bottomGrid.innerHTML = bottomRecs.map((a, i) => {
+                        const originalIdx = recsPool.indexOf(a);
+                        let recLink = `article.html?id=${originalIdx}`;
+                        if (type === 'stub') {
+                            recLink = `article.html?type=stub&category=${category}&index=${originalIdx}`;
+                        } else if (originalIdx === 0) {
+                            recLink = `article.html?id=cover`;
+                        }
+                        return `
+                            <div style="background:#111116; border: 1px solid #1a1a24; padding:15px; border-radius:4px;">
+                                <span style="font-size:0.65rem; color:var(--accent-gold); font-family:var(--font-mono); text-transform:uppercase;">${a.category || 'NEWS'}</span>
+                                <h4 style="font-size:0.95rem; margin-top:8px; line-height:1.35;"><a href="${recLink}" style="color:#fff; text-decoration:none;">${a.title}</a></h4>
+                            </div>
+                        `;
+                    }).join('');
                 }
 
                 // Render Sidebar recommendations from pool
