@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Pulse | Premium AI News Media & Geopolitical Intelligence</title>
+    <title>Global Pulse | Premium AI News Media & E-Books Mega Hub</title>
     
     <!-- Bootstrap 5.3.3 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -247,6 +247,36 @@
         .footer-logo span {
             color: var(--accent-gold);
         }
+
+        /* Library Section Specific Styling */
+        .library-search-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-luxury);
+            border-radius: 4px;
+        }
+
+        .book-card-cover {
+            height: 280px;
+            background-color: #1a1a24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-luxury);
+            position: relative;
+        }
+
+        .book-card-cover img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+
+        .search-spinner {
+            width: 3rem;
+            height: 3rem;
+            color: var(--accent-gold);
+        }
     </style>
 </head>
 <body>
@@ -272,10 +302,11 @@
                 <a href="index.html" class="brand-logo">GLOBAL<span>PULSE</span></a>
                 <nav class="d-none d-md-block">
                     <ul class="d-flex list-unstyled gap-4 m-0">
-                        <li><a href="#" class="nav-link-custom active" onclick="filterArticles('all', event)">Global Pulse</a></li>
-                        <li><a href="#" class="nav-link-custom" onclick="filterArticles('tech', event)">Tech Intel</a></li>
-                        <li><a href="#" class="nav-link-custom" onclick="filterArticles('markets', event)">Markets</a></li>
-                        <li><a href="#" class="nav-link-custom" onclick="filterArticles('analysis', event)">Deep Analysis</a></li>
+                        <li><a href="#" id="navNewsFeed" class="nav-link-custom active" onclick="switchTab('news', event)">Global Pulse</a></li>
+                        <li><a href="#" class="nav-link-custom" onclick="switchTab('tech', event)">Tech Intel</a></li>
+                        <li><a href="#" class="nav-link-custom" onclick="switchTab('markets', event)">Markets</a></li>
+                        <li><a href="#" class="nav-link-custom" onclick="switchTab('analysis', event)">Deep Analysis</a></li>
+                        <li><a href="#" id="navGlobalLibrary" class="nav-link-custom" onclick="switchTab('library', event)" style="color: var(--accent-gold);">Global Library</a></li>
                     </ul>
                 </nav>
                 <button class="btn btn-luxury px-3 py-2" onclick="location.href='api-docs.html'">API TERMINAL</button>
@@ -284,43 +315,231 @@
     </header>
 
     <main class="container my-5">
-        <!-- Hero Grid Section -->
-        <section class="row g-5 mb-5" id="heroGridContainer">
-            <!-- Lead Article (col-lg-8) -->
-            <div class="col-lg-8 d-flex flex-column gap-3" id="leadArticleFrame">
-                <div class="hero-lead-img-wrap rounded-1">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200" alt="Lead News" id="leadImage">
-                </div>
-                <div class="d-flex flex-column gap-2 mt-2">
-                    <span class="category-badge" id="leadCategory">WORLD INTEL</span>
-                    <a href="#" class="hero-lead-title" id="leadTitle">Decentralized AI Networks: Reforming Global Media Outlets Natively</a>
-                    <p class="text-secondary" id="leadSnippet">Loading deep intelligence summaries processed by our real-time Gemini cluster analysis nodes...</p>
-                    <div class="meta-row d-flex gap-3">
-                        <span class="meta-source" id="leadSource">Global Pulse AI</span>
-                        <span class="meta-time" id="leadTime">--:-- UTC</span>
+        <!-- Panel 1: News Feed Content -->
+        <div id="newsFeedPanel">
+            <!-- Hero Grid Section -->
+            <section class="row g-5 mb-5" id="heroGridContainer">
+                <!-- Lead Article (col-lg-8) -->
+                <div class="col-lg-8 d-flex flex-column gap-3" id="leadArticleFrame">
+                    <div class="hero-lead-img-wrap rounded-1">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200" alt="Lead News" id="leadImage">
+                    </div>
+                    <div class="d-flex flex-column gap-2 mt-2">
+                        <span class="category-badge" id="leadCategory">WORLD INTEL</span>
+                        <a href="#" class="hero-lead-title" id="leadTitle">Decentralized AI Networks: Reforming Global Media Outlets Natively</a>
+                        <p class="text-secondary" id="leadSnippet">Loading deep intelligence summaries processed by our real-time Gemini cluster analysis nodes...</p>
+                        <div class="meta-row d-flex gap-3">
+                            <span class="meta-source" id="leadSource">Global Pulse AI</span>
+                            <span class="meta-time" id="leadTime">--:-- UTC</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Side Featured Articles (col-lg-4) -->
-            <div class="col-lg-4">
-                <h3 class="side-title-header font-display fs-5 text-uppercase border-bottom border-secondary pb-3 mb-4 text-warning">HIGHLIGHT FEEDS</h3>
-                <div id="sideHighlightsContainer" class="d-flex flex-column gap-4">
-                    <!-- Dynamic side items -->
+                <!-- Side Featured Articles (col-lg-4) -->
+                <div class="col-lg-4">
+                    <h3 class="side-title-header font-display fs-5 text-uppercase border-bottom border-secondary pb-3 mb-4 text-warning">HIGHLIGHT FEEDS</h3>
+                    <div id="sideHighlightsContainer" class="d-flex flex-column gap-4">
+                        <!-- Dynamic side items -->
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Divider -->
-        <div class="my-5">
-            <h2 class="section-divider-title pb-2 text-uppercase fs-4">TRENDING STORIES</h2>
+            <!-- Divider -->
+            <div class="my-5">
+                <h2 class="section-divider-title pb-2 text-uppercase fs-4">TRENDING STORIES</h2>
+            </div>
+
+            <!-- News Grid Layout with Bootstrap Cards -->
+            <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5" id="trendingNewsGrid">
+                <!-- Dynamic bootstrap cards will inject here -->
+            </section>
         </div>
 
-        <!-- News Grid Layout with Bootstrap Cards -->
-        <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5" id="trendingNewsGrid">
-            <!-- Dynamic bootstrap cards will inject here -->
-        </section>
+        <!-- Panel 2: Global Library Content -->
+        <div id="globalLibraryPanel" class="d-none">
+            <div class="text-center mb-5">
+                <h1 class="font-display text-uppercase text-white tracking-widest display-5 mb-2">Global Library</h1>
+                <p class="text-warning font-monospace text-uppercase small">Access Over 10 Million Titles & Bestsellers Instantly</p>
+            </div>
+
+            <!-- Part 1: Open Library API Search Container -->
+            <section class="mb-5">
+                <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Search 10 Million Volumes</h3>
+                <div class="library-search-box p-4 mb-4">
+                    <div class="input-group">
+                        <input type="text" id="librarySearchInput" class="form-control bg-dark text-white border-secondary" placeholder="Search by title, author, or subject...">
+                        <button class="btn btn-luxury px-4" type="button" id="btnLibrarySearch" onclick="searchLibrary()">Search Library</button>
+                    </div>
+                </div>
+                
+                <!-- Loading indicator -->
+                <div id="searchLoading" class="text-center d-none my-5">
+                    <div class="spinner-border search-spinner" role="status"></div>
+                    <p class="text-warning mt-3 font-monospace small">COMMUNING WITH OPEN LIBRARY API ARCHIVES...</p>
+                </div>
+
+                <!-- Search Results Grid -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="librarySearchResultsGrid">
+                    <!-- Dynamic search results inject here -->
+                </div>
+            </section>
+
+            <!-- Part 2: 5000+ Free E-Books Grid with Lead Capture -->
+            <section class="mb-5">
+                <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4 text-warning">5000+ Free E-Books (Public Domain & Business Classics)</h3>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="freeEbooksGrid">
+                    
+                    <!-- Free Book 1 -->
+                    <div class="col">
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="book-card-cover">
+                                <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                <div class="position-absolute text-center p-3">
+                                    <h5 class="font-display text-white mb-2">Think and Grow Rich</h5>
+                                    <p class="text-muted small">Napoleon Hill</p>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <span class="category-badge d-block mb-1">Business & Wealth</span>
+                                    <p class="card-text text-secondary small">The legendary self-improvement and wealth classic detailing the success secrets of Andrew Carnegie.</p>
+                                </div>
+                                <button class="btn btn-luxury w-100" onclick="triggerLeadCapture('Think and Grow Rich')">Free Download (PDF)</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Free Book 2 -->
+                    <div class="col">
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="book-card-cover">
+                                <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                <div class="position-absolute text-center p-3">
+                                    <h5 class="font-display text-white mb-2">The Wealth of Nations</h5>
+                                    <p class="text-muted small">Adam Smith</p>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <span class="category-badge d-block mb-1">Economics</span>
+                                    <p class="card-text text-secondary small">The foundational text of classical economics, market dynamics, and global commerce frameworks.</p>
+                                </div>
+                                <button class="btn btn-luxury w-100" onclick="triggerLeadCapture('The Wealth of Nations')">Free Download (PDF)</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Free Book 3 -->
+                    <div class="col">
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="book-card-cover">
+                                <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                <div class="position-absolute text-center p-3">
+                                    <h5 class="font-display text-white mb-2">Principles of Economics</h5>
+                                    <p class="text-muted small">Alfred Marshall</p>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <span class="category-badge d-block mb-1">Finance & Economics</span>
+                                    <p class="card-text text-secondary small">A major economics treatise standardizing supply and demand functions, marginal utility, and production costs.</p>
+                                </div>
+                                <button class="btn btn-luxury w-100" onclick="triggerLeadCapture('Principles of Economics')">Free Download (PDF)</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Part 3: Bestsellers Affiliate Grid -->
+            <section class="mb-5">
+                <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Paid Bestsellers (Global Insights)</h3>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    
+                    <!-- Bestseller 1 -->
+                    <div class="col">
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="book-card-cover">
+                                <div class="text-center p-3">
+                                    <h5 class="font-display text-white mb-2">Atomic Habits</h5>
+                                    <p class="text-muted small">James Clear</p>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <span class="category-badge d-block mb-1">Self-Mastery</span>
+                                    <p class="card-text text-secondary small">Learn how tiny changes in behavioral patterns compound into massive positive outcomes over time.</p>
+                                </div>
+                                <a href="https://www.amazon.com/" target="_blank" class="btn btn-luxury w-100">Access Book (Partner Link)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bestseller 2 -->
+                    <div class="col">
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="book-card-cover">
+                                <div class="text-center p-3">
+                                    <h5 class="font-display text-white mb-2">Zero to One</h5>
+                                    <p class="text-muted small">Peter Thiel</p>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <span class="category-badge d-block mb-1">Startup & Strategy</span>
+                                    <p class="card-text text-secondary small">Notes on startups, building value structures, and how to create the absolute future.</p>
+                                </div>
+                                <a href="https://www.amazon.com/" target="_blank" class="btn btn-luxury w-100">Access Book (Partner Link)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bestseller 3 -->
+                    <div class="col">
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="book-card-cover">
+                                <div class="text-center p-3">
+                                    <h5 class="font-display text-white mb-2">The Intelligent Investor</h5>
+                                    <p class="text-muted small">Benjamin Graham</p>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <span class="category-badge d-block mb-1">Investment & Finance</span>
+                                    <p class="card-text text-secondary small">The bible of value investing, focusing on asset valuation, margin of safety, and risk control.</p>
+                                </div>
+                                <a href="https://www.amazon.com/" target="_blank" class="btn btn-luxury w-100">Access Book (Partner Link)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
     </main>
+
+    <!-- Lead Capture Modal -->
+    <div class="modal fade" id="leadCaptureModal" tabindex="-1" aria-labelledby="leadCaptureModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark border border-secondary text-white rounded-1">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title font-display text-warning" id="leadCaptureModalLabel">Unlock Premium Resource</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p class="small text-secondary mb-3">Join the <strong class="text-white">Global Pulse Executive Insights Newsletter</strong> to receive daily geopolitical intel briefs and instantly download <span class="text-warning fw-semibold" id="targetBookTitle">your selected book</span>.</p>
+                    <form id="leadCaptureForm" onsubmit="submitLead(event)">
+                        <div class="mb-3">
+                            <label for="subscriberEmail" class="form-label font-monospace small">Corporate Email Address</label>
+                            <input type="email" class="form-control bg-black text-white border-secondary" id="subscriberEmail" placeholder="e.g. executive@corporate.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-luxury w-100 py-2">Unlock & Download (PDF)</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Luxury Mega Footer -->
     <footer class="bg-black border-top border-secondary py-5 mt-5">
@@ -379,11 +598,16 @@
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Client-side Logic for Dynamically rendering news.json -->
+    <!-- Client-side Logic -->
     <script>
         let allArticles = [];
+        let leadBootstrapModal = null;
+        let selectedBookToDownload = "";
 
         async function loadNews() {
+            // Initialize Modal
+            leadBootstrapModal = new bootstrap.Modal(document.getElementById('leadCaptureModal'));
+
             try {
                 // Fetch dynamic news.json with timestamp bust
                 const response = await fetch(`data/news.json?t=${Date.now()}`);
@@ -517,14 +741,120 @@
             }
         }
 
-        function filterArticles(category, event) {
+        // SPA Toggling Handler
+        function switchTab(tab, event) {
             if (event) {
                 event.preventDefault();
-                // Set active link style
                 document.querySelectorAll('.nav-link-custom').forEach(el => el.classList.remove('active'));
                 event.target.classList.add('active');
             }
-            renderView(category);
+
+            if (tab === 'library') {
+                document.getElementById('newsFeedPanel').classList.add('d-none');
+                document.getElementById('globalLibraryPanel').classList.remove('d-none');
+            } else {
+                document.getElementById('globalLibraryPanel').classList.add('d-none');
+                document.getElementById('newsFeedPanel').classList.remove('d-none');
+                
+                // Keep news category filter operational
+                document.getElementById('navNewsFeed').classList.add('active');
+                renderView(tab);
+            }
+        }
+
+        // Open Library API Search Implementation
+        async function searchLibrary() {
+            const query = document.getElementById('librarySearchInput').value.trim();
+            if (!query) return;
+
+            const grid = document.getElementById('librarySearchResultsGrid');
+            const loader = document.getElementById('searchLoading');
+
+            grid.innerHTML = '';
+            loader.classList.remove('d-none');
+
+            try {
+                const response = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=9`);
+                if (!response.ok) throw new Error("Search library API failed");
+                const data = await response.json();
+
+                loader.classList.add('d-none');
+                const docs = data.docs || [];
+
+                if (docs.length === 0) {
+                    grid.innerHTML = `<div class="col-12 text-center text-muted py-5">No matching volumes discovered in Open Library archive.</div>`;
+                    return;
+                }
+
+                docs.forEach(book => {
+                    const coverUrl = book.cover_i 
+                        ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` 
+                        : 'https://openlibrary.org/images/assets/covers/logo_t.png';
+
+                    const col = document.createElement('div');
+                    col.className = 'col';
+                    col.innerHTML = `
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="book-card-cover">
+                                <img src="${coverUrl}" alt="Book Cover" onerror="this.src='https://openlibrary.org/images/assets/covers/logo_t.png'; this.style.width='80px'; this.style.opacity='0.2';">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <span class="category-badge d-block mb-1">${book.subject ? book.subject[0] : 'Literature'}</span>
+                                    <h5 class="card-title-custom fw-semibold fs-6 mb-1">${book.title}</h5>
+                                    <p class="text-secondary small mb-0">Author: ${book.author_name ? book.author_name[0] : 'Unknown'}</p>
+                                    <p class="text-secondary font-monospace" style="font-size:0.68rem; margin-top:5px;">First Published: ${book.first_publish_year || 'N/A'}</p>
+                                </div>
+                                <button class="btn btn-luxury w-100 mt-auto" onclick="triggerLeadCapture('${book.title.replace(/'/g, "\\'")}')">Acquire / View Book</button>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(col);
+                });
+            } catch (err) {
+                loader.classList.add('d-none');
+                console.error(err);
+                grid.innerHTML = `<div class="col-12 text-center text-danger py-5">Communication failure with Open Library databases. Please retry.</div>`;
+            }
+        }
+
+        // Lead Capture Management
+        function triggerLeadCapture(bookTitle) {
+            selectedBookToDownload = bookTitle;
+            document.getElementById('targetBookTitle').innerText = bookTitle;
+            leadBootstrapModal.show();
+        }
+
+        async function submitLead(event) {
+            event.preventDefault();
+            const email = document.getElementById('subscriberEmail').value.trim();
+            if (!email) return;
+
+            // 1. Save subscriber locally in localStorage
+            let subscribers = JSON.parse(localStorage.getItem('library_subscribers') || '[]');
+            subscribers.push({
+                email: email,
+                resourceUnlocked: selectedBookToDownload,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('library_subscribers', JSON.stringify(subscribers));
+
+            // 2. Local backend hit simulation
+            try {
+                await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email, resource: selectedBookToDownload })
+                });
+            } catch (e) {
+                // Fail silently on static build environments
+            }
+
+            leadBootstrapModal.hide();
+            document.getElementById('leadCaptureForm').reset();
+
+            // Simulate PDF file download trigger
+            alert(`Premium Unlock Successful!\n"${selectedBookToDownload}" PDF download has been initiated for: ${email}`);
         }
 
         // Initialize Page
