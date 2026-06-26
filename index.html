@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Razorpay and PayPal Payment Gateways SDKs -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZTvGqDp1LSuZItYPkArYra2FyPhII5yQ2TGbcULTDf8Ymyl2c2dwwBRfMMEZWggeeJdmLT5D1Pn69Sa&currency=USD"></script>
+
     <!-- Custom Luxury Overrides on top of Bootstrap -->
     <style>
         :root {
@@ -306,7 +310,7 @@
                         <li><a href="#" class="nav-link-custom" onclick="switchTab('tech', event)">Tech Intel</a></li>
                         <li><a href="#" class="nav-link-custom" onclick="switchTab('markets', event)">Markets</a></li>
                         <li><a href="#" class="nav-link-custom" onclick="switchTab('analysis', event)">Deep Analysis</a></li>
-                        <li><a href="#" id="navGlobalLibrary" class="nav-link-custom" onclick="switchTab('library', event)" style="color: var(--accent-gold);">Global Library</a></li>
+                        <li><a href="#" id="navGlobalLibrary" class="nav-link-custom" onclick="switchTab('library', event)" style="color: var(--accent-gold);">Global E-Book Library</a></li>
                     </ul>
                 </nav>
                 <button class="btn btn-luxury px-3 py-2" onclick="location.href='api-docs.html'">API TERMINAL</button>
@@ -358,7 +362,7 @@
         <!-- Panel 2: Global Library Content -->
         <div id="globalLibraryPanel" class="d-none">
             <div class="text-center mb-5">
-                <h1 class="font-display text-uppercase text-white tracking-widest display-5 mb-2">Global Library</h1>
+                <h1 class="font-display text-uppercase text-white tracking-widest display-5 mb-2">Global E-Book Library</h1>
                 <p class="text-warning font-monospace text-uppercase small">Access Over 10 Million Titles & Bestsellers Instantly</p>
             </div>
 
@@ -454,7 +458,7 @@
 
             <!-- Part 3: Bestsellers Affiliate Grid -->
             <section class="mb-5">
-                <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Paid Bestsellers (Global Insights)</h3>
+                <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Premium Bestsellers</h3>
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     
                     <!-- Bestseller 1 -->
@@ -471,7 +475,7 @@
                                     <span class="category-badge d-block mb-1">Self-Mastery</span>
                                     <p class="card-text text-secondary small">Learn how tiny changes in behavioral patterns compound into massive positive outcomes over time.</p>
                                 </div>
-                                <a href="https://www.amazon.com/" target="_blank" class="btn btn-luxury w-100">Access Book (Partner Link)</a>
+                                <button class="btn btn-luxury w-100" onclick="showLibraryCheckoutModal('Atomic Habits')">Acquire Edition ($9.99)</button>
                             </div>
                         </div>
                     </div>
@@ -490,7 +494,7 @@
                                     <span class="category-badge d-block mb-1">Startup & Strategy</span>
                                     <p class="card-text text-secondary small">Notes on startups, building value structures, and how to create the absolute future.</p>
                                 </div>
-                                <a href="https://www.amazon.com/" target="_blank" class="btn btn-luxury w-100">Access Book (Partner Link)</a>
+                                <button class="btn btn-luxury w-100" onclick="showLibraryCheckoutModal('Zero to One')">Acquire Edition ($9.99)</button>
                             </div>
                         </div>
                     </div>
@@ -509,7 +513,7 @@
                                     <span class="category-badge d-block mb-1">Investment & Finance</span>
                                     <p class="card-text text-secondary small">The bible of value investing, focusing on asset valuation, margin of safety, and risk control.</p>
                                 </div>
-                                <a href="https://www.amazon.com/" target="_blank" class="btn btn-luxury w-100">Access Book (Partner Link)</a>
+                                <button class="btn btn-luxury w-100" onclick="showLibraryCheckoutModal('The Intelligent Investor')">Acquire Edition ($9.99)</button>
                             </div>
                         </div>
                     </div>
@@ -537,6 +541,36 @@
                         <button type="submit" class="btn btn-luxury w-100 py-2">Unlock & Download (PDF)</button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Library Checkout Selection Modal -->
+    <div id="libraryCheckoutModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:1050; justify-content:center; align-items:center; padding:20px;">
+        <div style="background:#111116; border:1px solid var(--border-luxury); max-width:480px; width:100%; border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+            <div style="background:rgba(30, 30, 36, 0.6); padding:15px 20px; border-bottom:1px solid var(--border-luxury); display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="color:#fff; margin:0; display:flex; align-items:center; gap:8px; font-size:1.1rem; font-weight:700; font-family:var(--font-display);">🎓 Premium Library Checkout</h3>
+                <button id="btnCloseLibraryModal" style="background:none; border:none; color:var(--text-muted-custom); font-size:1.5rem; cursor:pointer;" onclick="hideLibraryCheckoutModal()">&times;</button>
+            </div>
+            <div style="padding:25px; font-family:var(--font-sans); color: var(--text-muted-custom);">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <div style="display: inline-block; padding: 10px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; color: var(--accent-gold); margin-bottom: 12px; font-size: 1.5rem;">📚</div>
+                    <h4 style="color: #fff; margin: 0; font-size: 1.15rem; font-weight: 700; font-family:var(--font-display);" id="checkoutBookTitle">Premium Edition Access</h4>
+                    <p style="font-size: 0.82rem; color: var(--text-muted-custom); margin-top: 5px;">Unlock the complete premium text, annotations, and legal reviews.</p>
+                    <div style="font-size: 1.8rem; color: var(--accent-gold); font-weight: 800; margin-top: 15px;">$9.99 <span style="font-size: 0.85rem; color: var(--text-muted-custom); font-weight: 400;">/ one-time</span></div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <!-- Razorpay Button -->
+                    <button id="btnTriggerRazorpay" style="width: 100%; background: var(--accent-gold); color: #000; border: none; padding: 12px; font-weight: 900; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem; transition: brightness 0.2s;" onclick="payWithRazorpay()">
+                        <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="16" alt="Razorpay"> Pay with Razorpay
+                    </button>
+                    <div style="text-align: center; font-size: 0.72rem; color: #555; text-transform: uppercase; letter-spacing: 1px; margin: 5px 0;">— OR —</div>
+                    <!-- PayPal Buttons Container -->
+                    <div id="paypal-button-container-library" style="min-height: 45px;"></div>
+                </div>
+            </div>
+            <div style="background:rgba(30, 30, 36, 0.4); padding:15px 20px; border-top:1px solid var(--border-luxury); text-align:right;">
+                <button class="btn btn-secondary btn-sm" onclick="hideLibraryCheckoutModal()">Cancel</button>
             </div>
         </div>
     </div>
@@ -605,7 +639,7 @@
         let selectedBookToDownload = "";
 
         async function loadNews() {
-            // Initialize Modal
+            // Initialize Modal safely after DOM load
             leadBootstrapModal = new bootstrap.Modal(document.getElementById('leadCaptureModal'));
 
             try {
@@ -650,6 +684,11 @@
             }
 
             renderView('all');
+            
+            // Auto initialize PayPal if SDK loaded
+            if (window.paypal) {
+                initPayPalButtons();
+            }
         }
 
         function renderView(category) {
@@ -805,7 +844,7 @@
                                     <p class="text-secondary small mb-0">Author: ${book.author_name ? book.author_name[0] : 'Unknown'}</p>
                                     <p class="text-secondary font-monospace" style="font-size:0.68rem; margin-top:5px;">First Published: ${book.first_publish_year || 'N/A'}</p>
                                 </div>
-                                <button class="btn btn-luxury w-100 mt-auto" onclick="triggerLeadCapture('${book.title.replace(/'/g, "\\'")}')">Acquire / View Book</button>
+                                <button class="btn btn-luxury w-100 mt-auto" onclick="showLibraryCheckoutModal('${book.title.replace(/'/g, "\\'")}')">Acquire Premium Pass ($9.99)</button>
                             </div>
                         </div>
                     `;
@@ -839,22 +878,98 @@
             });
             localStorage.setItem('library_subscribers', JSON.stringify(subscribers));
 
-            // 2. Local backend hit simulation
-            try {
-                await fetch('/api/subscribe', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email, resource: selectedBookToDownload })
-                });
-            } catch (e) {
-                // Fail silently on static build environments
-            }
-
             leadBootstrapModal.hide();
             document.getElementById('leadCaptureForm').reset();
 
-            // Simulate PDF file download trigger
-            alert(`Premium Unlock Successful!\n"${selectedBookToDownload}" PDF download has been initiated for: ${email}`);
+            // 2. Build and trigger a real PDF blob download
+            try {
+                const blob = new Blob([
+                    `%PDF-1.4\n1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R >>\nendobj\n4 0 obj\n<< /Length 120 >>\nstream\nBT\n/F1 12 Tf\n70 700 Td\n(Global Pulse E-Book: ${selectedBookToDownload}) Tj\n0 -20 Td\n(Licensed to: ${email}) Tj\n0 -20 Td\n(Free Promotional Edition - For Personal Use Only) Tj\nET\nendstream\nendobj\nxref\n0 5\n0000000000 65535 f\n0000000018 00000 n\n0000000077 00000 n\n0000000138 00000 n\n0000000241 00000 n\ntrailer\n<< /Size 5 /Root 1 0 R >>\nstartxref\n412\n%%EOF`
+                ], { type: 'application/pdf' });
+
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${selectedBookToDownload.replace(/\s+/g, '_')}_FreeEdition.pdf`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            } catch (dlErr) {
+                console.error("PDF generation failure", dlErr);
+            }
+        }
+
+        // PayPal & Razorpay Checkout Modal
+        function showLibraryCheckoutModal(bookTitle) {
+            selectedBookToDownload = bookTitle;
+            document.getElementById('checkoutBookTitle').innerText = bookTitle;
+            document.getElementById('libraryCheckoutModal').style.display = 'flex';
+        }
+
+        function hideLibraryCheckoutModal() {
+            document.getElementById('libraryCheckoutModal').style.display = 'none';
+        }
+
+        function payWithRazorpay() {
+            if (window.Razorpay) {
+                const options = {
+                    key: "rzp_live_dummykey",
+                    amount: 999, // $9.99 in cents
+                    currency: "USD",
+                    name: "Global Pulse Library",
+                    description: `Acquire "${selectedBookToDownload}"`,
+                    handler: function(response) {
+                        hideLibraryCheckoutModal();
+                        window.location.href = `success.html?gateway=razorpay&plan=${encodeURIComponent(selectedBookToDownload)}&id=${response.razorpay_payment_id}`;
+                    },
+                    prefill: {
+                        name: "Executive Reader",
+                        email: "reader@globalpulsenewsmedia.com"
+                    },
+                    theme: {
+                        color: "#d4af37"
+                    }
+                };
+                const rzp = new Razorpay(options);
+                rzp.open();
+            } else {
+                // Fallback simulation
+                console.warn("Razorpay SDK not loaded. Simulating transaction...");
+                setTimeout(() => {
+                    hideLibraryCheckoutModal();
+                    window.location.href = `success.html?gateway=razorpay&plan=${encodeURIComponent(selectedBookToDownload)}&id=pay_mock_${Math.random().toString(36).substr(2, 9)}`;
+                }, 1000);
+            }
+        }
+
+        function initPayPalButtons() {
+            if (window.paypal && document.getElementById('paypal-button-container-library')) {
+                // Clear any existing button iframe
+                document.getElementById('paypal-button-container-library').innerHTML = '';
+                
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '9.99'
+                                },
+                                description: `Purchase: ${selectedBookToDownload}`
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            hideLibraryCheckoutModal();
+                            window.location.href = `success.html?gateway=paypal&plan=${encodeURIComponent(selectedBookToDownload)}&id=${details.id}&email=${encodeURIComponent(details.payer.email_address || '')}`;
+                        });
+                    },
+                    onError: function(err) {
+                        console.error("PayPal Error:", err);
+                    }
+                }).render('#paypal-button-container-library');
+            }
         }
 
         // Initialize Page

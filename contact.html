@@ -3,88 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | ArbitrageSmartAI</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Contact Us | Global Pulse News Media</title>
+    
+    <!-- Bootstrap 5.3.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Luxury Overrides -->
     <style>
-        body { background: #fff; color: #000; padding: 100px 5%; font-family: 'Libre Franklin', sans-serif; line-height: 1.6; }
-        .container-legal { max-width: 1000px; margin: 0 auto; }
-        h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 40px; }
-        .contact-info h2 { font-size: 1rem; margin-top: 30px; color: #cc0000; text-transform: uppercase; letter-spacing: 1px; }
-        .contact-info p { font-size: 1.1rem; color: #333; margin-top: 5px; }
-        .back-link { display: inline-block; margin-top: 60px; color: #cc0000; text-decoration: none; font-weight: 900; font-size: 0.9rem; text-transform: uppercase; }
+        :root {
+            --bg-obsidian: #0a0a0c;
+            --bg-card: #121216;
+            --border-luxury: #22222a;
+            --accent-gold: #d4af37;
+            --font-display: 'Cinzel', serif;
+            --font-sans: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: #f8f9fa;
+            font-family: var(--font-sans);
+            line-height: 1.8;
+        }
+
+        .luxury-header {
+            background-color: rgba(10, 10, 12, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-luxury);
+        }
+
+        .brand-logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .brand-logo span {
+            color: var(--accent-gold);
+        }
+
+        .section-block {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-luxury);
+            border-radius: 4px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: 800;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+        }
+
+        .btn-luxury {
+            border: 1px solid var(--accent-gold);
+            background: transparent;
+            color: var(--accent-gold);
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+
+        .btn-luxury:hover {
+            background-color: var(--accent-gold);
+            color: #000;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-logo span {
+            color: var(--accent-gold);
+        }
     </style>
 </head>
 <body>
-    <div class="container-legal">
-        <h1>Contact Us</h1>
-        <p style="font-size: 1.2rem; color: #666;">ArbitrageSmartAI (Katke Enterprises) is a fully autonomous real-time crypto arbitrage scanning network. For any inquiries, our support desk is available around the clock.</p>
-        
-        <div class="contact-grid">
-            <div class="contact-info">
-                  <h2>Operational Headquarters</h2>
-                  <p><strong>Arbitrage Smart AI (Katke Enterprises)</strong><br>
-                     301, Riddhi Siddhi Apartment, Near Shani Temple,<br>
-                     Gaskopri, Virar - 401305, Taluka: Vasai, District: Palghar, Maharashtra, India.</p>
 
-                 <h2 style="margin-top: 20px;">Verification Credentials (MSME)</h2>
-                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: #f9f9f9; border: 1px solid #eee; padding: 15px; border-radius: 6px; font-size: 0.8rem; margin-top: 10px; margin-bottom: 20px; color: #333;">
-                     <div>
-                         <span style="color: #666; display: block; font-size: 0.7rem; text-transform: uppercase;">MSME Registration Number</span>
-                         <strong style="color: #cc0000; font-family: monospace;">UDYAM-MH-17-0069728</strong>
-                     </div>
-                     <div>
-                         <span style="color: #666; display: block; font-size: 0.7rem; text-transform: uppercase;">Legal Entity Classification</span>
-                         <strong>Katke Enterprises</strong>
-                     </div>
-                     <div>
-                         <span style="color: #666; display: block; font-size: 0.7rem; text-transform: uppercase;">Incorporation Date</span>
-                         <strong>07/11/2013</strong>
-                     </div>
-                     <div>
-                         <span style="color: #666; display: block; font-size: 0.7rem; text-transform: uppercase;">Business Commencement</span>
-                         <strong>06/09/2013</strong>
-                     </div>
-                 </div>
-
-                <h2>Registered Email</h2>
-                <p>arbitragesmartai@gmail.com<br>
-                   manikkatke93@gmail.com</p>
-
-                <h2>Customer Support</h2>
-                <p>Phone/WhatsApp: +91 93729 54852<br>
-                   Operating Hours: 24/7/365</p>
-            </div>
-
-            <div style="background: #f9f9f9; padding: 40px; border-radius: 6px; border-left: 5px solid #cc0000; display: flex; flex-direction: column; gap: 20px;">
-                <div>
-                    <h2 style="margin-top: 0; color: #000;">Founder & CEO</h2>
-                    <div style="display: flex; gap: 15px; align-items: center; margin-top: 15px;">
-                        <div style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 2px solid #cc0000; background: #eee; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <img src="assets/founder.jpg" alt="Manik Vithoba Katke" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <span style="font-size: 1.8rem; color: #cc0000; font-weight: bold; display: none;">M</span>
-                        </div>
-                        <div>
-                            <strong style="font-size: 1.1rem; color: #000;">Manik Vithoba Katke</strong>
-                            <span style="display: block; font-size: 0.8rem; color: #666; text-transform: uppercase; font-weight: bold;">Founder & CEO, Katke Enterprises</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="border-top: 1px solid #eee; padding-top: 15px;">
-                    <h3 style="margin-top: 0; color: #000; font-size: 1rem;">Grievance & Legal Verification Desk</h3>
-                    <p style="font-size: 0.85rem; color: #444; margin-top: 5px;">In accordance with the Information Technology Act, 2000 and the Rules made thereunder:</p>
-                    <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 1.8; color: #333; margin-top: 10px;">
-                        <li><strong>Officer:</strong> Manik Katke</li>
-                        <li><strong>Official Email:</strong> <a href="mailto:arbitragesmartai@gmail.com" style="color: #cc0000; text-decoration: none; font-weight: bold;">arbitragesmartai@gmail.com</a>, <a href="mailto:manikkatke93@gmail.com" style="color: #cc0000; text-decoration: none; font-weight: bold;">manikkatke93@gmail.com</a></li>
-                        <li><strong>Corporate Email:</strong> <a href="mailto:arbitragesmartai@arbitragesmartai.com" style="color: #cc0000; text-decoration: none; font-weight: bold;">arbitragesmartai@arbitragesmartai.com</a></li>
-                        <li><strong>Address:</strong> 301, Riddhi Siddhi Apartment, Near Shani Temple, Gaskopri, Virar - 401305, Taluka: Vasai, District: Palghar, Maharashtra, India.</li>
-                    </ul>
-                </div>
+    <!-- Navigation Header -->
+    <header class="luxury-header py-3">
+        <div class="container-fluid px-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="brand-logo">GLOBAL<span>PULSE</span></a>
+                <a href="index.html" class="btn btn-luxury px-3 py-2">RETURN TO DASHBOARD</a>
             </div>
         </div>
+    </header>
 
-        <a href="index.html" class="back-link">← Return to Intelligence Terminal</a>
-    </div>
+    <main class="container my-5 py-4">
+        <div class="text-center mb-5">
+            <h1 class="font-display text-uppercase text-white display-4 mb-2">CONTACT US</h1>
+            <p class="text-warning font-monospace text-uppercase small">Get In Touch With Our Global Compliance & Support Desk</p>
+        </div>
+
+        <section class="section-block">
+            <h2 class="section-title">GLOBAL SUPPORT & ASSISTANCE</h2>
+            <p class="text-secondary">
+                For general support, editorial submissions, or licensing queries, please contact our automated helpdesk:
+            </p>
+            <ul class="text-secondary">
+                <li><strong>Official Support Email:</strong> <a href="mailto:support@globalpulsenewsmedia.com" class="text-warning text-decoration-none">support@globalpulsenewsmedia.com</a></li>
+                <li><strong>General Inquiries Email:</strong> <a href="mailto:info@globalpulsenewsmedia.com" class="text-warning text-decoration-none">info@globalpulsenewsmedia.com</a></li>
+                <li><strong>GCP Operations Desk Email:</strong> <a href="mailto:manikkatke93@gmail.com" class="text-warning text-decoration-none">manikkatke93@gmail.com</a></li>
+                <li><strong>Corporate Address:</strong> 301, Riddhi Siddhi Apartment, Near Shani Temple, Gaskopri, Virar - 401305, Maharashtra, India.</li>
+            </ul>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title">GRIEVANCE & COMPLIANCE OFFICE</h2>
+            <p class="text-secondary">
+                In accordance with global news publication standards and local MSME regulations, legal grievances can be addressed directly to our compliance officer:
+            </p>
+            <p class="text-secondary">
+                <strong>Officer Name:</strong> Manik Vithoba Katke (Founder & CEO)<br>
+                <strong>Email:</strong> <a href="mailto:support@globalpulsenewsmedia.com" class="text-warning text-decoration-none">support@globalpulsenewsmedia.com</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-top border-secondary py-5 mt-5">
+        <div class="container text-secondary text-center">
+            <a href="index.html" class="footer-logo mb-3 d-inline-block">GLOBAL<span>PULSE</span></a>
+            <p class="small text-muted">&copy; 2026 Global Pulse News Media (Katke Enterprises). All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
