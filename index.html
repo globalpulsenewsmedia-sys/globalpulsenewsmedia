@@ -281,6 +281,59 @@
             height: 3rem;
             color: var(--accent-gold);
         }
+
+        /* Vertical Sidebar Styles */
+        .list-group-luxury .list-group-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-luxury);
+            color: var(--text-muted-custom);
+            font-family: var(--font-display);
+            letter-spacing: 0.08em;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .list-group-luxury .list-group-item:hover,
+        .list-group-luxury .list-group-item.active {
+            background-color: var(--accent-gold);
+            color: #000 !important;
+            border-color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* Audible Media Player Widget styling */
+        .audible-player-widget {
+            background-color: #050507;
+            border: 1px solid var(--border-luxury);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .player-visualizer {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 25px;
+        }
+
+        .visualizer-bar {
+            width: 3px;
+            height: 5px;
+            background-color: var(--accent-gold);
+            animation: bounce-bar 1.2s ease-in-out infinite;
+        }
+
+        @keyframes bounce-bar {
+            0%, 100% { height: 5px; }
+            50% { height: 20px; }
+        }
+
+        .player-visualizer.paused .visualizer-bar {
+            animation-play-state: paused;
+            height: 5px;
+        }
     </style>
 </head>
 <body>
@@ -361,165 +414,284 @@
 
         <!-- Panel 2: Global Library Content -->
         <div id="globalLibraryPanel" class="d-none">
+            
             <div class="text-center mb-5">
                 <h1 class="font-display text-uppercase text-white tracking-widest display-5 mb-2">Global E-Book Library</h1>
                 <p class="text-warning font-monospace text-uppercase small">Access Over 10 Million Titles & Bestsellers Instantly</p>
             </div>
 
-            <!-- Part 1: Open Library API Search Container -->
-            <section class="mb-5">
-                <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Search 10 Million Volumes</h3>
-                <div class="library-search-box p-4 mb-4">
-                    <div class="input-group">
-                        <input type="text" id="librarySearchInput" class="form-control bg-dark text-white border-secondary" placeholder="Search by title, author, or subject...">
-                        <button class="btn btn-luxury px-4" type="button" id="btnLibrarySearch" onclick="searchLibrary()">Search Library</button>
+            <!-- Audible Media Player Widget -->
+            <div class="audible-player-widget mb-5">
+                <div class="row align-items-center g-3">
+                    <div class="col-md-5 d-flex align-items-center gap-3">
+                        <div class="player-visualizer paused" id="playerVisualizer">
+                            <div class="visualizer-bar" style="animation-delay: 0.1s"></div>
+                            <div class="visualizer-bar" style="animation-delay: 0.3s"></div>
+                            <div class="visualizer-bar" style="animation-delay: 0.5s"></div>
+                            <div class="visualizer-bar" style="animation-delay: 0.2s"></div>
+                            <div class="visualizer-bar" style="animation-delay: 0.4s"></div>
+                        </div>
+                        <div>
+                            <div class="text-uppercase font-monospace text-warning small" style="font-size: 0.7rem; letter-spacing: 1px;">NATIVE AUDIBLE READER</div>
+                            <h6 class="text-white m-0 font-display fs-6" id="playerNowPlaying">Status: Idle / Selecting Book...</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center gap-2">
+                        <button class="btn btn-luxury btn-sm" id="btnAudioPlay" onclick="playSpeech()">Play</button>
+                        <button class="btn btn-luxury btn-sm" id="btnAudioPause" onclick="pauseSpeech()">Pause</button>
+                        <button class="btn btn-danger btn-sm" id="btnAudioStop" onclick="stopSpeech()">Stop</button>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center gap-2">
+                        <span class="small font-monospace text-muted flex-shrink-0">SPEED:</span>
+                        <input type="range" class="form-range" min="0.5" max="2" step="0.1" value="1" id="audioRate" onchange="updateAudioRate()">
+                        <span class="small font-monospace text-warning flex-shrink-0" id="rateVal">1.0x</span>
                     </div>
                 </div>
+            </div>
+
+            <!-- Library Two-Column Grid Layout -->
+            <div class="row g-5">
                 
-                <!-- Loading indicator -->
-                <div id="searchLoading" class="text-center d-none my-5">
-                    <div class="spinner-border search-spinner" role="status"></div>
-                    <p class="text-warning mt-3 font-monospace small">COMMUNING WITH OPEN LIBRARY API ARCHIVES...</p>
+                <!-- Left Column: Category Sidebar (col-lg-3) -->
+                <div class="col-lg-3">
+                    <h4 class="font-display text-uppercase text-warning fs-6 mb-4 tracking-wider pb-2 border-bottom border-secondary">Library Segments</h4>
+                    <div class="list-group list-group-luxury" id="categorySidebar">
+                        <button class="list-group-item list-group-item-action active" onclick="filterLibraryCategory('all', event)">All Volumes</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Business & Wealth', event)">Business & Wealth</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Economics', event)">Economics</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Self-Mastery', event)">Self-Mastery</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Technology', event)">Technology</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Classics', event)">Public Domain Classics</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Science', event)">Science</button>
+                    </div>
                 </div>
 
-                <!-- Search Results Grid -->
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="librarySearchResultsGrid">
-                    <!-- Dynamic search results inject here -->
-                </div>
-            </section>
-
-            <!-- Part 2: 5000+ Free E-Books Grid with Lead Capture -->
-            <section class="mb-5">
-                <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4 text-warning">5000+ Free E-Books (Public Domain & Business Classics)</h3>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="freeEbooksGrid">
+                <!-- Right Column: Main Content (col-lg-9) -->
+                <div class="col-lg-9">
                     
-                    <!-- Free Book 1 -->
-                    <div class="col">
-                        <div class="card h-100 card-luxury rounded-1">
-                            <div class="book-card-cover">
-                                <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
-                                <div class="position-absolute text-center p-3">
-                                    <h5 class="font-display text-white mb-2">Think and Grow Rich</h5>
-                                    <p class="text-muted small">Napoleon Hill</p>
-                                </div>
-                            </div>
-                            <div class="card-body d-flex flex-column justify-content-between gap-3">
-                                <div>
-                                    <span class="category-badge d-block mb-1">Business & Wealth</span>
-                                    <p class="card-text text-secondary small">The legendary self-improvement and wealth classic detailing the success secrets of Andrew Carnegie.</p>
-                                </div>
-                                <button class="btn btn-luxury w-100" onclick="triggerLeadCapture('Think and Grow Rich')">Free Download (PDF)</button>
+                    <!-- Search Container -->
+                    <section class="mb-5">
+                        <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Search 10 Million Volumes</h3>
+                        <div class="library-search-box p-4 mb-4">
+                            <div class="input-group">
+                                <input type="text" id="librarySearchInput" class="form-control bg-dark text-white border-secondary" placeholder="Search by title, author, or subject...">
+                                <button class="btn btn-luxury px-4" type="button" id="btnLibrarySearch" onclick="searchLibrary()">Search Library</button>
                             </div>
                         </div>
-                    </div>
+                        
+                        <!-- Loading spinner -->
+                        <div id="searchLoading" class="text-center d-none my-5">
+                            <div class="spinner-border search-spinner" role="status"></div>
+                            <p class="text-warning mt-3 font-monospace small">COMMUNING WITH OPEN LIBRARY API ARCHIVES...</p>
+                        </div>
 
-                    <!-- Free Book 2 -->
-                    <div class="col">
-                        <div class="card h-100 card-luxury rounded-1">
-                            <div class="book-card-cover">
-                                <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
-                                <div class="position-absolute text-center p-3">
-                                    <h5 class="font-display text-white mb-2">The Wealth of Nations</h5>
-                                    <p class="text-muted small">Adam Smith</p>
-                                </div>
-                            </div>
-                            <div class="card-body d-flex flex-column justify-content-between gap-3">
-                                <div>
-                                    <span class="category-badge d-block mb-1">Economics</span>
-                                    <p class="card-text text-secondary small">The foundational text of classical economics, market dynamics, and global commerce frameworks.</p>
-                                </div>
-                                <button class="btn btn-luxury w-100" onclick="triggerLeadCapture('The Wealth of Nations')">Free Download (PDF)</button>
-                            </div>
+                        <!-- Search Results Grid -->
+                        <div class="row row-cols-1 row-cols-sm-2 g-4" id="librarySearchResultsGrid">
+                            <!-- Search cards -->
                         </div>
-                    </div>
+                    </section>
 
-                    <!-- Free Book 3 -->
-                    <div class="col">
-                        <div class="card h-100 card-luxury rounded-1">
-                            <div class="book-card-cover">
-                                <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
-                                <div class="position-absolute text-center p-3">
-                                    <h5 class="font-display text-white mb-2">Principles of Economics</h5>
-                                    <p class="text-muted small">Alfred Marshall</p>
+                    <!-- Curated Free E-Books Grid -->
+                    <section class="mb-5">
+                        <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4 text-warning">Curated E-Books (5000+ Free Volumes)</h3>
+                        <div class="row row-cols-1 row-cols-md-2 g-4" id="freeEbooksGrid">
+                            
+                            <!-- Free Book 1 -->
+                            <div class="col free-book-card" data-category="Business & Wealth">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">Think and Grow Rich</h5>
+                                            <p class="text-muted small">Napoleon Hill</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <span class="category-badge d-block mb-1">Business & Wealth</span>
+                                            <p class="card-text text-secondary small text-description">The legendary self-improvement and wealth classic detailing the success secrets of Andrew Carnegie.</p>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('Think and Grow Rich', 'Napoleon Hill', 'The legendary self-improvement and wealth classic detailing the success secrets of Andrew Carnegie.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" onclick="triggerLeadCapture('Think and Grow Rich')">Download (PDF)</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-body d-flex flex-column justify-content-between gap-3">
-                                <div>
-                                    <span class="category-badge d-block mb-1">Finance & Economics</span>
-                                    <p class="card-text text-secondary small">A major economics treatise standardizing supply and demand functions, marginal utility, and production costs.</p>
+
+                            <!-- Free Book 2 -->
+                            <div class="col free-book-card" data-category="Economics">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">The Wealth of Nations</h5>
+                                            <p class="text-muted small">Adam Smith</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <span class="category-badge d-block mb-1">Economics</span>
+                                            <p class="card-text text-secondary small text-description">The foundational text of classical economics, market dynamics, and global commerce frameworks.</p>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('The Wealth of Nations', 'Adam Smith', 'The foundational text of classical economics, market dynamics, and global commerce frameworks.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" onclick="triggerLeadCapture('The Wealth of Nations')">Download (PDF)</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button class="btn btn-luxury w-100" onclick="triggerLeadCapture('Principles of Economics')">Free Download (PDF)</button>
                             </div>
+
+                            <!-- Free Book 3 -->
+                            <div class="col free-book-card" data-category="Economics">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">Principles of Economics</h5>
+                                            <p class="text-muted small">Alfred Marshall</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <span class="category-badge d-block mb-1">Economics</span>
+                                            <p class="card-text text-secondary small text-description">A major economics treatise standardizing supply and demand functions, marginal utility, and production costs.</p>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('Principles of Economics', 'Alfred Marshall', 'A major economics treatise standardizing supply and demand functions, marginal utility, and production costs.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" onclick="triggerLeadCapture('Principles of Economics')">Download (PDF)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Free Book 4 -->
+                            <div class="col free-book-card" data-category="Classics">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">The Great Gatsby</h5>
+                                            <p class="text-muted small">F. Scott Fitzgerald</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <span class="category-badge d-block mb-1">Classics</span>
+                                            <p class="card-text text-secondary small text-description">The masterwork detailing the wealthy corridors of Long Island, wealth illusion, and society classes.</p>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('The Great Gatsby', 'F. Scott Fitzgerald', 'The masterwork detailing the wealthy corridors of Long Island, wealth illusion, and society classes.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" onclick="triggerLeadCapture('The Great Gatsby')">Download (PDF)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Free Book 5 -->
+                            <div class="col free-book-card" data-category="Technology">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">The Soul of a New Machine</h5>
+                                            <p class="text-muted small">Tracy Kidder</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <span class="category-badge d-block mb-1">Technology</span>
+                                            <p class="card-text text-secondary small text-description">The classic story of a team of engineers racing to design a next-generation computer system.</p>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('The Soul of a New Machine', 'Tracy Kidder', 'The classic story of a team of engineers racing to design a next-generation computer system.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" onclick="triggerLeadCapture('The Soul of a New Machine')">Download (PDF)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Free Book 6 -->
+                            <div class="col free-book-card" data-category="Science">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">On the Origin of Species</h5>
+                                            <p class="text-muted small">Charles Darwin</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <span class="category-badge d-block mb-1">Science</span>
+                                            <p class="card-text text-secondary small text-description">The seminal work of scientific literature establishing evolutionary biology and natural selection.</p>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('On the Origin of Species', 'Charles Darwin', 'The seminal work of scientific literature establishing evolutionary biology and natural selection.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" onclick="triggerLeadCapture('On the Origin of Species')">Download (PDF)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
+                    </section>
+
+                    <!-- Premium Paid Bestsellers Grid -->
+                    <section class="mb-5">
+                        <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Premium Bestsellers</h3>
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            
+                            <!-- Bestseller 1 -->
+                            <div class="col">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <div class="text-center p-3">
+                                            <h5 class="font-display text-white mb-2">Atomic Habits</h5>
+                                            <p class="text-muted small">James Clear</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <span class="category-badge d-block mb-1">Self-Mastery</span>
+                                            <p class="card-text text-secondary small text-description">Learn how tiny changes in behavioral patterns compound into massive positive outcomes over time.</p>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('Atomic Habits', 'James Clear', 'Learn how tiny changes in behavioral patterns compound into massive positive outcomes over time.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" onclick="showLibraryCheckoutModal('Atomic Habits')">Acquire Pass ($9.99)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bestseller 2 -->
+                            <div class="col">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <div class="text-center p-3">
+                                            <h5 class="font-display text-white mb-2">Zero to One</h5>
+                                            <p class="text-muted small">Peter Thiel</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <span class="category-badge d-block mb-1">Startup & Strategy</span>
+                                            <p class="card-text text-secondary small text-description">Notes on startups, building value structures, and how to create the absolute future.</p>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('Zero to One', 'Peter Thiel', 'Notes on startups, building value structures, and how to create the absolute future.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" onclick="showLibraryCheckoutModal('Zero to One')">Acquire Pass ($9.99)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
 
                 </div>
-            </section>
+            </div>
 
-            <!-- Part 3: Bestsellers Affiliate Grid -->
-            <section class="mb-5">
-                <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Premium Bestsellers</h3>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                    
-                    <!-- Bestseller 1 -->
-                    <div class="col">
-                        <div class="card h-100 card-luxury rounded-1">
-                            <div class="book-card-cover">
-                                <div class="text-center p-3">
-                                    <h5 class="font-display text-white mb-2">Atomic Habits</h5>
-                                    <p class="text-muted small">James Clear</p>
-                                </div>
-                            </div>
-                            <div class="card-body d-flex flex-column justify-content-between gap-3">
-                                <div>
-                                    <span class="category-badge d-block mb-1">Self-Mastery</span>
-                                    <p class="card-text text-secondary small">Learn how tiny changes in behavioral patterns compound into massive positive outcomes over time.</p>
-                                </div>
-                                <button class="btn btn-luxury w-100" onclick="showLibraryCheckoutModal('Atomic Habits')">Acquire Edition ($9.99)</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bestseller 2 -->
-                    <div class="col">
-                        <div class="card h-100 card-luxury rounded-1">
-                            <div class="book-card-cover">
-                                <div class="text-center p-3">
-                                    <h5 class="font-display text-white mb-2">Zero to One</h5>
-                                    <p class="text-muted small">Peter Thiel</p>
-                                </div>
-                            </div>
-                            <div class="card-body d-flex flex-column justify-content-between gap-3">
-                                <div>
-                                    <span class="category-badge d-block mb-1">Startup & Strategy</span>
-                                    <p class="card-text text-secondary small">Notes on startups, building value structures, and how to create the absolute future.</p>
-                                </div>
-                                <button class="btn btn-luxury w-100" onclick="showLibraryCheckoutModal('Zero to One')">Acquire Edition ($9.99)</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bestseller 3 -->
-                    <div class="col">
-                        <div class="card h-100 card-luxury rounded-1">
-                            <div class="book-card-cover">
-                                <div class="text-center p-3">
-                                    <h5 class="font-display text-white mb-2">The Intelligent Investor</h5>
-                                    <p class="text-muted small">Benjamin Graham</p>
-                                </div>
-                            </div>
-                            <div class="card-body d-flex flex-column justify-content-between gap-3">
-                                <div>
-                                    <span class="category-badge d-block mb-1">Investment & Finance</span>
-                                    <p class="card-text text-secondary small">The bible of value investing, focusing on asset valuation, margin of safety, and risk control.</p>
-                                </div>
-                                <button class="btn btn-luxury w-100" onclick="showLibraryCheckoutModal('The Intelligent Investor')">Acquire Edition ($9.99)</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
         </div>
     </main>
 
@@ -637,6 +809,12 @@
         let allArticles = [];
         let leadBootstrapModal = null;
         let selectedBookToDownload = "";
+
+        // Text-to-Speech (Audible player) parameters
+        let currentUtterance = null;
+        let narrationText = "";
+        let audioRate = 1.0;
+        let isSpeaking = false;
 
         async function loadNews() {
             // Initialize Modal safely after DOM load
@@ -830,6 +1008,9 @@
                         ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` 
                         : 'https://openlibrary.org/images/assets/covers/logo_t.png';
 
+                    const author = book.author_name ? book.author_name[0] : 'Unknown Author';
+                    const summary = `First published in ${book.first_publish_year || 'N/A'}. Classified subjects include ${book.subject ? book.subject.slice(0, 3).join(', ') : 'Literature'}.`;
+
                     const col = document.createElement('div');
                     col.className = 'col';
                     col.innerHTML = `
@@ -841,10 +1022,13 @@
                                 <div>
                                     <span class="category-badge d-block mb-1">${book.subject ? book.subject[0] : 'Literature'}</span>
                                     <h5 class="card-title-custom fw-semibold fs-6 mb-1">${book.title}</h5>
-                                    <p class="text-secondary small mb-0">Author: ${book.author_name ? book.author_name[0] : 'Unknown'}</p>
+                                    <p class="text-secondary small mb-0">Author: ${author}</p>
                                     <p class="text-secondary font-monospace" style="font-size:0.68rem; margin-top:5px;">First Published: ${book.first_publish_year || 'N/A'}</p>
                                 </div>
-                                <button class="btn btn-luxury w-100 mt-auto" onclick="showLibraryCheckoutModal('${book.title.replace(/'/g, "\\'")}')">Acquire Premium Pass ($9.99)</button>
+                                <div class="d-flex gap-2 mt-auto">
+                                    <button class="btn btn-outline-warning btn-sm flex-grow-1" onclick="loadAudibleText('${book.title.replace(/'/g, "\\'")}', '${author.replace(/'/g, "\\'")}', '${summary.replace(/'/g, "\\'")}')">Listen (Audible)</button>
+                                    <button class="btn btn-luxury btn-sm flex-grow-1" onclick="showLibraryCheckoutModal('${book.title.replace(/'/g, "\\'")}')">Acquire Pass ($9.99)</button>
+                                </div>
                             </div>
                         </div>
                     `;
@@ -855,6 +1039,23 @@
                 console.error(err);
                 grid.innerHTML = `<div class="col-12 text-center text-danger py-5">Communication failure with Open Library databases. Please retry.</div>`;
             }
+        }
+
+        // Left Sidebar Category Filtering for Free Ebooks
+        function filterLibraryCategory(category, event) {
+            // Set active class on sidebar
+            document.querySelectorAll('#categorySidebar button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.free-book-card');
+            cards.forEach(card => {
+                const bookCat = card.getAttribute('data-category');
+                if (category === 'all' || bookCat === category) {
+                    card.classList.remove('d-none');
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
         }
 
         // Lead Capture Management
@@ -969,6 +1170,77 @@
                         console.error("PayPal Error:", err);
                     }
                 }).render('#paypal-button-container-library');
+            }
+        }
+
+        // --- Text-to-Speech (Audible) Engine logic ---
+        function loadAudibleText(title, author, description) {
+            stopSpeech();
+            
+            narrationText = `Now narrating: ${title}, written by ${author}. Overview: ${description}`;
+            document.getElementById('playerNowPlaying').innerText = `Audible: ${title} (${author})`;
+            
+            // Auto start playing
+            playSpeech();
+        }
+
+        function playSpeech() {
+            if (!narrationText) {
+                document.getElementById('playerNowPlaying').innerText = "Status: Please select a book first...";
+                return;
+            }
+
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+                document.getElementById('playerVisualizer').classList.remove('paused');
+                return;
+            }
+
+            window.speechSynthesis.cancel(); // Stop any active speech
+
+            currentUtterance = new SpeechSynthesisUtterance(narrationText);
+            currentUtterance.rate = audioRate;
+            
+            currentUtterance.onstart = () => {
+                isSpeaking = true;
+                document.getElementById('playerVisualizer').classList.remove('paused');
+            };
+
+            currentUtterance.onend = () => {
+                isSpeaking = false;
+                document.getElementById('playerVisualizer').classList.add('paused');
+                document.getElementById('playerNowPlaying').innerText = "Status: Finished Reading / Idle";
+            };
+
+            currentUtterance.onerror = (e) => {
+                console.error("SpeechSynthesis error:", e);
+                document.getElementById('playerVisualizer').classList.add('paused');
+            };
+
+            window.speechSynthesis.speak(currentUtterance);
+        }
+
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+                window.speechSynthesis.pause();
+                document.getElementById('playerVisualizer').classList.add('paused');
+            }
+        }
+
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+            document.getElementById('playerVisualizer').classList.add('paused');
+            document.getElementById('playerNowPlaying').innerText = "Status: Stopped / Idle";
+        }
+
+        function updateAudioRate() {
+            const slider = document.getElementById('audioRate');
+            audioRate = parseFloat(slider.value);
+            document.getElementById('rateVal').innerText = `${audioRate.toFixed(1)}x`;
+            
+            if (window.speechSynthesis.speaking) {
+                // To apply rate changes live we restart from the current position
+                playSpeech();
             }
         }
 
