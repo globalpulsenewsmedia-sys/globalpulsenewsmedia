@@ -849,110 +849,38 @@
 
         <!-- Panel 3: Free AI Tools Content -->
         <div id="freeToolsPanel" class="d-none">
-            <div class="text-center mb-5">
+            <div class="text-center mb-4">
                 <h1 class="font-display text-uppercase text-white tracking-widest display-5 mb-2">Free AI Tools Hub</h1>
-                <p class="text-info font-monospace text-uppercase small" style="color: #00ffcc !important;">High-Traffic Programmatic Utility Web Apps</p>
+                <p class="text-info font-monospace text-uppercase small" style="color: #00ffcc !important;">High-Traffic Programmatic Utility Web Apps (1,000+ Pages)</p>
             </div>
 
-            <!-- Tools Directory Grid -->
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
-                
-                <!-- Tool 1 -->
-                <div class="col">
-                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">SEO</span>
-                            <h5 class="font-display text-white mb-2">SEO Meta Tag Generator</h5>
-                            <p class="text-secondary small">Automatically generate search-engine optimized title tags, meta descriptions, and robots policies.</p>
-                        </div>
-                        <a href="/tools/meta-tag-generator" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
+            <!-- Live Search Bar -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="toolSearchInput" class="form-control bg-dark text-white border-secondary font-monospace" placeholder="Search 1,000+ free online utility tools..." oninput="filterToolsCatalog()">
+                        <button class="btn btn-luxury px-4" onclick="filterToolsCatalog()">Search</button>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('ALL')">All</button>
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('SEO')">SEO</button>
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('AI Content')">AI Content</button>
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('Developers')">Developers</button>
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('Utilities')">Utilities</button>
                     </div>
                 </div>
+            </div>
 
-                <!-- Tool 2 -->
-                <div class="col">
-                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">AI Content</span>
-                            <h5 class="font-display text-white mb-2">Word & Character Counter</h5>
-                            <p class="text-secondary small">Analyze word length, paragraphs, reading time, and detailed document character diagnostics live.</p>
-                        </div>
-                        <a href="/tools/word-counter" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
-                    </div>
-                </div>
+            <!-- Dynamic Tools Directory Grid -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4" id="toolsGrid">
+                <!-- Populated dynamically via JS -->
+            </div>
 
-                <!-- Tool 3 -->
-                <div class="col">
-                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">AI Content</span>
-                            <h5 class="font-display text-white mb-2">Markdown Live Editor</h5>
-                            <p class="text-secondary small">Write and format your text summaries, notes, or copywriting templates with dynamic HTML previews.</p>
-                        </div>
-                        <a href="/tools/markdown-live-preview" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
-                    </div>
-                </div>
-
-                <!-- Tool 4 -->
-                <div class="col">
-                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">Developers</span>
-                            <h5 class="font-display text-white mb-2">Base64 Encoder/Decoder</h5>
-                            <p class="text-secondary small">Instantly encode raw strings to secure base64 blocks or decode base64 hashes back to plain-text.</p>
-                        </div>
-                        <a href="/tools/base64-encoder" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
-                    </div>
-                </div>
-
-                <!-- Tool 5 -->
-                <div class="col">
-                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">Utilities</span>
-                            <h5 class="font-display text-white mb-2">QR Code Generator</h5>
-                            <p class="text-secondary small">Generate scan-ready high quality QR Codes for URLs, contacts, and custom content instantly.</p>
-                        </div>
-                        <a href="/tools/qr-code-generator" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
-                    </div>
-                </div>
-
-                <!-- Tool 6 -->
-                <div class="col">
-                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">SEO</span>
-                            <h5 class="font-display text-white mb-2">XML Sitemap Generator</h5>
-                            <p class="text-secondary small">Create standard search console compliant XML sitemaps to verify indexing priorities of your blog.</p>
-                        </div>
-                        <a href="/tools/xml-sitemap-generator" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
-                    </div>
-                </div>
-
-                <!-- Tool 7 -->
-                <div class="col">
-                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">SEO</span>
-                            <h5 class="font-display text-white mb-2">Robots.txt Generator</h5>
-                            <p class="text-secondary small">Generate optimized crawler rules, disallow directories, and sitemap reference links for Googlebot.</p>
-                        </div>
-                        <a href="/tools/robots-txt-generator" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
-                    </div>
-                </div>
-
-                <!-- Tool 8 -->
-                <div class="col">
-                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">Utilities</span>
-                            <h5 class="font-display text-white mb-2">Password Generator</h5>
-                            <p class="text-secondary small">Construct safe random passwords using numbers, uppercase parameters, and symbols to protect keys.</p>
-                        </div>
-                        <a href="/tools/password-generator" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
-                    </div>
-                </div>
-
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center gap-3 align-items-center mb-5">
+                <button class="btn btn-outline-warning btn-sm" id="prevToolsPageBtn" onclick="changeToolsPage(-1)">◀ Previous</button>
+                <span class="font-monospace small text-secondary" id="toolsPageIndicator">Page 1 of 50</span>
+                <button class="btn btn-outline-warning btn-sm" id="nextToolsPageBtn" onclick="changeToolsPage(1)">Next ▶</button>
             </div>
         </div>
     </main>
@@ -1942,8 +1870,102 @@
             }
         }
 
+        // Programmatic SEO Tools dynamic loading, cataloging and filtering
+        let toolsCatalog = [];
+        let filteredTools = [];
+        let currentToolsPage = 1;
+        const toolsPerPage = 12;
+        let currentToolsCategory = 'ALL';
+
+        async function initToolsCatalog() {
+            try {
+                const response = await fetch('/data/tools_catalog.json');
+                if (response.ok) {
+                    toolsCatalog = await response.json();
+                    filteredTools = [...toolsCatalog];
+                    renderToolsGrid();
+                } else {
+                    console.error("Failed to load tools catalog JSON");
+                }
+            } catch (err) {
+                console.error("Error loading tools catalog:", err);
+            }
+        }
+
+        function renderToolsGrid() {
+            const grid = document.getElementById('toolsGrid');
+            if (!grid) return;
+            
+            grid.innerHTML = '';
+            
+            const start = (currentToolsPage - 1) * toolsPerPage;
+            const end = start + toolsPerPage;
+            const pageItems = filteredTools.slice(start, end);
+            
+            if (pageItems.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <p class="text-secondary font-monospace">No tools found matching your criteria.</p>
+                    </div>
+                `;
+                document.getElementById('toolsPageIndicator').innerText = 'Page 0 of 0';
+                return;
+            }
+            
+            pageItems.forEach(tool => {
+                const col = document.createElement('div');
+                col.className = 'col';
+                col.innerHTML = `
+                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">${tool.category}</span>
+                            <h5 class="font-display text-white mb-2 fs-6">${tool.name}</h5>
+                            <p class="text-secondary small mb-0">Professional, high-performance web utility compiled to run client-side inside your browser.</p>
+                        </div>
+                        <a href="/tools/${tool.slug}" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
+                    </div>
+                `;
+                grid.appendChild(col);
+            });
+            
+            // Update page info
+            const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
+            document.getElementById('toolsPageIndicator').innerText = `Page ${currentToolsPage} of ${totalPages}`;
+            
+            document.getElementById('prevToolsPageBtn').disabled = currentToolsPage <= 1;
+            document.getElementById('nextToolsPageBtn').disabled = currentToolsPage >= totalPages;
+        }
+
+        function filterToolsCatalog() {
+            const query = document.getElementById('toolSearchInput').value.toLowerCase().trim();
+            filteredTools = toolsCatalog.filter(tool => {
+                const matchesSearch = tool.name.toLowerCase().includes(query) || tool.slug.toLowerCase().includes(query);
+                const matchesCat = currentToolsCategory === 'ALL' || tool.category === currentToolsCategory;
+                return matchesSearch && matchesCat;
+            });
+            currentToolsPage = 1;
+            renderToolsGrid();
+        }
+
+        function filterToolsCategory(category) {
+            currentToolsCategory = category;
+            filterToolsCatalog();
+        }
+
+        function changeToolsPage(direction) {
+            const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
+            const targetPage = currentToolsPage + direction;
+            if (targetPage >= 1 && targetPage <= totalPages) {
+                currentToolsPage = targetPage;
+                renderToolsGrid();
+            }
+        }
+
         // Initialize Page
-        window.addEventListener('DOMContentLoaded', loadNews);
+        window.addEventListener('DOMContentLoaded', () => {
+            loadNews();
+            initToolsCatalog();
+        });
     </script>
 </body>
 </html>
