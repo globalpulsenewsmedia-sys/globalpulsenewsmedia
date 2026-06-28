@@ -490,4 +490,20 @@ directories.forEach(dir => {
     }
 });
 
+// Copy data directory to public/tools/data to prevent 404s from relative subdirectory requests
+const toolsDataDir = path.join(publicDir, 'tools', 'data');
+if (!fs.existsSync(toolsDataDir)) {
+    fs.mkdirSync(toolsDataDir, { recursive: true });
+}
+const dataSrcPath = path.join(__dirname, 'data');
+if (fs.existsSync(dataSrcPath)) {
+    fs.readdirSync(dataSrcPath).forEach(file => {
+        const itemSrc = path.join(dataSrcPath, file);
+        const itemDest = path.join(toolsDataDir, file);
+        if (!fs.existsSync(itemDest)) {
+            copyRecursiveSync(itemSrc, itemDest);
+        }
+    });
+}
+
 console.log(`🚀 Compilation finished successfully!`);
