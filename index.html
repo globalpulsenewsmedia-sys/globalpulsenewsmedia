@@ -1877,19 +1877,50 @@
         const toolsPerPage = 12;
         let currentToolsCategory = 'ALL';
 
+        const fallbackTools = [
+            { slug: 'free-meta-tag-generator', name: 'Free SEO Meta Tag Generator', category: 'SEO' },
+            { slug: 'free-xml-sitemap-generator', name: 'Free XML Sitemap Generator', category: 'SEO' },
+            { slug: 'free-robots-txt-generator', name: 'Free Robots.txt Generator', category: 'SEO' },
+            { slug: 'free-keyword-density-checker', name: 'Free Keyword Density Analyzer', category: 'SEO' },
+            { slug: 'free-redirect-header-analyzer', name: 'Free HTTP Redirect Header Analyzer', category: 'SEO' },
+            { slug: 'free-word-counter', name: 'Free Word & Character Counter', category: 'AI Content' },
+            { slug: 'free-markdown-editor', name: 'Free Markdown Live Editor', category: 'AI Content' },
+            { slug: 'free-text-summarizer', name: 'Free AI Text Summarizer Tool', category: 'AI Content' },
+            { slug: 'free-case-converter', name: 'Free Text Case Converter', category: 'AI Content' },
+            { slug: 'free-sentence-rewriter', name: 'Free Sentence Rewriter Utility', category: 'AI Content' },
+            { slug: 'free-base64-encoder', name: 'Free Base64 Encoder / Decoder', category: 'Developers' },
+            { slug: 'free-json-formatter', name: 'Free JSON Formatter & Validator', category: 'Developers' },
+            { slug: 'free-url-encoder-decoder', name: 'Free URL Encoder & Decoder', category: 'Developers' },
+            { slug: 'free-md5-hash-generator', name: 'Free MD5 Cryptographic Hash Generator', category: 'Developers' },
+            { slug: 'free-hex-to-rgb-converter', name: 'Free HEX to RGB Color Converter', category: 'Developers' },
+            { slug: 'free-image-resizer', name: 'Free Client-Side Image Resizer', category: 'Utilities' },
+            { slug: 'free-color-picker', name: 'Free Palette Color Picker', category: 'Utilities' },
+            { slug: 'free-qr-code-generator', name: 'Free QR Code Builder', category: 'Utilities' },
+            { slug: 'free-password-generator', name: 'Free Strong Password Generator', category: 'Utilities' },
+            { slug: 'free-uuid-v4-generator', name: 'Free UUID v4 Identifier Generator', category: 'Utilities' }
+        ];
+
         async function initToolsCatalog() {
             try {
-                const response = await fetch('/data/tools_catalog.json');
+                const response = await fetch('/tools-data.json');
                 if (response.ok) {
                     toolsCatalog = await response.json();
-                    filteredTools = [...toolsCatalog];
-                    renderToolsGrid();
                 } else {
-                    console.error("Failed to load tools catalog JSON");
+                    console.warn("Failed to load /tools-data.json, trying fallback /tools/catalog.json");
+                    const backupResponse = await fetch('/tools/catalog.json');
+                    if (backupResponse.ok) {
+                        toolsCatalog = await backupResponse.json();
+                    } else {
+                        console.warn("Failed to load backend tools catalog JSON, loading defensive local fallbacks");
+                        toolsCatalog = fallbackTools;
+                    }
                 }
             } catch (err) {
                 console.error("Error loading tools catalog:", err);
+                toolsCatalog = fallbackTools;
             }
+            filteredTools = [...toolsCatalog];
+            renderToolsGrid();
         }
 
         function renderToolsGrid() {

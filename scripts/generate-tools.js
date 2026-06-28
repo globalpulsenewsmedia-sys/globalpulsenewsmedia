@@ -528,9 +528,11 @@ for (const prefix of prefixes) {
     }
 }
 
-// Write the compiled catalog database for frontend search indexing
-const catalogPath = path.join(dataDirectory, 'tools_catalog.json');
-fs.writeFileSync(catalogPath, JSON.stringify(generatedCatalog, null, 2), 'utf-8');
+// Write the compiled catalog database for frontend search indexing to multiple paths
+const catalogJSON = JSON.stringify(generatedCatalog, null, 2);
+fs.writeFileSync(path.join(dataDirectory, 'tools_catalog.json'), catalogJSON, 'utf-8');
+fs.writeFileSync(path.join(__dirname, '..', 'tools-data.json'), catalogJSON, 'utf-8');
+fs.writeFileSync(path.join(toolsDirectory, 'catalog.json'), catalogJSON, 'utf-8');
 
 console.log(`Successfully generated ${count} dynamic programmatic SEO tool pages!`);
-console.log(`Saved dynamic tools index catalog to ${catalogPath}`);
+console.log(`Saved dynamic tools index catalog to data/tools_catalog.json, tools-data.json, and tools/catalog.json`);
