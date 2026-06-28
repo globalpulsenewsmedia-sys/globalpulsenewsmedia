@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Pulse | Premium AI News Media & E-Books Mega Hub</title>
+    
+    <!-- Bootstrap 5.3.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Razorpay and PayPal Payment Gateways SDKs -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZTvGqDp1LSuZItYPkArYra2FyPhII5yQ2TGbcULTDf8Ymyl2c2dwwBRfMMEZWggeeJdmLT5D1Pn69Sa&currency=USD"></script>
+
+    <!-- Custom Luxury Overrides on top of Bootstrap -->
+    <style>
+        :root {
+            --bg-obsidian: #0a0a0c;
+            --bg-card: #121216;
+            --border-luxury: #22222a;
+            --accent-gold: #d4af37;
+            --accent-gold-hover: #f3e5ab;
+            --text-muted-custom: #8a8a93;
+            
+            --font-display: 'Cinzel', serif;
+            --font-sans: 'Outfit', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: #f8f9fa;
+            font-family: var(--font-sans);
+        }
+
+        /* Top Ticker Bar */
+        .top-ticker-bar {
+            background-color: #000;
+            border-bottom: 1px solid var(--border-luxury);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .ticker-badge {
+            background-color: var(--accent-gold);
+            color: #000;
+            font-weight: 700;
+            font-size: 0.65rem;
+            border-radius: 2px;
+        }
+
+        .ticker-content-wrap {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Header logo & navigation */
+        .luxury-header {
+            background-color: rgba(10, 10, 12, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-luxury);
+        }
+
+        .brand-logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .brand-logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-link-custom {
+            color: var(--text-muted-custom);
+            text-decoration: none;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-link-custom::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link-custom:hover, .nav-link-custom.active {
+            color: #fff;
+        }
+
+        .nav-link-custom:hover::after, .nav-link-custom.active::after {
+            width: 100%;
+        }
+
+        /* Bootstrap Card Custom Luxury Theme overrides */
+        .card-luxury {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-luxury);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            color: #fff;
+        }
+
+        .card-luxury:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-img-wrap {
+            height: 230px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-luxury);
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .card-luxury:hover .card-img-wrap img {
+            transform: scale(1.04);
+            filter: brightness(1.05);
+        }
+
+        .category-badge {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .card-title-custom {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .card-title-custom:hover {
+            color: var(--accent-gold);
+        }
+
+        .meta-row {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--text-muted-custom);
+        }
+
+        .meta-source {
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* Divider */
+        .section-divider-title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            letter-spacing: 0.15em;
+            color: #fff;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-luxury);
+            padding-bottom: 8px;
+        }
+
+        /* Hero styles */
+        .hero-lead-img-wrap {
+            height: 480px;
+            overflow: hidden;
+            border: 1px solid var(--border-luxury);
+        }
+
+        .hero-lead-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .hero-lead-title {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .hero-lead-title:hover {
+            color: var(--accent-gold);
+        }
+
+        .btn-luxury {
+            border: 1px solid var(--accent-gold);
+            background: transparent;
+            color: var(--accent-gold);
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+
+        .btn-luxury:hover {
+            background-color: var(--accent-gold);
+            color: #000;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-logo span {
+            color: var(--accent-gold);
+        }
+
+        /* Library Section Specific Styling */
+        .library-search-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-luxury);
+            border-radius: 4px;
+        }
+
+        .book-card-cover {
+            height: 280px;
+            background-color: #1a1a24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-luxury);
+            position: relative;
+        }
+
+        .book-card-cover img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+
+        .search-spinner {
+            width: 3rem;
+            height: 3rem;
+            color: var(--accent-gold);
+        }
+
+        /* Vertical Sidebar Styles */
+        .list-group-luxury .list-group-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-luxury);
+            color: var(--text-muted-custom);
+            font-family: var(--font-display);
+            letter-spacing: 0.08em;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .list-group-luxury .list-group-item:hover,
+        .list-group-luxury .list-group-item.active {
+            background-color: var(--accent-gold);
+            color: #000 !important;
+            border-color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* Audible Media Player Widget styling */
+        .audible-player-widget {
+            background-color: #050507;
+            border: 1px solid var(--border-luxury);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .player-visualizer {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 25px;
+        }
+
+        .visualizer-bar {
+            width: 3px;
+            height: 5px;
+            background-color: var(--accent-gold);
+            animation: bounce-bar 1.2s ease-in-out infinite;
+        }
+
+        @keyframes bounce-bar {
+            0%, 100% { height: 5px; }
+            50% { height: 20px; }
+        }
+
+        .player-visualizer.paused .visualizer-bar {
+            animation-play-state: paused;
+            height: 5px;
+        }
+
+        /* CNN / Reuters breaking ticker flash */
+        .blink-red {
+            animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0.4; }
+        }
+
+        /* AdSense Placeholders */
+        .adsense-slot {
+            background: rgba(20, 20, 25, 0.4);
+            border: 1px dashed #333344;
+            color: #555566;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            text-align: center;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+        .adsense-slot::before {
+            content: "ADVERTISEMENT / SPONSORED CONTENT";
+            display: block;
+            font-size: 0.6rem;
+            color: var(--accent-gold);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        /* Numbered list for Trending sidebar */
+        .trending-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-luxury);
+        }
+        .trending-number {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        /* Bookmarks list custom scroll */
+        .bookmarks-list {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        .history-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Metadata Bar -->
+    <div class="top-ticker-bar py-2 px-4 d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-3 w-75">
+            <span class="ticker-badge px-2 py-1 flex-shrink-0 bg-danger text-white blink-red" style="font-weight: 800;">BREAKING NOW</span>
+            <div class="ticker-content-wrap">
+                <span class="ticker-content text-white" id="topNewsTicker">Initializing autonomous media network stream...</span>
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-2 text-warning fs-8 font-monospace">
+            <span class="spinner-grow spinner-grow-sm text-warning" role="status"></span>
+            <span>24/7 AI AGENTS ACTIVE</span>
+            <span class="text-secondary">|</span>
+            <span id="streakCountBadge" style="color: var(--accent-gold); font-weight: bold;">🔥 0-DAY STREAK</span>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="luxury-header sticky-top py-3">
+        <div class="container-fluid px-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="brand-logo">GLOBAL<span>PULSE</span></a>
+                <nav class="d-none d-md-block">
+                    <ul class="d-flex list-unstyled gap-4 m-0">
+                        <li><a href="#" id="navNewsFeed" class="nav-link-custom active" onclick="switchTab('news', event)">Global Pulse</a></li>
+                        <li><a href="#" class="nav-link-custom" onclick="switchTab('tech', event)">Tech Intel</a></li>
+                        <li><a href="#" class="nav-link-custom" onclick="switchTab('markets', event)">Markets</a></li>
+                        <li><a href="#" class="nav-link-custom" onclick="switchTab('analysis', event)">Deep Analysis</a></li>
+                        <li><a href="#" id="navGlobalLibrary" class="nav-link-custom" onclick="switchTab('library', event)" style="color: var(--accent-gold);">Global E-Book Library</a></li>
+                        <li><a href="#" id="navFreeTools" class="nav-link-custom" onclick="switchTab('tools', event)" style="color: #00ffcc;">Free AI Tools</a></li>
+                    </ul>
+                </nav>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-warning btn-sm fw-bold px-3 py-2" id="headerPremiumBtn" onclick="showPremiumMembershipModal()" style="font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 0.05em; display: inline-block;">GO PREMIUM (₹99)</button>
+                    <button class="btn btn-luxury px-3 py-2" onclick="location.href='api-docs.html'">API TERMINAL</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Header AdSense Slot -->
+    <div class="container mt-3">
+        <div class="adsense-slot">
+            <strong>AD: Leaderboard Banner 728x90</strong> - Premium Institutional Analytics & Wealth Advisory Subscriptions Open.
+        </div>
+    </div>
+
+    <main class="container my-5">
+        <!-- Panel 1: News Feed Content -->
+        <div id="newsFeedPanel">
+            <!-- Hero Grid Section -->
+            <section class="row g-5 mb-5" id="heroGridContainer">
+                <!-- Lead Article (col-lg-8) -->
+                <div class="col-lg-8 d-flex flex-column gap-3" id="leadArticleFrame">
+                    <div class="hero-lead-img-wrap rounded-1">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200" alt="Lead News" id="leadImage">
+                    </div>
+                    <div class="d-flex flex-column gap-2 mt-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="category-badge" id="leadCategory">WORLD INTEL</span>
+                            <button id="bookmarkLeadBtn" class="btn btn-sm btn-outline-warning" style="font-size: 0.7rem;" onclick="toggleBookmarkLead()">🔖 Bookmark</button>
+                        </div>
+                        <a href="#" class="hero-lead-title" id="leadTitle">Decentralized AI Networks: Reforming Global Media Outlets Natively</a>
+                        <p class="text-secondary" id="leadSnippet">Loading deep intelligence summaries processed by our real-time Gemini cluster analysis nodes...</p>
+                        <div class="meta-row d-flex gap-3">
+                            <span class="meta-source" id="leadSource">Global Pulse AI</span>
+                            <span class="meta-time" id="leadTime">--:-- UTC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Featured Articles (col-lg-4) -->
+                <div class="col-lg-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="side-title-header font-display fs-5 text-uppercase border-bottom border-danger pb-3 mb-4 text-danger">TRENDING NOW</h3>
+                        <div id="trendingNowContainer" class="d-flex flex-column gap-3 mb-4">
+                            <!-- Dynamic trending items -->
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar AdSense Slot -->
+                    <div class="adsense-slot my-2">
+                        <strong>AD: Sidebar Square 300x250</strong> - Secure Your Ledger Hardware Key. Official US Affiliate Link.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Divider -->
+            <div class="my-5">
+                <h2 class="section-divider-title pb-2 text-uppercase fs-4">TRENDING STORIES</h2>
+            </div>
+
+            <!-- News Grid Layout with Bootstrap Cards -->
+            <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5" id="trendingNewsGrid">
+                <!-- Dynamic bootstrap cards will inject here -->
+            </section>
+        </div>
+
+        <!-- Panel 2: Global Library Content -->
+        <div id="globalLibraryPanel" class="d-none">
+            
+            <div class="text-center mb-5">
+                <h1 class="font-display text-uppercase text-white tracking-widest display-5 mb-2">Global E-Book Library</h1>
+                <p class="text-warning font-monospace text-uppercase small">Access Over 10 Million Titles & Bestsellers Instantly</p>
+            </div>
+
+            <!-- Audible Media Player Widget -->
+            <div class="audible-player-widget mb-5">
+                <div class="row align-items-center g-3">
+                    <div class="col-md-4 d-flex align-items-center gap-3">
+                        <div class="player-visualizer paused" id="playerVisualizer">
+                            <div class="visualizer-bar" style="animation-delay: 0.1s"></div>
+                            <div class="visualizer-bar" style="animation-delay: 0.3s"></div>
+                            <div class="visualizer-bar" style="animation-delay: 0.5s"></div>
+                            <div class="visualizer-bar" style="animation-delay: 0.2s"></div>
+                            <div class="visualizer-bar" style="animation-delay: 0.4s"></div>
+                        </div>
+                        <div>
+                            <div class="text-uppercase font-monospace text-warning small" style="font-size: 0.7rem; letter-spacing: 1px;">NATIVE AUDIBLE READER</div>
+                            <h6 class="text-white m-0 font-display fs-6" id="playerNowPlaying">Status: Idle / Selecting Book...</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center gap-2">
+                        <select id="audiobookChapterSelect" class="form-select bg-dark text-white border-secondary btn-sm" style="font-size: 0.8rem;" onchange="changeChapter()">
+                            <option>Select Chapter...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center gap-2">
+                        <button class="btn btn-outline-warning btn-sm" id="btnPrevChapter" onclick="prevChapter()" title="Previous Chapter">⏮</button>
+                        <button class="btn btn-luxury btn-sm" id="btnAudioPlay" onclick="playSpeech()">Play</button>
+                        <button class="btn btn-luxury btn-sm" id="btnAudioPause" onclick="pauseSpeech()">Pause</button>
+                        <button class="btn btn-danger btn-sm" id="btnAudioStop" onclick="stopSpeech()">Stop</button>
+                        <button class="btn btn-outline-warning btn-sm" id="btnNextChapter" onclick="nextChapter()" title="Next Chapter">⏭</button>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center gap-2">
+                        <span class="small font-monospace text-muted flex-shrink-0">SPEED:</span>
+                        <input type="range" class="form-range" min="0.5" max="2" step="0.1" value="1" id="audioRate" onchange="updateAudioRate()">
+                        <span class="small font-monospace text-warning flex-shrink-0" id="rateVal">1.0x</span>
+                    </div>
+                </div>
+                <!-- Reading progress bar -->
+                <div class="progress bg-secondary mt-3" style="height: 6px;">
+                    <div id="audiobookProgress" class="progress-bar bg-warning" role="progressbar" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <!-- Library Two-Column Grid Layout -->
+            <div class="row g-5">
+                
+                <!-- Left Column: Category Sidebar (col-lg-3) -->
+                <div class="col-lg-3">
+                    <h4 class="font-display text-uppercase text-warning fs-6 mb-4 tracking-wider pb-2 border-bottom border-secondary">Library Segments</h4>
+                    <div class="list-group list-group-luxury" id="categorySidebar">
+                        <button class="list-group-item list-group-item-action active" onclick="filterLibraryCategory('all', event)">All Volumes</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Business & Wealth', event)">Business & Wealth</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Economics', event)">Economics</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Self-Mastery', event)">Self-Mastery</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Technology', event)">Technology</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Classics', event)">Public Domain Classics</button>
+                        <button class="list-group-item list-group-item-action" onclick="filterLibraryCategory('Science', event)">Science</button>
+                    </div>
+
+                    <!-- Bookmarks section -->
+                    <h4 class="font-display text-uppercase text-warning fs-6 mt-4 mb-4 tracking-wider pb-2 border-bottom border-secondary">My Bookmarks</h4>
+                    <div class="list-group list-group-luxury bookmarks-list" id="bookmarksSidebar">
+                        <div class="text-muted small p-2">No bookmarks saved yet.</div>
+                    </div>
+
+                    <!-- History section -->
+                    <h4 class="font-display text-uppercase text-warning fs-6 mt-4 mb-4 tracking-wider pb-2 border-bottom border-secondary">Narrative History</h4>
+                    <div class="list-group list-group-luxury history-list" id="historySidebar">
+                        <div class="text-muted small p-2">No history recorded.</div>
+                    </div>
+
+                    <!-- Sidebar Ad Slot -->
+                    <div class="adsense-slot mt-4">
+                        <strong>AD: Sidebar Banner 160x600</strong> - Institutional Wealth Report 2026. Get Free Copy.
+                    </div>
+                </div>
+
+                <!-- Right Column: Main Content (col-lg-9) -->
+                <div class="col-lg-9">
+                    
+                    <!-- Search Container -->
+                    <section class="mb-5">
+                        <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Search 10 Million Volumes</h3>
+                        <div class="library-search-box p-4 mb-4">
+                            <div class="input-group">
+                                <input type="text" id="librarySearchInput" class="form-control bg-dark text-white border-secondary" placeholder="Search by title, author, or subject...">
+                                <button class="btn btn-luxury px-4" type="button" id="btnLibrarySearch" onclick="searchLibrary()">Search Library</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Loading spinner -->
+                        <div id="searchLoading" class="text-center d-none my-5">
+                            <div class="spinner-border search-spinner" role="status"></div>
+                            <p class="text-warning mt-3 font-monospace small">COMMUNING WITH OPEN LIBRARY API ARCHIVES...</p>
+                        </div>
+
+                        <!-- Search Results Grid -->
+                        <div class="row row-cols-1 row-cols-sm-2 g-4" id="librarySearchResultsGrid">
+                            <!-- Search cards -->
+                        </div>
+                    </section>
+
+                    <!-- Curated Free E-Books Grid -->
+                    <section class="mb-5">
+                        <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4 text-warning">Curated E-Books (5000+ Free Volumes)</h3>
+                        <div class="row row-cols-1 row-cols-md-2 g-4" id="freeEbooksGrid">
+                            
+                            <!-- Free Book 1 -->
+                            <div class="col free-book-card" data-category="Business & Wealth">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">Think and Grow Rich</h5>
+                                            <p class="text-muted small">Napoleon Hill</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="category-badge">Business & Wealth</span>
+                                                <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.8rem;" onclick="toggleBookmarkBook('Think and Grow Rich')">🔖 Save</button>
+                                            </div>
+                                            <p class="card-text text-secondary small text-description">The legendary self-improvement and wealth classic detailing the success secrets of Andrew Carnegie.</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('Think and Grow Rich', 'Napoleon Hill', 'The legendary self-improvement and wealth classic detailing the success secrets of Andrew Carnegie.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="triggerLeadCapture('Think and Grow Rich')">Download (PDF)</button>
+                                            <a href="https://www.amazon.com/s?k=Think+and+Grow+Rich+Napoleon+Hill" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Free Book 2 -->
+                            <div class="col free-book-card" data-category="Economics">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">The Wealth of Nations</h5>
+                                            <p class="text-muted small">Adam Smith</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="category-badge">Economics</span>
+                                                <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.8rem;" onclick="toggleBookmarkBook('The Wealth of Nations')">🔖 Save</button>
+                                            </div>
+                                            <p class="card-text text-secondary small text-description">The foundational text of classical economics, market dynamics, and global commerce frameworks.</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('The Wealth of Nations', 'Adam Smith', 'The foundational text of classical economics, market dynamics, and global commerce frameworks.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="triggerLeadCapture('The Wealth of Nations')">Download (PDF)</button>
+                                            <a href="https://www.amazon.com/s?k=The+Wealth+of+Nations+Adam+Smith" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Free Book 3 -->
+                            <div class="col free-book-card" data-category="Economics">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">Principles of Economics</h5>
+                                            <p class="text-muted small">Alfred Marshall</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="category-badge">Economics</span>
+                                                <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.8rem;" onclick="toggleBookmarkBook('Principles of Economics')">🔖 Save</button>
+                                            </div>
+                                            <p class="card-text text-secondary small text-description">A major economics treatise standardizing supply and demand functions, marginal utility, and production costs.</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('Principles of Economics', 'Alfred Marshall', 'A major economics treatise standardizing supply and demand functions, marginal utility, and production costs.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="triggerLeadCapture('Principles of Economics')">Download (PDF)</button>
+                                            <a href="https://www.amazon.com/s?k=Principles+of+Economics+Alfred+Marshall" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Free Book 4 -->
+                            <div class="col free-book-card" data-category="Classics">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">The Great Gatsby</h5>
+                                            <p class="text-muted small">F. Scott Fitzgerald</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="category-badge">Classics</span>
+                                                <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.8rem;" onclick="toggleBookmarkBook('The Great Gatsby')">🔖 Save</button>
+                                            </div>
+                                            <p class="card-text text-secondary small text-description">The masterwork detailing the wealthy corridors of Long Island, wealth illusion, and society classes.</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('The Great Gatsby', 'F. Scott Fitzgerald', 'The masterwork detailing the wealthy corridors of Long Island, wealth illusion, and society classes.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="triggerLeadCapture('The Great Gatsby')">Download (PDF)</button>
+                                            <a href="https://www.amazon.com/s?k=The+Great+Gatsby+Fitzgerald" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Free Book 5 -->
+                            <div class="col free-book-card" data-category="Technology">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">The Soul of a New Machine</h5>
+                                            <p class="text-muted small">Tracy Kidder</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="category-badge">Technology</span>
+                                                <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.8rem;" onclick="toggleBookmarkBook('The Soul of a New Machine')">🔖 Save</button>
+                                            </div>
+                                            <p class="card-text text-secondary small text-description">The classic story of a team of engineers racing to design a next-generation computer system.</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('The Soul of a New Machine', 'Tracy Kidder', 'The classic story of a team of engineers racing to design a next-generation computer system.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="triggerLeadCapture('The Soul of a New Machine')">Download (PDF)</button>
+                                            <a href="https://www.amazon.com/s?k=The+Soul+of+a+New+Machine+Tracy+Kidder" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Free Book 6 -->
+                            <div class="col free-book-card" data-category="Science">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <img src="https://openlibrary.org/images/assets/covers/logo_t.png" alt="Cover" style="opacity: 0.2; width: 80px;">
+                                        <div class="position-absolute text-center p-3">
+                                            <h5 class="font-display text-white mb-2">On the Origin of Species</h5>
+                                            <p class="text-muted small">Charles Darwin</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="category-badge">Science</span>
+                                                <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.8rem;" onclick="toggleBookmarkBook('On the Origin of Species')">🔖 Save</button>
+                                            </div>
+                                            <p class="card-text text-secondary small text-description">The seminal work of scientific literature establishing evolutionary biology and natural selection.</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('On the Origin of Species', 'Charles Darwin', 'The seminal work of scientific literature establishing evolutionary biology and natural selection.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="triggerLeadCapture('On the Origin of Species')">Download (PDF)</button>
+                                            <a href="https://www.amazon.com/s?k=On+the+Origin+of+Species+Charles+Darwin" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- In-content Google AdSense Slot -->
+                    <div class="adsense-slot">
+                        <strong>AD: In-Content Banner 468x60</strong> - Get Lifetime Digital Credentials & Cloud Security Certifications.
+                    </div>
+
+                    <!-- Premium Paid Bestsellers Grid -->
+                    <section class="mb-5 mt-4">
+                        <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4">Premium Bestsellers</h3>
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            
+                            <!-- Bestseller 1 -->
+                            <div class="col">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <div class="text-center p-3">
+                                            <h5 class="font-display text-white mb-2">Atomic Habits</h5>
+                                            <p class="text-muted small">James Clear</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="category-badge">Self-Mastery</span>
+                                                <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.8rem;" onclick="toggleBookmarkBook('Atomic Habits')">🔖 Save</button>
+                                            </div>
+                                            <p class="card-text text-secondary small text-description">Learn how tiny changes in behavioral patterns compound into massive positive outcomes over time.</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('Atomic Habits', 'James Clear', 'Learn how tiny changes in behavioral patterns compound into massive positive outcomes over time.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="showLibraryCheckoutModal('Atomic Habits')">Acquire Pass ($9.99)</button>
+                                            <a href="https://www.amazon.com/s?k=Atomic+Habits+James+Clear" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bestseller 2 -->
+                            <div class="col">
+                                <div class="card h-100 card-luxury rounded-1">
+                                    <div class="book-card-cover">
+                                        <div class="text-center p-3">
+                                            <h5 class="font-display text-white mb-2">Zero to One</h5>
+                                            <p class="text-muted small">Peter Thiel</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <span class="category-badge">Startup & Strategy</span>
+                                                <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.8rem;" onclick="toggleBookmarkBook('Zero to One')">🔖 Save</button>
+                                            </div>
+                                            <p class="card-text text-secondary small text-description">Notes on startups, building value structures, and how to create the absolute future.</p>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('Zero to One', 'Peter Thiel', 'Notes on startups, building value structures, and how to create the absolute future.')">Listen (Audible)</button>
+                                            <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="showLibraryCheckoutModal('Zero to One')">Acquire Pass ($9.99)</button>
+                                            <a href="https://www.amazon.com/s?k=Zero+to+One+Peter+Thiel" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- You Might Also Like Recommendations Section -->
+                    <section class="mt-5 border-top border-secondary pt-4" id="libraryRecommendationsSection">
+                        <h3 class="font-display text-uppercase text-warning fs-6 mb-4">You Might Also Like</h3>
+                        <div class="row row-cols-1 row-cols-sm-3 g-3" id="libraryRecommendationsGrid">
+                            <!-- Populated dynamically in JavaScript -->
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Panel 3: Free AI Tools Content -->
+        <div id="freeToolsPanel" class="d-none">
+            <div class="text-center mb-4">
+                <h1 class="font-display text-uppercase text-white tracking-widest display-5 mb-2">Free AI Tools Hub</h1>
+                <p class="text-info font-monospace text-uppercase small" style="color: #00ffcc !important;">High-Traffic Programmatic Utility Web Apps (1,000+ Pages)</p>
+            </div>
+
+            <!-- Live Search Bar -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="toolSearchInput" class="form-control bg-dark text-white border-secondary font-monospace" placeholder="Search 1,000+ free online utility tools..." oninput="filterToolsCatalog()">
+                        <button class="btn btn-luxury px-4" onclick="filterToolsCatalog()">Search</button>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('ALL')">All</button>
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('SEO')">SEO</button>
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('AI Content')">AI Content</button>
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('Developers')">Developers</button>
+                        <button class="btn btn-outline-secondary btn-sm font-monospace text-uppercase" onclick="filterToolsCategory('Utilities')">Utilities</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Tools Directory Grid -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4" id="toolsGrid">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center gap-3 align-items-center mb-5">
+                <button class="btn btn-outline-warning btn-sm" id="prevToolsPageBtn" onclick="changeToolsPage(-1)">◀ Previous</button>
+                <span class="font-monospace small text-secondary" id="toolsPageIndicator">Page 1 of 50</span>
+                <button class="btn btn-outline-warning btn-sm" id="nextToolsPageBtn" onclick="changeToolsPage(1)">Next ▶</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lead Capture Modal -->
+    <div class="modal fade" id="leadCaptureModal" tabindex="-1" aria-labelledby="leadCaptureModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark border border-secondary text-white rounded-1">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title font-display text-warning" id="leadCaptureModalLabel">Unlock Premium Resource</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p class="small text-secondary mb-3">Join the <strong class="text-white">Global Pulse Executive Insights Newsletter</strong> to receive daily geopolitical intel briefs and instantly download <span class="text-warning fw-semibold" id="targetBookTitle">your selected book</span>.</p>
+                    <form id="leadCaptureForm" onsubmit="submitLead(event)">
+                        <div class="mb-3">
+                            <label for="subscriberEmail" class="form-label font-monospace small">Corporate Email Address</label>
+                            <input type="email" class="form-control bg-black text-white border-secondary" id="subscriberEmail" placeholder="e.g. executive@corporate.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-luxury w-100 py-2">Unlock & Download (PDF)</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Library Checkout Selection Modal -->
+    <div id="libraryCheckoutModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:1050; justify-content:center; align-items:center; padding:20px;">
+        <div style="background:#111116; border:1px solid var(--border-luxury); max-width:480px; width:100%; border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+            <div style="background:rgba(30, 30, 36, 0.6); padding:15px 20px; border-bottom:1px solid var(--border-luxury); display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="color:#fff; margin:0; display:flex; align-items:center; gap:8px; font-size:1.1rem; font-weight:700; font-family:var(--font-display);">🎓 Premium Library Checkout</h3>
+                <button id="btnCloseLibraryModal" style="background:none; border:none; color:var(--text-muted-custom); font-size:1.5rem; cursor:pointer;" onclick="hideLibraryCheckoutModal()">&times;</button>
+            </div>
+            <div style="padding:25px; font-family:var(--font-sans); color: var(--text-muted-custom);">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <div style="display: inline-block; padding: 10px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; color: var(--accent-gold); margin-bottom: 12px; font-size: 1.5rem;">📚</div>
+                    <h4 style="color: #fff; margin: 0; font-size: 1.15rem; font-weight: 700; font-family:var(--font-display);" id="checkoutBookTitle">Premium Edition Access</h4>
+                    <p style="font-size: 0.82rem; color: var(--text-muted-custom); margin-top: 5px;">Unlock the complete premium text, annotations, and legal reviews.</p>
+                    <div style="font-size: 1.8rem; color: var(--accent-gold); font-weight: 800; margin-top: 15px;">$9.99 <span style="font-size: 0.85rem; color: var(--text-muted-custom); font-weight: 400;">/ one-time</span></div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <!-- Razorpay Button -->
+                    <button id="btnTriggerRazorpay" style="width: 100%; background: var(--accent-gold); color: #000; border: none; padding: 12px; font-weight: 900; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem; transition: brightness 0.2s;" onclick="payWithRazorpay()">
+                        <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="16" alt="Razorpay"> Pay with Razorpay
+                    </button>
+                    <div style="text-align: center; font-size: 0.72rem; color: #555; text-transform: uppercase; letter-spacing: 1px; margin: 5px 0;">— OR —</div>
+                    <!-- PayPal Buttons Container -->
+                    <div id="paypal-button-container-library" style="min-height: 45px;"></div>
+                </div>
+            </div>
+            <div style="background:rgba(30, 30, 36, 0.4); padding:15px 20px; border-top:1px solid var(--border-luxury); text-align:right;">
+                <button class="btn btn-secondary btn-sm" onclick="hideLibraryCheckoutModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Membership Modal -->
+    <div id="premiumMembershipModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(8px); z-index:1050; justify-content:center; align-items:center; padding:20px;">
+        <div style="background:#111116; border:1px solid var(--border-luxury); max-width:480px; width:100%; border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+            <div style="background:rgba(30, 30, 36, 0.6); padding:15px 20px; border-bottom:1px solid var(--border-luxury); display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="color:#fff; margin:0; display:flex; align-items:center; gap:8px; font-size:1.1rem; font-weight:700; font-family:var(--font-display);">👑 Premium Membership Upgrade</h3>
+                <button style="background:none; border:none; color:var(--text-muted-custom); font-size:1.5rem; cursor:pointer;" onclick="hidePremiumMembershipModal()">&times;</button>
+            </div>
+            <div style="padding:25px; font-family:var(--font-sans); color: var(--text-muted-custom);">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <div style="display: inline-block; padding: 10px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; color: var(--accent-gold); margin-bottom: 12px; font-size: 1.5rem;">💎</div>
+                    <h4 style="color: #fff; margin: 0; font-size: 1.15rem; font-weight: 700; font-family:var(--font-display);">Global Pulse Premium Pass</h4>
+                    <p style="font-size: 0.82rem; color: var(--text-muted-custom); margin-top: 5px;">Unlock all chapters of curated e-books, full audiobook narration, ad-free UI, and advanced news reports.</p>
+                    <div style="font-size: 1.8rem; color: var(--accent-gold); font-weight: 800; margin-top: 15px;">₹99 <span style="font-size: 0.85rem; color: var(--text-muted-custom); font-weight: 400;">/ month</span></div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <!-- Razorpay Button -->
+                    <button style="width: 100%; background: var(--accent-gold); color: #000; border: none; padding: 12px; font-weight: 900; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem;" onclick="payPremiumRazorpay()">
+                        <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="16" alt="Razorpay"> Pay with Razorpay (₹99)
+                    </button>
+                    <div style="text-align: center; font-size: 0.72rem; color: #555; text-transform: uppercase; letter-spacing: 1px; margin: 5px 0;">— OR —</div>
+                    <!-- PayPal Buttons Container -->
+                    <div id="paypal-button-container-premium" style="min-height: 45px;"></div>
+                </div>
+            </div>
+            <div style="background:rgba(30, 30, 36, 0.4); padding:15px 20px; border-top:1px solid var(--border-luxury); text-align:right;">
+                <button class="btn btn-secondary btn-sm" onclick="hidePremiumMembershipModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Luxury Mega Footer -->
+    <footer class="bg-black border-top border-secondary py-5 mt-5">
+        <div class="container text-secondary">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-logo mb-3 d-inline-block">GLOBAL<span>PULSE</span></a>
+                    <p class="small text-muted" style="line-height: 1.7;">
+                        The state-of-the-art autonomous publication ecosystem. Empowering continuous, copyright-free global coverage utilizing zero-cost intelligence integrations.
+                    </p>
+                </div>
+                <div class="col-6 col-sm-3 col-lg-2">
+                    <h5 class="text-white fs-6 font-display text-uppercase mb-3">Corporate</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="about.html" class="text-secondary text-decoration-none hover-gold">About Us</a></li>
+                        <li><a href="careers.html" class="text-secondary text-decoration-none hover-gold">Careers</a></li>
+                        <li><a href="partnerships.html" class="text-secondary text-decoration-none hover-gold">Strategic Alliances</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-3 col-lg-2">
+                    <h5 class="text-white fs-6 font-display text-uppercase mb-3">Developers</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="api-docs.html" class="text-secondary text-decoration-none hover-gold">API Docs</a></li>
+                        <li><a href="whitepaper.html" class="text-secondary text-decoration-none hover-gold">Whitepaper</a></li>
+                        <li><a href="roadmap.html" class="text-secondary text-decoration-none hover-gold">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-3 col-lg-2">
+                    <h5 class="text-white fs-6 font-display text-uppercase mb-3">Compliance</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="compliance-center.html" class="text-secondary text-decoration-none hover-gold">Compliance Hub</a></li>
+                        <li><a href="security-center.html" class="text-secondary text-decoration-none hover-gold">Security Center</a></li>
+                        <li><a href="terms.html" class="text-secondary text-decoration-none hover-gold">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-3 col-lg-2">
+                    <h5 class="text-white fs-6 font-display text-uppercase mb-3">Contact</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="contact-center.html" class="text-secondary text-decoration-none hover-gold">Contact Center</a></li>
+                        <li><a href="contact.html" class="text-secondary text-decoration-none hover-gold">Support Desk</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row pt-4 border-top border-secondary small text-muted font-monospace">
+                <div class="col-md-6 mb-2 mb-md-0">
+                    &copy; 2026 Global Pulse News Media (Katke Enterprises). All rights reserved.
+                </div>
+                <div class="col-md-6 text-md-end">
+                    Parent Entity MSME Registry: UDYAM-MH-17-0069728 | Maharashtra, India.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Client-side Logic -->
+    <script>
+        let allArticles = [];
+        let leadBootstrapModal = null;
+        let selectedBookToDownload = "";
+
+        // Text-to-Speech (Audible player) parameters
+        let currentUtterance = null;
+        let narrationText = "";
+        let audioRate = 1.0;
+        let isSpeaking = false;
+
+        // Chapter and book details state
+        let booksContent = null;
+        let activeBookKey = null;
+        let activeChapterIndex = 0;
+
+        async function loadNews() {
+            // Initialize Modal safely after DOM load
+            leadBootstrapModal = new bootstrap.Modal(document.getElementById('leadCaptureModal'));
+
+            // Check and display reading streak
+            initStreakUI();
+            
+            // Check and update Premium Member UI
+            updatePremiumUI();
+
+            // Load saved lists
+            renderBookmarks();
+            renderHistory();
+
+            try {
+                // Fetch dynamic news.json with timestamp bust
+                const response = await fetch(`data/news.json?t=${Date.now()}`);
+                if (!response.ok) throw new Error("Local news desk offline");
+                allArticles = await response.json();
+            } catch (err) {
+                console.warn("Using fallback static news data.", err);
+                allArticles = [
+                    {
+                        title: "Autonomous Journalism Systems Establish Grounding Across US Tech Hubs",
+                        snippet: "A significant transition toward multi-agent AI media architectures has been verified across Silicon Valley and Austin corridors, minimizing copyright complexities.",
+                        category: "TECH",
+                        source: "Global Pulse AI Desk",
+                        time: new Date().toLocaleString(),
+                        imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
+                    },
+                    {
+                        title: "Macro Yield Adjustments and Sovereign Bonds Regain Leverage in Markets",
+                        snippet: "Treasury markets reflect strong yields as geopolitical tensions settle, drawing attention from automated liquid engines.",
+                        category: "BUSINESS",
+                        source: "Global Pulse Intelligence",
+                        time: new Date().toLocaleString(),
+                        imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800"
+                    },
+                    {
+                        title: "Deepspace Satellite Nodes Coordinate Direct AI Verification Pipelines",
+                        snippet: "New orbital sensor platforms deploy on-chain data encryption structures, validating media origin hashes immediately.",
+                        category: "SCIENCE",
+                        source: "Global Pulse Space Agency",
+                        time: new Date().toLocaleString(),
+                        imageUrl: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800"
+                    }
+                ];
+            }
+
+            // Populate Top Ticker
+            if (allArticles.length > 0) {
+                const tickerText = allArticles.map(a => `*** [${a.category}] ${a.title}`).join('     |     ');
+                document.getElementById('topNewsTicker').innerText = tickerText;
+            }
+
+            renderView('all');
+            
+            // Populate CNN style elements
+            renderTrendingNow();
+            renderLibraryRecommendations();
+            
+            // Auto initialize PayPal if SDK loaded
+            if (window.paypal) {
+                initPayPalPremiumButtons();
+            }
+        }
+
+        // Daily Streak Logic
+        function initStreakUI() {
+            const lastReadStr = localStorage.getItem('last_read_date');
+            let streak = parseInt(localStorage.getItem('reading_streak') || '0');
+            if (lastReadStr) {
+                const lastReadDate = new Date(lastReadStr);
+                const todayDate = new Date(new Date().toDateString());
+                const diffTime = Math.abs(todayDate - lastReadDate);
+                const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+                if (diffDays > 1) {
+                    streak = 0; // Streak reset if they skipped a day
+                    localStorage.setItem('reading_streak', 0);
+                }
+            }
+            document.getElementById('streakCountBadge').innerText = `🔥 ${streak}-DAY STREAK`;
+        }
+
+        function recordReadingActivity() {
+            const todayStr = new Date().toDateString();
+            const lastReadStr = localStorage.getItem('last_read_date');
+            let streak = parseInt(localStorage.getItem('reading_streak') || '0');
+            
+            if (lastReadStr) {
+                if (lastReadStr !== todayStr) {
+                    const lastReadDate = new Date(lastReadStr);
+                    const todayDate = new Date(todayStr);
+                    const diffTime = Math.abs(todayDate - lastReadDate);
+                    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+                    
+                    if (diffDays === 1) {
+                        streak += 1;
+                    } else {
+                        streak = 1;
+                    }
+                    localStorage.setItem('reading_streak', streak);
+                    localStorage.setItem('last_read_date', todayStr);
+                }
+            } else {
+                streak = 1;
+                localStorage.setItem('reading_streak', streak);
+                localStorage.setItem('last_read_date', todayStr);
+            }
+            document.getElementById('streakCountBadge').innerText = `🔥 ${streak}-DAY STREAK`;
+        }
+
+        // Premium Upgrades Logic
+        function updatePremiumUI() {
+            const isPremium = localStorage.getItem('premium_member') === 'true';
+            const btn = document.getElementById('headerPremiumBtn');
+            if (isPremium) {
+                btn.className = "btn btn-success btn-sm fw-bold px-3 py-2";
+                btn.innerText = "👑 PREMIUM ACTIVE";
+                btn.onclick = null;
+            } else {
+                btn.className = "btn btn-warning btn-sm fw-bold px-3 py-2";
+                btn.innerText = "GO PREMIUM (₹99)";
+                btn.onclick = showPremiumMembershipModal;
+            }
+        }
+
+        function showPremiumMembershipModal() {
+            document.getElementById('premiumMembershipModal').style.display = 'flex';
+            initPayPalPremiumButtons();
+        }
+
+        function hidePremiumMembershipModal() {
+            document.getElementById('premiumMembershipModal').style.display = 'none';
+        }
+
+        function payPremiumRazorpay() {
+            if (window.Razorpay) {
+                const options = {
+                    key: "rzp_live_dummykey",
+                    amount: 9900, // ₹99 in paise
+                    currency: "INR",
+                    name: "Global Pulse Premium",
+                    description: "Premium Monthly Subscription Access",
+                    handler: function(response) {
+                        hidePremiumMembershipModal();
+                        localStorage.setItem('premium_member', 'true');
+                        updatePremiumUI();
+                        alert("Thank you! Premium Membership activated successfully.");
+                    },
+                    prefill: {
+                        name: "Executive Reader",
+                        email: "reader@globalpulsenewsmedia.com"
+                    },
+                    theme: {
+                        color: "#d4af37"
+                    }
+                };
+                const rzp = new Razorpay(options);
+                rzp.open();
+            } else {
+                console.warn("Razorpay SDK not loaded. Simulating subscription...");
+                setTimeout(() => {
+                    hidePremiumMembershipModal();
+                    localStorage.setItem('premium_member', 'true');
+                    updatePremiumUI();
+                    alert("Simulated Premium Membership activation successful.");
+                }, 1000);
+            }
+        }
+
+        function initPayPalPremiumButtons() {
+            const container = document.getElementById('paypal-button-container-premium');
+            if (window.paypal && container) {
+                container.innerHTML = '';
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '1.20'
+                                },
+                                description: "Global Pulse Premium Membership"
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            hidePremiumMembershipModal();
+                            localStorage.setItem('premium_member', 'true');
+                            updatePremiumUI();
+                            alert("Thank you! Premium Membership activated successfully.");
+                        });
+                    },
+                    onError: function(err) {
+                        console.error("PayPal Premium Error:", err);
+                    }
+                }).render('#paypal-button-container-premium');
+            }
+        }
+
+        // Bookmark & History Manager
+        function toggleBookmarkBook(title) {
+            let bookmarks = JSON.parse(localStorage.getItem('book_bookmarks') || '[]');
+            const idx = bookmarks.indexOf(title);
+            if (idx > -1) {
+                bookmarks.splice(idx, 1);
+                alert(`Removed "${title}" from bookmarks.`);
+            } else {
+                bookmarks.push(title);
+                alert(`Added "${title}" to bookmarks.`);
+            }
+            localStorage.setItem('book_bookmarks', JSON.stringify(bookmarks));
+            renderBookmarks();
+        }
+
+        function toggleBookmarkLead() {
+            const leadTitle = document.getElementById('leadTitle').innerText;
+            let bookmarks = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
+            const idx = bookmarks.indexOf(leadTitle);
+            const btn = document.getElementById('bookmarkLeadBtn');
+            if (idx > -1) {
+                bookmarks.splice(idx, 1);
+                btn.innerText = "🔖 Bookmark";
+                btn.classList.remove('btn-warning');
+                btn.classList.add('btn-outline-warning');
+            } else {
+                bookmarks.push(leadTitle);
+                btn.innerText = "⭐ Bookmarked";
+                btn.classList.remove('btn-outline-warning');
+                btn.classList.add('btn-warning');
+            }
+            localStorage.setItem('news_bookmarks', JSON.stringify(bookmarks));
+            renderBookmarks();
+        }
+
+        function renderBookmarks() {
+            const bookBms = JSON.parse(localStorage.getItem('book_bookmarks') || '[]');
+            const newsBms = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
+            const container = document.getElementById('bookmarksSidebar');
+            
+            if (bookBms.length === 0 && newsBms.length === 0) {
+                container.innerHTML = '<div class="text-muted small p-2">No bookmarks saved yet.</div>';
+                return;
+            }
+            
+            let html = '';
+            bookBms.forEach(title => {
+                html += `
+                    <div class="list-group-item d-flex justify-content-between align-items-center py-2" style="font-size:0.75rem; background:rgba(0,0,0,0.2); border-color:#222;">
+                        <span class="text-truncate" style="max-width: 150px;">📚 ${title}</span>
+                        <button class="btn btn-sm btn-link p-0 text-danger" onclick="toggleBookmarkBook('${title}')">&times;</button>
+                    </div>
+                `;
+            });
+            newsBms.forEach(title => {
+                html += `
+                    <div class="list-group-item d-flex justify-content-between align-items-center py-2" style="font-size:0.75rem; background:rgba(0,0,0,0.2); border-color:#222;">
+                        <span class="text-truncate" style="max-width: 150px;">📰 ${title}</span>
+                        <button class="btn btn-sm btn-link p-0 text-danger" onclick="removeNewsBookmark('${title}')">&times;</button>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function removeNewsBookmark(title) {
+            let bookmarks = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
+            const idx = bookmarks.indexOf(title);
+            if (idx > -1) {
+                bookmarks.splice(idx, 1);
+            }
+            localStorage.setItem('news_bookmarks', JSON.stringify(bookmarks));
+            
+            const leadTitle = document.getElementById('leadTitle') ? document.getElementById('leadTitle').innerText : "";
+            const btn = document.getElementById('bookmarkLeadBtn');
+            if (btn && leadTitle === title) {
+                btn.innerText = "🔖 Bookmark";
+                btn.classList.remove('btn-warning');
+                btn.classList.add('btn-outline-warning');
+            }
+            renderBookmarks();
+        }
+
+        function addToHistory(title, type) {
+            let history = JSON.parse(localStorage.getItem('reading_history') || '[]');
+            // Avoid duplicate contiguous history
+            if (history.length > 0 && history[0].title === title) return;
+            history.unshift({
+                title: title,
+                type: type,
+                time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            });
+            history = history.slice(0, 20);
+            localStorage.setItem('reading_history', JSON.stringify(history));
+            renderHistory();
+        }
+
+        function renderHistory() {
+            const history = JSON.parse(localStorage.getItem('reading_history') || '[]');
+            const container = document.getElementById('historySidebar');
+            if (history.length === 0) {
+                container.innerHTML = '<div class="text-muted small p-2">No history recorded.</div>';
+                return;
+            }
+            let html = '';
+            history.forEach(item => {
+                const icon = item.type === 'book' ? '📚' : '📰';
+                html += `
+                    <div class="list-group-item py-2" style="font-size:0.72rem; background:transparent; border-color:#1a1a20; color:var(--text-muted-custom);">
+                        <div class="text-truncate">${icon} ${item.title}</div>
+                        <div class="text-muted font-monospace" style="font-size:0.6rem;">${item.time}</div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function renderTrendingNow() {
+            const container = document.getElementById('trendingNowContainer');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            const trendingList = allArticles.slice(0, 4);
+            trendingList.forEach((art, index) => {
+                const item = document.createElement('div');
+                item.className = 'trending-item';
+                item.innerHTML = `
+                    <div class="trending-number">0${index + 1}</div>
+                    <div>
+                        <span class="category-badge" style="font-size:0.6rem; color:#888;">${art.category}</span>
+                        <a href="article.html?id=${allArticles.indexOf(art)}" class="card-title-custom fw-semibold d-block mt-1" style="font-size:0.85rem; line-height:1.25;">${art.title}</a>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function renderLibraryRecommendations() {
+            const container = document.getElementById('libraryRecommendationsGrid');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            const books = [
+                { title: "Think and Grow Rich", author: "Napoleon Hill", cat: "Business & Wealth", desc: "The legendary success blueprint." },
+                { title: "The Wealth of Nations", author: "Adam Smith", cat: "Economics", desc: "The foundation of classic capitalism." },
+                { title: "The Great Gatsby", author: "F. Scott Fitzgerald", cat: "Classics", desc: "Illusion of the American Dream." }
+            ];
+            
+            books.forEach(b => {
+                const col = document.createElement('div');
+                col.className = 'col';
+                col.innerHTML = `
+                    <div class="card h-100 card-luxury p-2" style="background:#09090c; border: 1px solid #1a1a24;">
+                        <span class="category-badge" style="font-size: 0.6rem;">${b.cat}</span>
+                        <h6 class="text-white mt-1 mb-1 font-display" style="font-size:0.8rem;">${b.title}</h6>
+                        <p class="text-muted mb-2" style="font-size:0.7rem; line-height:1.2;">${b.desc}</p>
+                        <button class="btn btn-outline-warning btn-sm p-1 w-100" style="font-size:0.65rem;" onclick="loadAudibleText('${b.title.replace(/'/g, "\\'")}', '${b.author.replace(/'/g, "\\'")}', '${b.desc.replace(/'/g, "\\'")}')">Listen</button>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+        }
+
+        function renderView(category) {
+            let filtered = [];
+            
+            // Map category to matching criteria
+            if (category === 'all') {
+                filtered = allArticles;
+            } else if (category === 'tech') {
+                filtered = allArticles.filter(a => ['tech', 'science'].includes(a.category.toLowerCase()));
+            } else if (category === 'markets') {
+                filtered = allArticles.filter(a => ['business', 'markets', 'economy', 'finance'].includes(a.category.toLowerCase()));
+            } else if (category === 'analysis') {
+                filtered = allArticles.filter(a => ['world', 'politics', 'geopolitics', 'health'].includes(a.category.toLowerCase()));
+            }
+
+            if (filtered.length === 0) {
+                filtered = allArticles; // Fallback to all if category empty
+            }
+
+            // Render Hero Article (Index 0)
+            const lead = filtered[0];
+            if (lead) {
+                document.getElementById('leadImage').src = lead.imageUrl || "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200";
+                document.getElementById('leadCategory').innerText = lead.category || "GENERAL";
+                document.getElementById('leadTitle').innerText = lead.title;
+                document.getElementById('leadTitle').href = `article.html?id=${allArticles.indexOf(lead)}`;
+                document.getElementById('leadSnippet').innerText = lead.snippet;
+                document.getElementById('leadSource').innerText = lead.source || "Global Pulse";
+                document.getElementById('leadTime').innerText = lead.time || "RECENT";
+                
+                // Sync bookmark button
+                const bookmarks = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
+                const btn = document.getElementById('bookmarkLeadBtn');
+                if (bookmarks.indexOf(lead.title) > -1) {
+                    btn.innerText = "⭐ Bookmarked";
+                    btn.classList.remove('btn-outline-warning');
+                    btn.classList.add('btn-warning');
+                } else {
+                    btn.innerText = "🔖 Bookmark";
+                    btn.classList.remove('btn-warning');
+                    btn.classList.add('btn-outline-warning');
+                }
+            }
+
+            // Render Remaining as Trending Grid (Index 3+) using Bootstrap Cards
+            const trending = filtered.slice(3);
+            const trendingGrid = document.getElementById('trendingNewsGrid');
+            trendingGrid.innerHTML = '';
+
+            if (trending.length > 0) {
+                trending.forEach(art => {
+                    const col = document.createElement('div');
+                    col.className = 'col';
+                    col.innerHTML = `
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="card-img-wrap">
+                                <img src="${art.imageUrl || "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600"}" class="card-img-top" alt="Trending News">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="category-badge">${art.category}</span>
+                                        <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.75rem;" onclick="toggleBookmarkNewsFromGrid('${art.title.replace(/'/g, "\\'")}', this)">🔖 Save</button>
+                                    </div>
+                                    <a href="article.html?id=${allArticles.indexOf(art)}" class="card-title-custom fw-semibold">${art.title}</a>
+                                    <p class="card-text text-secondary mt-2 small">${art.snippet}</p>
+                                </div>
+                                <div class="meta-row d-flex gap-2 mt-auto">
+                                    <span class="meta-source">${art.source || "Global Pulse"}</span>
+                                    <span class="meta-time">${art.time || "RECENT"}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    trendingGrid.appendChild(col);
+                });
+            } else {
+                trendingGrid.innerHTML = `<div class="col-12 text-center text-muted py-5">No additional stories archived for this segment.</div>`;
+            }
+        }
+
+        function toggleBookmarkNewsFromGrid(title, btnElement) {
+            let bookmarks = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
+            const idx = bookmarks.indexOf(title);
+            if (idx > -1) {
+                bookmarks.splice(idx, 1);
+                btnElement.innerText = "🔖 Save";
+                alert(`Removed "${title}" from bookmarks.`);
+            } else {
+                bookmarks.push(title);
+                btnElement.innerText = "⭐ Saved";
+                alert(`Added "${title}" to bookmarks.`);
+            }
+            localStorage.setItem('news_bookmarks', JSON.stringify(bookmarks));
+            renderBookmarks();
+        }
+
+        // SPA Toggling Handler
+        function switchTab(tab, event) {
+            if (event) {
+                event.preventDefault();
+                document.querySelectorAll('.nav-link-custom').forEach(el => el.classList.remove('active'));
+                event.target.classList.add('active');
+            }
+
+            document.getElementById('newsFeedPanel').classList.add('d-none');
+            document.getElementById('globalLibraryPanel').classList.add('d-none');
+            document.getElementById('freeToolsPanel').classList.add('d-none');
+
+            if (tab === 'library') {
+                document.getElementById('globalLibraryPanel').classList.remove('d-none');
+            } else if (tab === 'tools') {
+                document.getElementById('freeToolsPanel').classList.remove('d-none');
+            } else {
+                document.getElementById('newsFeedPanel').classList.remove('d-none');
+                document.getElementById('navNewsFeed').classList.add('active');
+                renderView(tab);
+            }
+        }
+
+        // Open Library API Search Implementation
+        async function searchLibrary() {
+            const query = document.getElementById('librarySearchInput').value.trim();
+            if (!query) return;
+
+            const grid = document.getElementById('librarySearchResultsGrid');
+            const loader = document.getElementById('searchLoading');
+
+            grid.innerHTML = '';
+            loader.classList.remove('d-none');
+
+            try {
+                const response = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=9`);
+                if (!response.ok) throw new Error("Search library API failed");
+                const data = await response.json();
+
+                loader.classList.add('d-none');
+                const docs = data.docs || [];
+
+                if (docs.length === 0) {
+                    grid.innerHTML = `<div class="col-12 text-center text-muted py-5">No matching volumes discovered in Open Library archive.</div>`;
+                    return;
+                }
+
+                docs.forEach(book => {
+                    const coverUrl = book.cover_i 
+                        ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` 
+                        : 'https://openlibrary.org/images/assets/covers/logo_t.png';
+
+                    const author = book.author_name ? book.author_name[0] : 'Unknown Author';
+                    const summary = `First published in ${book.first_publish_year || 'N/A'}. Classified subjects include ${book.subject ? book.subject.slice(0, 3).join(', ') : 'Literature'}.`;
+
+                    const col = document.createElement('div');
+                    col.className = 'col';
+                    col.innerHTML = `
+                        <div class="card h-100 card-luxury rounded-1">
+                            <div class="book-card-cover">
+                                <img src="${coverUrl}" alt="Book Cover" onerror="this.src='https://openlibrary.org/images/assets/covers/logo_t.png'; this.style.width='80px'; this.style.opacity='0.2';">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between gap-3">
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="category-badge">${book.subject ? book.subject[0] : 'Literature'}</span>
+                                        <button class="btn btn-link p-0 text-warning text-decoration-none" style="font-size:0.75rem;" onclick="toggleBookmarkBook('${book.title.replace(/'/g, "\\'")}')">🔖 Save</button>
+                                    </div>
+                                    <h5 class="card-title-custom fw-semibold fs-6 mb-1">${book.title}</h5>
+                                    <p class="text-secondary small mb-0">Author: ${author}</p>
+                                    <p class="text-secondary font-monospace" style="font-size:0.68rem; margin-top:5px;">First Published: ${book.first_publish_year || 'N/A'}</p>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 mt-auto">
+                                    <button class="btn btn-outline-warning btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="loadAudibleText('${book.title.replace(/'/g, "\\'")}', '${author.replace(/'/g, "\\'")}', '${summary.replace(/'/g, "\\'")}')">Listen (Audible)</button>
+                                    <button class="btn btn-luxury btn-sm flex-grow-1" style="font-size: 0.72rem;" onclick="showLibraryCheckoutModal('${book.title.replace(/'/g, "\\'")}')">Acquire Pass ($9.99)</button>
+                                    <a href="https://www.amazon.com/s?k=${encodeURIComponent(book.title)}+${encodeURIComponent(author)}" target="_blank" class="btn btn-outline-secondary btn-sm flex-grow-1 text-center font-monospace" style="font-size: 0.72rem;">🛒 Buy Physical</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(col);
+                });
+            } catch (err) {
+                loader.classList.add('d-none');
+                console.error(err);
+                grid.innerHTML = `<div class="col-12 text-center text-danger py-5">Communication failure with Open Library databases. Please retry.</div>`;
+            }
+        }
+
+        // Left Sidebar Category Filtering for Free Ebooks
+        function filterLibraryCategory(category, event) {
+            document.querySelectorAll('#categorySidebar button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.free-book-card');
+            cards.forEach(card => {
+                const bookCat = card.getAttribute('data-category');
+                if (category === 'all' || bookCat === category) {
+                    card.classList.remove('d-none');
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+        }
+
+        // Lead Capture Management
+        function triggerLeadCapture(bookTitle) {
+            selectedBookToDownload = bookTitle;
+            document.getElementById('targetBookTitle').innerText = bookTitle;
+            leadBootstrapModal.show();
+        }
+
+        async function submitLead(event) {
+            event.preventDefault();
+            const email = document.getElementById('subscriberEmail').value.trim();
+            if (!email) return;
+
+            let subscribers = JSON.parse(localStorage.getItem('library_subscribers') || '[]');
+            subscribers.push({
+                email: email,
+                resourceUnlocked: selectedBookToDownload,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('library_subscribers', JSON.stringify(subscribers));
+
+            leadBootstrapModal.hide();
+            document.getElementById('leadCaptureForm').reset();
+
+            // Build history
+            addToHistory(selectedBookToDownload, 'book');
+
+            try {
+                const blob = new Blob([
+                    `%PDF-1.4\n1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R >>\nendobj\n4 0 obj\n<< /Length 120 >>\nstream\nBT\n/F1 12 Tf\n70 700 Td\n(Global Pulse E-Book: ${selectedBookToDownload}) Tj\n0 -20 Td\n(Licensed to: ${email}) Tj\n0 -20 Td\n(Free Promotional Edition - For Personal Use Only) Tj\nET\nendstream\nendobj\nxref\n0 5\n0000000000 65535 f\n0000000018 00000 n\n0000000077 00000 n\n0000000138 00000 n\n0000000241 00000 n\ntrailer\n<< /Size 5 /Root 1 0 R >>\nstartxref\n412\n%%EOF`
+                ], { type: 'application/pdf' });
+
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${selectedBookToDownload.replace(/\s+/g, '_')}_FreeEdition.pdf`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            } catch (dlErr) {
+                console.error("PDF generation failure", dlErr);
+            }
+        }
+
+        // PayPal & Razorpay Checkout Modal
+        function showLibraryCheckoutModal(bookTitle) {
+            selectedBookToDownload = bookTitle;
+            document.getElementById('checkoutBookTitle').innerText = bookTitle;
+            document.getElementById('libraryCheckoutModal').style.display = 'flex';
+        }
+
+        function hideLibraryCheckoutModal() {
+            document.getElementById('libraryCheckoutModal').style.display = 'none';
+        }
+
+        function payWithRazorpay() {
+            if (window.Razorpay) {
+                const options = {
+                    key: "rzp_live_dummykey",
+                    amount: 999, // $9.99 in cents
+                    currency: "USD",
+                    name: "Global Pulse Library",
+                    description: `Acquire "${selectedBookToDownload}"`,
+                    handler: function(response) {
+                        hideLibraryCheckoutModal();
+                        window.location.href = `success.html?gateway=razorpay&plan=${encodeURIComponent(selectedBookToDownload)}&id=${response.razorpay_payment_id}`;
+                    },
+                    prefill: {
+                        name: "Executive Reader",
+                        email: "reader@globalpulsenewsmedia.com"
+                    },
+                    theme: {
+                        color: "#d4af37"
+                    }
+                };
+                const rzp = new Razorpay(options);
+                rzp.open();
+            } else {
+                console.warn("Razorpay SDK not loaded. Simulating transaction...");
+                setTimeout(() => {
+                    hideLibraryCheckoutModal();
+                    window.location.href = `success.html?gateway=razorpay&plan=${encodeURIComponent(selectedBookToDownload)}&id=pay_mock_${Math.random().toString(36).substr(2, 9)}`;
+                }, 1000);
+            }
+        }
+
+        // --- Text-to-Speech (Audible) Engine logic ---
+        async function loadAudibleText(title, author, description) {
+            stopSpeech();
+            recordReadingActivity();
+            addToHistory(title, 'book');
+            
+            if (!booksContent) {
+                try {
+                    const res = await fetch('data/books_content.json');
+                    booksContent = await res.json();
+                } catch(e) {
+                    console.error("Failed to load books database, using description fallback", e);
+                }
+            }
+            
+            // Map title string to keys
+            let matchedKey = null;
+            if (booksContent) {
+                matchedKey = Object.keys(booksContent).find(k => booksContent[k].title.toLowerCase() === title.toLowerCase());
+            }
+            
+            if (matchedKey && booksContent[matchedKey]) {
+                activeBookKey = matchedKey;
+                activeChapterIndex = 0;
+                setupChapterDropdown();
+                playActiveBookChapter();
+            } else {
+                // Fallback (e.g. for search result books not in our curated DB)
+                activeBookKey = null;
+                narrationText = `Now narrating: ${title}, written by ${author}. Overview: ${description}`;
+                document.getElementById('playerNowPlaying').innerText = `Audible: ${title} (${author})`;
+                document.getElementById('audiobookChapterSelect').innerHTML = '<option value="0">Overview (No Chapters)</option>';
+                document.getElementById('audiobookProgress').style.width = '0%';
+                playSpeech();
+            }
+        }
+
+        function setupChapterDropdown() {
+            const select = document.getElementById('audiobookChapterSelect');
+            select.innerHTML = '';
+            if (!activeBookKey || !booksContent || !booksContent[activeBookKey]) return;
+            
+            const book = booksContent[activeBookKey];
+            book.chapters.forEach((chap, idx) => {
+                const opt = document.createElement('option');
+                opt.value = idx;
+                opt.innerText = chap.title;
+                if (idx === activeChapterIndex) opt.selected = true;
+                select.appendChild(opt);
+            });
+        }
+
+        function playActiveBookChapter() {
+            if (!activeBookKey || !booksContent || !booksContent[activeBookKey]) return;
+            const book = booksContent[activeBookKey];
+            const chapter = book.chapters[activeChapterIndex];
+            
+            // Premium check: Free tier gets 2 chapters (index 0 and 1). Premium gets all chapters.
+            const isPremium = localStorage.getItem('premium_member') === 'true';
+            if (activeChapterIndex >= 2 && !isPremium) {
+                stopSpeech();
+                document.getElementById('playerNowPlaying').innerText = `Locked: Chapter 3+ requires Premium`;
+                showPremiumMembershipModal();
+                return;
+            }
+            
+            narrationText = `Reading ${book.title}. ${chapter.title}. ${chapter.content}`;
+            document.getElementById('playerNowPlaying').innerText = `${book.title} - ${chapter.title}`;
+            document.getElementById('audiobookProgress').style.width = '0%';
+            setupChapterDropdown();
+            playSpeech();
+        }
+
+        function changeChapter() {
+            const select = document.getElementById('audiobookChapterSelect');
+            activeChapterIndex = parseInt(select.value);
+            playActiveBookChapter();
+        }
+        
+        function prevChapter() {
+            if (activeChapterIndex > 0) {
+                activeChapterIndex--;
+                playActiveBookChapter();
+            }
+        }
+        
+        function nextChapter() {
+            if (activeBookKey && booksContent && booksContent[activeBookKey]) {
+                const total = booksContent[activeBookKey].chapters.length;
+                if (activeChapterIndex < total - 1) {
+                    activeChapterIndex++;
+                    playActiveBookChapter();
+                }
+            }
+        }
+
+        function playSpeech() {
+            if (!narrationText) {
+                document.getElementById('playerNowPlaying').innerText = "Status: Please select a book first...";
+                return;
+            }
+
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+                document.getElementById('playerVisualizer').classList.remove('paused');
+                return;
+            }
+
+            window.speechSynthesis.cancel(); // Stop active speech
+
+            currentUtterance = new SpeechSynthesisUtterance(narrationText);
+            currentUtterance.rate = audioRate;
+            
+            currentUtterance.onstart = () => {
+                isSpeaking = true;
+                document.getElementById('playerVisualizer').classList.remove('paused');
+            };
+
+            currentUtterance.onboundary = (event) => {
+                if (event.name === 'word') {
+                    const progressPercent = Math.min(100, Math.round((event.charIndex / narrationText.length) * 100));
+                    document.getElementById('audiobookProgress').style.width = `${progressPercent}%`;
+                }
+            };
+
+            currentUtterance.onend = () => {
+                isSpeaking = false;
+                document.getElementById('playerVisualizer').classList.add('paused');
+                document.getElementById('audiobookProgress').style.width = '100%';
+                
+                // Chapter auto-advance
+                if (activeBookKey && booksContent && booksContent[activeBookKey]) {
+                    const total = booksContent[activeBookKey].chapters.length;
+                    if (activeChapterIndex < total - 1) {
+                        activeChapterIndex++;
+                        setTimeout(() => {
+                            playActiveBookChapter();
+                        }, 1200); // Small rest gap between chapters
+                    } else {
+                        document.getElementById('playerNowPlaying').innerText = "Status: Completed Book Reading";
+                    }
+                } else {
+                    document.getElementById('playerNowPlaying').innerText = "Status: Finished Reading / Idle";
+                }
+            };
+
+            currentUtterance.onerror = (e) => {
+                console.error("SpeechSynthesis error:", e);
+                document.getElementById('playerVisualizer').classList.add('paused');
+            };
+
+            window.speechSynthesis.speak(currentUtterance);
+        }
+
+        function pauseSpeech() {
+            if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+                window.speechSynthesis.pause();
+                document.getElementById('playerVisualizer').classList.add('paused');
+            }
+        }
+
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+            document.getElementById('playerVisualizer').classList.add('paused');
+            document.getElementById('playerNowPlaying').innerText = "Status: Stopped / Idle";
+            document.getElementById('audiobookProgress').style.width = '0%';
+        }
+
+        function updateAudioRate() {
+            const slider = document.getElementById('audioRate');
+            audioRate = parseFloat(slider.value);
+            document.getElementById('rateVal').innerText = `${audioRate.toFixed(1)}x`;
+            
+            if (window.speechSynthesis.speaking) {
+                playSpeech();
+            }
+        }
+
+        // Programmatic SEO Tools dynamic loading, cataloging and filtering
+        let toolsCatalog = [];
+        let filteredTools = [];
+        let currentToolsPage = 1;
+        const toolsPerPage = 12;
+        let currentToolsCategory = 'ALL';
+
+        const fallbackTools = [
+            { slug: 'free-meta-tag-generator', name: 'Free SEO Meta Tag Generator', category: 'SEO' },
+            { slug: 'free-xml-sitemap-generator', name: 'Free XML Sitemap Generator', category: 'SEO' },
+            { slug: 'free-robots-txt-generator', name: 'Free Robots.txt Generator', category: 'SEO' },
+            { slug: 'free-keyword-density-checker', name: 'Free Keyword Density Analyzer', category: 'SEO' },
+            { slug: 'free-redirect-header-analyzer', name: 'Free HTTP Redirect Header Analyzer', category: 'SEO' },
+            { slug: 'free-word-counter', name: 'Free Word & Character Counter', category: 'AI Content' },
+            { slug: 'free-markdown-editor', name: 'Free Markdown Live Editor', category: 'AI Content' },
+            { slug: 'free-text-summarizer', name: 'Free AI Text Summarizer Tool', category: 'AI Content' },
+            { slug: 'free-case-converter', name: 'Free Text Case Converter', category: 'AI Content' },
+            { slug: 'free-sentence-rewriter', name: 'Free Sentence Rewriter Utility', category: 'AI Content' },
+            { slug: 'free-base64-encoder', name: 'Free Base64 Encoder / Decoder', category: 'Developers' },
+            { slug: 'free-json-formatter', name: 'Free JSON Formatter & Validator', category: 'Developers' },
+            { slug: 'free-url-encoder-decoder', name: 'Free URL Encoder & Decoder', category: 'Developers' },
+            { slug: 'free-md5-hash-generator', name: 'Free MD5 Cryptographic Hash Generator', category: 'Developers' },
+            { slug: 'free-hex-to-rgb-converter', name: 'Free HEX to RGB Color Converter', category: 'Developers' },
+            { slug: 'free-image-resizer', name: 'Free Client-Side Image Resizer', category: 'Utilities' },
+            { slug: 'free-color-picker', name: 'Free Palette Color Picker', category: 'Utilities' },
+            { slug: 'free-qr-code-generator', name: 'Free QR Code Builder', category: 'Utilities' },
+            { slug: 'free-password-generator', name: 'Free Strong Password Generator', category: 'Utilities' },
+            { slug: 'free-uuid-v4-generator', name: 'Free UUID v4 Identifier Generator', category: 'Utilities' }
+        ];
+
+        async function initToolsCatalog() {
+            try {
+                const response = await fetch('/tools-data.json');
+                if (response.ok) {
+                    toolsCatalog = await response.json();
+                } else {
+                    console.warn("Failed to load /tools-data.json, trying fallback /tools/catalog.json");
+                    const backupResponse = await fetch('/tools/catalog.json');
+                    if (backupResponse.ok) {
+                        toolsCatalog = await backupResponse.json();
+                    } else {
+                        console.warn("Failed to load backend tools catalog JSON, loading defensive local fallbacks");
+                        toolsCatalog = fallbackTools;
+                    }
+                }
+            } catch (err) {
+                console.error("Error loading tools catalog:", err);
+                toolsCatalog = fallbackTools;
+            }
+            filteredTools = [...toolsCatalog];
+            renderToolsGrid();
+        }
+
+        function renderToolsGrid() {
+            const grid = document.getElementById('toolsGrid');
+            if (!grid) return;
+            
+            grid.innerHTML = '';
+            
+            const start = (currentToolsPage - 1) * toolsPerPage;
+            const end = start + toolsPerPage;
+            const pageItems = filteredTools.slice(start, end);
+            
+            if (pageItems.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <p class="text-secondary font-monospace">No tools found matching your criteria.</p>
+                    </div>
+                `;
+                document.getElementById('toolsPageIndicator').innerText = 'Page 0 of 0';
+                return;
+            }
+            
+            pageItems.forEach(tool => {
+                const col = document.createElement('div');
+                col.className = 'col';
+                col.innerHTML = `
+                    <div class="card h-100 card-luxury rounded-1 p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge bg-warning text-dark font-monospace text-uppercase mb-2">${tool.category}</span>
+                            <h5 class="font-display text-white mb-2 fs-6">${tool.name}</h5>
+                            <p class="text-secondary small mb-0">Professional, high-performance web utility compiled to run client-side inside your browser.</p>
+                        </div>
+                        <a href="/tools/${tool.slug}" class="btn btn-luxury btn-sm w-100 mt-3">Launch Free Tool ➔</a>
+                    </div>
+                `;
+                grid.appendChild(col);
+            });
+            
+            // Update page info
+            const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
+            document.getElementById('toolsPageIndicator').innerText = `Page ${currentToolsPage} of ${totalPages}`;
+            
+            document.getElementById('prevToolsPageBtn').disabled = currentToolsPage <= 1;
+            document.getElementById('nextToolsPageBtn').disabled = currentToolsPage >= totalPages;
+        }
+
+        function filterToolsCatalog() {
+            const query = document.getElementById('toolSearchInput').value.toLowerCase().trim();
+            filteredTools = toolsCatalog.filter(tool => {
+                const matchesSearch = tool.name.toLowerCase().includes(query) || tool.slug.toLowerCase().includes(query);
+                const matchesCat = currentToolsCategory === 'ALL' || tool.category === currentToolsCategory;
+                return matchesSearch && matchesCat;
+            });
+            currentToolsPage = 1;
+            renderToolsGrid();
+        }
+
+        function filterToolsCategory(category) {
+            currentToolsCategory = category;
+            filterToolsCatalog();
+        }
+
+        function changeToolsPage(direction) {
+            const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
+            const targetPage = currentToolsPage + direction;
+            if (targetPage >= 1 && targetPage <= totalPages) {
+                currentToolsPage = targetPage;
+                renderToolsGrid();
+            }
+        }
+
+        // Initialize Page
+        window.addEventListener('DOMContentLoaded', () => {
+            loadNews();
+            initToolsCatalog();
+        });
+    </script>
+</body>
+</html>

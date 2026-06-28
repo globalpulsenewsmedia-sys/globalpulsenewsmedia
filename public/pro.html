@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO Lounge | ArbitrageSmartAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .pro-body { background: #000; color: #fff; }
+        .pro-hero { padding: 100px 0; text-align: center; border-bottom: 1px solid #222; }
+        .gold-tag { color: #ffd700; border: 1px solid #ffd700; padding: 4px 12px; border-radius: 4px; font-size: 0.7rem; font-weight: 900; letter-spacing: 2px; }
+        .signal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+        .signal-card { background: #050505; border: 1px solid #1a1a1a; padding: 30px; border-radius: 12px; transition: all 0.3s ease; }
+        .signal-card:hover { border-color: #ffd700; box-shadow: 0 0 30px rgba(255,215,0,0.1); }
+        .signal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .signal-strength { color: #00ff88; font-family: 'Roboto Mono', monospace; font-size: 0.8rem; }
+    </style>
+</head>
+<body class="pro-body">
+
+    <header class="cnn-header" style="background: #050505; border-bottom: 1px solid #1a1a1a;">
+        <div class="container">
+            <div class="header-content">
+                <div class="cnn-logo" onclick="window.location.href='index.html'" style="cursor:pointer;">
+                    ARBITRAGE<span>SMART AI</span> <span style="color: #ffd700; font-size: 0.8rem; margin-left: 10px;">PRO</span>
+                </div>
+                <nav class="cnn-nav">
+                    <ul>
+                        <li><a href="index.html">Main Intelligence</a></li>
+                        <li><a href="#" class="active">PRO SIGNALS</a></li>
+                        <li><a href="index.html#crypto-academy">Academy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container">
+            
+            <section class="pro-hero">
+                <span class="gold-tag">EXCLUSIVE ACCESS</span>
+                <h1 style="font-size: 3.5rem; font-weight: 900; margin-top: 20px;">The Billionaire's Edge</h1>
+                <p style="color: #888; max-width: 700px; margin: 20px auto;">Direct access to high-frequency AI signals, private market data, and billionaire-tier arbitrage opportunities.</p>
+        <div class="pricing-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 60px; text-align: left;">
+            <!-- Monthly Plan -->
+            <div class="pricing-card" style="background: #050505; padding: 40px; border-radius: 20px; border: 1px solid #222; position: relative;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 10px;">GLOBAL MONTHLY</h3>
+                <div class="price" style="font-size: 3rem; font-weight: 900; margin-bottom: 20px;">$9.99<span style="font-size: 1rem; color: #666;">/mo</span></div>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; color: #888; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;">✓ 24/7 AI Signal Access</li>
+                    <li style="margin-bottom: 10px;">✓ Multi-Region Intelligence</li>
+                    <li style="margin-bottom: 10px;">✓ Ad-Free Dashboard</li>
+                </ul>
+                <button onclick="pay('999', 'Monthly')" style="width: 100%; padding: 15px; background: #ffd700; color: #000; border: none; border-radius: 10px; font-weight: 900; cursor: pointer;">SUBSCRIBE MONTHLY</button>
+            </div>
+
+            <!-- Yearly Plan -->
+            <div class="pricing-card" style="background: #050505; padding: 40px; border-radius: 20px; border: 2px solid #ffd700; position: relative;">
+                <div style="position: absolute; top: -15px; right: 20px; background: #ffd700; color: #000; padding: 4px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: 900;">2 MONTHS FREE</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 10px;">ANNUAL PASS</h3>
+                <div class="price" style="font-size: 3rem; font-weight: 900; margin-bottom: 20px;">$99.99<span style="font-size: 1rem; color: #666;">/yr</span></div>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; color: #888; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;">✓ Everything in Monthly</li>
+                    <li style="margin-bottom: 10px;">✓ Priority Alpha Access</li>
+                    <li style="margin-bottom: 10px;">✓ Exclusive Market Reports</li>
+                </ul>
+                <button onclick="pay('9999', 'Annual')" style="width: 100%; padding: 15px; background: #fff; color: #000; border: none; border-radius: 10px; font-weight: 900; cursor: pointer;">SUBSCRIBE YEARLY</button>
+            </div>
+        </div>
+
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+            function pay(amount, plan) {
+                var options = {
+                    "key": "rzp_live_SpnkpDvXoY4a92",
+                    "amount": amount * 100,
+                    "currency": "USD",
+                    "name": "ArbitrageSmartAI PRO",
+                    "description": plan + " PRO Access Subscription",
+                    "handler": function (response){
+                        window.location.href = "success.html?plan=" + plan + "&id=" + response.razorpay_payment_id;
+                    },
+                    "theme": { "color": "#ffd700" }
+                };
+                var rzp = new Razorpay(options);
+                rzp.open();
+            }
+        </script>
+
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px; align-items: center; opacity: 0.6;">
+            <span style="font-size: 0.7rem;">SECURE PAYMENTS VIA</span>
+            <img src="https://razorpay.com/assets/razorpay-glyph.svg" width="20">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="60">
+            <span style="font-size: 0.7rem;">| DINERS CLUB & AMEX ACCEPTED | GDPR COMPLIANT</span>
+        </div>
+            </section>
+
+            <div class="signal-grid">
+                
+                <!-- SIGNAL 1: CRYPTO -->
+                <div class="signal-card">
+                    <div class="signal-header">
+                        <span class="gold-tag" style="font-size: 0.5rem;">CRYPTO ALPHA</span>
+                        <span class="signal-strength">STRENGTH: 94%</span>
+                    </div>
+                    <h4>SOL Whale Accumulation</h4>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 15px;">AI detecting massive spot buying from top 100 wallets. Target entry: $142. Exit: $178.</p>
+                </div>
+
+                <!-- SIGNAL 2: STOCKS -->
+                <div class="signal-card">
+                    <div class="signal-header">
+                        <span class="gold-tag" style="font-size: 0.5rem; border-color: #00ff88; color: #00ff88;">STOCK SIGNAL</span>
+                        <span class="signal-strength">STRENGTH: 88%</span>
+                    </div>
+                    <h4>NVDA Earnings Front-Run</h4>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 15px;">Institutional call flow increasing on 1-week expiry. High probability of pre-earnings rally.</p>
+                </div>
+
+                <!-- SIGNAL 3: ARBITRAGE -->
+                <div class="signal-card">
+                    <div class="signal-header">
+                        <span class="gold-tag" style="font-size: 0.5rem; border-color: #ff0055; color: #ff0055;">ARBITRAGE</span>
+                        <span class="signal-strength">STRENGTH: 99%</span>
+                    </div>
+                    <h4>DEX/CEX Gap Detected</h4>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 15px;">3.2% price discrepancy on ETH/USDT between Binance and Uniswap. Executing AI-bot sequence.</p>
+                </div>
+
+            </div>
+
+            <!-- PRO EXCLUSIVE: AI INSIGHTS -->
+            <section style="margin-top: 80px; padding: 40px; background: #050505; border: 1px solid #ffd700; border-radius: 12px; text-align: center;">
+                <h2 style="font-family: 'Roboto'; margin-bottom: 20px;">PRO AI Daily Intelligence</h2>
+                <div style="font-family: 'Roboto Mono'; color: #00ff88; font-size: 1.2rem;" id="proAiMessage">
+                    "Analyzing Global 500 sentiment... Probability of summer tech rally: 82.4%."
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="cnn-footer" style="background: #000; border-top: 1px solid #1a1a1a;">
+        <div class="container" style="text-align: center;">
+            <p style="color: #444;">&copy; 2026 ARBITRAGE SMART AI PRO. MEMBERS ONLY.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

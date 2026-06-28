@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Center | ArbitrageSmartAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .page-header { margin-bottom: 50px; border-bottom: 1px solid var(--card-border); padding-bottom: 30px; }
+        .page-title { font-size: 2.8rem; font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; color: var(--text-secondary); }
+        .section-block { margin-bottom: 60px; }
+        .section-title { font-size: 1.6rem; color: var(--accent); margin-bottom: 25px; font-weight: 800; border-left: 4px solid var(--accent); padding-left: 15px; }
+        .card-custom { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 30px; margin-bottom: 25px; }
+        .grid-2 { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+        .badge { background: rgba(0, 176, 255, 0.1); color: var(--accent-blue); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+        .press-date { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-blue); margin-bottom: 10px; }
+        .btn-download { background: var(--accent-blue); color: #000; border: none; padding: 10px 20px; border-radius: 4px; font-weight: 700; cursor: pointer; transition: background 0.2s; font-size: 0.85rem; }
+        .btn-download:hover { background: #008cd6; }
+    </style>
+</head>
+<body>
+
+    <header class="cnn-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="cnn-logo" onclick="window.location.href='index.html'" style="cursor:pointer;">
+                    ARBITRAGE<span>SMART AI</span>
+                </div>
+                <nav class="cnn-nav">
+                    <ul>
+                        <li><a href="index.html">Terminal</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact-center.html">Support</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 80px 0;">
+        <div class="container">
+            <div class="page-header">
+                <span class="badge">Press & Media</span>
+                <h1 class="page-title">Pressroom & Media Center</h1>
+                <p class="subtitle">Official news, announcements, and corporate brand assets from Katke Enterprises.</p>
+            </div>
+
+            <div class="section-block">
+                <div class="grid-2">
+                    <div>
+                        <h2 class="section-title">Official Announcements</h2>
+
+                        <div class="card-custom">
+                            <div class="press-date">JUNE 12, 2026</div>
+                            <h3 style="color:#fff; margin-bottom:12px; font-weight:800;">Arbitrage Smart AI Core Scanners decoders decoupled for external system configurations</h3>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.7; margin-bottom:15px;">
+                                Katke Enterprises has finalized modular decoupling on its websocket core telemetry. Scanners can now run inside decentralized clusters across Base L2 and Solana networks with SOC2 audited credentials.
+                            </p>
+                            <button class="btn-download" onclick="readFullRelease('Decoupled Scanners Launch')">Read Full Release</button>
+                        </div>
+
+                        <div class="card-custom">
+                            <div class="press-date">MAY 21, 2026</div>
+                            <h3 style="color:#fff; margin-bottom:12px; font-weight:800;">Google Cloud Vertex AI and Gemini model integrations live</h3>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.7; margin-bottom:15px;">
+                                Deploying advanced Vertex AI framework layers has improved regional data ingestion times. Evaluators of the Google Startup Program can access deployment verification briefs directly.
+                            </p>
+                            <button class="btn-download" onclick="readFullRelease('Google Cloud Integrations')">Read Full Release</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="section-title">Brand Resources</h2>
+                        <div class="card-custom" style="text-align: center; border-color: rgba(0, 176, 255, 0.2);">
+                            <h3 style="color:#fff; margin-bottom:15px; font-weight:800;">Media Kit Download</h3>
+                            <p style="color:var(--text-secondary); font-size:0.85rem; line-height:1.6; margin-bottom:25px;">
+                                Includes corporate overview briefs, high-resolution logos, brand color sheets, and founder portraits.
+                            </p>
+                            <button class="btn-download" style="width:100%;" onclick="downloadMediaKit()">Download Media Kit (.zip)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="cnn-mega-footer" style="background: #050505; border-top: 1px solid var(--card-border); padding: 40px 0;">
+        <div class="container">
+            <p style="font-size: 0.8rem; color: var(--text-secondary); text-align: center; line-height: 1.8;">
+                &copy; 2026 ArbitrageSmartAI (Katke Enterprises). All rights reserved. 
+                <br>MSME Registration: UDYAM-MH-17-0069728 | Registered in Palghar, Maharashtra, India.
+                <br>Grievance Officer Official Contact: <a href="mailto:arbitragesmartai@gmail.com" style="color: var(--accent); text-decoration: none;">arbitragesmartai@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function readFullRelease(title) {
+            alert('Full press release for "' + title + '" will open in your corporate reading panel. Watermarked verification ID: Katke Enterprises MSME-2026.');
+        }
+        function downloadMediaKit() {
+            // Generate mock file content
+            const content = "ARBITRAGE SMART AI - PRESS & MEDIA KIT\n" +
+                            "Owner: Katke Enterprises (UDYAM-MH-17-0069728)\n\n" +
+                            "This media kit contains official logo SVG specifications, corporate typography sheets, " +
+                            "and approved executive summaries for press use.\n" +
+                            "For media interviews, contact the corporate communications desk: arbitragesmartai@gmail.com\n";
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'ArbitrageSmartAI_MediaKit.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            alert('Your Media Kit (.txt format mock) has been downloaded.');
+        }
+    </script>
+</body>
+</html>
