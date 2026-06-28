@@ -19,3 +19,4 @@ docker-compose.yml
 nginx.conf
 prometheus.yml
 k8s/
+public/tools/

@@ -1,8 +1,5 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "outputDirectory": "public",
-  "rewrites": [
-    { "source": "/tools/:slug", "destination": "/tools/index.html" }
-  ]
+  "outputDirectory": "public"
 }
