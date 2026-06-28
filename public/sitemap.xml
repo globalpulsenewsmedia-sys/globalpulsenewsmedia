@@ -7,7 +7,13 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/free-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/free-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/free-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -31,13 +37,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/free-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/free-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/free-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -55,25 +55,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/free-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/free-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/free-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/free-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/free-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/free-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/free-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -97,6 +97,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/free-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/free-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -115,19 +121,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/free-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/free-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/online-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/online-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/online-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -151,13 +157,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/online-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/online-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/online-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -175,25 +175,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/online-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/online-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/online-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/online-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/online-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/online-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/online-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -217,6 +217,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/online-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/online-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -235,19 +241,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/online-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/online-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/best-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/best-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/best-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -271,13 +277,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/best-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/best-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/best-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -295,25 +295,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/best-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/best-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/best-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/best-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/best-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/best-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/best-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -337,6 +337,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/best-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/best-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -355,19 +361,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/best-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/best-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/fast-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/fast-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/fast-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -391,13 +397,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/fast-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/fast-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/fast-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -415,25 +415,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/fast-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/fast-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/fast-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/fast-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/fast-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/fast-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/fast-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -457,6 +457,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/fast-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/fast-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -475,19 +481,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/fast-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/fast-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/quick-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/quick-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/quick-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -511,13 +517,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/quick-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/quick-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/quick-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -535,25 +535,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/quick-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/quick-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/quick-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/quick-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/quick-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/quick-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/quick-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -577,6 +577,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/quick-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/quick-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -595,19 +601,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/quick-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/quick-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/easy-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/easy-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/easy-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -631,13 +637,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/easy-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/easy-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/easy-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -655,25 +655,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/easy-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/easy-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/easy-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/easy-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/easy-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/easy-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/easy-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -697,6 +697,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/easy-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/easy-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -715,19 +721,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/easy-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/easy-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/simple-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/simple-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/simple-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -751,13 +757,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/simple-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/simple-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/simple-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -775,25 +775,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/simple-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/simple-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/simple-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/simple-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/simple-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/simple-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/simple-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -817,6 +817,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/simple-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/simple-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -835,19 +841,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/simple-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/simple-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/secure-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/secure-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/secure-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -871,13 +877,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/secure-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/secure-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/secure-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -895,25 +895,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/secure-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/secure-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/secure-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/secure-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/secure-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/secure-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/secure-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -937,6 +937,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/secure-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/secure-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -955,19 +961,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/secure-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/secure-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/pro-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/pro-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/pro-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -991,13 +997,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/pro-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/pro-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/pro-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1015,25 +1015,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/pro-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/pro-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/pro-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/pro-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/pro-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/pro-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/pro-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1057,6 +1057,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/pro-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/pro-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1075,19 +1081,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/pro-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/pro-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/live-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/live-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/live-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1111,13 +1117,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/live-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/live-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/live-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1135,25 +1135,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/live-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/live-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/live-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/live-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/live-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/live-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/live-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1177,6 +1177,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/live-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/live-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1195,19 +1201,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/live-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/live-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/advanced-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/advanced-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/advanced-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1231,13 +1237,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/advanced-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/advanced-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/advanced-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1255,25 +1255,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/advanced-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/advanced-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/advanced-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/advanced-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/advanced-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/advanced-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/advanced-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1297,6 +1297,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/advanced-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/advanced-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1315,19 +1321,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/advanced-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/advanced-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/instant-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/instant-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/instant-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1351,13 +1357,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/instant-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/instant-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/instant-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1375,25 +1375,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/instant-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/instant-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/instant-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/instant-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/instant-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/instant-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/instant-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1417,6 +1417,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/instant-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/instant-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1435,19 +1441,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/instant-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/instant-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/smart-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/smart-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/smart-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1471,13 +1477,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/smart-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/smart-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/smart-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1495,25 +1495,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/smart-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/smart-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/smart-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/smart-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/smart-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/smart-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/smart-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1537,6 +1537,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/smart-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/smart-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1555,19 +1561,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/smart-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/smart-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/turbo-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/turbo-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/turbo-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1591,13 +1597,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/turbo-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/turbo-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/turbo-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1615,25 +1615,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/turbo-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/turbo-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/turbo-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/turbo-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/turbo-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/turbo-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/turbo-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1657,6 +1657,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/turbo-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/turbo-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1675,19 +1681,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/turbo-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/turbo-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/expert-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/expert-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/expert-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1711,13 +1717,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/expert-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/expert-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/expert-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1735,25 +1735,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/expert-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/expert-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/expert-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/expert-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/expert-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/expert-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/expert-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1777,6 +1777,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/expert-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/expert-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1795,19 +1801,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/expert-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/expert-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/cloud-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/cloud-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/cloud-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1831,13 +1837,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/cloud-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/cloud-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/cloud-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1855,25 +1855,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/cloud-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/cloud-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/cloud-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/cloud-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/cloud-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/cloud-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/cloud-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1897,6 +1897,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/cloud-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/cloud-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1915,19 +1921,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/cloud-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/cloud-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/global-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/global-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/global-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1951,13 +1957,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/global-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/global-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/global-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -1975,25 +1975,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/global-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/global-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/global-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/global-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/global-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/global-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/global-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2017,6 +2017,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/global-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/global-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2035,19 +2041,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/global-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/global-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/premium-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/premium-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/premium-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2071,13 +2077,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/premium-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/premium-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/premium-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2095,25 +2095,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/premium-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/premium-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/premium-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/premium-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/premium-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/premium-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/premium-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2137,6 +2137,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/premium-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/premium-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2155,19 +2161,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/premium-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/premium-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/super-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/super-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/super-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2191,13 +2197,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/super-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/super-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/super-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2215,25 +2215,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/super-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/super-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/super-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/super-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/super-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/super-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/super-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2257,6 +2257,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/super-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/super-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2275,19 +2281,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/super-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/super-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/hyper-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/hyper-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/hyper-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2311,13 +2317,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/hyper-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/hyper-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/hyper-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2335,25 +2335,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/hyper-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/hyper-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/hyper-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/hyper-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/hyper-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/hyper-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/hyper-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2377,6 +2377,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/hyper-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/hyper-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2395,19 +2401,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/hyper-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/hyper-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/elite-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/elite-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/elite-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2431,13 +2437,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/elite-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/elite-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/elite-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2455,25 +2455,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/elite-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/elite-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/elite-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/elite-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/elite-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/elite-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/elite-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2497,6 +2497,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/elite-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/elite-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2515,19 +2521,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/elite-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/elite-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/exact-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/exact-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/exact-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2551,13 +2557,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/exact-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/exact-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/exact-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2575,25 +2575,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/exact-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/exact-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/exact-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/exact-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/exact-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/exact-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/exact-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2617,6 +2617,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/exact-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/exact-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2635,19 +2641,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/exact-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/exact-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/power-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/power-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/power-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2671,13 +2677,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/power-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/power-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/power-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2695,25 +2695,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/power-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/power-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/power-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/power-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/power-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/power-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/power-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2737,6 +2737,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/power-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/power-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2755,19 +2761,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/power-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/power-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/optimal-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/optimal-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/optimal-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2791,13 +2797,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/optimal-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/optimal-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/optimal-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2815,25 +2815,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/optimal-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/optimal-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/optimal-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/optimal-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/optimal-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/optimal-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/optimal-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2857,6 +2857,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/optimal-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/optimal-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2875,19 +2881,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/optimal-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/optimal-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/dynamic-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/dynamic-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/dynamic-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2911,13 +2917,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/dynamic-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/dynamic-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/dynamic-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2935,25 +2935,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/dynamic-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/dynamic-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/dynamic-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/dynamic-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/dynamic-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/dynamic-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/dynamic-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -2977,6 +2977,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/dynamic-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/dynamic-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -2995,19 +3001,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/dynamic-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/dynamic-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/custom-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/custom-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/custom-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3031,13 +3037,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/custom-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/custom-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/custom-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3055,25 +3055,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/custom-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/custom-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/custom-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/custom-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/custom-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/custom-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/custom-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3097,6 +3097,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/custom-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/custom-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -3115,19 +3121,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/custom-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/custom-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/slick-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/slick-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/slick-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3151,13 +3157,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/slick-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/slick-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/slick-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3175,25 +3175,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/slick-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/slick-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/slick-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/slick-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/slick-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/slick-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/slick-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3217,6 +3217,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/slick-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/slick-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -3235,19 +3241,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/slick-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/slick-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/clean-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/clean-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/clean-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3271,13 +3277,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/clean-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/clean-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/clean-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3295,25 +3295,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/clean-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/clean-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/clean-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/clean-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/clean-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/clean-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/clean-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3337,6 +3337,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/clean-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/clean-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -3355,19 +3361,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/clean-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/clean-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/prime-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/prime-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/prime-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3391,13 +3397,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/prime-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/prime-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/prime-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3415,25 +3415,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/prime-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/prime-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/prime-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/prime-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/prime-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/prime-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/prime-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3457,6 +3457,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/prime-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/prime-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -3475,19 +3481,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/prime-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/prime-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/master-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/master-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/master-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3511,13 +3517,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/master-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/master-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/master-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3535,25 +3535,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/master-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/master-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/master-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/master-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/master-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/master-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/master-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3577,6 +3577,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/master-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/master-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -3595,19 +3601,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/master-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/master-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/mega-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/mega-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/mega-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3631,13 +3637,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/mega-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/mega-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/mega-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3655,25 +3655,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/mega-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/mega-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/mega-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/mega-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/mega-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/mega-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/mega-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3697,6 +3697,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/mega-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/mega-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -3715,19 +3721,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/mega-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/mega-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultra-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/ultra-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/ultra-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3751,13 +3757,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultra-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultra-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/ultra-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3775,25 +3775,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultra-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/ultra-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultra-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/ultra-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultra-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/ultra-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/ultra-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3817,6 +3817,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/ultra-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/ultra-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -3835,19 +3841,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultra-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/ultra-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/rapid-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/rapid-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/rapid-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3871,13 +3877,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/rapid-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/rapid-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/rapid-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3895,25 +3895,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/rapid-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/rapid-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/rapid-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/rapid-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/rapid-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/rapid-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/rapid-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3937,6 +3937,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/rapid-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/rapid-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -3955,19 +3961,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/rapid-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/rapid-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/safe-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/safe-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/safe-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -3991,13 +3997,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/safe-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/safe-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/safe-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4015,25 +4015,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/safe-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/safe-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/safe-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/safe-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/safe-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/safe-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/safe-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4057,6 +4057,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/safe-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/safe-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -4075,19 +4081,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/safe-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/safe-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/trusted-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/trusted-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/trusted-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4111,13 +4117,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/trusted-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/trusted-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/trusted-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4135,25 +4135,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/trusted-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/trusted-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/trusted-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/trusted-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/trusted-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/trusted-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/trusted-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4177,6 +4177,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/trusted-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/trusted-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -4195,19 +4201,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/trusted-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/trusted-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/verified-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/verified-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/verified-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4231,13 +4237,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/verified-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/verified-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/verified-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4255,25 +4255,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/verified-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/verified-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/verified-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/verified-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/verified-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/verified-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/verified-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4297,6 +4297,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/verified-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/verified-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -4315,19 +4321,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/verified-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/verified-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/utility-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/utility-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/utility-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4351,13 +4357,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/utility-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/utility-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/utility-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4375,25 +4375,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/utility-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/utility-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/utility-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/utility-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/utility-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/utility-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/utility-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4417,6 +4417,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/utility-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/utility-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -4435,19 +4441,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/utility-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/utility-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultimate-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/ultimate-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/ultimate-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4471,13 +4477,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultimate-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultimate-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/ultimate-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4495,25 +4495,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultimate-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/ultimate-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultimate-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/ultimate-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultimate-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/ultimate-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/ultimate-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4537,6 +4537,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/ultimate-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/ultimate-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -4555,19 +4561,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/ultimate-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/ultimate-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/genius-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/genius-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/genius-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4591,13 +4597,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/genius-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/genius-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/genius-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4615,25 +4615,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/genius-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/genius-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/genius-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/genius-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/genius-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/genius-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/genius-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4657,6 +4657,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/genius-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/genius-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -4675,19 +4681,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/genius-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/genius-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/stellar-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/stellar-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/stellar-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4711,13 +4717,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/stellar-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/stellar-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/stellar-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4735,25 +4735,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/stellar-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/stellar-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/stellar-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/stellar-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/stellar-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/stellar-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/stellar-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4777,6 +4777,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/stellar-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/stellar-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -4795,19 +4801,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/stellar-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/stellar-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/perfect-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/perfect-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/perfect-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4831,13 +4837,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/perfect-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/perfect-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/perfect-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4855,25 +4855,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/perfect-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/perfect-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/perfect-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/perfect-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/perfect-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/perfect-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/perfect-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4897,6 +4897,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/perfect-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/perfect-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -4915,19 +4921,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/perfect-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/perfect-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/speedy-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/speedy-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/speedy-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4951,13 +4957,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/speedy-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/speedy-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/speedy-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -4975,25 +4975,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/speedy-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/speedy-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/speedy-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/speedy-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/speedy-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/speedy-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/speedy-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5017,6 +5017,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/speedy-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/speedy-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5035,19 +5041,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/speedy-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/speedy-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/agile-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/agile-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/agile-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5071,13 +5077,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/agile-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/agile-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/agile-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5095,25 +5095,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/agile-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/agile-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/agile-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/agile-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/agile-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/agile-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/agile-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5137,6 +5137,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/agile-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/agile-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5155,19 +5161,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/agile-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/agile-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/nimble-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/nimble-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/nimble-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5191,13 +5197,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/nimble-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/nimble-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/nimble-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5215,25 +5215,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/nimble-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/nimble-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/nimble-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/nimble-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/nimble-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/nimble-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/nimble-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5257,6 +5257,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/nimble-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/nimble-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5275,19 +5281,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/nimble-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/nimble-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/grand-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/grand-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/grand-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5311,13 +5317,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/grand-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/grand-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/grand-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5335,25 +5335,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/grand-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/grand-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/grand-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/grand-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/grand-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/grand-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/grand-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5377,6 +5377,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/grand-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/grand-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5395,19 +5401,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/grand-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/grand-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/royal-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/royal-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/royal-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5431,13 +5437,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/royal-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/royal-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/royal-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5455,25 +5455,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/royal-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/royal-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/royal-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/royal-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/royal-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/royal-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/royal-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5497,6 +5497,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/royal-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/royal-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5515,19 +5521,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/royal-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/royal-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/noble-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/noble-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/noble-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5551,13 +5557,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/noble-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/noble-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/noble-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5575,25 +5575,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/noble-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/noble-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/noble-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/noble-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/noble-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/noble-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/noble-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5617,6 +5617,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/noble-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/noble-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5635,19 +5641,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/noble-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/noble-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/apex-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/apex-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/apex-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5671,13 +5677,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/apex-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/apex-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/apex-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5695,25 +5695,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/apex-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/apex-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/apex-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/apex-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/apex-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/apex-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/apex-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5737,6 +5737,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/apex-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/apex-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5755,19 +5761,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/apex-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/apex-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/peak-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/peak-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/peak-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5791,13 +5797,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/peak-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/peak-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/peak-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5815,25 +5815,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/peak-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/peak-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/peak-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/peak-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/peak-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/peak-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/peak-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5857,6 +5857,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/peak-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/peak-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5875,19 +5881,19 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/peak-password-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/peak-uuid-v4-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/crest-meta-tag-generator</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/crest-word-counter</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/crest-slug-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5911,13 +5917,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/crest-redirect-header-analyzer</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/crest-word-counter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/crest-text-case-converter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5935,25 +5935,25 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/crest-case-converter</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://globalpulsenewsmedia.com/tools/crest-sentence-rewriter</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/crest-base64-encoder</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/crest-placeholder-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://globalpulsenewsmedia.com/tools/crest-json-formatter</loc>
+    <loc>https://globalpulsenewsmedia.com/tools/crest-json-validator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://globalpulsenewsmedia.com/tools/crest-base64-encoder</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -5977,6 +5977,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://globalpulsenewsmedia.com/tools/crest-password-generator</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://globalpulsenewsmedia.com/tools/crest-image-resizer</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -5990,12 +5996,6 @@
   </url>
   <url>
     <loc>https://globalpulsenewsmedia.com/tools/crest-qr-code-generator</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/crest-password-generator</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
