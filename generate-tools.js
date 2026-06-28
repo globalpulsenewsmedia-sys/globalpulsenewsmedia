@@ -5,9 +5,9 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const toolsDirectory = path.join(__dirname, '..', 'tools');
-const dataDirectory = path.join(__dirname, '..', 'data');
-const rootDirectory = path.join(__dirname, '..');
+const toolsDirectory = path.join(__dirname, 'tools');
+const dataDirectory = path.join(__dirname, 'data');
+const rootDirectory = path.join(__dirname);
 
 if (!fs.existsSync(toolsDirectory)) {
     fs.mkdirSync(toolsDirectory, { recursive: true });
