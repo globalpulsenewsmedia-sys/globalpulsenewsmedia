@@ -394,7 +394,11 @@ console.log('🚀 Starting Programmatic Tool Generation...');
 const catalogData = [];
 
 toolsList.forEach((tool) => {
-    const filePath = path.join(OUTPUT_DIR, `${tool.slug}.html`);
+    const toolFolder = path.join(OUTPUT_DIR, tool.slug);
+    if (!fs.existsSync(toolFolder)) {
+        fs.mkdirSync(toolFolder, { recursive: true });
+    }
+    const filePath = path.join(toolFolder, 'index.html');
     const content = getTemplate(tool);
     
     fs.writeFileSync(filePath, content);
