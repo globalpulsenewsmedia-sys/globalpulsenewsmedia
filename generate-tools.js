@@ -464,7 +464,8 @@ const htmlFiles = [
     'enterprise.html', 'google-readiness.html', 'investors.html', 'marketplace.html',
     'media-center.html', 'privacy.html', 'pro.html', 'refund.html', 'risk.html',
     'roadmap.html', 'security-center.html', 'security.html', 'shipping.html',
-    'terms.html', 'whitepaper.html', 'success.html', 'api-docs.html', 'feed.xml', 'robots.txt'
+    'terms.html', 'whitepaper.html', 'success.html', 'api-docs.html', 'feed.xml', 'robots.txt',
+    'article.html', 'aml-kyc.html', 'agent-command.html', 'partnerships.html'
 ];
 
 // Copy core html files
