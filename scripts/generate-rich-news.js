@@ -1,387 +1,1199 @@
 import fs from 'fs';
 import path from 'path';
 
-const categoriesData = {
-  SPORTS: [
-    {
-      title: "Real Madrid Claims UEFA Champions League Trophy in Thrilling Football Final",
-      snippet: "Real Madrid secured a dramatic 3-2 victory in the final minutes of extra time, cementing their legacy once again on Europe's grandest football stage.",
-      image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
-      content: `
-        <p><strong>MUNICH, Germany</strong> — In an unforgettable night of European football, Real Madrid clinched their latest UEFA Champions League title with a dramatic 3-2 victory over their rivals. The match, which extended into extra time, kept fans on the edge of their seats as both sides showcased masterclasses in tactical play and sheer determination.</p>
-        
-        <h2>A Tactical Chess Match in Munich</h2>
-        <p>The first half began with intense pressure from both sides, leading to early defensive errors. A tactical shift in the 65th minute allowed Real Madrid to exploit gaps in the opposition's midfield transition. The coach's decision to bring on fresh wingers paid off handsomely, turning the tide of possession and offensive speed.</p>
-        
-        <blockquote>
-            "We played with our hearts on our sleeves tonight. When we went down in the first half, we never lost faith in our system. This trophy belongs to every single fan who traveled to support us."
-            <br><small>— Real Madrid Team Captain</small>
-        </blockquote>
+const allArticles = [
+  // --- SPORTS (8 Articles) ---
+  {
+    title: "Real Madrid Claims UEFA Champions League Trophy in Thrilling Football Final",
+    snippet: "Real Madrid secured a dramatic 3-2 victory in the final minutes of extra time, cementing their legacy once again on Europe's grandest football stage.",
+    category: "SPORTS",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 22:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800",
+    content: `
+      <p><strong>MUNICH, Germany</strong> — In an unforgettable night of European football, Real Madrid clinched their latest UEFA Champions League title with a dramatic 3-2 victory over their rivals. The match, which extended into extra time, kept fans on the edge of their seats as both sides showcased masterclasses in tactical play and sheer determination.</p>
+      <h2>A Tactical Chess Match in Munich</h2>
+      <p>The first half began with intense pressure from both sides, leading to early defensive errors. A tactical shift in the 65th minute allowed Real Madrid to exploit gaps in the opposition's midfield transition. The coach's decision to bring on fresh wingers paid off handsomely, turning the tide of possession and offensive speed.</p>
+      <blockquote>
+          "We played with our hearts on our sleeves tonight. When we went down in the first half, we never lost faith in our system. This trophy belongs to every single fan who traveled to support us."
+          <br><small>— Real Madrid Team Captain</small>
+      </blockquote>
+      <h2>The Definitive Moments of the Match</h2>
+      <p>The breakthrough came in the 114th minute when a brilliant cross-field pass was met with a clinical volley, sending the stadium into a frenzy. Key highlights of the second-half resurgence included:</p>
+      <ul>
+          <li><strong>Tactical Restructuring:</strong> Shifting to a compact 4-3-3 formation to clog the central passing channels.</li>
+          <li><strong>Precision Set Pieces:</strong> Utilizing near-post runs to disrupt zonal marking structures.</li>
+          <li><strong>Exceptional Goalkeeping:</strong> Three crucial stops during the final minutes of extra time preserved the narrow lead.</li>
+      </ul>
+      <h2>Long-Term Institutional Impact</h2>
+      <p>With this victory, Real Madrid reinforces their dominant position at the pinnacle of continental football, securing a historical legacy that will inspire future generations of athletes worldwide. Financial analysts estimate that the victory will boost the club's commercial sponsorships and merchandising revenues by over 18% in the coming fiscal year, cementing their status as the world's most valuable football franchise.</p>
+    `
+  },
+  {
+    title: "Wimbledon Finals: Historic Straight-Sets Tennis Championship Declared",
+    snippet: "A historic day on the grass courts as a rising young phenom sweeps the tennis finals, signaling a major generational shift in professional tennis.",
+    category: "SPORTS",
+    source: "Pulse News Wire",
+    time: "June 29, 2026 • 18:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=800",
+    content: `
+      <p><strong>LONDON, United Kingdom</strong> — The grass courts of Wimbledon witnessed a historic changing of the guard as a 19-year-old tennis prodigy captured the men's singles championship in straight sets. Facing a seasoned veteran, the young athlete displayed ice-cold composure and a devastating serve that left spectators and commentators in awe.</p>
+      <h2>Redefining the Baseline Game on Grass</h2>
+      <p>From the opening game, the rookie dominated the baseline rallies, hitting winner after winner with surgical precision. The final set concluded with a spectacular ace, cementing a 6-4, 6-3, 6-2 triumph that will go down in tennis folklore. Sporting critics are praising the champion's unique grip and aggressive return strategy, which neutralized the opponent's signature slice.</p>
+      <blockquote>
+          "I dreamed of this moment since I first picked up a racket at age five. To stand here holding this trophy is a feeling that words cannot adequately capture."
+          <br><small>— Wimbledon Men's Champion</small>
+      </blockquote>
+      <h2>Key Statistical Metrics from the Match</h2>
+      <p>A closer look at the match telemetry shows a highly lopsided performance in several critical departments:</p>
+      <ul>
+          <li><strong>First Serve Percentage:</strong> An outstanding 78% success rate, winning 90% of those points.</li>
+          <li><strong>Unforced Errors:</strong> Restrained to a mere 12 throughout the entire three-set match.</li>
+          <li><strong>Net Points Won:</strong> Converging on 15 out of 18 attempts, demonstrating superb spatial awareness.</li>
+      </ul>
+      <h2>The Dawn of a New Tennis Dynasty</h2>
+      <p>The sports world is abuzz with speculation about the start of a new dominant era in tennis, as sponsors and fans rally behind the newly crowned champion who has defied all pre-tournament odds. Industry marketing experts predict this victory will launch a massive wave of endorsement contracts, securing the player's position as the new face of global athletics.</p>
+    `
+  },
+  {
+    title: "Manchester City Clinches English Premier League Title After Final Day Drama",
+    snippet: "A spectacular second-half comeback seals the Premier League trophy, securing City's place at the top of English football.",
+    category: "SPORTS",
+    source: "Sentinel Intelligence",
+    time: "June 29, 2026 • 15:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800",
+    content: `
+      <p><strong>MANCHESTER, UK</strong> — Manchester City retained the Premier League title in the most dramatic fashion, overcoming a two-goal deficit on the final day of the season to win 3-2. The victory triggered wild celebrations at the Etihad Stadium as City secured their fourth consecutive league crown.</p>
+      <h2>The Drama of the Final Ten Minutes</h2>
+      <p>Two quick-fire goals in the final ten minutes turned the game on its head, leaving their rivals stunned. The manager praised his players' resilience, calling it 'a testament to the character and spirit of this football club.' The tactical shift to bring on additional attacking midfielders overwhelmed the opponent's low defensive block.</p>
+      <h2>Behind the Numbers of the Season</h2>
+      <p>City's league campaign was marked by historical performance parameters:</p>
+      <ul>
+          <li><strong>Goal Scoring Record:</strong> A staggering 104 goals scored across 38 matches.</li>
+          <li><strong>Defensive Solidity:</strong> Keeping 22 clean sheets, the highest in league history.</li>
+          <li><strong>Passing Accuracy:</strong> Averaging 91% passing completion rates across all matches.</li>
+      </ul>
+      <p>With this championship, Manchester City solidifies its status as one of the greatest modern sports dynasties, with plans already underway for next season's campaign.</p>
+    `
+  },
+  {
+    title: "Formula 1: Monaco Grand Prix Delivers Masterclass in Wet Weather Racing",
+    snippet: "Sudden downpours turn the legendary street circuit into a tactical battlefield, leading to an unexpected podium finish.",
+    category: "SPORTS",
+    source: "Financial Times Desk",
+    time: "June 29, 2026 • 14:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800",
+    content: `
+      <p><strong>MONTE CARLO, Monaco</strong> — Sudden torrential rain transformed the Monaco Grand Prix into a high-stakes tactical chess game, resulting in one of the most unpredictable races of the season. Drivers struggled for grip on the narrow street circuit as teams scrambled to adapt their tire strategies.</p>
+      <h2>Tire Management and Pit Stop Strategy</h2>
+      <p>A series of daring overtakes and pit-stop blunders shook up the grid, allowing a mid-tier team to claim a historic first-place finish. The winner described the race as 'pure adrenaline from start to finish.' Key elements that decided the podium placements included:</p>
+      <ul>
+          <li><strong>Intermediate Tire Durability:</strong> Drivers who stayed out longer on worn intermediates gained track position.</li>
+          <li><strong>Safety Car Timing:</strong> A late-race safety car compressed the field, setting up a 3-lap sprint to the finish.</li>
+          <li><strong>Precision Steering:</strong> Navigating the hairpin curve with zero margins of error on wet asphalt.</li>
+      </ul>
+      <p>As the dust settles, Formula 1 analysts are praising the safety protocols and driver skill that prevented major incidents under extremely challenging track conditions.</p>
+    `
+  },
+  {
+    title: "NBA Finals: Golden State Warriors Reclaim Championship Ring in Game 6",
+    snippet: "A spectacular three-point shooting showcase seals the victory, bringing the Larry O'Brien trophy back to the Bay Area.",
+    category: "SPORTS",
+    source: "Reuters Syndicate",
+    time: "June 29, 2026 • 09:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800",
+    content: `
+      <p><strong>SAN FRANCISCO, USA</strong> — The Golden State Warriors clinched another NBA Championship with an emphatic Game 6 victory, dominating the fourth quarter with their signature fast-paced offense. The home crowd erupted as the final buzzer sounded, celebrating a hard-fought season.</p>
+      <h2>A Masterclass in Perimeter Shooting</h2>
+      <p>The finals MVP delivered a stunning 42-point performance, breaking multiple shooting records along the way. 'We stayed united through all the injuries and doubts,' the star player remarked during the trophy ceremony. The team's defensive rotation successfully neutralized the opponent's star center, restricting inside scoring opportunities.</p>
+      <h2>Statistical Highlights of Game 6</h2>
+      <p>The final game telemetry showcased key competitive metrics:</p>
+      <ul>
+          <li><strong>Three-Point Conversion:</strong> Converting 21 out of 38 attempts from beyond the arc.</li>
+          <li><strong>Rebounding Domination:</strong> Securing 48 total rebounds against the opponent's 34.</li>
+          <li><strong>Turnovers Forced:</strong> Forcing 18 turnovers leading to 24 transition points.</li>
+      </ul>
+      <p>With this championship, the franchise solidifies its status as one of the greatest modern sports dynasties, with plans already underway for next season's campaign.</p>
+    `
+  },
+  {
+    title: "Lionel Messi Announces Final International Campaign Ahead of World Cup",
+    snippet: "The legendary football icon confirms the upcoming global tournament will mark his final appearance in the national jersey.",
+    category: "SPORTS",
+    source: "Global Pulse Intel",
+    time: "June 28, 2026 • 23:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=800",
+    content: `
+      <p><strong>BUENOS AIRES, Argentina</strong> — Football legend Lionel Messi has officially announced that the upcoming World Cup will be his final tournament representing Argentina. The decision marks the end of an era for international football, sparking emotional tributes from fans and players worldwide.</p>
+      <h2>A Legacy of Unmatched Brilliance</h2>
+      <p>'I want to enjoy these final games with my teammates and give everything to bring home another trophy,' Messi stated in an exclusive interview. The national team manager emphasized that Messi's leadership off the pitch will be just as crucial as his magic on it as the squad prepares for the tournament.</p>
+      <blockquote>
+          "Messi has given everything to this country. Our goal now is to build the best possible support system on the field to let him play his natural game one last time."
+          <br><small>— Argentina Head Coach</small>
+      </blockquote>
+      <p>Fans across the nation are organizing tributes for the upcoming qualifying matches, celebrating a career that has brought immense joy and international recognition to South American football.</p>
+    `
+  },
+  {
+    title: "Paris Olympic Committee Unveils Carbon-Neutral Athletes Village",
+    snippet: "The newly constructed complex utilizes solar integration and geothermal cooling, setting a new standard for sustainable sports events.",
+    category: "SPORTS",
+    source: "Pulse News Wire",
+    time: "June 28, 2026 • 16:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1578873376229-25a115af1b28?w=800",
+    content: `
+      <p><strong>PARIS, France</strong> — The Paris Olympic Committee has officially opened the Athletes Village, showcasing an array of eco-friendly innovations designed to minimize the event's environmental footprint. The village features recycled timber structures, rooftop solar arrays, and an innovative underground water cooling system.</p>
+      <h2>Eradicating the Need for Air Conditioning</h2>
+      <p>By avoiding traditional air conditioning and utilizing sustainable materials, the organizers expect to cut emissions by 50% compared to previous games. 'This is a model for the future of urban design,' the mayor of Paris noted during the opening tour. Key green technologies deployed include:</p>
+      <ul>
+          <li><strong>Geothermal Grid:</strong> Circulating cool groundwater through floor panels to regulate room temperatures naturally.</li>
+          <li><strong>Solar Integration:</strong> Covering 60% of roof surfaces with high-efficiency photovoltaic cells.</li>
+          <li><strong>Recycled Materials:</strong> Constructing athlete furniture from compressed cardboard and local ocean plastic waste.</li>
+      </ul>
+      <p>Athletes from around the world have begun moving into the facility, praising the comfortable living spaces and focus on ecological sustainability.</p>
+    `
+  },
+  {
+    title: "NFL Super Bowl: Underdog Franchise Secures Historic Overtime Victory",
+    snippet: "A dramatic goal-line stand in the final seconds of overtime crowns a new champion, capping off a remarkable season.",
+    category: "SPORTS",
+    source: "Sentinel Intelligence",
+    time: "June 28, 2026 • 11:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1566577134770-3d85bb3a9cc4?w=800",
+    content: `
+      <p><strong>LAS VEGAS, USA</strong> — The NFL season concluded with a Super Bowl for the ages as the underdog team secured a historic overtime victory. A sensational touchdown drive in the dying seconds of the extra period sealed the win, leaving stadium spectators in absolute disbelief.</p>
+      <h2>The Critical Goal-Line Stand</h2>
+      <p>The winning quarterback, who was drafted in the final round, was named MVP after throwing for four touchdowns and zero interceptions. 'No one believed in us, but we believed in each other,' he said holding the Lombardi Trophy. The defensive line executed three consecutive stops inside the 2-yard line during the third quarter, turning the momentum.</p>
+      <h2>Economic Impact of the Victory</h2>
+      <p>Cities across the home state are preparing massive parade routes to welcome back the champion squad, marking their first league title in over four decades. Local sports retailers report a 300% spike in merchandise demand, demonstrating the massive cultural influence of this underdog championship run.</p>
+    `
+  },
 
-        <h2>The Definitive Moments of the Match</h2>
-        <p>The breakthrough came in the 114th minute when a brilliant cross-field pass was met with a clinical volley, sending the stadium into a frenzy. Key highlights of the second-half resurgence included:</p>
-        <ul>
-            <li><strong>Tactical Restructuring:</strong> Shifting to a compact 4-3-3 formation to clog the central passing channels.</li>
-            <li><strong>Precision Set Pieces:</strong> Utilizing near-post runs to disrupt zonal marking structures.</li>
-            <li><strong>Exceptional Goalkeeping:</strong> Three crucial stops during the final minutes of extra time preserved the narrow lead.</li>
-        </ul>
+  // --- TECH (8 Articles) ---
+  {
+    title: "Next-Gen Quantum Smartphone Launch Verified by Leading Tech Labs",
+    snippet: "The world's first commercially viable consumer quantum processor phone has been launched, featuring military-grade dynamic encryption keys.",
+    category: "TECH",
+    source: "Reuters Syndicate",
+    time: "June 29, 2026 • 21:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+    content: `
+      <p><strong>SILICON VALLEY, USA</strong> — Tech pioneers have officially launched the first consumer smartphone powered by a micro-quantum processor. This breakthrough device offers processing speeds up to 100 times faster than traditional silicon chips, marking a paradigm shift in mobile computing and user interface responsiveness.</p>
+      <h2>Breaking the Silicon Barrier</h2>
+      <p>For decades, chip developers have warned about the physical limitations of silicon transistors. The new quantum mobile chipset utilizes sub-atomic particle entanglement to perform calculations, practically bypassing heat generation limits and allowing true multi-tasking without throttling.</p>
+      <blockquote>
+          "This is not a progressive step; it is a leap off the cliff of classical computing. We have brought room-temperature quantum computing out of the research facility and into the consumer's palm."
+          <br><small>— Chief Hardware Architect</small>
+      </blockquote>
+      <h2>Unbreakable Security Infrastructure</h2>
+      <p>The primary feature drawing attention from cybersecurity firms is the phone's hardware-level quantum key distribution (QKD):</p>
+      <ul>
+          <li><strong>Dynamic Entangled Keys:</strong> Cryptographic tokens change state instantly if any attempt is made to intercept the signal.</li>
+          <li><strong>Zero Cache Overhead:</strong> Cryptographic calculations are solved at the hardware layer, bypassing standard operating system vulnerabilities.</li>
+          <li><strong>Quantum-Resistant Protocols:</strong> Algorithms are fully prepared for the future arrival of commercial quantum mainframes.</li>
+      </ul>
+      <h2>Consumer Market Reception & Enterprise Demand</h2>
+      <p>Pre-orders have surged across international tech hubs, with corporate enterprises and government agencies securing initial production runs to guarantee communication security in sensitive operating environments. Analysts predict that quantum mobile technology will replace standard flagship smartphones in corporate corridors within the next three years.</p>
+    `
+  },
+  {
+    title: "Silicon Valley Showcases Holographic Gadgets Targeting Consumer Markets",
+    snippet: "Top hardware developers unveiled ultra-slim interactive holographic glass interfaces set to replace traditional monitors and tablet displays.",
+    category: "TECH",
+    source: "Financial Times Desk",
+    time: "June 29, 2026 • 17:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800",
+    content: `
+      <p><strong>SAN FRANCISCO, USA</strong> — Leading electronics manufacturers have showcased a series of interactive holographic displays designed to replace traditional screens. The devices project high-definition 3D visuals directly into the air, allowing users to interact with files and applications using intuitive hand gestures.</p>
+      <h2>The End of Flat-Panel Monitors</h2>
+      <p>By employing advanced spatial light modulators and infrared tracking sensors, the holographic glass creates a seamless, lag-free workspace that integrates naturally with modern smart home environments. Users can stretch, rotate, and minimize application windows floating in mid-air, creating a high-tech desktop workspace.</p>
+      <blockquote>
+          "The screen has been a bottleneck for human creativity for half a century. We are finally expanding the digital workspace into three-dimensional space."
+          <br><small>— Spatial Interface Design Lead</small>
+      </blockquote>
+      <h2>Technical Highlights of Holographic Glass</h2>
+      <p>The system utilizes several cutting-edge hardware layers to achieve a realistic projection:</p>
+      <ul>
+          <li><strong>Micro-Laser Arrays:</strong> Millions of localized laser diodes project coherent light waves that intersect in three-dimensional space.</li>
+          <li><strong>Time-of-Flight Gesture Cameras:</strong> Sub-millimeter tracking captures fine finger adjustments for precise drawing and modeling.</li>
+          <li><strong>Eye-Tracking Focus Calibration:</strong> Adjusts projection depth dynamically based on where the user is looking.</li>
+      </ul>
+      <h2>Market Projections and Enterprise Integration</h2>
+      <p>Consumer tech commentators are calling this the most significant interface innovation since the multi-touch capacitive screen, predicting widespread adoption within the executive computing sector by next year. Software giants have already begun releasing compatible operating system patches to support spatial holographic workspaces natively.</p>
+    `
+  },
+  {
+    title: "ChatGPT-5 Release Date Leaked: Next-Gen AI System Capable of Real-Time Reasoning",
+    snippet: "Leaked documents reveal a massive leap in multi-modal capabilities, enabling the AI to reason and interact with human speed.",
+    category: "TECH",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 12:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780efad99a?w=800",
+    content: `
+      <p><strong>SAN FRANCISCO, USA</strong> — Internal documents leaked from leading artificial intelligence research labs suggest that ChatGPT-5 is slated for release late this quarter. The system represents a monumental upgrade, moving beyond pattern recognition to deep symbolic reasoning and planning.</p>
+      <h2>Deep Symbolic Reasoning</h2>
+      <p>According to the leak, the model can autonomously write, test, and deploy software applications in real-time while dynamically correcting logic errors. Additionally, its conversational latency has been reduced to sub-100ms, making interactions feel indistinguishable from human voice communication. Key improvements outlined in the documents include:</p>
+      <ul>
+          <li><strong>Reasoning Engines:</strong> Multi-step execution planning before rendering outputs.</li>
+          <li><strong>Active Memory:</strong> Maintaining context across sessions with secure local vector datastores.</li>
+          <li><strong>Advanced Vision:</strong> Understanding technical schematics and generating functioning UI code templates instantly.</li>
+      </ul>
+      <p>Safety boards are currently reviewing the model to ensure compliance with international ethical guidelines, while tech enterprises brace for a wave of automation potential across customer support and analytics.</p>
+    `
+  },
+  {
+    title: "Apple Vision Pro 2 Launches with Neural Interface and Extended Battery",
+    snippet: "The upgraded spatial computing headset introduces direct eye-tracking control and a lightweight external battery pack.",
+    category: "TECH",
+    source: "Pulse News Wire",
+    time: "June 29, 2026 • 08:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1608248597481-496100c8c836?w=800",
+    content: `
+      <p><strong>CUPERTINO, USA</strong> — Apple has officially announced the Vision Pro 2, addressing key user feedback from the first generation with a lighter carbon-fiber chassis and double the computing power. The headset introduces 'Neural Link' eye tracking, which allows users to execute commands simply by thinking about them.</p>
+      <h2>Circadian and Neural Interface Optimizations</h2>
+      <p>An upgraded external battery pack provides up to six hours of continuous operation, making the device viable for full-day professional workspaces. The integration of next-generation micro-OLED displays virtually eliminates motion sickness and eye strain. Apple engineers have also integrated custom sensory bands that monitor alpha and beta brainwaves to predict user focus states.</p>
+      <blockquote>
+          "We are not just designing hardware; we are designing the cognitive loop between humans and machines. Vision Pro 2 represents our ultimate vision of invisible tech."
+          <br><small>— Apple Design Executive</small>
+      </blockquote>
+      <p>The spatial computing market is expected to expand rapidly as corporate developers launch dedicated productivity suites designed specifically for the new headset architecture.</p>
+    `
+  },
+  {
+    title: "NVIDIA Unveils Blackwell Ultra AI Chips to Power Next-Gen Neural Networks",
+    snippet: "The ultra-advanced chip architecture promises a 30x performance boost in LLM training speeds while cutting energy use in half.",
+    category: "TECH",
+    source: "Sentinel Intelligence",
+    time: "June 28, 2026 • 20:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1591453089816-0fbb971b454c?w=800",
+    content: `
+      <p><strong>SANTA CLARA, USA</strong> — NVIDIA CEO Jensen Huang unveiled the Blackwell Ultra chip family, designed to power the next generation of multi-trillion parameter artificial intelligence models. The hardware features a new high-speed interconnect system that enables seamless communication across thousands of nodes.</p>
+      <h2>Redefining Data Center Efficiencies</h2>
+      <p>Initial benchmarks show a staggering 30x improvement in training and inference speeds for large language models, while utilizing advanced thermal management to reduce power consumption by 50%. The chip features custom liquid-cooling channels that operate silently under maximum compute load. Key technical specs include:</p>
+      <ul>
+          <li><strong>Compute Density:</strong> 120 billion transistors on a single package.</li>
+          <li><strong>Bandwidth:</strong> 8.5 Terabytes per second memory throughput.</li>
+          <li><strong>Energy Efficiency:</strong> Integrated power regulators that scale clock rates based on immediate queue sizes.</li>
+      </ul>
+      <p>Cloud service providers have immediately queued up orders for the chips, anticipating a massive surge in demand from corporate clients building custom generative models.</p>
+    `
+  },
+  {
+    title: "Sony and Honda Unveil Afeela EV Prototype with Integrated Gaming Console",
+    snippet: "The electric vehicle features a panoramic entertainment dashboard powered by PlayStation 5 cloud streaming technology.",
+    category: "TECH",
+    source: "Reuters Syndicate",
+    time: "June 28, 2026 • 15:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800",
+    content: `
+      <p><strong>TOKYO, Japan</strong> — The joint venture between Sony and Honda has showcased the latest prototype of their Afeela electric vehicle. The car features a revolutionary interactive dashboard that spans the entire cabin, offering passengers access to high-fidelity cloud gaming and media streaming.</p>
+      <h2>PS5 Cloud Architecture Integration</h2>
+      <p>Advanced autonomous driving sensors monitor road conditions in real-time, allowing the vehicle to handle complex highway routes without driver intervention. 'We are redefining what a vehicle cabin can be,' the Sony representative stated. The system utilizes local 6G telemetry to stream games from localized edge servers, ensuring latency-free feedback.</p>
+      <blockquote>
+          "Afeela transforms the daily commute from a chore into a creative playground. We are integrating world-class engineering with world-class entertainment."
+          <br><small>— Sony-Honda Mobility Joint Venture CEO</small>
+      </blockquote>
+      <p>Pre-orders for the production model are expected to open next year, with initial deliveries targeting the North American and Asian markets.</p>
+    `
+  },
+  {
+    title: "Decentralized Web3 Cloud Networks Scale Up to Challenge AWS Dominance",
+    snippet: "Independent computing clusters unite globally, offering cost-effective and censorship-resistant hosting solutions.",
+    category: "TECH",
+    source: "Financial Times Desk",
+    time: "June 28, 2026 • 11:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
+    content: `
+      <p><strong>BERLIN, Germany</strong> — A consortium of decentralized node operators has reported a 200% growth in capacity, establishing Web3 cloud storage as a viable competitor to legacy giants. By utilizing unused disk spaces and processing units across millions of secure homes, the network cuts hosting costs by 70%.</p>
+      <h2>Censorship-Resistant File Hosting</h2>
+      <p>The network fragments files across multiple nodes, ensuring that data remains highly available even if individual clusters experience localized power grid outages. Data is secured via end-to-end cryptographic layers controlled strictly by the customer, preventing third-party platform scraping. This has attracted high-growth fintech platforms looking for secure data backups.</p>
+    `
+  },
+  {
+    title: "Autonomous Humanoid Robots Entering Production Lines in European Factories",
+    snippet: "Robotics developers deploy human-like robots to handle complex assembly tasks alongside human technicians.",
+    category: "TECH",
+    source: "Global Pulse Intel",
+    time: "June 28, 2026 • 09:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800",
+    content: `
+      <p><strong>MUNICH, Germany</strong> — Automotive assembly plants in Germany have began deploying autonomous humanoid robots to handle delicate wiring layouts. The robots utilize advanced computer vision and tactile feedback pads to align components with sub-millimeter precision, reducing error margins by 80% compared to classical assembly machinery.</p>
+    `
+  },
 
-        <h2>Long-Term Institutional Impact</h2>
-        <p>With this victory, Real Madrid reinforces their dominant position at the pinnacle of continental football, securing a historical legacy that will inspire future generations of athletes worldwide. Financial analysts estimate that the victory will boost the club's commercial sponsorships and merchandising revenues by over 18% in the coming fiscal year, cementing their status as the world's most valuable football franchise.</p>
-      `
-    },
-    {
-      title: "Wimbledon Finals: Historic Straight-Sets Tennis Championship Declared",
-      snippet: "A historic day on the grass courts as a rising young phenom sweeps the tennis finals, signaling a major generational shift in professional tennis.",
-      image: "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=800",
-      content: `
-        <p><strong>LONDON, United Kingdom</strong> — The grass courts of Wimbledon witnessed a historic changing of the guard as a 19-year-old tennis prodigy captured the men's singles championship in straight sets. Facing a seasoned veteran, the young athlete displayed ice-cold composure and a devastating serve that left spectators and commentators in awe.</p>
+  // --- AUTO (8 Articles) ---
+  {
+    title: "Autonomous Electric Supercar Unveiled with Mach-Speed Battery Architecture",
+    snippet: "The new luxury electric vehicle features solid-state battery technology capable of charging from 0% to 100% in under three minutes.",
+    category: "AUTO",
+    source: "Pulse News Wire",
+    time: "June 29, 2026 • 20:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800",
+    content: `
+      <p><strong>STUTTGART, Germany</strong> — A premier European automaker has stunned the automotive world by unveiling a concept electric supercar equipped with a revolutionary solid-state battery. The vehicle boasts a range of over 800 miles on a single charge and can replenish its battery fully in under three minutes.</p>
+      <h2>Solid-State Energy Densities Unleashed</h2>
+      <p>By employing high-density lithium-metal anodes and a solid ceramic electrolyte layer, the vehicle eliminates the overheating risks associated with traditional liquid lithium-ion packs, enabling continuous high-speed charging without degradation. This solves the primary bottleneck that has plagued the electric vehicle market for a decade.</p>
+      <blockquote>
+          "We have built a sports car that respects the planet without compromising on track-performance. Solid-state technology makes range anxiety a historical relic."
+          <br><small>— Lead Powertrain Engineer</small>
+      </blockquote>
+      <h2>Aerodynamic and AI Architecture</h2>
+      <p>The vehicle features a carbon-fiber shell and an onboard autonomous piloting mainframe trained on racing simulators:</p>
+      <ul>
+          <li><strong>Active Aerodynamic Flaps:</strong> Adjust drag coefficients dynamically during cornering and braking.</li>
+          <li><strong>Predictive Thermal Management:</strong> Pre-cools batteries ahead of high-performance driving segments.</li>
+          <li><strong>Mach-Speed Charging Grid compatibility:</strong> Supports 800V and 1200V supercharger infrastructures.</li>
+      </ul>
+      <h2>Global Launch and Distribution Strategy</h2>
+      <p>Production is scheduled to begin in limited quantities next year, with luxury car collectors and tech executives representing the primary customer base. Dealerships across major luxury hubs have reported record deposit registrations, signaling strong consumer confidence in the future of electrified high-performance travel.</p>
+    `
+  },
+  {
+    title: "Next-Gen Hydrogen Sedans Enter Mass Production to Disrupt Electric Markets",
+    snippet: "Leading automakers launch mass-production facilities for zero-emission hydrogen fuel-cell sedans, targeting long-range travel.",
+    category: "AUTO",
+    source: "Reuters Syndicate",
+    time: "June 29, 2026 • 15:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800",
+    content: `
+      <p><strong>TOKYO, Japan</strong> — In a bold bid to challenge the dominance of battery-electric vehicles, Japanese automotive giants have launched their first dedicated mass-production facility for hydrogen fuel-cell passenger sedans.</p>
+      <h2>Fuel-Cell Efficiencies</h2>
+      <p>The new line of vehicles offers a refuel time of under five minutes and emits only pure water vapor, making them an ideal choice for long-distance travel and taxi fleets operating in urban centers with limited electric grid capacity. The drivetrain integrates high-pressure carbon-fiber tanks that store up to 6kg of compressed hydrogen safety.</p>
+      <p>Government subsidies and infrastructure investments in hydrogen refueling stations across Europe and the US are expected to boost sales and accelerate the transition toward zero-emission transportation.</p>
+    `
+  },
+  {
+    title: "Tesla Cyberbeast 2 Launches with Enhanced Autopilot and Solar Roof Panel",
+    snippet: "The upgraded electric truck features a built-in solar array that adds up to 15 miles of driving range per day from sunlight.",
+    category: "AUTO",
+    source: "Sentinel Intelligence",
+    time: "June 29, 2026 • 11:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800",
+    content: `
+      <p><strong>AUSTIN, USA</strong> — Tesla has officially launched the Cyberbeast 2, featuring a revised suspension system and an integrated solar roof array. The lightweight solar panels charge the battery continuously throughout the day, providing an additional 15 miles of range under normal sunlight conditions.</p>
+      <h2>Full Self-Driving Upgrade</h2>
+      <p>The truck is equipped with the latest Full Self-Driving (FSD) computer, which utilizes neural nets to navigate complex urban intersections and construction zones with minimal driver supervision. The reinforced cold-rolled steel body has been optimized to absorb collision impacts more effectively, passing rigorous international safety ratings.</p>
+    `
+  },
+  {
+    title: "Porsche Unveils All-Electric 911 Hybrid with Track-Optimized Power System",
+    snippet: "The legendary sports car adopts an advanced electric-hybrid drivetrain to deliver unprecedented track performance.",
+    category: "AUTO",
+    source: "Financial Times Desk",
+    time: "June 28, 2026 • 18:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800",
+    content: `
+      <p><strong>STUTTGART, Germany</strong> — Porsche has revealed the first hybrid version of the iconic 911, combining a twin-turbocharged flat-six engine with a high-performance electric motor. The hybrid system is designed primarily to boost acceleration and power delivery out of corners.</p>
+      <h2>Track-Tested Power Integration</h2>
+      <p>An innovative regenerative braking system recovers energy during deceleration, charging a compact lightweight battery pack optimized for rapid power cycles. 'We have preserved the classic driving feel while embracing modern electrification,' the design director noted. The model will hit dealerships late this year, targeting sports car enthusiasts.</p>
+    `
+  },
+  {
+    title: "Audi Luxury Electric SUV Debuts Level-4 Autonomous Navigation System",
+    snippet: "The flagship SUV navigates complex highway interchanges without driver intervention under clear weather protocols.",
+    category: "AUTO",
+    source: "Global Pulse Intel",
+    time: "June 28, 2026 • 14:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800",
+    content: `
+      <p><strong>INGOLSTADT, Germany</strong> — Audi has launched its latest electric SUV featuring a certified Level-4 autonomous driving system. The platform utilizes 12 LiDAR sensors and a dual-redundant computing core to pilot the vehicle along mapped highway networks, allowing drivers to engage in productive workspaces during commutes.</p>
+    `
+  },
+  {
+    title: "BMW Showcases Color-Changing Dynamic Ink Exterior at Munich Auto Show",
+    snippet: "Electrophoretic skin wraps allow drivers to change the vehicle's paint color dynamically via a mobile application.",
+    category: "AUTO",
+    source: "Pulse News Wire",
+    time: "June 28, 2026 • 10:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800",
+    content: `
+      <p><strong>MUNICH, Germany</strong> — BMW has unveiled a concept vehicle wrapped in advanced electrophoretic micro-panels. The technology, similar to e-reader screens, uses micro-charges to bring different color pigments to the surface, allowing drivers to customize patterns or switch the exterior color between white, black, and deep blue instantly.</p>
+    `
+  },
+  {
+    title: "Toyota Unveils Zero-Emissions Ammonia Engine Prototype for Commercial Trucks",
+    snippet: "The alternative fuel combustion engine offers high torque outputs without generating carbon or fine particulate matter.",
+    category: "AUTO",
+    source: "Reuters Syndicate",
+    time: "June 27, 2026 • 19:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800",
+    content: `
+      <p><strong>TOKYO, Japan</strong> — Toyota researchers have successfully tested a heavy-duty commercial truck engine powered by liquid ammonia. The fuel burns cleanly without producing CO2 emissions, offering an alternative energy source for long-haul logistics fleets that cannot easily integrate heavy battery packs.</p>
+    `
+  },
+  {
+    title: "Ferrari Launches Hyper-Hybrid Model Breaking Fiorano Track Speed Records",
+    snippet: "The limited edition hypercar utilizes Formula 1 KERS technology to hit 60mph in under 1.8 seconds.",
+    category: "AUTO",
+    source: "Sentinel Intelligence",
+    time: "June 27, 2026 • 13:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800",
+    content: `
+      <p><strong>MARANELLO, Italy</strong> — Ferrari has unveiled a limited-run hypercar equipped with a high-performance V8 engine assisted by dual electric motors. The powertrain generates a combined 1,200 horsepower, setting a new lap record on the manufacturer's official test track and demonstrating the potential of high-performance hybrid setups.</p>
+    `
+  },
 
-        <h2>Redefining the Baseline Game on Grass</h2>
-        <p>From the opening game, the rookie dominated the baseline rallies, hitting winner after winner with surgical precision. The final set concluded with a spectacular ace, cementing a 6-4, 6-3, 6-2 triumph that will go down in tennis folklore. Sporting critics are praising the champion's unique grip and aggressive return strategy, which neutralized the opponent's signature slice.</p>
+  // --- CELEBRITY (8 Articles) ---
+  {
+    title: "Cannes Film Festival: Red Carpet Highlights and Top Director Awards",
+    snippet: "Global filmmakers gather as independent cinema sweeps the top honors, featuring high-profile celebrity appearances and style showcases.",
+    category: "CELEBRITY",
+    source: "Reuters Syndicate",
+    time: "June 29, 2026 • 19:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800",
+    content: `
+      <p><strong>CANNES, France</strong> — The Cannes Film Festival concluded with a series of surprise victories as independent, foreign-language films dominated the main awards. Celebrities from around the globe walked the red carpet, showcasing stunning custom outfits that set new trends for the fashion season.</p>
+      <h2>Independent Cinema Sweeps the Palme d'Or</h2>
+      <p>The coveted Palme d'Or was awarded to a breakout director for a gripping psychological drama, receiving a standing ovation from the audience during the closing ceremony. Critics praised the film's minimal scoring and rich dialogue, marking a return to classic cinematic storytelling methods.</p>
+      <blockquote>
+          "Cinema is an international language. This award is a validation for independent storytellers everywhere who refuse to dilute their vision for commercial grids."
+          <br><small>— Palme d'Or Winning Director</small>
+      </blockquote>
+      <h2>Red Carpet Style & High Fashion Trends</h2>
+      <p>Fashion houses took center stage on the red carpet, with several prominent trends emerging from the opening night:</p>
+      <ul>
+          <li><strong>Sustainable Luxury:</strong> Hand-woven organic silk and recycled gemstone accessories dominated the outfits.</li>
+          <li><strong>Vintage Revivals:</strong> Classic silhouettes from the 1950s and 60s re-imagined with modern asymmetrical tailoring.</li>
+          <li><strong>AI-Assisted Couture:</strong> Dynamic fabrics that adapt drape and structure based on ambient lighting.</li>
+      </ul>
+      <h2>Industry Financial Outlook</h2>
+      <p>Distributors reported a highly active marketplace, with several high-value acquisition contracts signed during the festival. Industry analysts predict a strong recovery for theatrical releases as independent titles secure global distribution pipelines across major streaming platforms and art-house theaters.</p>
+    `
+  },
+  {
+    title: "Met Gala Style Unveiled: Luxury Outfits Redefine Modern Runway Themes",
+    snippet: "High-fashion statements dominate the museum steps as prominent celebrities showcase custom handcrafted luxury wear designed by AI.",
+    category: "CELEBRITY",
+    source: "Financial Times Desk",
+    time: "June 29, 2026 • 14:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800",
+    content: `
+      <p><strong>NEW YORK, USA</strong> — The Metropolitan Museum of Art hosted the annual Met Gala, with this year's theme pushing the boundaries of technology and fashion. Prominent celebrities arrived in breathtaking outfits that featured intricate 3D-printed elements and fiber-optic fabrics.</p>
+      <h2>AI-Designed Haute Couture</h2>
+      <p>One of the night's highlights was a dress designed entirely through collaborative AI models, utilizing recycled ocean plastics to construct a stunning, liquid-like silhouette that shifted color under the camera flashes. Commentators are praising the event's focus on technological innovation and ecological sustainability, hailing it as a pivotal moment for modern high fashion.</p>
+    `
+  },
+  {
+    title: "Taylor Swift Announces Extended Global Tour with Dynamic Ticket Pricing",
+    snippet: "The pop icon confirms new dates across Asia and Europe, adopting blockchain tickets to prevent secondary scalping.",
+    category: "CELEBRITY",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 09:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
+    content: `
+      <p><strong>LOS ANGELES, USA</strong> — Taylor Swift has announced an extension of her record-breaking world tour, adding 30 new dates across major stadiums in Europe, South America, and Asia. To combat rampant ticket scalping, the tour organizers are deploying blockchain-based digital tickets.</p>
+      <h2>Secure Digital Ticketing</h2>
+      <p>The smart tickets are tied directly to the buyer's mobile device and cannot be resold on secondary platforms for inflated prices. 'We want to ensure our real fans get access at the original price,' Swift's management team stated. Demand is expected to break previous records, with millions of fans queuing up online.</p>
+    `
+  },
+  {
+    title: "Rihanna Launches Luxury Eco-Friendly Makeup Line under Fenty Brand",
+    snippet: "The new cosmetics line features biodegradable packaging and organic formulations, targeting the clean beauty market.",
+    category: "CELEBRITY",
+    source: "Pulse News Wire",
+    time: "June 28, 2026 • 18:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800",
+    content: `
+      <p><strong>PARIS, France</strong> — Rihanna has unveiled the latest expansion of her Fenty Beauty empire, introducing a line of premium, zero-waste cosmetics. The products utilize fully biodegradable bamboo packaging and organic, plant-based formulations free from synthetic chemicals.</p>
+      <h2>Eco-Conscious Cosmetics</h2>
+      <p>The clean beauty line has received immediate praise from environmental groups and beauty influencers alike for its commitment to sustainability without sacrificing product performance or color range. The collection will launch in retail stores worldwide this Friday.</p>
+    `
+  },
+  {
+    title: "Zendaya Star in Upcoming Sci-Fi Thriller Directed by Acclaimed Filmmaker",
+    snippet: "The award-winning actress signs a major contract for a high-concept spatial survival film starting production next autumn.",
+    category: "CELEBRITY",
+    source: "Sentinel Intelligence",
+    time: "June 28, 2026 • 13:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800",
+    content: `
+      <p><strong>LOS ANGELES, USA</strong> — Hollywood trade reports confirm that Zendaya has signed on to star in an upcoming spatial survival movie. The project, which features an extensive budget, utilizes advanced virtual production stages to render realistic cosmic backdrops, avoiding traditional green screen limitations.</p>
+    `
+  },
+  {
+    title: "Billie Eilish Unveils Zero-Waste Global Stadium Tour Guidelines",
+    snippet: "The musician mandates single-use plastic bans and local solar generators for all venues on her upcoming tour.",
+    category: "CELEBRITY",
+    source: "Reuters Syndicate",
+    time: "June 28, 2026 • 09:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800",
+    content: `
+      <p><strong>LONDON, UK</strong> — Singer Billie Eilish has established strict ecological guidelines for her upcoming concert tour. All hosting venues must verify zero-waste compliance, utilizing local solar generator arrays and banning single-use water bottles to minimize the carbon footprint associated with large live events.</p>
+    `
+  },
+  {
+    title: "Keanu Reeves to Direct Independent Documentary Highlighting Indie Game Devs",
+    snippet: "The veteran actor will executive produce a multi-part series exploring the artistic struggles of solo game developers.",
+    category: "CELEBRITY",
+    source: "Financial Times Desk",
+    time: "June 27, 2026 • 18:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800",
+    content: `
+      <p><strong>VANCOUVER, Canada</strong> — Keanu Reeves is launching a documentary series focusing on the global indie game development community. The project aims to highlight the dedication, artistic risks, and mental health struggles faced by creators operating outside major corporate publishing studios.</p>
+    `
+  },
+  {
+    title: "Selena Gomez Beauty Brand Prepares for High-Value Wall Street IPO",
+    snippet: "Financial analysts value the cosmetics venture at over $2 billion ahead of the planned public stock listing.",
+    category: "CELEBRITY",
+    source: "Global Pulse Intel",
+    time: "June 27, 2026 • 12:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800",
+    content: `
+      <p><strong>NEW YORK, USA</strong> — Selena Gomez's Rare Beauty brand has registered files with securities regulators for an initial public offering (IPO). The brand's focus on inclusivity and mental health initiatives has driven massive market share growth, positioning it for a highly anticipated Wall Street debut.</p>
+    `
+  },
 
-        <blockquote>
-            "I dreamed of this moment since I first picked up a racket at age five. To stand here holding this trophy is a feeling that words cannot adequately capture."
-            <br><small>— Wimbledon Men's Champion</small>
-        </blockquote>
+  // --- TRAVEL (8 Articles) ---
+  {
+    title: "Hidden Luxury Eco-Resorts Discovered Across Pristine Southeast Asian Islands",
+    snippet: "Travel experts catalog off-grid carbon-neutral private luxury villas offering ultra-premium hospitality experiences and wellness retreats.",
+    category: "TRAVEL",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 18:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+    content: `
+      <p><strong>BALI, Indonesia</strong> — Travel connoisseurs have compiled a list of the most exclusive, off-grid eco-resorts tucked away in remote corners of Southeast Asia. These private island destinations offer premium luxury while operating with a zero-carbon footprint.</p>
+      <h2>A Zero-Carbon Footprint Paradise</h2>
+      <p>Powered entirely by solar micro-grids and featuring organic farm-to-table dining, the resorts cater to high-profile travelers seeking privacy and deep rejuvenation through personalized wellness programs. The villas are built using locally sourced bamboo and volcanic stone, blending seamlessly with the natural jungle landscape.</p>
+      <blockquote>
+          "True luxury today is not about gold-plated fixtures; it is about absolute silence, clean air, and reconnecting with the earth without leaving a footprint."
+          <br><small>— Eco-Hospitality Developer</small>
+      </blockquote>
+      <h2>Exclusive Guest Amenities and Wellness Focus</h2>
+      <p>Guests have access to curated wellness therapies and off-grid adventures designed to soothe modern cognitive fatigue:</p>
+      <ul>
+          <li><strong>Holistic Sound Therapy:</strong> Meditation chambers built inside natural limestone caves.</li>
+          <li><strong>Organic Culinary Journeys:</strong> Menus customized daily by nutritionists utilizing ingredients harvested from on-site permaculture gardens.</li>
+          <li><strong>Private Marine Safaris:</strong> Guided electric catamaran tours to coral restoration reefs.</li>
+      </ul>
+      <h2>The Rapid Growth of Slow Travel</h2>
+      <p>Booking waitlists have extended up to a year, indicating a massive shift in luxury travel preferences toward sustainable, slow-travel experiences far removed from crowded tourism hubs. Hospitality groups are expanding portfolios to meet this high-yield, environmentally conscious demand.</p>
+    `
+  },
+  {
+    title: "High-Speed Trans-European Rail Routes Expand Connecting Capital Corridors",
+    snippet: "New luxury sleeper train networks connect major continental hubs, offering sustainable premium travel alternatives to regional flights.",
+    category: "TRAVEL",
+    source: "Pulse News Wire",
+    time: "June 29, 2026 • 13:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1532103054090-334e6e60ab29?w=800",
+    content: `
+      <p><strong>BRUSSELS, Belgium</strong> — European transport authorities have launched a series of high-speed luxury sleeper trains connecting major cities across the continent, offering a comfortable and eco-friendly alternative to regional air travel.</p>
+      <h2>Premium Overnight Travel</h2>
+      <p>The trains feature private suites, gourmet dining cars, and high-speed Wi-Fi, allowing business executives and leisure travelers to work and relax while traveling between Paris, Berlin, Vienna, and Rome overnight. This transition has dramatically reduced regional aviation emissions across key corridors.</p>
+    `
+  },
+  {
+    title: "Kyoto Tourism Board Restricts Access to Historic Districts to Prevent Crowding",
+    snippet: "New regulations limit entry to geisha districts during peak hours, protecting local culture and heritage sites.",
+    category: "TRAVEL",
+    source: "Sentinel Intelligence",
+    time: "June 29, 2026 • 09:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800",
+    content: `
+      <p><strong>KYOTO, Japan</strong> — The Kyoto Tourism Board has implemented new access controls in the historic Gion district to combat overcrowding and preserve the neighborhood's traditional atmosphere. Under the new rules, tourists are restricted from entering private alleys during evening hours.</p>
+      <h2>Cultural Preservation</h2>
+      <p>Local authorities have installed multilingual signage and deployed patrol officers to educate visitors on local customs and prevent inappropriate photography of geishas. Travel agencies are shifting focus toward guided cultural tours in lesser-known temples to distribute foot traffic more evenly across the city.</p>
+    `
+  },
+  {
+    title: "Luxury Cruise Ship Sets Sail on First Carbon-Neutral Arctic Expedition",
+    snippet: "The hybrid-electric cruise vessel utilizes advanced bio-fuels and batteries to navigate fragile polar ecosystems safely.",
+    category: "TRAVEL",
+    source: "Financial Times Desk",
+    time: "June 28, 2026 • 17:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800",
+    content: `
+      <p><strong>TROMSO, Norway</strong> — A new hybrid-electric expedition vessel has departed on its maiden voyage to the Arctic Circle. The state-of-the-art cruise ship utilizes a combination of advanced low-emission bio-fuels and massive battery packs to operate silently in fragile polar waters.</p>
+      <h2>Eco-Sensitive Exploration</h2>
+      <p>The ship's silent propulsion system minimizes disturbance to marine wildlife, while on-board laboratories allow passengers to participate in citizen-science research alongside marine biologists. The expedition marks a major milestone for the cruise industry.</p>
+    `
+  },
+  {
+    title: "Hidden Treehouse Lodges Discovered in Costa Rican Cloud Rainforests",
+    snippet: "Adventure travelers catalog remote canopy cabins offering immersive wildlife observation and volcanic views.",
+    category: "TRAVEL",
+    source: "Reuters Syndicate",
+    time: "June 28, 2026 • 12:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800",
+    content: `
+      <p><strong>SAN JOSE, Costa Rica</strong> — Tucked deep inside Costa Rica's Monteverde Cloud Forest, a series of luxury canopy treehouses have opened for eco-tourists. The structures suspend guests 30 meters above the jungle floor, providing direct views of rare bird species and nearby active volcanoes.</p>
+    `
+  },
+  {
+    title: "Commercial Space Tourism Flights Launch Luxury Suborbital Journeys",
+    snippet: "A private aerospace venture opens ticket bookings for six-passenger suborbital spaceflights departing next spring.",
+    category: "TRAVEL",
+    source: "Sentinel Intelligence",
+    time: "June 28, 2026 • 08:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
+    content: `
+      <p><strong>MOJAVE DESERT, USA</strong> — Commercial space operators have verified ticket openings for suborbital flights. The 90-minute journey takes passengers to the edge of space, offering several minutes of weightlessness and views of the Earth's curvature, establishing a new luxury travel tier.</p>
+    `
+  },
+  {
+    title: "Medieval Italian Villages Successfully Restored as Boutique Hospitality Hubs",
+    snippet: "Historical preservation groups convert abandoned stone hamlets into scattered hotels, boosting local rural economies.",
+    category: "TRAVEL",
+    source: "Global Pulse Intel",
+    time: "June 27, 2026 • 19:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800",
+    content: `
+      <p><strong>L'AQUILA, Italy</strong> — The 'Albergo Diffuso' model has saved three abandoned medieval villages in the Abruzzo region. By converting rustic stone houses into scattered hotel rooms with a centralized reception, preservationists have restored life to historical landmarks.</p>
+    `
+  },
+  {
+    title: "Underwater Luxury Villas Open in Maldives Marine Conservation Zone",
+    snippet: "Guests sleep beneath the ocean surface, surrounded by coral nurseries and active marine restoration grids.",
+    category: "TRAVEL",
+    source: "Pulse News Wire",
+    time: "June 27, 2026 • 13:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800",
+    content: `
+      <p><strong>MALE, Maldives</strong> — A premier resort has unveiled underwater suites constructed 5 meters below the Indian Ocean. Built with acrylic glass domes, the villas are situated adjacent to an active coral nursery, allowing guests to observe marine conservation efforts first-hand.</p>
+    `
+  },
 
-        <h2>Key Statistical Metrics from the Match</h2>
-        <p>A closer look at the match telemetry shows a highly lopsided performance in several critical departments:</p>
-        <ul>
-            <li><strong>First Serve Percentage:</strong> An outstanding 78% success rate, winning 90% of those points.</li>
-            <li><strong>Unforced Errors:</strong> Restrained to a mere 12 throughout the entire three-set match.</li>
-            <li><strong>Net Points Won:</strong> Converging on 15 out of 18 attempts, demonstrating superb spatial awareness.</li>
-        </ul>
+  // --- WORLD (8 Articles) ---
+  {
+    title: "Devastating Quakes Strike Coastlines Leading to Dynamic Evacuations",
+    snippet: "Twin offshore earthquakes prompt emergency responses across coastal hubs, with regional rescue agencies active in establishing safety zones.",
+    category: "WORLD",
+    source: "Reuters Syndicate",
+    time: "June 29, 2026 • 17:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=800",
+    content: `
+      <p><strong>CARACAS, Venezuela</strong> — A powerful pair of offshore earthquakes measuring 7.2 and 7.5 on the Richter scale struck the Venezuelan coastline within minutes of each other, triggering emergency evacuations and localized tsunami warnings.</p>
+      <h2>Mobilizing Regional Disaster Response</h2>
+      <p>Rescue teams have been deployed to Guaire and surrounding areas to clear debris and check for survivors in collapsed structures. Infrastructure damage is reported to be significant along coastal roads, prompting government officials to appeal for caution and restrict non-essential travel.</p>
+      <blockquote>
+          "Our primary focus is safety and stabilization. Emergency crews are working round the clock to restore power and communication lines to isolated districts."
+          <br><small>— Disaster Management Spokesperson</small>
+      </blockquote>
+      <h2>Seismic Analysis & Geotechnical Reports</h2>
+      <p>Geological departments indicate that the quakes occurred along the active Caribbean tectonic plate boundary:</p>
+      <ul>
+          <li><strong>Twin Ruptures:</strong> Two distinct slips occurred along parallel fault lines, doubling the seismic impact.</li>
+          <li><strong>Aftershock Risks:</strong> Over 120 minor tremors recorded within the first 12 hours, complicating rescue efforts.</li>
+          <li><strong>Tsunami Wave Watch:</strong> Coastal sensors monitor water level fluctuations to detect potential secondary swells.</li>
+      </ul>
+      <h2>International Relief Efforts Coordinated</h2>
+      <p>International aid agencies are coordinating emergency shipments of food, water, and medical supplies to the affected regions. Neighbouring countries have pledged technical support and search-and-rescue teams to accelerate recovery operations in the worst-hit coastal cities.</p>
+    `
+  },
+  {
+    title: "Global Energy Transition Stabilizes as Geothermal Power Gained Ground",
+    snippet: "Recent developments in deep-crust boring technology unlock massive clean heat reservoirs, supplying power to regional grids.",
+    category: "WORLD",
+    source: "Financial Times Desk",
+    time: "June 29, 2026 • 12:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
+    content: `
+      <p><strong>REYKJAVIK, Iceland</strong> — Breakthroughs in deep-bore geothermal drilling have unlocked massive clean energy potential, allowing power plants to tap into superheated steam reservoirs located miles below the Earth's crust.</p>
+      <h2>Deep-Crust Boring Technology</h2>
+      <p>The new drilling technique utilizes advanced electromagnetic bits that melt through hard granite layer without mechanical wear, cutting setup costs for geothermal plants by up to 60%. Energy analysts predict that geothermal power will play a critical role in stabilizing national grids.</p>
+    `
+  },
+  {
+    title: "UN Climate Summit Agrees on Landmark Accord to Limit Plastics Production",
+    snippet: "Delegates from 190 nations sign a legally binding treaty to reduce global plastics manufacturing by 40% over the next decade.",
+    category: "WORLD",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 08:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800",
+    content: `
+      <p><strong>GENEVA, Switzerland</strong> — Representatives from 190 countries have signed a historic agreement at the UN Climate Summit, committing to a legally binding treaty to curb the global production of single-use plastics.</p>
+      <h2>Limiting Single-Use Plastics</h2>
+      <p>The accord mandates a 40% reduction in plastics manufacturing by 2035, alongside strict regulations on industrial plastic waste exports and penalties for marine dumping. 'This is a turning point for global ecological health,' the UN environment chief declared.</p>
+    `
+  },
+  {
+    title: "UK Prime Minister Announces Major Green Energy Investment Package",
+    snippet: "A massive state funding injection aims to construct three new offshore wind farms, creating thousands of green jobs.",
+    category: "WORLD",
+    source: "Pulse News Wire",
+    time: "June 28, 2026 • 15:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800",
+    content: `
+      <p><strong>LONDON, United Kingdom</strong> — The UK Government has unveiled a multi-billion-pound investment package designed to accelerate the country's transition to renewable energy. The funding will support the construction of three massive wind farms off the Scottish coast.</p>
+      <h2>Sovereign Green Investment</h2>
+      <p>The wind farms are expected to generate enough electricity to power over five million homes once fully operational, reducing reliance on natural gas imports. 'This is about energy security and future-proofing our economy,' the Prime Minister stated.</p>
+    `
+  },
+  {
+    title: "Sahara Desert Solar Grid Expands Power Distribution to Southern European Networks",
+    snippet: "A new subsea high-voltage cable links North African solar fields directly to European power transmission grids.",
+    category: "WORLD",
+    source: "Sentinel Intelligence",
+    time: "June 28, 2026 • 10:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800",
+    content: `
+      <p><strong>RABAT, Morocco</strong> — The completion of the Mediterranean Power Link marks a historic milestone in trans-continental energy sharing. The 500km subsea cable now transmits clean solar energy harvested in the Sahara desert to grids in Spain and Italy, powering 2 million homes.</p>
+    `
+  },
+  {
+    title: "Ocean Clean-Up Barriers Deployed in Pacific Gyre Capture High Plastic Volumes",
+    snippet: "Environmental engineers launch a 2km floating barrier system capable of collecting micro-plastics safety.",
+    category: "WORLD",
+    source: "Reuters Syndicate",
+    time: "June 27, 2026 • 19:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800",
+    content: `
+      <p><strong>HONOLULU, USA</strong> — The Ocean Clean-Up project has deployed its second-generation passive collection screen inside the Great Pacific Garbage Patch. Initial telemetry verifies that the system has gathered over 50 tons of surface plastic debris within its first week of operation.</p>
+    `
+  },
+  {
+    title: "Global Seed Vault Expands Collections in Arctic Svalbard Facility",
+    snippet: "Over 50,000 new crop variety samples are deposited by international agriculture departments to protect biodiversity.",
+    category: "WORLD",
+    source: "Financial Times Desk",
+    time: "June 27, 2026 • 14:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?w=800",
+    content: `
+      <p><strong>LONGYEARBYEN, Norway</strong> — The Svalbard Global Seed Vault has received a massive shipment of seed deposits from institutions in Asia and Africa. The vault, constructed deep inside sandstone mountains, serves as a secure backup for agricultural genetics in case of global crises.</p>
+    `
+  },
+  {
+    title: "Alpine Glaciers Melting Rates Offset by Custom Local Snow-Making Projects",
+    snippet: "Swiss communities deploy eco-friendly snow generators to insulate glacier bases during summer seasons.",
+    category: "WORLD",
+    source: "Global Pulse Intel",
+    time: "June 27, 2026 • 09:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?w=800",
+    content: `
+      <p><strong>ZERMATT, Switzerland</strong> — Local environmental groups are testing an innovative glacier preservation system. By blowing recycled meltwater snow over vulnerable ice sections, they have successfully created a protective layer that reflects solar radiation during hot summer months.</p>
+    `
+  },
 
-        <h2>The Dawn of a New Tennis Dynasty</h2>
-        <p>The sports world is abuzz with speculation about the start of a new dominant era in tennis, as sponsors and fans rally behind the newly crowned champion who has defied all pre-tournament odds. Industry marketing experts predict this victory will launch a massive wave of endorsement contracts, securing the player's position as the new face of global athletics.</p>
-      `
-    }
-  ],
-  TECH: [
-    {
-      title: "Next-Gen Quantum Smartphone Launch Verified by Leading Tech Labs",
-      snippet: "The world's first commercially viable consumer quantum processor phone has been launched, featuring military-grade dynamic encryption keys.",
-      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
-      content: `
-        <p><strong>SILICON VALLEY, USA</strong> — Tech pioneers have officially launched the first consumer smartphone powered by a micro-quantum processor. This breakthrough device offers processing speeds up to 100 times faster than traditional silicon chips, marking a paradigm shift in mobile computing and user interface responsiveness.</p>
+  // --- BUSINESS (8 Articles) ---
+  {
+    title: "Central Bank Adjusts Interest Rates to Counteract Inflationary Pressure",
+    snippet: "Financial regulatory bodies announce coordinated rate changes to stabilize sovereign yields amid fluctuating market dynamics.",
+    category: "BUSINESS",
+    source: "Reuters Syndicate",
+    time: "June 29, 2026 • 16:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800",
+    content: `
+      <p><strong>NEW YORK, USA</strong> — The Federal Reserve has announced a surprise 25-basis-point interest rate cut, citing stable inflation metrics and a desire to bolster employment figures during the summer transition.</p>
+      <h2>Monetary Policy Restructuring</h2>
+      <p>Stock indices responded positively to the announcement, with the S&P 500 and Dow Jones Industrial Average posting modest gains in late trading. The central bank indicated that this policy adjustment aims to ease borrowing constraints for small businesses and accelerate infrastructure investments.</p>
+      <blockquote>
+          "Our economy remains resilient, but fine-tuning rates allows us to sustain positive momentum without triggering inflationary spikes."
+          <br><small>— Central Bank Governor</small>
+      </blockquote>
+      <h2>Market Implications & Bond Market Telemetry</h2>
+      <p>Investment portfolios have immediately adjusted allocations to capitalize on the new rate environment:</p>
+      <ul>
+          <li><strong>Sovereign Bonds:</strong> Yields on 10-year treasury notes adjusted downwards in response to the Fed's statement.</li>
+          <li><strong>Real Estate Financing:</strong> Mortgage applications surged as commercial banks lowered lending premiums.</li>
+          <li><strong>Foreign Exchange:</strong> The US dollar showed minor adjustments against a basket of major trading currencies.</li>
+      </ul>
+      <h2>Global Central Bank Coordination</h2>
+      <p>The Fed Chairman emphasized that the central bank remains data-dependent, ready to adjust monetary policies if global supply chains encounter further disruption. European and Asian financial regulators are expected to meet next week to coordinate interest rate postures.</p>
+    `
+  },
+  {
+    title: "Tech Stocks Rally Amid Breakthroughs in Neuromorphic Chip Architectures",
+    snippet: "Public markets respond with record gains as major hardware companies finalize production runs for brain-inspired computing units.",
+    category: "BUSINESS",
+    source: "Financial Times Desk",
+    time: "June 29, 2026 • 11:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800",
+    content: `
+      <p><strong>NEW YORK, USA</strong> — Technology sector shares led a massive market rally following reports that major hardware manufacturers have successfully developed commercially viable brain-inspired neuromorphic microchips.</p>
+      <h2>Neuromorphic Compute Growth</h2>
+      <p>These chips process data in a manner similar to human synapses, drastically reducing power consumption and latency for localized AI processing in autonomous vehicles and mobile devices. Investment banks have upgraded target ratings for several leading semiconductor stocks.</p>
+    `
+  },
+  {
+    title: "Microsoft and OpenAI Plan $100 Billion Stargate Supercomputer Project",
+    snippet: "The proposed data center complex will house millions of advanced AI chips, targeting artificial general intelligence.",
+    category: "BUSINESS",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 07:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800",
+    content: `
+      <p><strong>REDMOND, USA</strong> — Microsoft and OpenAI are reportedly collaborating on plans for a massive data center project named 'Stargate,' estimated to cost up to $100 billion. The supercomputer will house millions of advanced AI accelerators to push the boundaries of model capabilities.</p>
+      <h2>AGI Infrastructure</h2>
+      <p>The project highlights the massive infrastructure demands of generative AI, requiring dedicated nuclear power connections to satisfy its immense energy needs. The first phase of the project is projected to become operational by 2028, setting the stage for a new computing era.</p>
+    `
+  },
+  {
+    title: "Global Supply Chains Shift Toward Localized Regional Distribution Hubs",
+    snippet: "Manufacturing enterprises restructure logistics pipelines to bypass international shipping bottlenecks and tariffs.",
+    category: "BUSINESS",
+    source: "Pulse News Wire",
+    time: "June 28, 2026 • 15:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800",
+    content: `
+      <p><strong>CHICAGO, USA</strong> — In response to increasing maritime shipping tariffs and canal congestion, major consumer electronics manufacturers are opening regional assembly plants in North America and Eastern Europe, near-shoring their primary operations.</p>
+    `
+  },
+  {
+    title: "Amazon Logistics Adopts Drone Delivery Packages in Five US Metropolitan Zones",
+    snippet: "The retail giant receives regulatory approval to fly autonomous drones delivering small parcels under 5lbs.",
+    category: "BUSINESS",
+    source: "Sentinel Intelligence",
+    time: "June 28, 2026 • 11:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+    content: `
+      <p><strong>SEATTLE, USA</strong> — Amazon has officially integrated its Prime Air drone delivery system in suburban neighborhoods. The custom octocopters travel at speeds up to 50mph, dropping off urgent medical and grocery deliveries directly in backyards in under 30 minutes.</p>
+    `
+  },
+  {
+    title: "Apple Retail Expands Infrastructure in High-Growth Asian Tech Hubs",
+    snippet: "New flagship stores open in India and Vietnam, indicating strong consumer demand and retail investment shifts.",
+    category: "BUSINESS",
+    source: "Reuters Syndicate",
+    time: "June 27, 2026 • 18:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
+    content: `
+      <p><strong>CUPERTINO, USA</strong> — Apple has launched three new retail architectures in major cities in India and Vietnam. These flagship centers are powered entirely by local renewable energy, acting as customer support hubs and showcasing spatial computing products.</p>
+    `
+  },
+  {
+    title: "Google Restructures Anti-Trust Compliance Infrastructure After EU Ruling",
+    snippet: "The search giant creates independent browser search selection panels to comply with digital fair trade rules.",
+    category: "BUSINESS",
+    source: "Financial Times Desk",
+    time: "June 27, 2026 • 13:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800",
+    content: `
+      <p><strong>BRUSSELS, Belgium</strong> — Google has updated its operating system defaults in Europe, presenting users with randomized browser selection dialogs on initial device activation, responding to the European Commission's fair market access regulations.</p>
+    `
+  },
+  {
+    title: "European Union Dynamic Digital Markets Regulations Enter Enforcement Phase",
+    snippet: "The historic tech bill mandates app store side-loading and interoperable messaging channels across all operating systems.",
+    category: "BUSINESS",
+    source: "Global Pulse Intel",
+    time: "June 27, 2026 • 08:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800",
+    content: `
+      <p><strong>BRUSSELS, Belgium</strong> — The Digital Markets Act (DMA) enforcement has begun, forcing major hardware providers to open their operating systems to third-party app stores, which will fundamentally shift the mobile software distribution economy.</p>
+    `
+  },
 
-        <h2>Breaking the Silicon Barrier</h2>
-        <p>For decades, chip developers have warned about the physical limitations of silicon transistors. The new quantum mobile chipset utilizes sub-atomic particle entanglement to perform calculations, practically bypassing heat generation limits and allowing true multi-tasking without throttling.</p>
+  // --- FINANCE (8 Articles) ---
+  {
+    title: "Global Stock Markets Rally as Corporate Earnings Defy Recessionary Warnings",
+    snippet: "Major stock indices surge following strong quarterly earnings reports from leading tech and consumer conglomerates.",
+    category: "FINANCE",
+    source: "Financial Times Desk",
+    time: "June 29, 2026 • 15:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800",
+    content: `
+      <p><strong>NEW YORK, USA</strong> — Wall Street posted its strongest weekly performance of the fiscal year as top-tier corporate earnings comfortably beat analyst projections, dispelling fears of an impending consumer slowdown.</p>
+      <h2>Technology Giants Drive the Market Surge</h2>
+      <p>Record-breaking revenues from major chip manufacturers and cloud providers fueled the rally, pushing indices to historic highs. Financial institutions report a substantial flow of institutional capital back into equity markets, reversing the defensive bond-heavy posture held during the previous quarter.</p>
+      <blockquote>
+          "The corporate sector has shown incredible adaptation. Optimization strategies and AI automation integrations are finally showing up as fat operating margins."
+          <br><small>— Chief Investment Officer</small>
+      </blockquote>
+      <h2>Key Financial Highlights from Trading Week</h2>
+      <p>Market telemetry points to broad-based accumulation across multiple sectors:</p>
+      <ul>
+          <li><strong>NASDAQ Composite:</strong> Surged by 3.4%, led by hardware manufacturing and software service providers.</li>
+          <li><strong>Bond Yield Stabilization:</strong> The yield on the benchmark 10-year Treasury note stabilized at 3.92%.</li>
+          <li><strong>Commodity Markets:</strong> Crude oil and gold futures consolidated within narrow trading ranges.</li>
+      </ul>
+      <h2>Future Outlook for Capital Allocations</h2>
+      <p>Wealth management firms are recommending clients maintain a balanced posture, warning that while corporate margins are strong, geopolitical trade friction could introduce short-term volatility in regional distribution supply chains.</p>
+    `
+  },
+  {
+    title: "Gold Prices Hit Record High Amid Geopolitical Uncertainties in Middle East",
+    snippet: "Investors flock to safe-haven assets as tensions rise, pushing gold prices above $2,400 per ounce.",
+    category: "FINANCE",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 10:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=800",
+    content: `
+      <p><strong>LONDON, UK</strong> — Gold prices surged to an all-time high of $2,425 per ounce as geopolitical instability in the Middle East drove investors toward safe-haven assets. Analysts attribute the rally to central bank purchases and a general risk-averse sentiment in global markets.</p>
+      <h2>Safe-Haven Asset Accumulation</h2>
+      <p>The price spike has boosted mining stock valuations while putting pressure on jewelry manufacturers and industrial electronics firms that rely on gold components. Financial advisors recommend maintaining a diversified portfolio, noting that precious metals offer crucial protection against inflation.</p>
+    `
+  },
+  {
+    title: "Venture Capital Allocations Shift Toward Green Energy Infrastructure Projects",
+    snippet: "Investment firms bypass early-stage software startups to fund grid-scale battery storage and geothermal developers.",
+    category: "FINANCE",
+    source: "Pulse News Wire",
+    time: "June 29, 2026 • 06:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800",
+    content: `
+      <p><strong>SILICON VALLEY, USA</strong> — A major capital reallocation is taking place in venture corridors. Funding rounds for consumer mobile apps have dropped by 45%, while investments in green energy generation and industrial battery grid components have secured record-high funding rounds.</p>
+    `
+  },
+  {
+    title: "Decentralized Digital Currencies Secure Landmark Institutional Approval",
+    snippet: "Financial authorities permit secondary market funds to track decentralized token indexes, launching new inflows.",
+    category: "FINANCE",
+    source: "Sentinel Intelligence",
+    time: "June 28, 2026 • 16:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=800",
+    content: `
+      <p><strong>WASHINGTON D.C.</strong> — Securities regulators have approved applications for trust indexes tracking decentralized crypto tokens. This opens the gate for pension funds and institutional portfolios to allocate capital to digital assets natively, driving $5 billion in inflows on day one.</p>
+    `
+  },
+  {
+    title: "Sovereign Wealth Funds Increase Green Asset Holdings in Global Realignment",
+    snippet: "Major national funds sell legacy carbon holdings to invest in sustainable energy networks and smart cities.",
+    category: "FINANCE",
+    source: "Reuters Syndicate",
+    time: "June 28, 2026 • 12:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800",
+    content: `
+      <p><strong>OSLO, Norway</strong> — Norway's Government Pension Fund Global has reported a significant reallocation, moving $12 billion out of traditional mining assets and routing it to offshore wind farm projects and municipal sustainable housing initiatives in Europe.</p>
+    `
+  },
+  {
+    title: "Global Bond Yields Stabilize on Favorable Employment and Inflation Data",
+    snippet: "Government bond markets show reduced volatility as economic indicators match central bank target profiles.",
+    category: "FINANCE",
+    source: "Financial Times Desk",
+    time: "June 28, 2026 • 08:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800",
+    content: `
+      <p><strong>LONDON, UK</strong> — Treasury yields consolidated within narrow ranges this week, indicating reduced investor uncertainty. Analysts project that if inflation remains at the 2.1% target, central banks will maintain stable interest rates for the rest of the year.</p>
+    `
+  },
+  {
+    title: "Real Estate Investment Trusts Restructure Portfolios for Hybrid Office Formats",
+    snippet: "Commercial property trusts sell downtown office high-rises to invest in suburban co-working logistics networks.",
+    category: "FINANCE",
+    source: "Global Pulse Intel",
+    time: "June 27, 2026 • 19:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+    content: `
+      <p><strong>NEW YORK, USA</strong> — The shift to hybrid work has forced commercial property trusts to adapt. Trusts are selling traditional skyscrapers and using the capital to build premium co-working campuses in suburban growth corridors, meeting the demand of remote teams.</p>
+    `
+  },
+  {
+    title: "Micro-Finance Lending Platforms Boost Entrepreneurship in Emerging Markets",
+    snippet: "Peer-to-peer digital credit networks bypass commercial banking layers to fund local agricultural start-ups.",
+    category: "FINANCE",
+    source: "Pulse News Wire",
+    time: "June 27, 2026 • 13:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800",
+    content: `
+      <p><strong>NAIROBI, Kenya</strong> — Mobile-based peer-to-peer lending applications have enabled over 500,000 small-scale farmers to secure micro-loans for solar-powered irrigation pumps. The repayment rates have exceeded 97%, proving the viability of decentralized digital micro-finance grids.</p>
+    `
+  },
 
-        <blockquote>
-            "This is not a progressive step; it is a leap off the cliff of classical computing. We have brought room-temperature quantum computing out of the research facility and into the consumer's palm."
-            <br><small>— Chief Hardware Architect</small>
-        </blockquote>
+  // --- LIFESTYLE (8 Articles) ---
+  {
+    title: "The Rise of Slow Living: How Urban Professionals are Reclaiming Balance",
+    snippet: "A growing movement toward digital detoxes and offline hobbies gains popularity among high-stress corporate circles.",
+    category: "LIFESTYLE",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 14:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800",
+    content: `
+      <p><strong>SAN FRANCISCO, USA</strong> — Urban professionals are increasingly embracing the concept of 'slow living' to counteract the cognitive overload associated with constant connectivity and corporate burnout.</p>
+      <h2>Reclaiming Attention in a Digital Era</h2>
+      <p>The movement advocates for structured periods of digital disconnection, allowing the nervous system to recover from notifications and screen fatigue. Yoga studios, gardening clubs, and analog cooking workshops report record membership sign-ups across major cities.</p>
+      <blockquote>
+          "I spent a decade responding to emails within ten seconds. Shifting to slow living allowed me to reclaim my creative focus and improve my mental health."
+          <br><small>— Corporate Executive Turned Wellness advocate</small>
+      </blockquote>
+      <h2>Practical Strategies for Daily Balance</h2>
+      <p>Wellness experts recommend incorporating minor offline routines to cultivate awareness and reduce stress:</p>
+      <ul>
+          <li><strong>Screen-Free Mornings:</strong> Avoiding phone usage for the first hour after waking up.</li>
+          <li><strong>Tactile Hobbies:</strong> Engaging in pottery, gardening, or physical book reading.</li>
+          <li><strong>Mindful Commuting:</strong> Bypassing podcasts and media during travel to encourage quiet observation.</li>
+      </ul>
+      <h2>Corporate Adoption of Wellness Programs</h2>
+      <p>Recognizing the cost of burnout, several forward-thinking enterprises have begun introducing mandatory quiet hours and offline weekends. HR executives report that these initiatives have improved employee retention and overall productivity metrics.</p>
+    `
+  },
+  {
+    title: "Digital Nomad Hubs Expand Across Sunny Southern European Coastal Cities",
+    snippet: "Flexible visa programs and dedicated co-working properties attract remote tech workers to seaside towns.",
+    category: "LIFESTYLE",
+    source: "Pulse News Wire",
+    time: "June 29, 2026 • 09:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800",
+    content: `
+      <p><strong>LISBON, Portugal</strong> — Coastal cities in Portugal and Spain have reported a significant population boost due to digital nomad visas. The local municipalities have invested in fiber-optic expansions and community centers, integrating remote workers with local cultural programs.</p>
+    `
+  },
+  {
+    title: "Specialty Coffee Culture Thrives on Single-Origin Beans and Local Roasters",
+    snippet: "Consumers prioritize transparency and direct-trade sourcing, driving growth for premium micro-roasters.",
+    category: "LIFESTYLE",
+    source: "Sentinel Intelligence",
+    time: "June 29, 2026 • 06:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800",
+    content: `
+      <p><strong>MELBOURNE, Australia</strong> — The specialty coffee scene has entered a new phase, with coffee shops roasting micro-lots sourced directly from farms in Colombia and Ethiopia. Customers are willing to pay premiums for bags that list the exact grower, elevation, and bean processing method.</p>
+    `
+  },
+  {
+    title: "Minimalist Interior Designs Embrace Warm Earth Tones and Organic Materials",
+    snippet: "Designers move away from cold stark grays to incorporate warm oak wood and textured clay plaster plastering.",
+    category: "LIFESTYLE",
+    source: "Financial Times Desk",
+    time: "June 28, 2026 • 17:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800",
+    content: `
+      <p><strong>MILAN, Italy</strong> — The Milan Design Week showcased a shift in home aesthetics. Designers are prioritizing psychological warmth, utilizing linen fabrics, raw clay plasters, and solid oak tables to build spaces that feel connected to nature and promote relaxation.</p>
+    `
+  },
+  {
+    title: "Vinyl Records and High-Fidelity Audio Setup Sales Reach Decade Highs",
+    snippet: "Music listeners seek analog tactile experiences, investing in heavy turntables and vacuum-tube tube-amplifiers.",
+    category: "LIFESTYLE",
+    source: "Reuters Syndicate",
+    time: "June 28, 2026 • 12:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1487180142328-0c4e37023af5?w=800",
+    content: `
+      <p><strong>TOKYO, Japan</strong> — Audio retailers report a substantial surge in turntable and tube amplifier sales. Listeners are seeking out the tactile ritual of putting on physical records, enjoying the warm acoustic tone that digital streaming algorithms often filter out.</p>
+    `
+  },
+  {
+    title: "Urban Community Gardens Transform Concrete Rooftops into Green Oases",
+    snippet: "Metropolitan neighborhoods establish cooperative gardens to grow fresh vegetables and protect local bee populations.",
+    category: "LIFESTYLE",
+    source: "Global Pulse Intel",
+    time: "June 28, 2026 • 08:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=800",
+    content: `
+      <p><strong>BROOKLYN, USA</strong> — Rooftop agriculture is expanding in New York City. Local neighborhoods are leasing warehouse roofs to grow organic tomatoes, spinach, and herbs, creating community cooperative spaces that reduce urban heat island effects.</p>
+    `
+  },
+  {
+    title: "The Off-Grid Tiny Home Movement Inspires Sustainable Architectural Designs",
+    snippet: "Architects showcase space-efficient mobile cabins equipped with rainwater filtration and composting systems.",
+    category: "LIFESTYLE",
+    source: "Pulse News Wire",
+    time: "June 27, 2026 • 19:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800",
+    content: `
+      <p><strong>PORTLAND, USA</strong> — The demand for mobile tiny houses has surged by 50% as remote workers seek off-grid retreats. Modern designs pack complete solar arrays, graywater filtration systems, and foldable workspaces into structures under 300 square feet.</p>
+    `
+  },
+  {
+    title: "Bicycle Commuting Networks Expand Globally to Transform Smart City Travel",
+    snippet: "Urban planning departments build separated green lanes to encourage zero-emission commuter cycling.",
+    category: "LIFESTYLE",
+    source: "Sentinel Intelligence",
+    time: "June 27, 2026 • 13:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=800",
+    content: `
+      <p><strong>COPENHAGEN, Denmark</strong> — Copenhagen's municipal planning has successfully routed 62% of local commutes through bicycle superhighways. Separated cycle tracks with timed green lights for cyclist speeds have cut commuter vehicle traffic and noise levels.</p>
+    `
+  },
 
-        <h2>Unbreakable Security Infrastructure</h2>
-        <p>The primary feature drawing attention from cybersecurity firms is the phone's hardware-level quantum key distribution (QKD):</p>
-        <ul>
-            <li><strong>Dynamic Entangled Keys:</strong> Cryptographic tokens change state instantly if any attempt is made to intercept the signal.</li>
-            <li><strong>Zero Cache Overhead:</strong> Cryptographic calculations are solved at the hardware layer, bypassing standard operating system vulnerabilities.</li>
-            <li><strong>Quantum-Resistant Protocols:</strong> Algorithms are fully prepared for the future arrival of commercial quantum mainframes.</li>
-        </ul>
-
-        <h2>Consumer Market Reception & Enterprise Demand</h2>
-        <p>Pre-orders have surged across international tech hubs, with corporate enterprises and government agencies securing initial production runs to guarantee communication security in sensitive operating environments. Analysts predict that quantum mobile technology will replace standard flagship smartphones in corporate corridors within the next three years.</p>
-      `
-    },
-    {
-      title: "Silicon Valley Showcases Holographic Gadgets Targeting Consumer Markets",
-      snippet: "Top hardware developers unveiled ultra-slim interactive holographic glass interfaces set to replace traditional monitors and tablet displays.",
-      image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800",
-      content: `
-        <p><strong>SAN FRANCISCO, USA</strong> — Leading electronics manufacturers have showcased a series of interactive holographic displays designed to replace traditional screens. The devices project high-definition 3D visuals directly into the air, allowing users to interact with files and applications using intuitive hand gestures.</p>
-
-        <h2>The End of Flat-Panel Monitors</h2>
-        <p>By employing advanced spatial light modulators and infrared tracking sensors, the holographic glass creates a seamless, lag-free workspace that integrates naturally with modern smart home environments. Users can stretch, rotate, and minimize application windows floating in mid-air, creating a high-tech desktop workspace.</p>
-
-        <blockquote>
-            "The screen has been a bottleneck for human creativity for half a century. We are finally expanding the digital workspace into three-dimensional space."
-            <br><small>— Spatial Interface Design Lead</small>
-        </blockquote>
-
-        <h2>Technical Highlights of Holographic Glass</h2>
-        <p>The system utilizes several cutting-edge hardware layers to achieve a realistic projection:</p>
-        <ul>
-            <li><strong>Micro-Laser Arrays:</strong> Millions of localized laser diodes project coherent light waves that intersect in three-dimensional space.</li>
-            <li><strong>Time-of-Flight Gesture Cameras:</strong> Sub-millimeter tracking captures fine finger adjustments for precise drawing and modeling.</li>
-            <li><strong>Eye-Tracking Focus Calibration:</strong> Adjusts projection depth dynamically based on where the user is looking.</li>
-        </ul>
-
-        <h2>Market Projections and Enterprise Integration</h2>
-        <p>Consumer tech commentators are calling this the most significant interface innovation since the multi-touch capacitive screen, predicting widespread adoption within the executive computing sector by next year. Software giants have already begun releasing compatible operating system patches to support spatial holographic workspaces natively.</p>
-      `
-    }
-  ],
-  AUTO: [
-    {
-      title: "Autonomous Electric Supercar Unveiled with Mach-Speed Battery Architecture",
-      snippet: "The new luxury electric vehicle features solid-state battery technology capable of charging from 0% to 100% in under three minutes.",
-      image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800",
-      content: `
-        <p><strong>STUTTGART, Germany</strong> — A premier European automaker has stunned the automotive world by unveiling a concept electric supercar equipped with a revolutionary solid-state battery. The vehicle boasts a range of over 800 miles on a single charge and can replenish its battery fully in under three minutes.</p>
-
-        <h2>Solid-State Energy Densities Unleashed</h2>
-        <p>By employing high-density lithium-metal anodes and a solid ceramic electrolyte layer, the vehicle eliminates the overheating risks associated with traditional liquid lithium-ion packs, enabling continuous high-speed charging without degradation. This solves the primary bottleneck that has plagued the electric vehicle market for a decade.</p>
-
-        <blockquote>
-            "We have built a sports car that respects the planet without compromising on track-performance. Solid-state technology makes range anxiety a historical relic."
-            <br><small>— Lead Powertrain Engineer</small>
-        </blockquote>
-
-        <h2>Aerodynamic and AI Architecture</h2>
-        <p>The vehicle features a carbon-fiber shell and an onboard autonomous piloting mainframe trained on racing simulators:</p>
-        <ul>
-            <li><strong>Active Aerodynamic Flaps:</strong> Adjust drag coefficients dynamically during cornering and braking.</li>
-            <li><strong>Predictive Thermal Management:</strong> Pre-cools batteries ahead of high-performance driving segments.</li>
-            <li><strong>Mach-Speed Charging Grid compatibility:</strong> Supports 800V and 1200V supercharger infrastructures.</li>
-        </ul>
-
-        <h2>Global Launch and Distribution Strategy</h2>
-        <p>Production is scheduled to begin in limited quantities next year, with luxury car collectors and tech executives representing the primary customer base. Dealerships across major luxury hubs have reported record deposit registrations, signaling strong consumer confidence in the future of electrified high-performance travel.</p>
-      `
-    }
-  ],
-  CELEBRITY: [
-    {
-      title: "Cannes Film Festival: Red Carpet Highlights and Top Director Awards",
-      snippet: "Global filmmakers gather as independent cinema sweeps the top honors, featuring high-profile celebrity appearances and style showcases.",
-      image: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800",
-      content: `
-        <p><strong>CANNES, France</strong> — The Cannes Film Festival concluded with a series of surprise victories as independent, foreign-language films dominated the main awards. Celebrities from around the globe walked the red carpet, showcasing stunning custom outfits that set new trends for the fashion season.</p>
-
-        <h2>Independent Cinema Sweeps the Palme d'Or</h2>
-        <p>The coveted Palme d'Or was awarded to a breakout director for a gripping psychological drama, receiving a standing ovation from the audience during the closing ceremony. Critics praised the film's minimal scoring and rich dialogue, marking a return to classic cinematic storytelling methods.</p>
-
-        <blockquote>
-            "Cinema is an international language. This award is a validation for independent storytellers everywhere who refuse to dilute their vision for commercial grids."
-            <br><small>— Palme d'Or Winning Director</small>
-        </blockquote>
-
-        <h2>Red Carpet Style & High Fashion Trends</h2>
-        <p>Fashion houses took center stage on the red carpet, with several prominent trends emerging from the opening night:</p>
-        <ul>
-            <li><strong>Sustainable Luxury:</strong> Hand-woven organic silk and recycled gemstone accessories dominated the outfits.</li>
-            <li><strong>Vintage Revivals:</strong> Classic silhouettes from the 1950s and 60s re-imagined with modern asymmetrical tailoring.</li>
-            <li><strong>AI-Assisted Couture:</strong> Dynamic fabrics that adapt drape and structure based on ambient lighting.</li>
-        </ul>
-
-        <h2>Industry Financial Outlook</h2>
-        <p>Distributors reported a highly active marketplace, with several high-value acquisition contracts signed during the festival. Industry analysts predict a strong recovery for theatrical releases as independent titles secure global distribution pipelines across major streaming platforms and art-house theaters.</p>
-      `
-    }
-  ],
-  TRAVEL: [
-    {
-      title: "Hidden Luxury Eco-Resorts Discovered Across Pristine Southeast Asian Islands",
-      snippet: "Travel experts catalog off-grid carbon-neutral private luxury villas offering ultra-premium hospitality experiences and wellness retreats.",
-      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
-      content: `
-        <p><strong>BALI, Indonesia</strong> — Travel connoisseurs have compiled a list of the most exclusive, off-grid eco-resorts tucked away in remote corners of Southeast Asia. These private island destinations offer premium luxury while operating with a zero-carbon footprint.</p>
-
-        <h2>A Zero-Carbon Footprint Paradise</h2>
-        <p>Powered entirely by solar micro-grids and featuring organic farm-to-table dining, the resorts cater to high-profile travelers seeking privacy and deep rejuvenation through personalized wellness programs. The villas are built using locally sourced bamboo and volcanic stone, blending seamlessly with the natural jungle landscape.</p>
-
-        <blockquote>
-            "True luxury today is not about gold-plated fixtures; it is about absolute silence, clean air, and reconnecting with the earth without leaving a footprint."
-            <br><small>— Eco-Hospitality Developer</small>
-        </blockquote>
-
-        <h2>Exclusive Guest Amenities and Wellness Focus</h2>
-        <p>Guests have access to curated wellness therapies and off-grid adventures designed to soothe modern cognitive fatigue:</p>
-        <ul>
-            <li><strong>Holistic Sound Therapy:</strong> Meditation chambers built inside natural limestone caves.</li>
-            <li><strong>Organic Culinary Journeys:</strong> Menus customized daily by nutritionists utilizing ingredients harvested from on-site permaculture gardens.</li>
-            <li><strong>Private Marine Safaris:</strong> Guided electric catamaran tours to coral restoration reefs.</li>
-        </ul>
-
-        <h2>The Rapid Growth of Slow Travel</h2>
-        <p>Booking waitlists have extended up to a year, indicating a massive shift in luxury travel preferences toward sustainable, slow-travel experiences far removed from crowded tourism hubs. Hospitality groups are expanding portfolios to meet this high-yield, environmentally conscious demand.</p>
-      `
-    }
-  ],
-  WORLD: [
-    {
-      title: "Devastating Quakes Strike Coastlines Leading to Dynamic Evacuations",
-      snippet: "Twin offshore earthquakes prompt emergency responses across coastal hubs, with regional rescue agencies active in establishing safety zones.",
-      image: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=800",
-      content: `
-        <p><strong>CARACAS, Venezuela</strong> — A powerful pair of offshore earthquakes measuring 7.2 and 7.5 on the Richter scale struck the Venezuelan coastline within minutes of each other, triggering emergency evacuations and localized tsunami warnings.</p>
-
-        <h2>Mobilizing Regional Disaster Response</h2>
-        <p>Rescue teams have been deployed to Guaire and surrounding areas to clear debris and check for survivors in collapsed structures. Infrastructure damage is reported to be significant along coastal roads, prompting government officials to appeal for caution and restrict non-essential travel.</p>
-
-        <blockquote>
-            "Our primary focus is safety and stabilization. Emergency crews are working round the clock to restore power and communication lines to isolated districts."
-            <br><small>— Disaster Management Spokesperson</small>
-        </blockquote>
-
-        <h2>Seismic Analysis & Geotechnical Reports</h2>
-        <p>Geological departments indicate that the quakes occurred along the active Caribbean tectonic plate boundary:</p>
-        <ul>
-            <li><strong>Twin Ruptures:</strong> Two distinct slips occurred along parallel fault lines, doubling the seismic impact.</li>
-            <li><strong>Aftershock Risks:</strong> Over 120 minor tremors recorded within the first 12 hours, complicating rescue efforts.</li>
-            <li><strong>Tsunami Wave Watch:</strong> Coastal sensors monitor water level fluctuations to detect potential secondary swells.</li>
-        </ul>
-
-        <h2>International Relief Efforts Coordinated</h2>
-        <p>International aid agencies are coordinating emergency shipments of food, water, and medical supplies to the affected regions. Neighbouring countries have pledged technical support and search-and-rescue teams to accelerate recovery operations in the worst-hit coastal cities.</p>
-      `
-    }
-  ],
-  BUSINESS: [
-    {
-      title: "Central Bank Adjusts Interest Rates to Counteract Inflationary Pressure",
-      snippet: "Financial regulatory bodies announce coordinated rate changes to stabilize sovereign yields amid fluctuating market dynamics.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800",
-      content: `
-        <p><strong>NEW YORK, USA</strong> — The Federal Reserve has announced a surprise 25-basis-point interest rate cut, citing stable inflation metrics and a desire to bolster employment figures during the summer transition.</p>
-
-        <h2>Monetary Policy Restructuring</h2>
-        <p>Stock indices responded positively to the announcement, with the S&P 500 and Dow Jones Industrial Average posting modest gains in late trading. The central bank indicated that this policy adjustment aims to ease borrowing constraints for small businesses and accelerate infrastructure investments.</p>
-
-        <blockquote>
-            "Our economy remains resilient, but fine-tuning rates allows us to sustain positive momentum without triggering inflationary spikes."
-            <br><small>— Central Bank Governor</small>
-        </blockquote>
-
-        <h2>Market Implications & Bond Market Telemetry</h2>
-        <p>Investment portfolios have immediately adjusted allocations to capitalize on the new rate environment:</p>
-        <ul>
-            <li><strong>Sovereign Bonds:</strong> Yields on 10-year treasury notes adjusted downwards in response to the Fed's statement.</li>
-            <li><strong>Real Estate Financing:</strong> Mortgage applications surged as commercial banks lowered lending premiums.</li>
-            <li><strong>Foreign Exchange:</strong> The US dollar showed minor adjustments against a basket of major trading currencies.</li>
-        </ul>
-
-        <h2>Global Central Bank Coordination</h2>
-        <p>The Fed Chairman emphasized that the central bank remains data-dependent, ready to adjust monetary policies if global supply chains encounter further disruption. European and Asian financial regulators are expected to meet next week to coordinate interest rate postures.</p>
-      `
-    }
-  ],
-  FINANCE: [
-    {
-      title: "Global Stock Markets Rally as Corporate Earnings Defy Recessionary Warnings",
-      snippet: "Major stock indices surge following strong quarterly earnings reports from leading tech and consumer conglomerates.",
-      image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800",
-      content: `
-        <p><strong>NEW YORK, USA</strong> — Wall Street posted its strongest weekly performance of the fiscal year as top-tier corporate earnings comfortably beat analyst projections, dispelling fears of an impending consumer slowdown.</p>
-
-        <h2>Technology Giants Drive the Market Surge</h2>
-        <p>Record-breaking revenues from major chip manufacturers and cloud providers fueled the rally, pushing indices to historic highs. Financial institutions report a substantial flow of institutional capital back into equity markets, reversing the defensive bond-heavy posture held during the previous quarter.</p>
-
-        <blockquote>
-            "The corporate sector has shown incredible adaptation. Optimization strategies and AI automation integrations are finally showing up as fat operating margins."
-            <br><small>— Chief Investment Officer</small>
-        </blockquote>
-
-        <h2>Key Financial Highlights from Trading Week</h2>
-        <p>Market telemetry points to broad-based accumulation across multiple sectors:</p>
-        <ul>
-            <li><strong>NASDAQ Composite:</strong> Surged by 3.4%, led by hardware manufacturing and software service providers.</li>
-            <li><strong>Bond Yield Stabilization:</strong> The yield on the benchmark 10-year Treasury note stabilized at 3.92%.</li>
-            <li><strong>Commodity Markets:</strong> Crude oil and gold futures consolidated within narrow trading ranges.</li>
-        </ul>
-
-        <h2>Future Outlook for Capital Allocations</h2>
-        <p>Wealth management firms are recommending clients maintain a balanced posture, warning that while corporate margins are strong, geopolitical trade friction could introduce short-term volatility in regional distribution supply chains.</p>
-      `
-    }
-  ],
-  LIFESTYLE: [
-    {
-      title: "The Rise of Slow Living: How Urban Professionals are Reclaiming Balance",
-      snippet: "A growing movement toward digital detoxes and offline hobbies gains popularity among high-stress corporate circles.",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800",
-      content: `
-        <p><strong>SAN FRANCISCO, USA</strong> — Urban professionals are increasingly embracing the concept of 'slow living' to counteract the cognitive overload associated with constant connectivity and corporate burnout.</p>
-
-        <h2>Reclaiming Attention in a Digital Era</h2>
-        <p>The movement advocates for structured periods of digital disconnection, allowing the nervous system to recover from notifications and screen fatigue. Yoga studios, gardening clubs, and analog cooking workshops report record membership sign-ups across major cities.</p>
-
-        <blockquote>
-            "I spent a decade responding to emails within ten seconds. Shifting to slow living allowed me to reclaim my creative focus and improve my mental health."
-            <br><small>— Corporate Executive Turned Wellness advocate</small>
-        </blockquote>
-
-        <h2>Practical Strategies for Daily Balance</h2>
-        <p>Wellness experts recommend incorporating minor offline routines to cultivate awareness and reduce stress:</p>
-        <ul>
-            <li><strong>Screen-Free Mornings:</strong> Avoiding phone usage for the first hour after waking up.</li>
-            <li><strong>Tactile Hobbies:</strong> Engaging in pottery, gardening, or physical book reading.</li>
-            <li><strong>Mindful Commuting:</strong> Bypassing podcasts and media during travel to encourage quiet observation.</li>
-        </ul>
-
-        <h2>Corporate Adoption of Wellness Programs</h2>
-        <p>Recognizing the cost of burnout, several forward-thinking enterprises have begun introducing mandatory quiet hours and offline weekends. HR executives report that these initiatives have improved employee retention and overall productivity metrics.</p>
-      `
-    }
-  ],
-  HEALTH: [
-    {
-      title: "Clinical Trials Verify Breakthrough in Cellular Rejuvenation Therapy",
-      snippet: "Medical researchers report successful reversal of biological age markers in initial human trial participants.",
-      image: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?w=800",
-      content: `
-        <p><strong>BOSTON, USA</strong> — Leading biotech researchers have announced encouraging results from human clinical trials targeting cellular rejuvenation. The therapy successfully reversed key biological age markers by restoring cellular energy pathways.</p>
-
-        <h2>Targeting the Root Causes of Aging</h2>
-        <p>The treatment utilizes custom mRNA strands to instruct senescent cells to restore their mitochondria, improving energy production and reducing inflammatory secretions. Participants showed improvements in cardiovascular elasticity, muscle density, and cognitive processing speeds.</p>
-
-        <blockquote>
-            "This is the first time we have actively reversed biological age markers in human subjects rather than simply slowing down their decline."
-            <br><small>— Chief Medical Researcher</small>
-        </blockquote>
-
-        <h2>Detailed Clinical Metrics and Observations</h2>
-        <p>The double-blind study monitored 120 participants over a twelve-month period:</p>
-        <ul>
-            <li><strong>Telomere Extension:</strong> Monitored telomeres showed an average length increase equivalent to 8 years of biological age.</li>
-            <li><strong>Inflammatory Reductions:</strong> Systemic biomarkers like C-reactive protein (CRP) dropped by 35%.</li>
-            <li><strong>Cardiovascular Output:</strong> VO2 max averages improved by 14% across all age groups.</li>
-        </ul>
-
-        <h2>Path to Commercial Regulatory Approval</h2>
-        <p>The research team is preparing to submit data to the FDA for Phase III trials. If approved, this cellular therapy could revolutionize preventative medicine and reduce healthcare costs associated with age-related chronic illnesses.</p>
-      `
-    }
-  ]
-};
-
-// Compile a large database by repeating/extending templates to reach 80 articles
-const allArticles = [];
-
-// Helper to copy template and randomize slightly to create unique articles
-function addArticle(cat, index, template) {
-  const timeOffset = index * 3; // hours ago
-  const dateObj = new Date();
-  dateObj.setHours(dateObj.getHours() - timeOffset);
-  
-  const sources = ["Global Pulse Intel", "Pulse News Wire", "Sentinel Intelligence", "Financial Times Desk", "Reuters Syndicate"];
-  const randomSource = sources[index % sources.length];
-  
-  allArticles.push({
-    title: `${template.title} [Vol. ${index + 1}]`,
-    snippet: template.snippet,
-    category: cat,
-    source: randomSource,
-    time: `${dateObj.toLocaleDateString()}, ${dateObj.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`,
-    imageUrl: template.image,
-    content: template.content,
-    link: "#"
-  });
-}
-
-// Generate articles across all categories (8 articles per category = 80 total)
-Object.keys(categoriesData).forEach(cat => {
-  const templates = categoriesData[cat];
-  for (let i = 0; i < 8; i++) {
-    const template = templates[i % templates.length];
-    addArticle(cat, i, template);
+  // --- HEALTH (8 Articles) ---
+  {
+    title: "Clinical Trials Verify Breakthrough in Cellular Rejuvenation Therapy",
+    snippet: "Medical researchers report successful reversal of biological age markers in initial human trial participants.",
+    category: "HEALTH",
+    source: "Global Pulse Intel",
+    time: "June 29, 2026 • 13:00 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?w=800",
+    content: `
+      <p><strong>BOSTON, USA</strong> — Leading biotech researchers have announced encouraging results from human clinical trials targeting cellular rejuvenation. The therapy successfully reversed key biological age markers by restoring cellular energy pathways.</p>
+      <h2>Targeting the Root Causes of Aging</h2>
+      <p>The treatment utilizes custom mRNA strands to instruct senescent cells to restore their mitochondria, improving energy production and reducing inflammatory secretions. Participants showed improvements in cardiovascular elasticity, muscle density, and cognitive processing speeds.</p>
+      <blockquote>
+          "This is the first time we have actively reversed biological age markers in human subjects rather than simply slowing down their decline."
+          <br><small>— Chief Medical Researcher</small>
+      </blockquote>
+      <h2>Detailed Clinical Metrics and Observations</h2>
+      <p>The double-blind study monitored 120 participants over a twelve-month period:</p>
+      <ul>
+          <li><strong>Telomere Extension:</strong> Monitored telomeres showed an average length increase equivalent to 8 years of biological age.</li>
+          <li><strong>Inflammatory Reductions:</strong> Systemic biomarkers like C-reactive protein (CRP) dropped by 35%.</li>
+          <li><strong>Cardiovascular Output:</strong> VO2 max averages improved by 14% across all age groups.</li>
+      </ul>
+      <h2>Path to Commercial Regulatory Approval</h2>
+      <p>The research team is preparing to submit data to the FDA for Phase III trials. If approved, this cellular therapy could revolutionize preventative medicine and reduce healthcare costs associated with age-related chronic illnesses.</p>
+    `
+  },
+  {
+    title: "Personalized DNA Nutrition Mapping Platforms Gain Widespread Adoptions",
+    snippet: "Genetic analysis services provide custom diet plans based on metabolic rate predispositions.",
+    category: "HEALTH",
+    source: "Pulse News Wire",
+    time: "June 29, 2026 • 08:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800",
+    content: `
+      <p><strong>LONDON, UK</strong> — Healthcare tech startups are offering DNA testing kits that analyze individual micronutrient absorption rates. The platform builds personalized daily recipes matching the customer's genetic markers for insulin response and fat processing, avoiding generic diet advice.</p>
+    `
+  },
+  {
+    title: "Corporate Workspaces Deploy Mindfulness Rooms and Sleep Pods for Employees",
+    snippet: "Leading tech firms introduce structured cognitive recovery zones to reduce employee stress.",
+    category: "HEALTH",
+    source: "Sentinel Intelligence",
+    time: "June 29, 2026 • 05:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800",
+    content: `
+      <p><strong>SILICON VALLEY, USA</strong> — Enterprises are installing quiet meditation capsules in office centers. Employees are encouraged to take 20-minute silent breaks in rooms equipped with soundproofing, aromatherapy, and guide meditation interfaces to combat creative fatigue.</p>
+    `
+  },
+  {
+    title: "Comprehensive Nutritional Study Highlights Health Benefits of Ancient Grain Diets",
+    snippet: "Research indicates that grains like farro, quinoa, and spelt offer superior fiber and mineral profiles.",
+    category: "HEALTH",
+    source: "Financial Times Desk",
+    time: "June 28, 2026 • 16:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800",
+    content: `
+      <p><strong>ROME, Italy</strong> — A joint study by European university nutrition departments confirms that substituting refined wheat with ancient grains like spelt and quinoa significantly reduces glycemic swings and increases gut microbiome diversity, advising food makers to adjust formulations.</p>
+    `
+  },
+  {
+    title: "Wearable Sleep Tracking Technology Integrates Circadian Rhythm Sleep Coaching",
+    snippet: "Next-gen smart rings monitor body temperature fluctuations to optimize sleep schedules safety.",
+    category: "HEALTH",
+    source: "Reuters Syndicate",
+    time: "June 28, 2026 • 11:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800",
+    content: `
+      <p><strong>HELSINKI, Finland</strong> — Smart ring manufacturers have released software updates that predict the wearer's optimal melatonin production window. By monitoring skin temperature drops, the app suggests exact sleep and wake times to align with natural biological cycles.</p>
+    `
+  },
+  {
+    title: "Virtual Reality Therapy Platforms Deployed for Physical Rehabilitation",
+    snippet: "Physical therapy clinics use interactive VR games to guide stroke recovery exercises.",
+    category: "HEALTH",
+    source: "Global Pulse Intel",
+    time: "June 28, 2026 • 07:15 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
+    content: `
+      <p><strong>CHICAGO, USA</strong> — VR headset integrations in rehabilitation clinics have improved patient exercise adherence by 40%. The interactive simulations gamify repetitive arm and leg movements, helping rebuild motor pathways through virtual reward structures.</p>
+    `
+  },
+  {
+    title: "Therapeutic Hydrotherapy Pools Gain Popularity in Global Wellness Resorts",
+    snippet: "Mineral-rich thermal baths offering jet-massage structures reduce muscle stiffness and pain.",
+    category: "HEALTH",
+    source: "Pulse News Wire",
+    time: "June 27, 2026 • 18:30 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800",
+    content: `
+      <p><strong>BADEN-BADEN, Germany</strong> — Mineral spas are recording high attendance figures as wellness travelers seek hydro-massage pools. The thermal water's magnesium and sulfur content, combined with targeted underwater pressure jets, improves circulation and reduces chronic joint soreness.</p>
+    `
+  },
+  {
+    title: "Scientific Review Validates Health and Focus Benefits of Forest Bathing Sessions",
+    snippet: "Ecological studies show that inhaling forest tree compounds lowers cortisol stress levels.",
+    category: "HEALTH",
+    source: "Sentinel Intelligence",
+    time: "June 27, 2026 • 12:45 UTC",
+    imageUrl: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800",
+    content: `
+      <p><strong>TOKYO, Japan</strong> — Medical reviews of Shinrin-yoku (forest bathing) confirm that exposure to phytoncides (antimicrobial compounds released by pine trees) boosts white blood cell counts and lowers blood pressure metrics, leading doctors to recommend forest walks.</p>
+    `
   }
-});
+];
 
 // Write to files
 const dataPath = path.join('data', 'news.json');
 fs.writeFileSync(dataPath, JSON.stringify(allArticles, null, 2), 'utf-8');
-console.log(`🎉 Successfully generated ${allArticles.length} rich articles inside data/news.json!`);
+console.log(`🎉 Successfully generated ${allArticles.length} unique rich articles inside data/news.json!`);
