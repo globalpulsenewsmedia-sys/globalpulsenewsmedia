@@ -11,6 +11,3 @@ C:\Users\HP\.gemini\antigravity\brain
 *.zip
 *.log
 logs/
-.vercel/
-package.json
-package-lock.json
