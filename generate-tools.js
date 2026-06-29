@@ -488,9 +488,7 @@ directories.forEach(dir => {
         fs.readdirSync(srcPath).forEach(file => {
             const itemSrc = path.join(srcPath, file);
             const itemDest = path.join(destPath, file);
-            if (!fs.existsSync(itemDest)) {
-                copyRecursiveSync(itemSrc, itemDest);
-            }
+            copyRecursiveSync(itemSrc, itemDest);
         });
     }
 });
@@ -505,9 +503,7 @@ if (fs.existsSync(dataSrcPath)) {
     fs.readdirSync(dataSrcPath).forEach(file => {
         const itemSrc = path.join(dataSrcPath, file);
         const itemDest = path.join(toolsDataDir, file);
-        if (!fs.existsSync(itemDest)) {
-            copyRecursiveSync(itemSrc, itemDest);
-        }
+        copyRecursiveSync(itemSrc, itemDest);
     });
 }
 

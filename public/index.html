@@ -1096,7 +1096,21 @@
                 document.getElementById('topNewsTicker').innerText = tickerText;
             }
 
-            renderView('all');
+            // Detect category parameter from URL (for redirects from other pages)
+            const urlParams = new URLSearchParams(window.location.search);
+            const catParam = urlParams.get('category');
+            if (catParam) {
+                const cleanCat = catParam.toLowerCase();
+                if (cleanCat === 'library') {
+                    switchTab('library');
+                } else if (cleanCat === 'tools') {
+                    switchTab('tools');
+                } else {
+                    switchTab(cleanCat);
+                }
+            } else {
+                renderView('all');
+            }
             
             // Populate CNN style elements
             renderTrendingNow();
@@ -1405,62 +1419,15 @@
             });
         }
 
-        function renderView(category) {
-            let filtered = [];
-            
-            // Map category to matching criteria
-            if (category === 'all') {
-                filtered = allArticles;
-            } else if (category === 'tech') {
-                filtered = allArticles.filter(a => ['tech', 'science'].includes(a.category.toLowerCase()));
-            } else if (category === 'markets') {
-                filtered = allArticles.filter(a => ['business', 'markets', 'economy', 'finance'].includes(a.category.toLowerCase()));
-            } else if (category === 'analysis') {
-                filtered = allArticles.filter(a => ['world', 'politics', 'geopolitics', 'health'].includes(a.category.toLowerCase()));
-            }
-
-            if (filtered.length === 0) {
-                filtered = allArticles; // Fallback to all if category empty
-            }
-
-            // Render Hero Article (Index 0)
-            const lead = filtered[0];
-            if (lead) {
-                document.getElementById('leadImage').src = lead.imageUrl || "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200";
-                document.getElementById('leadCategory').innerText = lead.category || "GENERAL";
-                document.getElementById('leadTitle').innerText = lead.title;
-                document.getElementById('leadTitle').href = `article.html?id=${allArticles.indexOf(lead)}`;
-                document.getElementById('leadSnippet').innerText = lead.snippet;
-                document.getElementById('leadSource').innerText = lead.source || "Global Pulse";
-                document.getElementById('leadTime').innerText = lead.time || "RECENT";
-                
-                // Sync bookmark button
-                const bookmarks = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
-                const btn = document.getElementById('bookmarkLeadBtn');
-                if (bookmarks.indexOf(lead.title) > -1) {
-                    btn.innerText = "⭐ Bookmarked";
-                    btn.classList.remove('btn-outline-warning');
-                    btn.classList.add('btn-warning');
-                } else {
-                    btn.innerText = "🔖 Bookmark";
-                    btn.classList.remove('btn-warning');
-                    btn.classList.add('btn-outline-warning');
-                }
-            }
-
-            // Render Remaining as Trending Grid (Index 3+) using Bootstrap Cards
-            const trending = filtered.slice(3);
-            const trendingGrid = document.getElementById('trendingNewsGrid');
-            trendingGrid.innerHTML = '';
-
-            if (trending.length > 0) {
-                trending.forEach(art => {
+        function renderArticlesGrid(articlesList, containerElement) {
+            if (articlesList.length > 0) {
+                articlesList.forEach(art => {
                     const col = document.createElement('div');
                     col.className = 'col';
                     col.innerHTML = `
                         <div class="card h-100 card-luxury rounded-1">
                             <div class="card-img-wrap">
-                                <img src="${art.imageUrl || "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600"}" class="card-img-top" alt="Trending News">
+                                <img src="${art.imageUrl || "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600"}" class="card-img-top" alt="News Image">
                             </div>
                             <div class="card-body d-flex flex-column justify-content-between gap-3">
                                 <div>
@@ -1478,10 +1445,95 @@
                             </div>
                         </div>
                     `;
-                    trendingGrid.appendChild(col);
+                    containerElement.appendChild(col);
                 });
             } else {
-                trendingGrid.innerHTML = `<div class="col-12 text-center text-muted py-5">No additional stories archived for this segment.</div>`;
+                containerElement.innerHTML = `<div class="col-12 text-center text-muted py-5">No stories found for this segment.</div>`;
+            }
+        }
+
+        function renderView(category) {
+            let filtered = [];
+            const target = (category && category.toLowerCase() !== 'news') ? category.toLowerCase() : 'all';
+
+            // Render Hero Article (Index 0)
+            const lead = allArticles[0];
+            if (lead) {
+                document.getElementById('leadImage').src = lead.imageUrl || "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200";
+                document.getElementById('leadCategory').innerText = lead.category || "GENERAL";
+                document.getElementById('leadTitle').innerText = lead.title;
+                document.getElementById('leadTitle').href = `article.html?id=${allArticles.indexOf(lead)}`;
+                document.getElementById('leadSnippet').innerText = lead.snippet;
+                document.getElementById('leadSource').innerText = lead.source || "Global Pulse";
+                document.getElementById('leadTime').innerText = lead.time || "RECENT";
+                
+                // Sync bookmark button
+                const bookmarks = JSON.parse(localStorage.getItem('news_bookmarks') || '[]');
+                const btn = document.getElementById('bookmarkLeadBtn');
+                if (btn) {
+                    if (bookmarks.indexOf(lead.title) > -1) {
+                        btn.innerText = "⭐ Bookmarked";
+                        btn.classList.remove('btn-outline-warning');
+                        btn.classList.add('btn-warning');
+                    } else {
+                        btn.innerText = "🔖 Bookmark";
+                        btn.classList.remove('btn-warning');
+                        btn.classList.add('btn-outline-warning');
+                    }
+                }
+            }
+
+            const trendingGrid = document.getElementById('trendingNewsGrid');
+            trendingGrid.innerHTML = '';
+            trendingGrid.className = 'row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5';
+
+            if (target !== 'all') {
+                document.getElementById('heroGridContainer').classList.add('d-none');
+                document.querySelector('.section-divider-title').innerText = `${category.toUpperCase()} NEWS`;
+                
+                filtered = allArticles.filter(a => {
+                    const artCat = a.category.toLowerCase();
+                    if (artCat === target) return true;
+                    if (target === 'tech' && ['tech', 'technology', 'ai', 'science'].includes(artCat)) return true;
+                    if (target === 'markets' && ['business', 'markets', 'economy', 'finance'].includes(artCat)) return true;
+                    if (target === 'analysis' && ['world', 'politics', 'geopolitics', 'health'].includes(artCat)) return true;
+                    if (target === 'sports' && ['sports', 'football', 'tennis', 'athletics'].includes(artCat)) return true;
+                    if (target === 'entertainment' && ['entertainment', 'celebrity', 'style', 'movies'].includes(artCat)) return true;
+                    if (target === 'lifestyle' && ['travel', 'luxury', 'fitness', 'relationships', 'lifestyle'].includes(artCat)) return true;
+                    return false;
+                });
+                
+                renderArticlesGrid(filtered, trendingGrid);
+            } else {
+                document.getElementById('heroGridContainer').classList.remove('d-none');
+                document.querySelector('.section-divider-title').innerText = `LATEST GLOBAL INTELLIGENCE`;
+                
+                trendingGrid.className = 'd-flex flex-column gap-5 w-100 mb-5';
+                
+                const sections = [
+                    { name: 'Technology & AI Intel', slug: 'tech', categories: ['tech'] },
+                    { name: 'Business & Markets', slug: 'business', categories: ['business'] },
+                    { name: 'US & World Geopolitics', slug: 'world', categories: ['world'] },
+                    { name: 'Sports & Football', slug: 'sports', categories: ['sports'] },
+                    { name: 'New Auto Innovation', slug: 'auto', categories: ['auto'] },
+                    { name: 'Celebrity News & Style', slug: 'celebrity', categories: ['celebrity'] },
+                    { name: 'Global Travel Intelligence', slug: 'travel', categories: ['travel'] }
+                ];
+                
+                sections.forEach(sec => {
+                    const secArticles = allArticles.filter(a => sec.categories.includes(a.category.toLowerCase()));
+                    if (secArticles.length > 0) {
+                        const secContainer = document.createElement('div');
+                        secContainer.className = 'category-section-wrap w-100 mt-2';
+                        secContainer.innerHTML = `
+                            <h3 class="section-divider-title pb-2 text-uppercase fs-5 mb-4 text-warning border-bottom border-warning border-opacity-25" style="letter-spacing: 0.12em;">${sec.name}</h3>
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+                        `;
+                        const subGrid = secContainer.querySelector('.row');
+                        renderArticlesGrid(secArticles, subGrid);
+                        trendingGrid.appendChild(secContainer);
+                    }
+                });
             }
         }
 

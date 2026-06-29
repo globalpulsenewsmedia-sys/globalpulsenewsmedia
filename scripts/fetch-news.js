@@ -9,7 +9,9 @@ const FEEDS = [
     { category: 'BUSINESS', url: 'http://feeds.bbci.co.uk/news/business/rss.xml' },
     { category: 'SCIENCE', url: 'http://feeds.bbci.co.uk/news/science_and_environment/rss.xml' },
     { category: 'HEALTH', url: 'http://feeds.bbci.co.uk/news/health/rss.xml' },
-    { category: 'POLITICS', url: 'http://feeds.bbci.co.uk/news/politics/rss.xml' }
+    { category: 'POLITICS', url: 'http://feeds.bbci.co.uk/news/politics/rss.xml' },
+    { category: 'SPORTS', url: 'http://feeds.bbci.co.uk/sport/rss.xml' },
+    { category: 'CELEBRITY', url: 'http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml' }
 ];
 
 const SITE_URL = "https://globalpulsenewsmedia.com";
