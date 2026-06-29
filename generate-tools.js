@@ -327,59 +327,180 @@ for (const prefix of prefixes) {
     }
 }
 
-// 3. MASTER HTML TEMPLATE (SEO Optimized)
-const getTemplate = (tool) => `
+// 3. MASTER HTML TEMPLATE (Programmatic SEO & AdSense Ready)
+const getTemplate = (tool, related = []) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${tool.title} | ${SITE_NAME}</title>
-    <meta name="description" content="${tool.desc}">
-    <link rel="canonical" href="${BASE_URL}/${tool.slug}">
+    <meta name="description" content="Use ${tool.title} online for free. ${tool.desc} Secure, browser-based, and instant results. No signups required.">
+    <meta name="keywords" content="${tool.cat.toLowerCase()}, free online tool, web utility, browser tool, developer tools, ${tool.slug.replace(/-/g, ', ')}">
+    <link rel="canonical" href="${BASE_URL}/${tool.slug}/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="${BASE_URL}/${tool.slug}/">
+    <meta property="og:title" content="${tool.title} | ${SITE_NAME}">
+    <meta property="og:description" content="Use ${tool.title} online for free. ${tool.desc} Secure, browser-based, and instant results.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="${BASE_URL}/${tool.slug}/">
+    <meta property="twitter:title" content="${tool.title} | ${SITE_NAME}">
+    <meta property="twitter:description" content="Use ${tool.title} online for free. ${tool.desc} Secure, browser-based, and instant results.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200">
+
+    <!-- Google AdSense Auto Ads Tag -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9626359300624933"
+         crossorigin="anonymous"></script>
+
+    <!-- Schema.org WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "${tool.title.split(' - ')[0]}",
+      "description": "${tool.desc}",
+      "applicationCategory": "${tool.cat}Application",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "url": "${BASE_URL}/${tool.slug}/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .tool-container { min-height: 400px; border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px; background: #fff; }
-        .btn { background: #2563eb; color: white; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-top: 10px; display: inline-block; }
-        .btn:hover { background: #1d4ed8; }
-        #result { margin-top: 20px; padding: 15px; background: #f3f4f6; border-radius: 8px; word-break: break-all; }
+        :root {
+            --accent-gold: #c5a880;
+            --dark-bg: #0a0a0f;
+            --dark-card: #111116;
+            --dark-border: #1a1a24;
+        }
+        body { background-color: var(--dark-bg); color: #e2e8f0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .tool-container { border: 1px solid var(--dark-border); border-radius: 12px; padding: 25px; background: var(--dark-card); }
+        .btn { background: var(--accent-gold); color: #0a0a0f; font-weight: 600; padding: 12px 24px; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+        #result { margin-top: 25px; padding: 20px; background: #16161d; border: 1px solid var(--dark-border); border-radius: 8px; font-family: monospace; color: #34d399; word-break: break-all; }
+        .related-card { background: var(--dark-card); border: 1px solid var(--dark-border); transition: all 0.2s ease; }
+        .related-card:hover { border-color: var(--accent-gold); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="min-h-screen flex flex-col justify-between">
 
-    <nav class="p-6 bg-white shadow-sm mb-8">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="/" class="text-xl font-bold text-blue-600">${SITE_NAME}</a>
-            <span class="text-sm text-gray-500">Free Tools Hub / ${tool.cat}</span>
+    <div>
+        <nav class="p-6 border-b border-[#1a1a24] bg-[#0c0c12]">
+            <div class="max-w-6xl mx-auto flex justify-between items-center">
+                <a href="/" class="text-xl font-bold tracking-wider text-white flex items-center gap-2">
+                    <span style="color: var(--accent-gold);">GLOBAL</span>PULSE <span class="text-xs bg-[#1a1a24] px-2 py-1 rounded text-gray-400 font-normal">TOOLS</span>
+                </a>
+                <span class="text-xs font-mono tracking-widest text-[#c5a880] uppercase">${tool.cat} Suite</span>
+            </div>
+        </nav>
+
+        <main class="max-w-4xl mx-auto px-4 py-12">
+            <header class="mb-10 text-center md:text-left">
+                <span class="text-xs font-mono text-[#c5a880] uppercase tracking-wider mb-2 block">Premium Web Utility</span>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">${tool.title.split(' - ')[0]}</h1>
+                <p class="text-base text-gray-400 max-w-2xl">${tool.desc}</p>
+            </header>
+
+            <!-- AdSense Responsive Top Slot Placeholder -->
+            <div class="my-6 text-center">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9626359300624933"
+                     data-ad-slot="top-auto"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <div class="tool-container shadow-2xl">
+                <label for="input" class="block text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">Input Workspace</label>
+                <textarea id="input" class="w-full h-44 p-4 bg-[#0a0a0f] border border-[#1a1a24] text-white rounded-md mb-4 focus:outline-none focus:border-[#c5a880] transition-colors" placeholder="${tool.placeholder}"></textarea>
+                <button class="btn" onclick="runTool()">Execute Tool</button>
+                
+                <div id="result">Result will appear here...</div>
+            </div>
+
+            <!-- AdSense Responsive Middle Slot Placeholder -->
+            <div class="my-8 text-center">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9626359300624933"
+                     data-ad-slot="middle-auto"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <!-- Programmatic SEO Guide -->
+            <section class="mt-14 border-t border-[#1a1a24] pt-10">
+                <h2 class="text-xl font-bold text-white mb-4">How to Use ${tool.title.split(' - ')[0]} Online</h2>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    Our free web-based utility is designed to help engineers, content creators, and developers execute daily tasks instantly. Simply paste or type your information into the workspace area above and press the execute action trigger.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div class="p-5 rounded-lg bg-[#111116] border border-[#1a1a24]">
+                        <h3 class="text-sm font-semibold text-white mb-2" style="color: var(--accent-gold);">🔒 100% Client-Side Privacy</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">This application executes processes completely inside your web browser using sandboxed JavaScript. No inputs, documents, or variables are sent to our servers.</p>
+                    </div>
+                    <div class="p-5 rounded-lg bg-[#111116] border border-[#1a1a24]">
+                        <h3 class="text-sm font-semibold text-white mb-2" style="color: var(--accent-gold);">⚡ Ultra Fast Response</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">Using microsecond-level runtime algorithms, compilation and transformation operations render instantly without network latency bottlenecks.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Tools programmatic linking (Internal Linking SEO boost) -->
+            ${related.length > 0 ? `
+            <section class="mt-14 border-t border-[#1a1a24] pt-10">
+                <h2 class="text-lg font-bold text-white mb-6">Related Tools in ${tool.cat}</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    ${related.map(rel => `
+                        <a href="/tools/${rel.slug}/" class="related-card p-4 rounded-lg block">
+                            <h4 class="text-sm font-medium text-white mb-1 group-hover:text-[#c5a880] transition-colors">${rel.title.split(' - ')[0]}</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2">${rel.desc}</p>
+                        </a>
+                    `).join('')}
+                </div>
+            </section>
+            ` : ''}
+        </main>
+    </div>
+
+    <!-- Premium Editorial Footer -->
+    <footer class="mt-20 py-10 border-t border-[#1a1a24] bg-[#0c0c12]">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="text-xs text-gray-500 font-mono">&copy; ${new Date().getFullYear()} ${SITE_NAME} Hub. All utilities are free and privacy-secured.</span>
+            <div class="flex flex-wrap gap-4 text-xs font-mono text-gray-400">
+                <a href="/about.html" class="hover:text-white transition-colors">About Us</a>
+                <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="/contact.html" class="hover:text-white transition-colors">Contact</a>
+            </div>
         </div>
-    </nav>
-
-    <main class="max-w-4xl mx-auto px-4">
-        <header class="mb-8">
-            <h1 class="text-4xl font-extrabold mb-4">${tool.title}</h1>
-            <p class="text-lg text-gray-600">${tool.desc}</p>
-        </header>
-
-        <div class="tool-container shadow-lg">
-            <textarea id="input" class="w-full h-40 p-4 border rounded-md mb-4" placeholder="${tool.placeholder}"></textarea>
-            <button class="btn" onclick="runTool()">Execute Tool</button>
-            
-            <div id="result">Result will appear here...</div>
-        </div>
-
-        <section class="mt-12 prose max-w-none">
-            <h2 class="text-2xl font-bold">How to use ${tool.title}</h2>
-            <p>Simply enter your data in the input box above and click execute. This tool is part of our ${tool.cat} suite, designed to help professionals and developers automate daily tasks. This tool runs entirely in your browser, ensuring your data never leaves your computer.</p>
-        </section>
-
-        <footer class="mt-20 py-8 border-t text-center text-gray-400 text-sm">
-            &copy; ${new Date().getFullYear()} ${SITE_NAME} - All Tools are Free.
-        </footer>
-    </main>
+    </footer>
 
     <script>
         function runTool() {
-            ${tool.logic}
+            try {
+                ${tool.logic}
+            } catch(e) {
+                document.getElementById('result').innerHTML = '<span style="color:#ef4444;">Error: ' + e.message + '</span>';
+            }
         }
         // Auto-run on input for better UX
         document.getElementById('input').addEventListener('input', runTool);
@@ -399,7 +520,10 @@ toolsList.forEach((tool) => {
         fs.mkdirSync(toolFolder, { recursive: true });
     }
     const filePath = path.join(toolFolder, 'index.html');
-    const content = getTemplate(tool);
+    
+    // Find related tools in the same category for programmatic SEO linking
+    const related = toolsList.filter(t => t.cat === tool.cat && t.slug !== tool.slug).slice(0, 3);
+    const content = getTemplate(tool, related);
     
     fs.writeFileSync(filePath, content);
     
@@ -423,16 +547,16 @@ fs.writeFileSync(path.join(OUTPUT_DIR, 'catalog.json'), catalogJSON, 'utf-8');
 let sitemapXML = '<?xml version="1.0" encoding="UTF-8"?>\n';
 sitemapXML += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 sitemapXML += `  <url>
-    <loc>https://globalpulsenewsmedia.com/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://www.globalpulsenewsmedia.com/</loc>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>\n`;
 
 toolsList.forEach(tool => {
     sitemapXML += `  <url>
-    <loc>https://globalpulsenewsmedia.com/tools/${tool.slug}</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://www.globalpulsenewsmedia.com/tools/${tool.slug}/</loc>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>\n`;
