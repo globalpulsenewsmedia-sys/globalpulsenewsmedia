@@ -353,6 +353,15 @@ const getTemplate = (tool, related = []) => `
     <meta property="twitter:description" content="Use ${tool.title} online for free. ${tool.desc} Secure, browser-based, and instant results.">
     <meta property="twitter:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTEPMYGJV4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NTEPMYGJV4');
+    </script>
+
     <!-- Google AdSense Auto Ads Tag -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9626359300624933"
          crossorigin="anonymous"></script>
