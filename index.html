@@ -1815,14 +1815,8 @@
             const book = booksContent[activeBookKey];
             const chapter = book.chapters[activeChapterIndex];
             
-            // Premium check: Free tier gets 2 chapters (index 0 and 1). Premium gets all chapters.
-            const isPremium = localStorage.getItem('premium_member') === 'true';
-            if (activeChapterIndex >= 2 && !isPremium) {
-                stopSpeech();
-                document.getElementById('playerNowPlaying').innerText = `Locked: Chapter 3+ requires Premium`;
-                showPremiumMembershipModal();
-                return;
-            }
+            // Bypassed premium check to allow playing all audiobook chapters for free
+            const isPremium = true;
             
             narrationText = `Reading ${book.title}. ${chapter.title}. ${chapter.content}`;
             document.getElementById('playerNowPlaying').innerText = `${book.title} - ${chapter.title}`;
