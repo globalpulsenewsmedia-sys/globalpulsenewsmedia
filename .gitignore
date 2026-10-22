@@ -6,7 +6,7 @@ node_modules
 *.zip
 *.log
 logs/
-data/
+data/images/
 __pycache__/
 **/__pycache__/
 *.db

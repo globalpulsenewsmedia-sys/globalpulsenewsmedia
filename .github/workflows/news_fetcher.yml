@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -32,7 +32,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/news.json feed.xml sitemap.xml
+          git add -f data/news.json feed.xml sitemap.xml
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update news feeds [skip ci]" && git push)
 
       - name: Install Vercel CLI
