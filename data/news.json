@@ -1,23 +1,5 @@
 [
   {
-    "title": "Global tech stocks plunge as US midterms add to AI slowdown fears",
-    "snippet": "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/6/2026, 2:57:24 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7da8/live/a5c551d0-d996-11f1-9e72-375d6b1d1f05.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Trump signs order preventing future presidents from changing Oval Office",
-    "snippet": "The order comes after Trump made a series of big changes to the decor of the Oval Office and tore down the White House East Wing.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/6/2026, 4:29:25 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6593/live/d5c2e140-d991-11f1-9ebf-51ca702e24e1.jpg",
-    "link": "#"
-  },
-  {
     "title": "White House denies Hegseth and Rubio to leave jobs after Republican election losses",
     "snippet": "US media reports there are calls to replace Pete Hegseth, who also faces a possible impeachment vote, while Mark Rubio is rumoured to be eyeing a presidential run.",
     "category": "WORLD",
@@ -36,12 +18,12 @@
     "link": "#"
   },
   {
-    "title": "Hoax bomb threats target European airlines and airports for second time in a week",
-    "snippet": "At least 21 flights across Europe are affected in what the UK government calls a \"malicious hoax threat\".",
+    "title": "Trump signs order preventing future presidents from changing Oval Office",
+    "snippet": "The order comes after Trump made a series of big changes to the decor of the Oval Office and tore down the White House East Wing.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "11/5/2026, 5:39:48 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7423/live/1976bf00-d911-11f1-94c6-3f8050561bf5.jpg",
+    "time": "11/6/2026, 4:29:25 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/97ff/live/e5957760-d9b2-11f1-93e1-3b657b665bcf.jpg",
     "link": "#"
   },
   {
@@ -54,12 +36,39 @@
     "link": "#"
   },
   {
+    "title": "Macau jails pro-democracy campaigner in city's first national security case",
+    "snippet": "Au Kam San was sentenced to 12 years and six months' jail for \"subversion against the political power of the state\".",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/6/2026, 6:46:21 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0ae0/live/23a8aa80-d9aa-11f1-88e6-7913ca4cf3b6.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Chris vs Chris: Who's running and what's at stake this New Zealand election",
+    "snippet": "New Zealanders will head to the polls on 7 November to elect a new government, with rising cost of living a key concern for voters.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/5/2026, 7:08:48 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2811/live/420fe4c0-d8c9-11f1-a701-fddedf244c16.jpg",
+    "link": "#"
+  },
+  {
     "title": "Paraguay President Santiago Peña resigns after bank collapse",
     "snippet": "The move follows a bank collapse and after the lower house of congress voted in favour of pursuing an impeachment trial against him.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
     "time": "11/5/2026, 5:40:40 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/12e6/live/3ccd15c0-d93a-11f1-95ea-8df9a040b6bf.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Hoax bomb threats target European airlines and airports for second time in a week",
+    "snippet": "At least 21 flights across Europe are affected in what the UK government calls a \"malicious hoax threat\".",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/5/2026, 5:39:48 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7423/live/1976bf00-d911-11f1-94c6-3f8050561bf5.jpg",
     "link": "#"
   },
   {
@@ -81,12 +90,12 @@
     "link": "#"
   },
   {
-    "title": "Eight killed in series of shootings in western Turkey",
-    "snippet": "Victims are found in several locations in three separate vehicles, according to local reports.",
-    "category": "WORLD",
+    "title": "Global tech stocks plunge as US midterms add to AI slowdown fears",
+    "snippet": "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry.",
+    "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "11/5/2026, 7:32:54 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/06a9/live/afaf1b30-d947-11f1-93e1-3b657b665bcf.jpg",
+    "time": "11/6/2026, 7:27:26 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7da8/live/a5c551d0-d996-11f1-9e72-375d6b1d1f05.jpg",
     "link": "#"
   },
   {
@@ -248,7 +257,7 @@
     "category": "SCIENCE",
     "source": "Global Pulse Intelligence",
     "time": "11/6/2026, 1:22:39 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3dca/live/cb01af10-d8ed-11f1-b7ca-cbaa67b24b8c.jpg",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/107a/live/0dde0950-d9b1-11f1-b441-2b33b063138f.jpg",
     "link": "#"
   },
   {
