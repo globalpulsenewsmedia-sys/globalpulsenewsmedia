@@ -1,11 +1,38 @@
 [
   {
+    "title": "What we know about Krakow mass shooting so far",
+    "snippet": "At least six people were killed by a gunman in military fatigues who opened fire in Poland's second largest city.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/7/2026, 7:40:10 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f6c3/live/95455f00-dac5-11f1-bda8-29fb69dbc026.jpg",
+    "link": "#"
+  },
+  {
     "title": "No clear winner after tight New Zealand general election",
     "snippet": "Weeks of coalition talks could follow after preliminary results pointed to a highly divided national parliament.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
     "time": "11/7/2026, 3:56:28 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3578/live/a76cb0d0-dab5-11f1-a701-fddedf244c16.jpg",
+    "link": "#"
+  },
+  {
+    "title": "US offers $20m reward for information about Iran's nuclear programme",
+    "snippet": "Donald Trump has repeatedly raised the prospecting of renewing strikes against Iran's nuclear facilities.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/7/2026, 6:14:38 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b84/live/0f887590-dad0-11f1-93e1-3b657b665bcf.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Houthis say at least 25 killed in Saudi air strike",
+    "snippet": "Saudi Arabia, which leads a coalition fighting the Houthis in Yemen, has not commented.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/7/2026, 5:09:24 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2670/live/bfaac760-dacc-11f1-bda8-29fb69dbc026.jpg",
     "link": "#"
   },
   {
@@ -27,11 +54,11 @@
     "link": "#"
   },
   {
-    "title": "Paraguay's president impeached and under house arrest after bank collapse",
+    "title": "Paraguay's former president charged after bank collapse",
     "snippet": "Santiago Peña was ousted due to a banking crisis which left millions of people unable to access their money.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "11/7/2026, 7:20:00 AM",
+    "time": "11/7/2026, 7:17:22 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a65d/live/3fe15d20-da57-11f1-af22-a97b84c9ca63.jpg",
     "link": "#"
   },
@@ -63,39 +90,21 @@
     "link": "#"
   },
   {
-    "title": "Meghan's father Thomas Markle under house arrest after child sex abuse material charge",
-    "snippet": "The 82-year-old appeared in court in Florida after the FBI searched two Los Angeles-area storage units he rented.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/7/2026, 7:27:44 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/97ed/live/4b09f660-da7c-11f1-a975-15a4138f9d40.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Texas mayor instructs police to limit co-operation with ICE",
-    "snippet": "There has been months of public outcry in Houston after an Immigration and Customs Enforcement (ICE) officer fatally shot a man who was driving to work.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/7/2026, 8:15:55 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4095/live/09b20f70-da4c-11f1-ad69-611c5b2ed04a.jpg",
-    "link": "#"
-  },
-  {
-    "title": "AI stocks climb after trillions wiped from market values",
-    "snippet": "Investors had been selling off tech shares in part due to concerns the Democrat election victory would mean slower AI development.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/6/2026, 9:06:25 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdde/live/9036f7e0-da01-11f1-93e1-3b657b665bcf.jpg",
-    "link": "#"
-  },
-  {
     "title": "Elon Musk appears to signal the end of the road for Cybertruck",
     "snippet": "Musk said it was to make room for production of its Cybercabs - autonomous taxis without a driver.",
     "category": "TECH",
     "source": "Global Pulse Intelligence",
     "time": "11/6/2026, 9:49:50 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d7ce/live/3fc37350-d9f3-11f1-a701-fddedf244c16.jpg",
+    "link": "#"
+  },
+  {
+    "title": "AI stocks climb after trillions wiped from market values",
+    "snippet": "Investors had been selling off tech shares in part due to concerns the Democrat election victory would mean slower AI development.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "11/6/2026, 9:06:25 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdde/live/9036f7e0-da01-11f1-93e1-3b657b665bcf.jpg",
     "link": "#"
   },
   {
