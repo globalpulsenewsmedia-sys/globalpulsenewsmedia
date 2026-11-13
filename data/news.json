@@ -1,20 +1,29 @@
 [
   {
-    "title": "Scandal-hit Nvidia CEO Jensen Huang quits, plunging AI chipmaking giant into turmoil",
-    "snippet": "US lawmakers now want to question Huang over whether one of his alleged relationships was with a Chinese spy.",
+    "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
+    "snippet": "Huang abruptly quit on Thursday as head of one of the world's most valuable companies after revelations of alleged extramarital affairs.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "11/12/2026, 11:34:05 PM",
+    "time": "11/13/2026, 3:57:01 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f66c/live/4f0358a0-def1-11f1-bb80-c5cef03337ce.jpg",
     "link": "#"
   },
   {
-    "title": "US envoys meet Zelensky in Dublin after talks with Putin in Moscow",
-    "snippet": "US envoy Steve Witkoff says President Putin has agreed to European negotiators joining the next round of Ukraine talks.",
+    "title": "Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks",
+    "snippet": "The Ukrainian president says it makes sense for European leaders to be involved as Ukraine hopes to eventually join the EU.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "11/12/2026, 9:00:42 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0196/live/ef110310-de9c-11f1-a701-fddedf244c16.jpg",
+    "time": "11/13/2026, 2:01:35 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f44f/live/57b45570-df06-11f1-9f71-7d0084202c8a.jpg",
+    "link": "#"
+  },
+  {
+    "title": "North Korean hackers used fake video calls in $400m crypto hack, says FBI",
+    "snippet": "More than 900 victims are thought to have fallen prey to the FaceStealer scheme in the last 18 months.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/13/2026, 2:48:29 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c16a/live/65ee22f0-df02-11f1-b6e1-5b169363fed4.jpg",
     "link": "#"
   },
   {
@@ -36,12 +45,12 @@
     "link": "#"
   },
   {
-    "title": "Democrat Scott Colom makes history as Mississippi's first black senator since 19th Century",
-    "snippet": "In a state Trump won two years ago by 22 points, Colom's victory extends a string of Democratic wins in the Senate.",
+    "title": "Australian footballers will not be charged after hotel incident, police say",
+    "snippet": "Four Sydney Swans players had been under investigation after an alleged sexual assault after a game in Melbourne.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "11/12/2026, 12:56:55 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/884a/live/97210150-de3d-11f1-a9ed-658311f31da9.jpg",
+    "time": "11/13/2026, 3:02:54 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e9a2/live/04510720-defc-11f1-9b2e-c7d61d5838d4.jpg",
     "link": "#"
   },
   {
@@ -51,6 +60,15 @@
     "source": "Global Pulse Intelligence",
     "time": "11/12/2026, 6:47:35 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9916/live/a7c0bac0-dec7-11f1-a701-fddedf244c16.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Democrat Scott Colom makes history as Mississippi's first black senator since 19th Century",
+    "snippet": "In a state Trump won two years ago by 22 points, Colom's victory extends a string of Democratic wins in the Senate.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/12/2026, 12:56:55 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/884a/live/97210150-de3d-11f1-a9ed-658311f31da9.jpg",
     "link": "#"
   },
   {
@@ -72,29 +90,11 @@
     "link": "#"
   },
   {
-    "title": "Five new miniature frog species found in eastern Himalayas",
-    "snippet": "Scientists say the frogs evolved as the Himalayas rose and the Asian monsoon took shape.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/12/2026, 11:07:19 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6413/live/e56f4d60-de76-11f1-9115-cfe6d179af3a.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Oranges investigated after four girls die in suspected Uganda school poisoning",
-    "snippet": "The girls started vomiting after eating oranges brought in by a fellow pupil - police are travelling to the village they came from.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/12/2026, 7:45:52 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7574/live/b4ca5c60-de65-11f1-8771-4778a0df4e09.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Microsoft struggling to restore service as global outage affects Outlook and Teams",
+    "title": "Global Microsoft outage affecting tens of thousands of users",
     "snippet": "Microsoft said the outage was caused by servers unexpected becoming unavailable, straining other systems.",
     "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "11/13/2026, 1:53:55 AM",
+    "time": "11/13/2026, 2:38:02 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/28a7/live/2a181e50-defa-11f1-b877-3169a3b63f2c.jpg",
     "link": "#"
   },
@@ -222,6 +222,15 @@
     "source": "Global Pulse Intelligence",
     "time": "11/10/2026, 10:52:15 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4d6c/live/e7ad5400-dd59-11f1-b441-2b33b063138f.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Claude chatbot maker set for $1.3tn stock market debut despite 'catastrophic' AI warning",
+    "snippet": "The AI company behind the Claude chatbot will offer its shares at between $70 and $78, which is lower than what was expected.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "11/10/2026, 5:56:12 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/151a/live/19e16bc0-dd03-11f1-a701-fddedf244c16.jpg",
     "link": "#"
   },
   {
