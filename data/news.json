@@ -1,5 +1,32 @@
 [
   {
+    "title": "What we know about the ground stop and what to do if you're affected",
+    "snippet": "US officials say the disruption was caused by old equipment overloading and not a cyber-attack.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/14/2026, 7:42:11 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/14ef/live/f4aae840-dfd7-11f1-b441-2b33b063138f.jpg",
+    "link": "#"
+  },
+  {
+    "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+    "snippet": "The Ukrainian president says US envoys touted the exchange as part of efforts to end the war with Russia.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/14/2026, 11:41:20 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d028/live/47c10ab0-e013-11f1-b441-2b33b063138f.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
+    "snippet": "Trump will discuss the \"reduction of nuclear weapons\" during the unprecedented talks, a spokeswoman says.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/14/2026, 5:52:31 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/172e/live/be162960-dfc9-11f1-81be-1f9bcd2a4214.jpg",
+    "link": "#"
+  },
+  {
     "title": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
     "snippet": "The collision leaves 32 people in hospital with non-critical injuries, but no-one unaccounted for.",
     "category": "WORLD",
@@ -9,39 +36,30 @@
     "link": "#"
   },
   {
-    "title": "Microsoft 'deeply sorry' for global outage as it reports broad recovery",
-    "snippet": "Experts say the event is a \"stark reminder\" of how heavily the world relies on a small group of big tech providers.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/13/2026, 9:14:22 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5f18/live/9b3a5370-df98-11f1-a9ad-6774a3284d10.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
-    "snippet": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/13/2026, 6:36:57 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dddf/live/8578f720-df49-11f1-b441-2b33b063138f.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Watch: How a server outage took down Microsoft Teams and Outlook",
-    "snippet": "A Microsoft outage is affecting services including Teams, Outlook and AI software Copilot.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/13/2026, 11:43:27 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e30a/live/54c2fe10-df57-11f1-a701-fddedf244c16.jpg",
-    "link": "#"
-  },
-  {
     "title": "Setback for SpaceX Starship rocket's double-catch test",
     "snippet": "Elon Musk’s company aborted an attempted catch of the rocket’s booster - instead it came down in the ocean.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
     "time": "11/14/2026, 12:01:01 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1b1a/live/3f2ee680-dfbc-11f1-9e98-11d1980367a2.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Microsoft says services fully restored after day-long global outage",
+    "snippet": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/14/2026, 6:42:27 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5f18/live/9b3a5370-df98-11f1-a9ad-6774a3284d10.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Hungarian authorities uncover $20m during probe of Orbán-era minister",
+    "snippet": "Prime Minister Péter Magyar promised a sweeping anti-corruption drive after ousting Orbán in April.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/14/2026, 10:42:20 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/da9e/live/d437a0b0-e010-11f1-b884-a9f52ca7a4b1.jpg",
     "link": "#"
   },
   {
@@ -63,39 +81,12 @@
     "link": "#"
   },
   {
-    "title": "The Peruvian city that has embraced Pope Leo as one of its own",
-    "snippet": "Pope Leo XIV is in Peru as part of his Latin America tour, just weeks after having surgery for lung cancer.",
+    "title": "Estonia bans Russian athletes as backlash intensifies",
+    "snippet": "Estonia is the latest country to say it will not allow Russian or Belarusian athletes to compete on its territory as a result of the ongoing war in Ukraine.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "11/13/2026, 6:34:45 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/566c/live/8649d9e0-df84-11f1-a8e2-5b59832bb2f1.jpg",
-    "link": "#"
-  },
-  {
-    "title": "German spies handed new powers to tackle 'hybrid threats' from abroad",
-    "snippet": "German reforms mean foreign and domestic intelligence services will have greater powers to combat espionage, terrorism and sabotage.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/13/2026, 3:42:52 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4a89/live/8263f580-df76-11f1-b844-3146c4983677.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Democratic Senate leader Schumer set to face leadership challenge",
-    "snippet": "Maryland Senator Van Hollen says \"new leadership\" is needed for Democrats following the party's recent midterm successes.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/13/2026, 7:03:10 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8015/live/4a0196d0-df4d-11f1-b441-2b33b063138f.png",
-    "link": "#"
-  },
-  {
-    "title": "Microsoft says services fully restored after for day-long global outage",
-    "snippet": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "11/14/2026, 6:42:27 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5f18/live/9b3a5370-df98-11f1-a9ad-6774a3284d10.jpg",
+    "time": "11/13/2026, 5:54:33 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1c85/live/160022d0-df88-11f1-93e1-3b657b665bcf.jpg",
     "link": "#"
   },
   {
@@ -132,6 +123,15 @@
     "source": "Global Pulse Intelligence",
     "time": "11/13/2026, 7:53:57 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2783/live/a5cdb560-df6c-11f1-9892-87464bbcc2b8.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
+    "snippet": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage.",
+    "category": "TECH",
+    "source": "Global Pulse Intelligence",
+    "time": "11/13/2026, 6:36:57 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dddf/live/8578f720-df49-11f1-b441-2b33b063138f.jpg",
     "link": "#"
   },
   {
@@ -225,6 +225,15 @@
     "link": "#"
   },
   {
+    "title": "How to spot November's planetary parade in the pre-dawn sky",
+    "snippet": "The planets of Mercury, Venus, Mars and Jupiter will align in pre-dawn sky throughout November.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "11/14/2026, 11:07:51 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a1a4/live/8fa21860-daa5-11f1-9da2-b11e4d68c08e.jpg",
+    "link": "#"
+  },
+  {
     "title": "Bluetongue virus confirmed on County Down farm",
     "snippet": "Officials from the Department of Agriculture, Environment and Rural Affairs said the virus had been detected in three sheep.",
     "category": "SCIENCE",
@@ -294,15 +303,6 @@
     "source": "Global Pulse Intelligence",
     "time": "11/12/2026, 12:12:59 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e068/live/4f7ef220-ddfd-11f1-8445-15eb55286f71.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Four grizzly bears killed in Canada after fatal attack on mother and daughter",
-    "snippet": "The sow and her three cubs were responsible for killing Jennifer Balcarras, 48, and her daughter Selah Reed, 20, earlier this month.",
-    "category": "SCIENCE",
-    "source": "Global Pulse Intelligence",
-    "time": "11/11/2026, 1:24:29 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3ce6/live/65c341e0-ddcf-11f1-a701-fddedf244c16.jpg",
     "link": "#"
   }
 ]
