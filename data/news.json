@@ -1,10 +1,19 @@
 [
   {
+    "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
+    "snippet": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/19/2026, 11:33:51 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b7d/live/94082910-e452-11f1-a094-5fdc692f3e33.jpg",
+    "link": "#"
+  },
+  {
     "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
     "snippet": "The unprecedented International Court of Justice verdict concerns a 2017 military crackdown that killed thousands.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 4:55:57 PM",
+    "time": "11/19/2026, 8:07:02 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d789/live/7c1a8b30-e435-11f1-99b6-a35a62fa4264.jpg",
     "link": "#"
   },
@@ -14,7 +23,52 @@
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
     "time": "11/19/2026, 5:38:22 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1107/live/91612f50-e42e-11f1-99a1-253766e7ad8b.jpg",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/56c4/live/c36d8970-e448-11f1-a094-5fdc692f3e33.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+    "snippet": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/19/2026, 9:21:43 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1fd8/live/5c168a90-e44a-11f1-a094-5fdc692f3e33.jpg",
+    "link": "#"
+  },
+  {
+    "title": "California probing whether China improperly acquired Nvidia technology",
+    "snippet": "The probe by California, where the AI chipmaker has its global headquarters, follows former CEO Jensen Huang's departure.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/19/2026, 11:04:30 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2b75/live/e227dc20-e46c-11f1-950d-9b3226707024.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Judge finds Thomas Markle mentally fit to stand trial on child abuse charges",
+    "snippet": "Markle, who has denied possessing images of child sex abuse was deemed competent after an evaluation by a court-appointed psychiatrist.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/19/2026, 10:48:22 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5d77/live/35f78600-e465-11f1-99b6-a35a62fa4264.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Fiona the hippo dies after swallowing a hat at Cincinnati Zoo",
+    "snippet": "Fiona, who became an internet star after her premature birth in 2017, \"fought until she couldn’t anymore\", the zoo says.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/19/2026, 11:40:29 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ff3b/live/b1a3a370-e464-11f1-99a1-253766e7ad8b.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Trump posthumously pardons US baseball legend Pete Rose",
+    "snippet": "Rose, who died in 2024, was given a lifetime ban from the sport for betting on games but was reinstated last year.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/19/2026, 11:18:43 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a82/live/d2560a80-e465-11f1-80e9-fd4d95b40178.jpg",
     "link": "#"
   },
   {
@@ -27,15 +81,6 @@
     "link": "#"
   },
   {
-    "title": "Venezuela signs military deal with US less than a year after Maduro's removal",
-    "snippet": "The US Secretary of Defence says Venezuela has \"gone from our most aggressive regional threat to a compliant security partner\".",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 1:31:23 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/18e1/live/23556d10-e400-11f1-877f-2bb5452e5ffc.jpg",
-    "link": "#"
-  },
-  {
     "title": "Putin vows 'far more painful' response to Ukraine's strikes on Crimean Bridge",
     "snippet": "The bridge - a symbol of Russia's occupation of the Crimean Peninsula - suffered major damaged following a combined attack by Ukraine earlier this week.",
     "category": "WORLD",
@@ -45,48 +90,12 @@
     "link": "#"
   },
   {
-    "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
-    "snippet": "Châtaigniers en fleurs was painted in 1890 in the final two months of Vincent van Gogh's life.",
-    "category": "WORLD",
+    "title": "Tens of thousands of UK fridges secured from hackers in secret nationwide operation",
+    "snippet": "Supermarkets, warehouses, restaurants and stadiums have been scrambling to make their devices safe.",
+    "category": "TECH",
     "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 12:49:19 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a424/live/fe3f6bb0-e428-11f1-99b6-a35a62fa4264.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Susan Smith denied parole again 32 years after drowning her two sons",
-    "snippet": "At a hearing on the possibility of parole, Smith said she wished she could change the past, and her two children \"did not deserve to die\".",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 5:23:34 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d76c/live/0d6d9ab0-a76f-11ef-a215-2b35ff609397.jpg",
-    "link": "#"
-  },
-  {
-    "title": "US consortium wins huge Kenya mining deal, beating Chinese rivals",
-    "snippet": "The Mrima Hill site is estimated to hold deposits of critical minerals worth more than $60bn (£45bn).",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 12:56:30 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3358/live/5110da10-e40e-11f1-b37c-b3a71d7200af.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Survivors of Uganda's deadly landslide seek justice at the UN",
-    "snippet": "Survivors reject relocation plans they say ignore their safety, land rights and livelihoods.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 9:21:54 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2f49/live/977f9e30-e3f2-11f1-a1b0-810734adec41.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Florida pastor found guilty over role in assassination of Haitian president",
-    "snippet": "Christian Emmanuel Sanon is convicted of involvement in the plot that resulted in the killing of Jovenel Moïse.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 11:44:57 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e31d/live/a9425010-e409-11f1-ab35-e1af93fa5cce.jpg",
+    "time": "11/20/2026, 12:02:07 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d3db/live/57d6aa20-d769-11f1-a956-ff083523ef77.jpg",
     "link": "#"
   },
   {
@@ -162,30 +171,30 @@
     "link": "#"
   },
   {
-    "title": "British hacker who stole $11m through text message scheme jailed for six years in US",
-    "snippet": "Tyler Buchanan, from Dundee, was a member of the notorious Scattered Spider group and began hacking when he was a teenager.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "11/18/2026, 9:28:35 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ee74/live/b9842e30-e337-11f1-9479-d17d3e98c29d.png",
-    "link": "#"
-  },
-  {
-    "title": "Security flaw found in Java, world's third-largest programming language",
-    "snippet": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's most popular computer language programs.",
-    "category": "TECH",
-    "source": "Global Pulse Intelligence",
-    "time": "11/18/2026, 8:47:06 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b2fd/live/c9c932d0-e324-11f1-99a1-253766e7ad8b.jpg",
-    "link": "#"
-  },
-  {
-    "title": "McDonald's sex abuse: 'They were waiting for the younger girls to turn 18'",
-    "snippet": "A former McDonald's worker calls on the firm to “change the way they treat younger employees” as a judge rules a legal case against the chain can go ahead.",
+    "title": "California targets Nvidia in China AI chip probe",
+    "snippet": "The probe by California, where the AI chipmaker has its global headquarters, follows former CEO Jensen Huang's departure.",
     "category": "BUSINESS",
     "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 12:00:59 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4b62/live/ccbeb3f0-e407-11f1-a094-5fdc692f3e33.jpg",
+    "time": "11/19/2026, 11:04:30 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2b75/live/e227dc20-e46c-11f1-950d-9b3226707024.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Airbnb's divisive new house rules come into force",
+    "snippet": "New rules on what Airbnb hosts can reasonably ask guests to do could mean fewer chores but higher costs for customers.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "11/20/2026, 12:12:28 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/005c/live/dfcb5350-e410-11f1-b37c-b3a71d7200af.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Fish and eggs al desko? The dos and don'ts of the lunch break",
+    "snippet": "What is acceptable to eat at your desk, without annoying your colleagues?",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "11/20/2026, 12:08:37 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c5a2/live/ef6d14f0-d93a-11f1-95ea-8df9a040b6bf.jpg",
     "link": "#"
   },
   {
@@ -198,12 +207,12 @@
     "link": "#"
   },
   {
-    "title": "Europe plans to catch the next computer chip wave",
-    "snippet": "Europe hopes to be a leader in a new generation of computer chips which use light to process data.",
+    "title": "McDonald's sex abuse: 'They were waiting for the younger girls to turn 18'",
+    "snippet": "A former McDonald's worker calls on the firm to “change the way they treat younger employees” as a judge rules a legal case against the chain can go ahead.",
     "category": "BUSINESS",
     "source": "Global Pulse Intelligence",
-    "time": "11/18/2026, 12:00:24 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c96b/live/b14b3a60-d9c8-11f1-93e1-3b657b665bcf.jpg",
+    "time": "11/19/2026, 12:00:59 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4b62/live/ccbeb3f0-e407-11f1-a094-5fdc692f3e33.jpg",
     "link": "#"
   },
   {
@@ -216,30 +225,12 @@
     "link": "#"
   },
   {
-    "title": "Gilts v kilts: What is happening with Scottish government bonds?",
-    "snippet": "MSPs have heard both the pros and cons of the government's plan to launch its first ever bond to the market.",
-    "category": "BUSINESS",
+    "title": "More climate money for Africa? Europe says use what's already pledged",
+    "snippet": "African countries at the UN climate summit in Turkey are demanding more funding from developed nations to help them cope with climate change.",
+    "category": "SCIENCE",
     "source": "Global Pulse Intelligence",
-    "time": "11/19/2026, 6:15:57 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bef5/live/7cbd5260-e35a-11f1-a094-5fdc692f3e33.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Why has Waymo pulled all its driverless cars from US freeways?",
-    "snippet": "The vehicles currently operate in 15 US cities, though freeway rides are only offered in a handful, including San Francisco and Los Angeles.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "11/18/2026, 11:47:46 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1cf8/live/3bc03860-e3a8-11f1-ae87-b7d1078e8448.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again",
-    "snippet": "Energy bills are expected to jump by 26% a year for a typical household as UK inflation hits its highest rate for a year.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "11/18/2026, 1:17:06 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4a59/live/128bd8c0-e35b-11f1-99b6-a35a62fa4264.jpg",
+    "time": "11/20/2026, 12:54:50 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9534/live/be6f9f00-e432-11f1-99a1-253766e7ad8b.jpg",
     "link": "#"
   },
   {
@@ -249,6 +240,15 @@
     "source": "Global Pulse Intelligence",
     "time": "11/19/2026, 1:35:29 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8a1f/live/36fc5700-e411-11f1-b37c-b3a71d7200af.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Survivors of Uganda's deadly landslide seek justice at the UN",
+    "snippet": "Survivors reject relocation plans they say ignore their safety, land rights and livelihoods.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "11/19/2026, 9:21:54 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2f49/live/977f9e30-e3f2-11f1-a1b0-810734adec41.jpg",
     "link": "#"
   },
   {
@@ -303,15 +303,6 @@
     "source": "Global Pulse Intelligence",
     "time": "11/17/2026, 11:34:56 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7f9b/live/9d67ed20-e29e-11f1-8dda-8925a81c3da5.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Fears toxic lagoon fire led to cancer and miscarriages",
-    "snippet": "The incident took place in Llwyneinion in August 1980.",
-    "category": "SCIENCE",
-    "source": "Global Pulse Intelligence",
-    "time": "11/17/2026, 10:39:23 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9cb9/live/45f494d0-e294-11f1-99a1-253766e7ad8b.jpg",
     "link": "#"
   }
 ]
