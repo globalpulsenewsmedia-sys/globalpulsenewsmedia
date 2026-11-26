@@ -1,29 +1,11 @@
 [
   {
-    "title": "Russia's own figures show it has lost nearly 500,000 people in Ukraine war",
-    "snippet": "Leaked data reveal how the full-scale invasion of Ukraine has fundamentally changed mortality patterns in Russia.",
+    "title": "US announces new tariffs on host of countries including China",
+    "snippet": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
     "category": "WORLD",
     "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 12:21:49 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1e4e/live/dce0d700-e8c5-11f1-99b6-a35a62fa4264.jpg",
-    "link": "#"
-  },
-  {
-    "title": "My family were killed in Ukraine. My mum blamed Zelensky's troops - the truth is complicated",
-    "snippet": "BBC journalist Anastasiya Gribanova investigates who killed her father and grandparents in the war.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 12:54:13 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c61f/live/78592c20-e8c4-11f1-99b6-a35a62fa4264.jpg",
-    "link": "#"
-  },
-  {
-    "title": "US stocks fall further as fears over AI intensify",
-    "snippet": "All three main US indexes were down in early trading, with the tech-dominated Nasdaq down almost 4%.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 5:48:09 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9f2e/live/6940e8e0-e8f1-11f1-99a1-253766e7ad8b.jpg",
+    "time": "11/25/2026, 4:21:34 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/91fc/live/6d9c5c50-e908-11f1-99b6-a35a62fa4264.jpg",
     "link": "#"
   },
   {
@@ -36,6 +18,69 @@
     "link": "#"
   },
   {
+    "title": "Thirty-one killed in massive fire as fuel tanker crashes on Cairo highway",
+    "snippet": "Another 21 are injured after the tanker reportedly overturns on a busy ring road in the Egyptian capital.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/25/2026, 10:18:06 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2d4b/live/5e57daf0-e91f-11f1-9108-c5b270b0703d.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Israeli judges recommend dropping most serious charges against Netanyahu",
+    "snippet": "The Israeli PM says his trial should end after judges said there was little chance of conviction in one of three cases.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/25/2026, 7:47:39 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d91d/live/f0a5ecf0-e8fa-11f1-99b6-a35a62fa4264.jpg",
+    "link": "#"
+  },
+  {
+    "title": "US stocks fall further as fears over AI intensify",
+    "snippet": "All three main US indexes were down in early trading, with the tech-dominated Nasdaq down almost 4%.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/25/2026, 9:43:18 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9f2e/live/6940e8e0-e8f1-11f1-99a1-253766e7ad8b.jpg",
+    "link": "#"
+  },
+  {
+    "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
+    "snippet": "Despite widespread concern from residents ahead of the blast, officials say that lead readings in the area so far have been promising.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/25/2026, 7:54:52 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9049/live/be474ac0-e8f9-11f1-b8b0-a95064d74c5f.jpg",
+    "link": "#"
+  },
+  {
+    "title": "North Korea expels Swiss diplomat in sanctions row",
+    "snippet": "Swiss officials said relations would be kept through North Korea's embassy in Bern, and its own embassy in Beijing.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/25/2026, 9:51:17 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b4ee/live/fcd47260-e8fc-11f1-99b6-a35a62fa4264.jpg",
+    "link": "#"
+  },
+  {
+    "title": "My family were killed in Ukraine. My mum blamed Zelensky's troops - the truth is complicated",
+    "snippet": "BBC journalist Anastasiya Gribanova investigates who killed her father and grandparents in the war.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/25/2026, 12:54:13 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c61f/live/78592c20-e8c4-11f1-99b6-a35a62fa4264.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Russia's own figures show it has lost nearly 500,000 people in Ukraine war",
+    "snippet": "Leaked data reveal how the full-scale invasion of Ukraine has fundamentally changed mortality patterns in Russia.",
+    "category": "WORLD",
+    "source": "Global Pulse Intelligence",
+    "time": "11/25/2026, 12:21:49 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1e4e/live/dce0d700-e8c5-11f1-99b6-a35a62fa4264.jpg",
+    "link": "#"
+  },
+  {
     "title": "Israeli strike kills senior Hamas security official and family in Gaza City",
     "snippet": "Mohammed Abu al-Ouf, head of Hamas's internal security service in northern Gaza, was killed with his wife and two teenage daughters, doctors say.",
     "category": "WORLD",
@@ -45,48 +90,12 @@
     "link": "#"
   },
   {
-    "title": "Five Russian military jets hit in airfield strike, says Ukraine",
-    "snippet": "The Savasleyka airfield hosts aircraft used by Russia to launch hypersonic missiles and glide bombs at Ukraine.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 2:46:41 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/263d/live/670b2250-e8df-11f1-a3b9-79c60ec9ab33.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Protesters call on Israel to free Palestinian student held without charge",
-    "snippet": "Mahdi Tunsi, 26, was taken from his university dormitory earlier this month and has since been held without charge.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 10:03:42 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3883/live/d69e8c10-e8b7-11f1-a094-5fdc692f3e33.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Colombian police storm supermarket to free 20 held hostage for 17 hours",
-    "snippet": "One gunman was killed in the operation to free around 20 shoppers and employees after a 17-hour hostage ordeal.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 4:20:14 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/997a/live/4f4b3940-e8c4-11f1-ac76-db9e97f93d67.jpg",
-    "link": "#"
-  },
-  {
     "title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
     "snippet": "The verdict follows a months-long trial in New York.",
-    "category": "WORLD",
+    "category": "TECH",
     "source": "Global Pulse Intelligence",
     "time": "11/25/2026, 10:52:09 AM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c0cb/live/da83bf80-e849-11f1-aa88-031e8213533d.jpg",
-    "link": "#"
-  },
-  {
-    "title": "Canadian astronaut welcomes baby girl  from space station",
-    "snippet": "Joshua Kutryk, currently on his first space mission, is just the fourth astronaut in history to miss the birth of a child while aboard the International Space Station.",
-    "category": "WORLD",
-    "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 3:41:39 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/19b2/live/aed9cc20-e8e5-11f1-a3b9-79c60ec9ab33.jpg",
     "link": "#"
   },
   {
@@ -171,11 +180,20 @@
     "link": "#"
   },
   {
+    "title": "UK government set to publish new treaties agreed with EU",
+    "snippet": "The BBC understands the treaties contain a 10-year termination clause to reimburse costs of any need to rebuild border checks infrastructure.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "11/26/2026, 2:13:00 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0991/live/fc4bdc70-e933-11f1-a094-5fdc692f3e33.jpg",
+    "link": "#"
+  },
+  {
     "title": "Poundland collapses putting 11,000 jobs at risk",
     "snippet": "The discount chain has fallen into administration after its owners failed to find a buyer.",
     "category": "BUSINESS",
     "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 6:29:42 PM",
+    "time": "11/25/2026, 9:31:10 PM",
     "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5177/live/c7a2f690-e8fa-11f1-99a1-253766e7ad8b.jpg",
     "link": "#"
   },
@@ -189,12 +207,21 @@
     "link": "#"
   },
   {
-    "title": "US announces new tariffs on host of countries including China",
-    "snippet": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
+    "title": "US approves SpaceX plan to send a million data satellites to space",
+    "snippet": "The Starmind constellation aims to be the most cost and energy-efficient way to meet the growing demand for AI computing power.",
     "category": "BUSINESS",
     "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 4:21:34 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/511d/live/da29c130-e860-11f1-a330-6153c8fb2fad.jpg",
+    "time": "11/26/2026, 12:07:51 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fd78/live/4cbffd10-e91d-11f1-9108-c5b270b0703d.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Guitar wars - the transatlantic battle over the Stratocaster",
+    "snippet": "US company Fender is in dispute with a German firm that makes generic versions of its key model.",
+    "category": "BUSINESS",
+    "source": "Global Pulse Intelligence",
+    "time": "11/26/2026, 12:01:37 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/67c1/live/7aa1e2b0-e80b-11f1-99a1-253766e7ad8b.jpg",
     "link": "#"
   },
   {
@@ -225,30 +252,39 @@
     "link": "#"
   },
   {
-    "title": "'I only use the washing machine on a Sunday' - how we're keeping our energy bills down",
-    "snippet": "The BBC speaks to three people about steps they take to keep their energy bills under control.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 12:12:11 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4a8e/live/565f9af0-e806-11f1-a094-5fdc692f3e33.jpg",
-    "link": "#"
-  },
-  {
-    "title": "What will the energy cap changes mean for my bills?",
-    "snippet": "Regulator Ofgem is raising the cap affecting the energy bills of millions of households.",
-    "category": "BUSINESS",
-    "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 9:54:32 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4155/live/6d965910-59d2-11f1-8b8c-6d33e1d5abb6.jpg",
-    "link": "#"
-  },
-  {
-    "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
-    "snippet": "Despite widespread concern from residents ahead of the blast, officials say that lead readings in the area so far have been promising.",
+    "title": "California warns of flooding as king tides peak over Thanksgiving",
+    "snippet": "Parts of the Canadian province of British Columbia may also be affected by the storms, which come as millions of people travel for the holiday.",
     "category": "SCIENCE",
     "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 7:23:03 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9049/live/be474ac0-e8f9-11f1-b8b0-a95064d74c5f.jpg",
+    "time": "11/26/2026, 1:22:55 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6396/live/c71ce590-e919-11f1-8383-53f283141713.jpg",
+    "link": "#"
+  },
+  {
+    "title": "What UK season changes mean for you",
+    "snippet": "Frosts will become less common and hot summer days more frequent in the UK, the Met Office says.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "11/26/2026, 12:14:16 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9001/live/d4588420-e8ed-11f1-a094-5fdc692f3e33.png",
+    "link": "#"
+  },
+  {
+    "title": "Expect fewer frosts and more hot days as UK seasons shift, says Met Office",
+    "snippet": "Changing seasons are affecting wildlife and leading some farmers to grow different crops.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "11/26/2026, 12:08:07 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f0a2/live/0f7bb370-e749-11f1-88dc-f746e0cde621.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Canadian astronaut welcomes baby girl  from space station",
+    "snippet": "Joshua Kutryk, currently on his first space mission, is just the fourth astronaut in history to miss the birth of a child while aboard the International Space Station.",
+    "category": "SCIENCE",
+    "source": "Global Pulse Intelligence",
+    "time": "11/25/2026, 3:41:39 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/19b2/live/aed9cc20-e8e5-11f1-a3b9-79c60ec9ab33.jpg",
     "link": "#"
   },
   {
@@ -279,39 +315,93 @@
     "link": "#"
   },
   {
-    "title": "Will there be a white Christmas this year?",
-    "snippet": "It is just a month until the big day but what do the early signs say about the chances of a white Christmas in the UK?",
-    "category": "SCIENCE",
+    "title": "Third of young Brits have never had sex, but many are sexting and watching porn",
+    "snippet": "More young people in Britain have never had sex, but many are sexting and watching porn. ",
+    "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 1:03:24 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ed6d/live/7d7bb080-e764-11f1-b407-33329b1ec67a.jpg",
+    "time": "11/24/2026, 11:38:39 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1c04/live/270d0cc0-e8b4-11f1-99a1-253766e7ad8b.jpg",
     "link": "#"
   },
   {
-    "title": "The rising cost of putting food on the table in India",
-    "snippet": "India's food inflation is broadening, squeezing household budgets.",
-    "category": "SCIENCE",
+    "title": "Why I don't always tell potential employers I'm dyslexic",
+    "snippet": "Many dyslexic people say it harms their confidence, a report about experiences in the workplace suggests.",
+    "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "11/25/2026, 1:02:13 AM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e93a/live/237a32d0-e7d4-11f1-939f-471cde339c0e.jpg",
+    "time": "11/24/2026, 12:00:47 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/49d8/live/1c75ed80-e770-11f1-99a1-253766e7ad8b.jpg",
     "link": "#"
   },
   {
-    "title": "Mass badger cull ruled out by Welsh government after speculation",
-    "snippet": "Plaid Cymru ministers rule out mass badger cull as part of new plans to tackle bovine tuberculosis.",
-    "category": "SCIENCE",
+    "title": "Can AI spot breast cancer earlier? NHS launches world's largest trial to find out",
+    "snippet": "Researchers will test the technology in breast cancer screening which could ease pressure on the NHS.",
+    "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "11/24/2026, 4:47:05 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fa52/live/37d695d0-e800-11f1-ab60-79086b6495b8.jpg",
+    "time": "11/23/2026, 12:49:22 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6158/live/7701a960-e298-11f1-8dda-8925a81c3da5.jpg",
     "link": "#"
   },
   {
-    "title": "Record 5,200 heat-linked deaths estimated in England this year",
-    "snippet": "The UK Health Security Agency says this year's number of deaths is twice that of the previous record year.",
-    "category": "SCIENCE",
+    "title": "Sales of baby sleeping bag halted by Next after new mum raises alarm",
+    "snippet": "The sleeping bag’s neck hole was far too big, meaning Emma's baby daughter could wriggle down and it could cover her face.",
+    "category": "HEALTH",
     "source": "Global Pulse Intelligence",
-    "time": "11/24/2026, 4:22:16 PM",
-    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7439/live/723aa2a0-e802-11f1-95bb-3f37d3e026b0.jpg",
+    "time": "11/21/2026, 12:02:09 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5fff/live/40c02ae0-e50c-11f1-b40b-5f46e8cf687c.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Massive hope for pancreatic cancer pill after trial saw tumours vanish",
+    "snippet": "Daily pill daraxonrasib appears to shrink and possibly even eliminate tumours in some patients with one of the deadliest cancers.",
+    "category": "HEALTH",
+    "source": "Global Pulse Intelligence",
+    "time": "11/20/2026, 12:08:22 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4568/live/3c973e20-e4be-11f1-99a1-253766e7ad8b.png",
+    "link": "#"
+  },
+  {
+    "title": "Covid inquiry report: key findings on testing, tracing and 'the pingdemic'",
+    "snippet": "Early efforts to contain coronavirus \"were doomed to fail\", the public inquiry has found. Here's what you need to know.",
+    "category": "HEALTH",
+    "source": "Global Pulse Intelligence",
+    "time": "11/19/2026, 12:47:27 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/907e/live/c7d0e7d0-e37d-11f1-b879-03485a55c082.png",
+    "link": "#"
+  },
+  {
+    "title": "Regulator mistakenly sent complaints about doctors to newspaper",
+    "snippet": "Information sent to the Times newspaper by the General Medical Council included summaries of complaints alleging antisemitism and Islamophobia against doctors.",
+    "category": "HEALTH",
+    "source": "Global Pulse Intelligence",
+    "time": "11/18/2026, 5:48:10 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/73cb/live/11eb1800-e373-11f1-9f51-4bfc31543510.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Voy at-home test kit adverts banned over low testosterone claims",
+    "snippet": "The Advertising Standards Authority says the adverts by online healthcare provider Voy made misleading claims.",
+    "category": "HEALTH",
+    "source": "Global Pulse Intelligence",
+    "time": "11/18/2026, 1:11:07 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b4b0/live/d8c4a540-e2b5-11f1-bee0-ef418afc697f.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Largest British study to check social media ban's effect on youth mental health",
+    "snippet": "Ten different research teams will look at how well teenagers are coping without social media.",
+    "category": "HEALTH",
+    "source": "Global Pulse Intelligence",
+    "time": "11/18/2026, 12:49:31 AM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/02cd/live/6ddfb5f0-e2bd-11f1-a094-5fdc692f3e33.jpg",
+    "link": "#"
+  },
+  {
+    "title": "NHS data contract to stay with Palantir until 2029",
+    "snippet": "Despite calls from some Labour MPs to end the arrangement with Palantir, ministers say a new contract will not be awarded until 2029.",
+    "category": "HEALTH",
+    "source": "Global Pulse Intelligence",
+    "time": "11/17/2026, 12:00:12 PM",
+    "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/87b8/live/b2aca760-54fb-11f1-b682-cf91850925ea.jpg",
     "link": "#"
   }
 ]
